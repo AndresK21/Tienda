@@ -35,79 +35,270 @@
     </header>
 
     <main>
-        <!-- Barra de busqueda -->
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
+        
+
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs blue-grey-text text-darken-4">
+                    <li class="tab col s3"><a class="active blue-grey-text text-darken-4" href="#test1">Productos</a></li>
+                    <li class="tab col s3"><a class="blue-grey-text text-darken-4" href="#test2">Marca</a></li>
+                    <li class="tab col s3"><a class="blue-grey-text text-darken-4" href="#test3">Categoria</a></li>
+                    <li class="tab col s3"><a class="blue-grey-text text-darken-4" href="#test4">Color</a></li>
+                </ul>
+            </div>
+            <div id="test1" class="col s12">
+            
+                <!-- Barra de busqueda -->
+                <div class="container">
                     <div class="row">
-                        <div class="input-field col s12">
-                        <i class="material-icons prefix">search</i>
-                        <input type="text" id="autocomplete-input" class="autocomplete">
-                        <label for="autocomplete-input">Buscar producto</label>
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                <i class="material-icons prefix">search</i>
+                                <input type="text" id="autocomplete-input" class="autocomplete">
+                                <label for="autocomplete-input">Buscar producto</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            
+
+                <div class="container">
+
+                    <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modalProduc"><i class="material-icons ">add</i></a>
+
+                    <table class="bordered highlight responsive-table espacio_inf">
+                        <thead class="blue-grey darken-4 white-text">
+                        <tr>
+                            <th>Nombre de la marca</th>
+                            <th>Empresa asociada</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
+                            <td>Pintura látex blanco ostra high standard.</td>
+                            <td>25</td>
+                            <td>$25.</td>
+                            <td><i class="material-icons prefix">visibility</i>
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
+                            <td>Pintura pro látex blanco hueso.</td>
+                            <td>50</td>
+                            <td>$25.00</td>
+                            <td><i class="material-icons prefix">visibility</i>
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                            
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
+                            <td>Pintura pro látex marfil.</td>
+                            <td>$125</td>
+                            <td>$25.00</td>
+                            <td><i class="material-icons prefix">visibility</i>
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                            
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
             </div>
+            <div id="test2" class="col s12">
+            
+            
+            
+            
+            
+            
+            
+            
+                <!-- Barra de busqueda -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                <i class="material-icons prefix">search</i>
+                                <input type="text" id="autocomplete-input" class="autocomplete">
+                                <label for="autocomplete-input">Buscar Marca</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <div class="container">
+
+                    <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modalProduc"><i class="material-icons ">add</i></a>
+
+                    <table class="bordered highlight responsive-table espacio_inf">
+                        <thead class="blue-grey darken-4 white-text">
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Descripci&oacute;n</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
+                            <td>Pintura látex blanco ostra high standard.</td>
+                            <td>25</td>
+                            <td>$25.</td>
+                            <td><i class="material-icons prefix">visibility</i>
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
+                            <td>Pintura pro látex blanco hueso.</td>
+                            <td>50</td>
+                            <td>$25.00</td>
+                            <td><i class="material-icons prefix">visibility</i>
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                            
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
+                            <td>Pintura pro látex marfil.</td>
+                            <td>$125</td>
+                            <td>$25.00</td>
+                            <td><i class="material-icons prefix">visibility</i>
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                            
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+            <div id="test3" class="col s12">Test 3</div>
+            <div id="test4" class="col s12">Test 4</div>
         </div>
 
 
-        <div class="container">
 
-            <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modalProduc"><i class="material-icons ">add</i></a>
 
-            <table class="bordered highlight responsive-table espacio_inf">
-                <thead class="blue-grey darken-4 white-text">
-                <tr>
-                    <th>Imagen</th>
-                    <th>Descripci&oacute;n</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                </thead>
 
-                <tbody>
-                <tr>
-                    <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
-                    <td>Pintura látex blanco ostra high standard.</td>
-                    <td>25</td>
-                    <td>$25.</td>
-                    <td><i class="material-icons prefix">visibility</i>
-                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
-                    </td>
-                </tr>
 
-                <tr>
-                    <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
-                    <td>Pintura pro látex blanco hueso.</td>
-                    <td>50</td>
-                    <td>$25.00</td>
-                    <td><i class="material-icons prefix">visibility</i>
-                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                    
-                    </td>
-                </tr>
 
-                <tr>
-                    <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
-                    <td>Pintura pro látex marfil.</td>
-                    <td>$125</td>
-                    <td>$25.00</td>
-                    <td><i class="material-icons prefix">visibility</i>
-                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                    
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
 
    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Modal de producto  nuevo -->
         <div id="modalProduc" class="modal modal-fixed-footer">
