@@ -32,7 +32,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="../index.php">Inicio</a></li>
                     <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a href="#!">Nosotros</a></li>
+                    <li><a href="../public/contactanos.php">Contactanos</a></li>
                     <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
                     <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
                 </ul>
@@ -43,7 +43,7 @@
                     <li><a href="../index.php">Inicio</a></li>
                     <li><a href="#!">Nosotros</a></li>
                     <li><a href="contactanos.php">Contactanos</a></li>
-                    <li><a href="iniciar_sesion.php">Contactanos</a></li>
+                    <li><a href="iniciar_sesion.php">Iniciar Sesion</a></li>
                     <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
                     <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
