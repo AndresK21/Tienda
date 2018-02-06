@@ -1,11 +1,13 @@
 .imagen{
-    max-height: 64px;
-    max-width: 64px;
-    margin: 0%;
-    padding: 0%;
-    border: 0%;
+    max-height: 50px;
+    max-width: 50px;
 }
 
-.space{
-    margin-left: 30px; 
+.espacio_inf{
+    margin-bottom: 64px; 
+}
+
+.espacio{
+    padding-left: 15px;
+    padding-bottom: 15px; 
 }

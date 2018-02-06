@@ -50,212 +50,64 @@
             </div>
         </div>
 
+
         <div class="container">
-            <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align" href="#modalProduc"><i class="material-icons ">add</i></a>
 
-            <row>
-                <div class="col s12">
-            <table class="bordered highlight ">
-        <thead>
-          <tr class="blue-grey darken-4 white-text">
-              <th>Imagen</th>
-              <th>Descripci&oacute;n</th>
-              <th>Cantidad</th>
-              <th>Precio</th>
-              <th></th>
-              <th></th>
-              <th></th>
-          </tr>
-        </thead>
+            <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modalProduc"><i class="material-icons ">add</i></a>
 
-        <tbody>
-          <tr>
-            
-                <td><img class="imagen" src="../web/img/producto1.jpg"></td>
-            
-            <th>Pintura l&aacute;tex blanco ostra high standard.</th>
-            <th>25</th>
-            <th>$25.00</th>
-            <th><i class="material-icons prefix">visibility</i></th>
-            <th><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                <!-- Modal Structure -->
-                    <div id="modal1" class="modal modal-fixed-footer">
-                        <div class="modal-content">
-                            <h4>Editar producto</h4>
-                            <div class="card horizontal">
-                                <div class="card-image">
-                                    <img src="../web/img/producto1.jpg">
-                                    <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
-                                </div>
-                                <div class="card-stacked">
-                                    <div class="card-content">
+            <table class="bordered highlight responsive-table espacio_inf">
+                <thead class="blue-grey darken-4 white-text">
+                <tr>
+                    <th>Imagen</th>
+                    <th>Descripci&oacute;n</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
 
+                <tbody>
+                <tr>
+                    <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
+                    <td>Pintura látex blanco ostra high standard.</td>
+                    <td>25</td>
+                    <td>$25.</td>
+                    <td><i class="material-icons prefix">visibility</i>
+                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
-                                        <div class="row">
-                                            <form class="col s12">
-                                                <div class="row">
-                                                    <div class="input-field col s12">
-                                                        <input placeholder="Pintura látex blanco ostra high standard." id="descripcion" type="text" class="validate">
-                                                        <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="input-field col s12">
-                                                        <input placeholder="25" id="cantidad" type="number" class="validate">
-                                                        <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="input-field col s12">
-                                                        <input placeholder="$25.00" id="precio" type="number" class="validate">
-                                                        <label for="Precio" class="blue-grey-text text-darken-4">Precio</label>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
+                    </td>
+                </tr>
 
+                <tr>
+                    <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
+                    <td>Pintura pro látex blanco hueso.</td>
+                    <td>50</td>
+                    <td>$25.00</td>
+                    <td><i class="material-icons prefix">visibility</i>
+                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                    
+                    </td>
+                </tr>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Descartar</a>
-                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
-                        </div>
-                    </div>
-                </th>
-
-            <th><a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></th>
-
-          </tr>
-          <tr>
-            <td><img class="imagen" src="../web/img/producto2.jpg"></td>
-            <td>Pintura pro látex blanco hueso.</td>
-            <td>50</td>
-            <td>$25.00</td>
-            <td><i class="material-icons prefix">visibility</i></td>
-            <td>
-                <a class="waves-effect waves-light modal-trigger" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-
-                <!-- Modal Structure -->
-                <div id="modal2" class="modal modal-fixed-footer">
-                    <div class="modal-content">
-                        <h4>Editar producto</h4>
-                        <div class="card horizontal">
-                            <div class="card-image">
-                                <img src="../web/img/producto2.jpg">
-                                <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
-                            </div>
-                            <div class="card-stacked">
-                                <div class="card-content">
-
-
-                                    <div class="row">
-                                        <form class="col s12">
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="Pintura pro látex blanco hueso." id="descripcion" type="text" class="validate">
-                                                    <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="50" id="cantidad" type="number" class="validate">
-                                                    <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="$25.00" id="precio" type="number" class="validate">
-                                                    <label for="Precio" class="blue-grey-text text-darken-4">Precio</label>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Descartar</a>
-                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
-                    </div>
-                </div>
-            </td>
-            <td><a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-          </tr>
-          <tr>
-            <td><img class="imagen" src="../web/img/producto3.jpg"></td>
-            <td>Pintura pro látex marfil.</td>
-            <td>125</td>
-            <td>$25.00</td>
-            <td><i class="material-icons prefix">visibility</i></td>
-            <td>
-                <a class="waves-effect waves-light modal-trigger" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-
-                <!-- Modal Structure -->
-                <div id="modal3" class="modal modal-fixed-footer">
-                    <div class="modal-content">
-                        <h4>Editar producto</h4>
-                        <div class="card horizontal">
-                            <div class="card-image">
-                                <img src="../web/img/producto3.jpg">
-                                <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
-                            </div>
-                            <div class="card-stacked">
-                                <div class="card-content">
-
-
-                                    <div class="row">
-                                        <form class="col s12">
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="Pintura pro látex marfil." id="descripcion" type="text" class="validate">
-                                                    <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="125" id="cantidad" type="number" class="validate">
-                                                    <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input placeholder="$25.00" id="precio" type="number" class="validate">
-                                                    <label for="Precio" class="blue-grey-text text-darken-4">Precio</label>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Descartar</a>
-                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
-                    </div>
-                </div>
-            </td>
-            <td><a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-      </row>
-
+                <tr>
+                    <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
+                    <td>Pintura pro látex marfil.</td>
+                    <td>$125</td>
+                    <td>$25.00</td>
+                    <td><i class="material-icons prefix">visibility</i>
+                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                    
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-        
 
-            
-        
-            
+   
 
         <!-- Modal de producto  nuevo -->
         <div id="modalProduc" class="modal modal-fixed-footer">
@@ -369,6 +221,151 @@
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Iniciar sesion</a>
             </div>
         </div>
+
+
+
+        <!-- Modal para prodcuto 1 -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Editar producto</h4>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="../web/img/producto1.jpg">
+                        <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+
+
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="Pintura látex blanco ostra high standard." id="descripcion" type="text" class="validate">
+                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="25" id="cantidad" type="number" class="validate">
+                                            <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="$25.00" id="precio" type="number" class="validate">
+                                            <label for="Precio" class="blue-grey-text text-darken-4">Precio</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Descartar</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
+            </div>
+        </div>
+
+
+        <!-- Modal para producto 2 -->
+        <div id="modal2" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Editar producto</h4>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="../web/img/producto2.jpg">
+                        <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+
+
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="Pintura pro látex blanco hueso." id="descripcion" type="text" class="validate">
+                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="50" id="cantidad" type="number" class="validate">
+                                            <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="$25.00" id="precio" type="number" class="validate">
+                                            <label for="Precio" class="blue-grey-text text-darken-4">Precio</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Descartar</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
+            </div>
+        </div>
+
+
+        <!-- Modal para producto 3 -->
+        <div id="modal3" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Editar producto</h4>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="../web/img/producto3.jpg">
+                        <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+
+
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="Pintura pro látex marfil." id="descripcion" type="text" class="validate">
+                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="125" id="cantidad" type="number" class="validate">
+                                            <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input placeholder="$25.00" id="precio" type="number" class="validate">
+                                            <label for="Precio" class="blue-grey-text text-darken-4">Precio</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Descartar</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
+            </div>
+        </div>
+
+
     </main>
 
         <?php
