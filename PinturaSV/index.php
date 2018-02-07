@@ -93,8 +93,8 @@
                     <div class="modal-content">
                       <!-- COMENTARIOS -->
                       <ul class="collection">
+                      <li class="collection-header"><h5>Comentarios</h5></li>
                         <li class="collection-item avatar">
-                        <span class="title">Comentarios</span>
                           <i class="material-icons circle">comment</i>
                           <span class="title">Andres Gomez</span>
                           <p>Excelente<br>
