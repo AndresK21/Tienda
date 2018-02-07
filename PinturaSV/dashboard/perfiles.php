@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <!--Import Google Icon Font-->
         <link href="../web/css/icon.css" rel="stylesheet">
+        <link href="../web/css/style.css" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
@@ -33,37 +34,25 @@
                                     <form class="">
                                         <div class="row">
                                             <div class="input-field ">
-                                                <input placeholder="Nombres" id="nombres" type="text" class="validate">
-                                                <label for="nombres" class="blue-grey-text text-darken-4">Nombres</label>
+                                                <input disabled value="I am not editable" id="disabled" type="number" class="validate">
+                                                <label for="nombres" class="blue-grey-text text-darken-4">Nombre completo</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field ">
-                                                <input placeholder="Apellidos" id="apellidos" type="text" class="validate">
-                                                <label for="apellidos" class="blue-grey-text text-darken-4">Apellidos</label>
+                                                <input disabled value="I am not editable" id="disabled" type="number" class="validate">
+                                                <label for="edad" class="blue-grey-text text-darken-4">DUI</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field ">
-                                                <input placeholder="25" id="edad" type="number" class="validate">
-                                                <label for="edad" class="blue-grey-text text-darken-4">Edad</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="input-field ">
-                                                <input placeholder="Administrador" id="cargo" type="text" class="validate">
-                                                <label for="cargo" class="blue-grey-text text-darken-4">Cargo</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="input-field ">
-                                                <input placeholder="Nombre de usuario" id="usuario" type="text" class="validate">
+                                                <input disabled value="I am not editable" id="disabled" type="number" class="validate">
                                                 <label for="usuario" class="blue-grey-text text-darken-4">Nombre de usuario</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field ">
-                                                <input placeholder="correo@electronico.com" id="email" type="email" class="validate">
+                                                <input disabled value="I am not editable" id="disabled" type="number" class="validate">
                                                 <label for="email" class="blue-grey-text text-darken-4">Correo electronico</label>
                                             </div>
                                         </div>
@@ -89,22 +78,22 @@
                                     </div>
                                 </div>
                                 
-                                <ul class="collection ">
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                    <li class="collection-item "><div>Nombre de usuario<a href="#modal1" class="secondary-content waves-effect waves-light modal-trigger"><i class="material-icons blue-grey-text text-darken-4 prefix">delete</i></a></div></li>
-                                </ul>
+                                <div class="collection ">
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
+                                </div>
 
                             </div>
                         </div>
@@ -126,57 +115,10 @@
             </div>
 
 
-            <!-- Modal de registrarse -->
-            <div id="modal1Regis" class="modal modal-fixed-footer">
-                <div class="modal-content">
-                    <h4>Registrarse</h4>
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="Juan Carlos" id="nombres" type="text" class="validate">
-                                    <label for="nombres">Nombres</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input placeholder="Perez Gonzales" id="apellidos" type="text" class="validate">
-                                    <label for="apellidos">Apellidos</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="35" id="edad" type="number" class="validate">
-                                    <label for="edad">Edad</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input placeholder="Administrador" id="cargo" type="text" class="validate">
-                                    <label for="cargo">Cargo</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="Nombre de usuario" id="usuario" type="text" class="validate">
-                                    <label for="usuario">Nombre de usuario</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input placeholder="Contraseña" id="contrasena" type="password" class="validate">
-                                    <label for="contrasena">Contraseña</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="correo@electronico.com" id="email" type="email" class="validate">
-                                    <label for="email">Correo electronico</label>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Iniciar sesion</a>
-                </div>
-            </div>
+            <?php
+                include('../controllers/view/ini_sesion.php');
+            ?>
+            
         </main>
 
         <?php

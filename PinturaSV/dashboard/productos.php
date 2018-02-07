@@ -783,58 +783,9 @@
         </div>
 
 
-        <!-- Modal de registro de usuarios -->
-        <div id="modal1Regis" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <h4>Registrarse</h4>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input placeholder="Juan Carlos" id="nombres" type="text" class="validate">
-                                <label for="nombres" class="blue-grey-text text-darken-4">Nombres</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input placeholder="Perez Gonzales" id="apellidos" type="text" class="validate">
-                                <label for="apellidos" class="blue-grey-text text-darken-4">Apellidos</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input placeholder="35" id="edad" type="number" class="validate">
-                                <label for="edad" class="blue-grey-text text-darken-4">Edad</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input placeholder="Administrador" id="cargo" type="text" class="validate">
-                                <label for="cargo" class="blue-grey-text text-darken-4">Cargo</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input placeholder="Nombre de usuario" id="usuario" type="text" class="validate">
-                                <label for="usuario" class="blue-grey-text text-darken-4">Nombre de usuario</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input placeholder="Contraseña" id="contrasena" type="password" class="validate">
-                                <label for="contrasena" class="blue-grey-text text-darken-4">Contraseña</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input placeholder="correo@electronico.com" id="email" type="email" class="validate">
-                                <label for="email" class="blue-grey-text text-darken-4">Correo electronico</label>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Iniciar sesion</a>
-            </div>
-        </div>
-
+        <?php
+                include('../controllers/view/ini_sesion.php');
+        ?>
 
 
         <!-- Modal para prodcuto 1 -->

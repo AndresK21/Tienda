@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="card horizontal">
                     <div class="card-image">
-                        <img src="../web/img/usuario.png">
+                        <img class="responsive-img" src="../web/img/usuario.png">
                         <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
                     </div>
                     <div class="card-stacked">
@@ -87,58 +87,10 @@
                 </div>
             </div>
             
+            <?php
+                include('../controllers/view/ini_sesion.php');
+            ?>
 
-            <!-- Modal de registro de usuarios -->
-            <div id="modal1Regis" class="modal modal-fixed-footer">
-                <div class="modal-content">
-                    <h4>Registrarse</h4>
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="Juan Carlos" id="nombres" type="text" class="validate">
-                                    <label for="nombres">Nombres</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input placeholder="Perez Gonzales" id="apellidos" type="text" class="validate">
-                                    <label for="apellidos">Apellidos</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="35" id="edad" type="number" class="validate">
-                                    <label for="edad">Edad</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input placeholder="Administrador" id="cargo" type="text" class="validate">
-                                    <label for="cargo">Cargo</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="Nombre de usuario" id="usuario" type="text" class="validate">
-                                    <label for="usuario">Nombre de usuario</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input placeholder="Contraseña" id="contrasena" type="password" class="validate">
-                                    <label for="contrasena">Contraseña</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="correo@electronico.com" id="email" type="email" class="validate">
-                                    <label for="email">Correo electronico</label>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Iniciar sesion</a>
-                </div>
-            </div>
         </main>
 
         <?php

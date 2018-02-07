@@ -8,7 +8,7 @@
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="perfiles.php">Usuarios</a></li>
             <li><a href="productos.php">Productos</a></li>
-            <li><a class="modal-trigger" href="#modal1Regis">Iniciar Sesi&oacute;n</a></li>
+            <li><a class="modal-trigger" href="#modal_inicio">Iniciar Sesi&oacute;n</a></li>
         </ul>
         </div>
     </nav>
@@ -17,5 +17,5 @@
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="perfiles.php">Usuarios</a></li>
             <li><a href="productos.php">Productos</a></li>
-            <li><a class="modal-trigger" href="#modal1Regis">Iniciar Sesi&oacute;n</a></li>
+            <li><a class="modal-trigger" href="#modal_inicio">Iniciar Sesi&oacute;n</a></li>
         </ul>
