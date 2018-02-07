@@ -21,3 +21,7 @@ body {
 main {
 flex: 1 0 auto;
 }
+
+.body404 {
+    background-color: #00B9E0;
+}
