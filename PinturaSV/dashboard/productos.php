@@ -49,9 +49,14 @@
                 </div>
             
 
-                <div class="container">
+                <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modalProduc">
+                        <i class="large material-icons">add</i>
+                    </a>
+                </div>
 
-                    <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modalProduc"><i class="material-icons ">add</i></a>
+
+                <div class="container">
 
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
@@ -119,6 +124,7 @@
                             
                             </td>
                         </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -153,9 +159,14 @@
                 </div>
             
 
-                <div class="container">
+                <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_marca">
+                        <i class="large material-icons">add</i>
+                    </a>
+                </div>
 
-                    <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modal_marca"><i class="material-icons ">add</i></a>
+
+                <div class="container">
 
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
@@ -232,9 +243,14 @@
                 </div>
             
 
-                <div class="container">
+                <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_categoria">
+                        <i class="large material-icons">add</i>
+                    </a>
+                </div>
 
-                    <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modal_categoria"><i class="material-icons ">add</i></a>
+
+                <div class="container">
 
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
@@ -316,9 +332,15 @@
                 </div>
             
 
+                <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_presen">
+                        <i class="large material-icons">add</i>
+                    </a>
+                </div>
+
+
                 <div class="container">
 
-                    <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modal_presen"><i class="material-icons ">add</i></a>
 
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
@@ -401,9 +423,14 @@
                 </div>
             
 
-                <div class="container">
+                <div class="fixed-action-btn">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_tipo_produc">
+                        <i class="large material-icons">add</i>
+                    </a>
+                </div>
 
-                    <a class="btn-floating btn-large waves-effect modal-trigger waves-light blue-grey darken-4 right-align espacio_inf" href="#modal_tipo_produc"><i class="material-icons ">add</i></a>
+
+                <div class="container">
 
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
@@ -1188,12 +1215,6 @@
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
             </div>
         </div>
-
-
-        <?php
-                include('../controllers/view/ini_sesion.php');
-        ?>
-
 
     </main>
 
