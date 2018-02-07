@@ -55,11 +55,6 @@
                 </div>
             </div>
 
-
-            <?php
-                include('../controllers/view/ini_sesion.php');
-            ?>
-
         </main>
 
         <?php

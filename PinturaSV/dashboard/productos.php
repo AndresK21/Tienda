@@ -109,7 +109,7 @@
                         <tr>
                             <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
                             <td>Pintura pro látex marfil.</td>
-                            <td>$125</td>
+                            <td>125</td>
                             <td>$25.00</td>
                             <td>Cubeta</td>
                             <td>
