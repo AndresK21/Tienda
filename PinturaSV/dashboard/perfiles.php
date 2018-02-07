@@ -78,22 +78,45 @@
                                     </div>
                                 </div>
                                 
-                                <div class="collection ">
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                    <a class="collection-item blue-grey-text text-darken-4">Nombre de usuario<a href="#modal1" class="secondary-content modal-trigger"><i class="material-icons red-text text-darken-3">delete</i></a></a>
-                                </div>
+                                <table class="bordered highlight responsive-table">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Nombre de usuario</td>
+                                        <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nombre de usuario</td>
+                                        <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nombre de ususario</td>
+                                        <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nombre de ususario</td>
+                                        <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nombre de ususario</td>
+                                        <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nombre de ususario</td>
+                                        <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nombre de ususario</td>
+                                        <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
 
                             </div>
                         </div>

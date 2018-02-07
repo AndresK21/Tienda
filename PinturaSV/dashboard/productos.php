@@ -783,11 +783,6 @@
         </div>
 
 
-        <?php
-                include('../controllers/view/ini_sesion.php');
-        ?>
-
-
         <!-- Modal para prodcuto 1 -->
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
@@ -1193,6 +1188,11 @@
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
             </div>
         </div>
+
+
+        <?php
+                include('../controllers/view/ini_sesion.php');
+        ?>
 
 
     </main>
