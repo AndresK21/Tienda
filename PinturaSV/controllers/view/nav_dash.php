@@ -1,3 +1,16 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="editar_perfil.php">Editar perfil</a></li>
+    <li class="divider"></li>
+    <li><a href="inicio.php">Cerrar sesi&oacute;n</a></li>
+</ul>
+<!-- Dropdown Structure Mobile -->
+<ul id="dropdown2" class="dropdown-content">
+    <li><a href="editar_perfil.php">Editar perfil</a></li>
+    <li class="divider"></li>
+    <li><a href="inicio.php">Cerrar sesi&oacute;n</a></li>
+</ul>
+
 <div class="navbar-fixed">  
     <nav>
     <!--Navbar Color gris azulado-->
@@ -8,7 +21,7 @@
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="perfiles.php">Usuarios</a></li>
             <li><a href="productos.php">Productos</a></li>
-            <li><a class="modal-trigger" href="#modal_inicio">Iniciar Sesi&oacute;n</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Bienvenido "Usuario"<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
         </div>
     </nav>
@@ -17,5 +30,5 @@
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="perfiles.php">Usuarios</a></li>
             <li><a href="productos.php">Productos</a></li>
-            <li><a class="modal-trigger" href="#modal_inicio">Iniciar Sesi&oacute;n</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Bienvenido "Usuario"<i class="material-icons right">arrow_drop_down</i></a></li>>
         </ul>

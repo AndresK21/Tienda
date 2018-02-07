@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <!--Import Google Icon Font-->
         <link href="../web/css/icon.css" rel="stylesheet">
+        <link href="../web/css/style.css" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
@@ -17,29 +18,30 @@
                 <li><a href="../public/categoria_aceite.php">Aceite</a></li>
                 <li class="divider"></li>
                 <li><a href="../public/categoria_agua.php">Agua</a></li>
-                </ul>
-                <!-- Dropdown Structure Mobile -->
-                <ul id="dropdown2" class="dropdown-content">
+            </ul>
+            <!-- Dropdown Structure Mobile -->
+            <ul id="dropdown2" class="dropdown-content">
                 <li><a href="../public/categoria_agua.php">Aceite</a></li>
                 <li class="divider"></li>
                 <li><a href="../public/categoria_agua.php">Agua</a></li>
-                </ul>
+            </ul>
                 <div class="navbar-fixed">
-                <nav>
-                    <!--Navbar Color Azul-->
-                    <div class="nav-wrapper  blue">
-                    <img class="brand-logo" src="../web/img/mipintura.png">
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                        <ul class="right hide-on-med-and-down">
-                            <li><a href="../index.php">Inicio</a></li>
-                            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
-                            <li><a href="#!">Nosotros</a></li>
-                            <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
-                            <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
-                        </ul>
-                    </div>
+                    <nav>
+                        <!--Navbar Color Azul-->
+                        <div class="nav-wrapper  blue">
+                            <img class="brand-logo" src="../web/img/mipintura.png">
+                            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                            <ul class="right hide-on-med-and-down">
+                                <li><a href="../index.php">Inicio</a></li>
+                                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
+                                <li><a href="#!">Nosotros</a></li>
+                                <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
+                                <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-                </nav>
+                    
                         <ul class="side-nav" id="mobile-demo">
                             <li><a href="../index.php">Inicio</a></li>
                             <li><a href="#!">Nosotros</a></li>
@@ -50,215 +52,69 @@
                         </ul>
         </header>
         <main>
-            
-            <!--Fila de orden-->
+
+            <div class="white-text">.</div>
+            <div class="white-text">.</div>
+            <div class="white-text">.</div>
+
             <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="card horizontal nav-wrapper  blue">
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p style="color:white">Imagen</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s3">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p style="color:white">Descripcion</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p style="color:white">Cantidad</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p style="color:white">Precio</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p style="color:white">Sub-total</p>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="col s1">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+                <table class="bordered highlight responsive-table espacio_sup espacio_inf">
+                    <thead class="blue white-text">
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Descripci&oacute;n</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
 
+                    <tbody>
+                    <tr>
+                        <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
+                        <td>Pintura látex blanco ostra high standard.</td>
+                        <td><input placeholder="2" id="cantidad" type="number" class="validate"></td>
+                        <td>$25.00</td>
+                        <td>$50.00</td>
+                        <td><a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
-                <!--Productos-->
-                <div class="row">
-                    <div class="col s12">
-                        <div class="card horizontal">
-                            <div class="col s2">
-                                <div class="card-image" style="max-height: 100%; max-width: 100%;">
-                                    <img src="../web/img/producto1.jpg">
-                                </div>
-                            </div>
-                            <div class="col s3">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>Pintura látex blanco ostra high standard.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <input placeholder="2" id="cantidad" type="number" class="validate">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>$25.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>$50.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            <div class="col s1">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </td>
+                    </tr>
 
+                    <tr>
+                        <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
+                        <td>Pintura pro látex blanco hueso.</td>
+                        <td><input placeholder="1" id="cantidad" type="number" class="validate"></td>
+                        <td>$25.00</td>
+                        <td>$25.00</td>
+                        <td><a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                        
+                        </td>
+                    </tr>
 
-                <div class="row">
-                    <div class="col s12">
-                        <div class="card horizontal">
-                            <div class="col s2">
-                                <div class="card-image" style="max-height: 100%; max-width: 100%;">
-                                    <img src="../web/img/producto2.jpg">
-                                </div>
-                            </div>
-                            <div class="col s3">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>Pintura pro látex blanco hueso.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <input placeholder="1" id="cantidad" type="number" class="validate">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>$25.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>$25.00</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <tr>
+                        <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
+                        <td>Pintura pro látex marfil.</td>
+                        <td><input placeholder="2" id="cantidad" type="number" class="validate"></td>
+                        <td>$25.00</td>
+                        <td>$50.00</td>
+                        <td><a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                        
+                        </td>
+                    </tr>
 
-                            <div class="col s1">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col s12">
-                        <div class="card horizontal">
-                            <div class="col s2">
-                                <div class="card-image" style="max-height: 100%; max-width: 100%;">
-                                    <img src="../web/img/producto3.jpg">
-                                </div>
-                            </div>
-                            <div class="col s3">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>Pintura pro látex marfil.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <input placeholder="2" id="" type="number" class="validate">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>$25.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s2">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <p>$50.00</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col s1">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <a class="waves-effect waves-light modal-trigger" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </tbody>
+                </table>
 
 
                 <div class="right-align">
                     <h5 style="text-decoration: underline;">Total a pagar:  $150.00</h5>
-                    <a class="waves-effect waves-light btn" style="margin-bottom: 128px;"><i class="material-icons right">shopping_cart</i>Hacer compra</a>
+                    <a class="waves-effect waves-light btn espacio_inf"><i class="material-icons right">shopping_cart</i>Hacer compra</a>
                 </div>
-
             </div>
                 
 
