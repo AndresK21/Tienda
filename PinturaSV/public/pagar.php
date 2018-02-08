@@ -53,12 +53,13 @@
         </header>
         <main>
 
+            <!--Divs para dar un espacio arriba de la tabla-->
             <div class="white-text">.</div>
             <div class="white-text">.</div>
             <div class="white-text">.</div>
 
             <div class="container">
-
+                <!--Parte de clasificacion de la tabla-->
                 <table class="bordered highlight responsive-table espacio_sup espacio_inf">
                     <thead class="blue white-text">
                     <tr>
@@ -74,6 +75,7 @@
                     </thead>
 
                     <tbody>
+                    <!--Producto de ejemplo 1-->
                     <tr>
                         <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
                         <td>Pintura látex blanco ostra high standard.</td>
@@ -84,7 +86,7 @@
 
                         </td>
                     </tr>
-
+                    <!--Producto de ejemplo 2-->
                     <tr>
                         <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
                         <td>Pintura pro látex blanco hueso.</td>
@@ -95,7 +97,7 @@
                         
                         </td>
                     </tr>
-
+                    <!--Producto de ejemplo 3-->
                     <tr>
                         <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
                         <td>Pintura pro látex marfil.</td>
@@ -110,7 +112,7 @@
                     </tbody>
                 </table>
 
-
+                <!--Espacio donde se muestra el costo total de la compra y proceder a pagar-->
                 <div class="right-align">
                     <h5 style="text-decoration: underline;">Total a pagar:  $150.00</h5>
                     <a class="waves-effect waves-light btn espacio_inf"><i class="material-icons right">shopping_cart</i>Hacer compra</a>

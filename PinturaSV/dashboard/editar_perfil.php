@@ -13,12 +13,14 @@
     <body>
 
         <header>
+            <!--Archivo maestro que contiene la barra de navegacion-->
             <?php
                 include('../controllers/view/nav_dash.php');
             ?>
         </header>
 
         <main>
+            <!--Imagen de perfil del usuario-->
             <div class="container">
                 <div class="card horizontal">
                     <div class="card-image">
@@ -28,7 +30,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
-
+                            <!--Formulario de editar perfil-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -81,7 +83,6 @@
                                 </form>
                             </div>
 
-
                         </div>
                     </div>
                 </div>
@@ -89,6 +90,7 @@
 
         </main>
 
+        <!--Archivo maestro que contiene el footer-->
         <?php
             include('../controllers/view/footer_dash.php');
         ?>

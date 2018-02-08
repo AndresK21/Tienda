@@ -13,6 +13,7 @@
     </head>
     <body>
         <header>
+            <!--Archivo maestro que contiene la barra de navegacion-->
             <?php
                 include('../controllers/view/nav_dash.php');
             ?>
@@ -43,7 +44,7 @@
 
 
 
-            <!-- Modal Structure -->
+            <!-- Modal de especificacion de estadisticas -->
             <div id="modal1" class="modal modal-fixed-footer">
                 <div class="modal-content">
                 <h4>Estadisticas de visitas</h4>
@@ -57,6 +58,7 @@
 
         </main>
 
+        <!--Archivo maestro que contiene el footer-->
         <?php
             include('../controllers/view/footer_dash.php');
         ?>

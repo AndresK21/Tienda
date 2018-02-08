@@ -23,30 +23,31 @@
                 </nav>
             </div>
         </header>
-
         <main>
             
-
-
+            <!--Formulario de inicio de sesion-->
             <div class="container">
                 <div class="row">
                     <div class="col s12 m12 l12">
                         <div class="card grey lighten-4">
                             <div class="card-content">
-                                <span class="card-title">Iniciar sesi&oacute;n</span>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="usuario" type="text" class="validate">
-                                            <label class="blue-grey-text text-darken-4" for="usuario">Nombre de usuario</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="contrasena" type="text" class="validate">
-                                            <label class="blue-grey-text text-darken-4" for="contrasena">Contraseña</label>
-                                        </div>
+                                <span class="card-title"><h4>Iniciar sesi&oacute;n</h4></span>
+                                <div class="center-align">
+                                    <img class="responsive-img" src="../web/img/pintura.jpg">
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="usuario" type="text" class="validate">
+                                        <label class="blue-grey-text text-darken-4" for="usuario">Nombre de usuario</label>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="contrasena" type="text" class="validate">
+                                        <label class="blue-grey-text text-darken-4" for="contrasena">Contraseña</label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="card-action blue-grey-text text-darken-4">
                                 <a href="dashboard.php">Iniciar sesi&oacute;n</a>
                             </div>
@@ -55,9 +56,9 @@
                 </div>
             </div>
 
-
         </main>
 
+        <!--Archivo maestro que contiene el footer-->
         <?php
             include('../controllers/view/footer_dash.php');
         ?>

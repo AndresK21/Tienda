@@ -13,6 +13,7 @@
     </head>
     <body>
         <header>
+            <!--Archivo maestro que contiene la barra de navegacion-->
             <?php
                 include('../controllers/view/nav_dash.php');
             ?>
@@ -20,23 +21,26 @@
 
         <main>
 
+            <!--Boton fijo en la pantalla para agregar nuevos usuarios-->
             <div class="fixed-action-btn">
                 <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal2">
                     <i class="large material-icons">add</i>
                 </a>
             </div>
 
+            <!--Mitad de la pantalla donde solo se mostrara la informacion del usuario-->
             <div class="row">
                 <div class="col s6">
 
-                    <div class="card horizontal fijo">
+                    <!--Imagen de perfil del usuario-->
+                    <div class="card horizontal fixed">
                         <div class="card-image">
                             <img src="../web/img/usuario.png">
                         </div>
                         <div class="card-stacked">
                             <div class="card-content">
 
-
+                                <!--Formulario ineditable donde se muestra la informacion del usuario-->
                                 <div class="row">
                                     <form class="">
                                         <div class="row">
@@ -68,12 +72,13 @@
                                     </form>
                                 </div>
 
-
                             </div>
                         </div>
                     </div>
 
                 </div>
+
+                <!--Mitad de la pantalla donde se muestra la lista de usuarios existentes-->
                 <div class="col s6">
                     <div class="card horizontal">
                         <div class="card-stacked">
@@ -147,7 +152,7 @@
             </div>
 
 
-            <!-- Modal de usuario nueva -->
+            <!-- Modal de usuario nuevo -->
             <div id="modal2" class="modal">
                 <div class="modal-content">
                     <h4>Agregar nuevo usuario</h4>
@@ -155,6 +160,7 @@
                         <div class="card-stacked">
                             <div class="card-content">
 
+                                <!--Formulario para ingresar nuevo usuario-->
                                 <div class="row">
                                     <form class="">
                                         <div class="row">
@@ -204,6 +210,7 @@
             
         </main>
 
+        <!--Archivo maestro que contiene el footer-->
         <?php
             include('../controllers/view/footer_dash.php');
         ?>

@@ -13,6 +13,7 @@
     </head>
     <body>
     <header>
+        <!--Archivo maestro que contiene la barra de navegacion-->
         <?php
             include('../controllers/view/nav_dash.php');
         ?>
@@ -20,7 +21,7 @@
 
     <main>
         
-
+        <!--Tabs para separar cada categoria en la que se puede ingresar informacion-->
         <div class="row">
             <div class="col s12">
                 <ul class="tabs blue-grey-text text-darken-4">
@@ -31,6 +32,8 @@
                     <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test5">Tipo de producto</a></li>
                 </ul>
             </div>
+
+            <!--Contenido del tab de productos-->
             <div id="test1" class="col s12">
             
                 <!-- Barra de busqueda -->
@@ -48,7 +51,7 @@
                     </div>
                 </div>
             
-
+                <!--Boton fijo en la pantalla para agregar nuevos productos-->
                 <div class="fixed-action-btn">
                     <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modalProduc">
                         <i class="large material-icons">add</i>
@@ -57,91 +60,84 @@
 
 
                 <div class="container">
-
+                    <!--Parte de clasificacion de la tabla-->
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
-                        <tr>
-                            <th>Imagen</th>
-                            <th>Descripci&oacute;n</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
-                            <th>Presentaci&oacute;n</th>
-                            <th>Existencias</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Descripci&oacute;n</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Presentaci&oacute;n</th>
+                                <th>Existencias</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
-                            <td>Pintura látex blanco ostra high standard.</td>
-                            <td>25</td>
-                            <td>$25.00</td>
-                            <td>Cubeta</td>
-                            <td>
-                                <p>
-                                    <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
-                                    <label class="white-text" for="test7">.</label>
-                                </p>
-                            </td>
-                            <td><i class="material-icons prefix">visibility</i>
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                        <!--Producto de ejemplo 1-->
+                            <tr>
+                                <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
+                                <td>Pintura látex blanco ostra high standard.</td>
+                                <td>25</td>
+                                <td>$25.00</td>
+                                <td>Cubeta</td>
+                                <td>
+                                    <p>
+                                        <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+                                        <label class="white-text" for="test7">.</label>
+                                    </p>
+                                </td>
+                                <td><i class="material-icons prefix">visibility</i>
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
-                            <td>Pintura pro látex blanco hueso.</td>
-                            <td>50</td>
-                            <td>$25.00</td>
-                            <td>Cubeta</td>
-                            <td></td>
-                            <td><i class="material-icons prefix">visibility</i>
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
-                            <td>Pintura pro látex marfil.</td>
-                            <td>125</td>
-                            <td>$25.00</td>
-                            <td>Cubeta</td>
-                            <td>
-                                <p>
-                                    <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
-                                    <label class="white-text" for="test7">.</label>
-                                </p>
-                            </td>
-                            <td><i class="material-icons prefix">visibility</i>
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 2-->
+                            <tr>
+                                <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
+                                <td>Pintura pro látex blanco hueso.</td>
+                                <td>50</td>
+                                <td>$25.00</td>
+                                <td>Cubeta</td>
+                                <td></td>
+                                <td><i class="material-icons prefix">visibility</i>
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 3-->
+                            <tr>
+                                <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
+                                <td>Pintura pro látex marfil.</td>
+                                <td>125</td>
+                                <td>$25.00</td>
+                                <td>Cubeta</td>
+                                <td>
+                                    <p>
+                                        <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+                                        <label class="white-text" for="test7">.</label>
+                                    </p>
+                                </td>
+                                <td><i class="material-icons prefix">visibility</i>
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
 
                         </tbody>
                     </table>
                 </div>
 
-
             </div>
             
             
-            
+            <!--Contenido del tab de marcas-->
             <div id="test2" class="col s12">
-            
-            
-            
-            
-            
-            
-            
             
                 <!-- Barra de busqueda -->
                 <div class="container">
@@ -158,74 +154,57 @@
                     </div>
                 </div>
             
-
+                <!--Boton fijo en la pantalla para agregar nuevos marcas-->
                 <div class="fixed-action-btn">
                     <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_marca">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
 
-
                 <div class="container">
-
+                    <!--Parte de clasificacion de la tabla-->
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
-                        <tr>
-                            <th>Nombre de marca</th>
-                            <th></th>
-                        </tr>
+                            <tr>
+                                <th>Nombre de marca</th>
+                                <th></th>
+                            </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td>Benjamin Moore.</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                            <!--Producto de ejemplo 1-->
+                            <tr>
+                                <td>Benjamin Moore.</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Ace royal.</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Freshaire choice.</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 2-->
+                            <tr>
+                                <td>Ace royal.</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 3-->
+                            <tr>
+                                <td>Freshaire choice.</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-            
-            
-            
-            
-            
-            
-            
-            
+
             </div>
 
 
-
-
+            <!--Contenido del tab de categorias-->
             <div id="test3" class="col s12">
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
                 <!-- Barra de busqueda -->
                 <div class="container">
@@ -242,79 +221,61 @@
                     </div>
                 </div>
             
-
+                <!--Boton fijo en la pantalla para agregar nuevas categorias-->
                 <div class="fixed-action-btn">
                     <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_categoria">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
 
-
                 <div class="container">
-
+                    <!--Parte de clasificacion de la tabla-->
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Marca</th>
-                            <th></th>
-                        </tr>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Marca</th>
+                                <th></th>
+                            </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td>Premium</td>
-                            <td>Benjamin Moore.</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                            <!--Producto de ejemplo 1-->
+                            <tr>
+                                <td>Premium</td>
+                                <td>Benjamin Moore.</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Est&aacute;ndar.</td>
-                            <td>Ace royal.</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Impermeable</td>
-                            <td>Freshaire choice</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 2-->
+                            <tr>
+                                <td>Est&aacute;ndar.</td>
+                                <td>Ace royal.</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 3-->
+                            <tr>
+                                <td>Impermeable</td>
+                                <td>Freshaire choice</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             
-            
-            
-            
-            
-            
-            
-            
-            
             </div>
 
 
-
-
+            <!--Contenido del tab de presentacioness-->
             <div id="test4" class="col s12">
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
                 <!-- Barra de busqueda -->
                 <div class="container">
@@ -331,81 +292,61 @@
                     </div>
                 </div>
             
-
+                <!--Boton fijo en la pantalla para agregar nuevas presentaciones-->
                 <div class="fixed-action-btn">
                     <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_presen">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
 
-
                 <div class="container">
-
-
+                    <!--Parte de clasificacion de la tabla-->
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
-                        <tr>
-                            <th>Presentaci&oacute;n</th>
-                            <th>Tipo de producto</th>
-                            <th></th>
-                        </tr>
+                            <tr>
+                                <th>Presentaci&oacute;n</th>
+                                <th>Tipo de producto</th>
+                                <th></th>
+                            </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td>Cubeta</td>
-                            <td>Pintura</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                            <!--Producto de ejemplo 1-->
+                            <tr>
+                                <td>Cubeta</td>
+                                <td>Pintura</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Galones</td>
-                            <td>Pintura</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Litros</td>
-                            <td>Pintura</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 2-->
+                            <tr>
+                                <td>Galones</td>
+                                <td>Pintura</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 3-->
+                            <tr>
+                                <td>Litros</td>
+                                <td>Pintura</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
             </div>
 
 
-
-
-
-
+            <!--Contenido del tab de tipo de producto-->
             <div id="test5" class="col s12">
-            
-            
-            
-            
-            
-            
-            
             
                 <!-- Barra de busqueda -->
                 <div class="container">
@@ -422,156 +363,65 @@
                     </div>
                 </div>
             
-
+                <!--Boton fijo en la pantalla para agregar nuevos tipos de productos-->
                 <div class="fixed-action-btn">
                     <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_tipo_produc">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
 
-
                 <div class="container">
-
+                    <!--Parte de clasificacion de la tabla-->
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
-                        <tr>
-                            <th>Tipo de producto</th>
-                            <th></th>
-                        </tr>
+                            <tr>
+                                <th>Tipo de producto</th>
+                                <th></th>
+                            </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td>Pintura.</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                            <!--Producto de ejemplo 1-->
+                            <tr>
+                                <td>Pintura.</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Brochas.</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Contenedores.</td>
-                            <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
-                            
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 2-->
+                            <tr>
+                                <td>Brochas.</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
+                            <!--Producto de ejemplo 3-->
+                            <tr>
+                                <td>Contenedores.</td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             
-            
-            
-            
-            
-            
-            
-            
             </div>
-
-
-
-
-
 
         </div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Modal de producto nuevo -->
+        <!-- Modal de agregar nuevo -->
         <div id="modalProduc" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <h4>Agregar producto</h4>
                 <div class="card horizontal">
+                    <!--Lugar donde se insertara la imagen del producto-->
                     <div class="card-image">
                         <img src="">
                         <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
@@ -579,7 +429,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
-
+                            <!--Formulario para insertar los productos-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -669,6 +519,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
+                            <!--Formulario para insertar marcas-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -699,6 +550,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
+                            <!--Formulario para insertar las categorias-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -736,7 +588,8 @@
                 <div class="card horizontal">
                     <div class="card-stacked">
                         <div class="card-content">
-
+                            
+                            <!--Formulario para insertar las presentaciones-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -775,6 +628,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
+                            <!--Formulario para insertar los tipos de productos-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -810,7 +664,7 @@
         </div>
 
 
-        <!-- Modal para prodcuto 1 -->
+        <!-- Modal para editar prodcuto 1 -->
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <h4>Editar producto</h4>
@@ -822,7 +676,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
-
+                            <!--Formulario para editar el producto-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -911,7 +765,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
-
+                            <!--Formulario para editar el producto-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -1002,7 +856,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
-
+                            <!--Formulario para editar el producto-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -1069,7 +923,6 @@
                                 </form>
                             </div>
 
-
                         </div>
                     </div>
                 </div>
@@ -1089,6 +942,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
+                            <!--Formulario para editar la marca-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -1119,6 +973,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
+                            <!--Formulario para editar la categoria-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -1157,6 +1012,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
+                            <!--Formulario para editar la presentacion-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -1195,6 +1051,7 @@
                     <div class="card-stacked">
                         <div class="card-content">
 
+                            <!--Formulario para editar el tipo de producto-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
@@ -1218,11 +1075,11 @@
 
     </main>
 
+        <!--Archivo maestro que contiene el footer-->
         <?php
             include('../controllers/view/footer_dash.php');
         ?>
 
-        
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="../web/js/main.js"></script>
         <script type="text/javascript" src="../web/js/ini.js"></script>
