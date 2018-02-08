@@ -27,7 +27,7 @@
                 <ul class="tabs blue-grey-text text-darken-4">
                     <li class="tab col s3"><a class="active blue-grey-text text-darken-4" href="#test1">Productos</a></li>
                     <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test2">Marca</a></li>
-                    <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test3">Categor&oacute;a</a></li>
+                    <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test3">Categor&Iacute;a</a></li>
                     <li class="tab col s3"><a class="blue-grey-text text-darken-4" href="#test4">Presentaciones</a></li>
                     <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test5">Tipo de producto</a></li>
                 </ul>
