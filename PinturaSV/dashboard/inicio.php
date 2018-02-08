@@ -44,7 +44,7 @@
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="contrasena" type="text" class="validate">
-                                        <label class="blue-grey-text text-darken-4" for="contrasena">Contraseña</label>
+                                        <label class="blue-grey-text text-darken-4" for="contrasena">Contrase&ntilde;a</label>
                                     </div>
                                 </div>
                             </div>

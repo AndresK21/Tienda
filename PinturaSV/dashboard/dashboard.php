@@ -47,7 +47,7 @@
             <!-- Modal de especificacion de estadisticas -->
             <div id="modal1" class="modal modal-fixed-footer">
                 <div class="modal-content">
-                <h4>Estadisticas de visitas</h4>
+                <h4>Estad&iacute;sticas de visitas</h4>
                     <img class="responsive-img" src="../web/img/estadisticas.jpg" alt="estadistica">
                 </div>
                 <div class="modal-footer">

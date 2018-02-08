@@ -58,7 +58,7 @@
                                         <div class="row">
                                             <div class="input-field ">
                                                 <input disabled value="I am not editable" id="disabled" type="number" class="validate">
-                                                <label for="email" class="blue-grey-text text-darken-4">Correo electronico</label>
+                                                <label for="email" class="blue-grey-text text-darken-4">Correo electr&oacute;nico</label>
                                             </div>
                                         </div>
                                         <p>
@@ -143,7 +143,7 @@
             <div id="modal1" class="modal">
                 <div class="modal-content">
                     <h4>Eliminar usuario</h4>
-                    <p>¿Esta seguro que desea eliminar este usuario?</p>
+                    <p>&iquest;Esta seguro que desea eliminar este usuario&#63;</p>
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
@@ -178,7 +178,7 @@
                                         <div class="row">
                                             <div class="input-field ">
                                                 <input id="contrasena" type="text" class="validate">
-                                                <label for="contrasena" class="blue-grey-text text-darken-4">Contraseña</label>
+                                                <label for="contrasena" class="blue-grey-text text-darken-4">Contrase&ntilde;a</label>
                                             </div>
                                         </div>
                                         <div class="row">

@@ -27,7 +27,7 @@
                 <ul class="tabs blue-grey-text text-darken-4">
                     <li class="tab col s3"><a class="active blue-grey-text text-darken-4" href="#test1">Productos</a></li>
                     <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test2">Marca</a></li>
-                    <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test3">Categoria</a></li>
+                    <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test3">Categor&oacute;a</a></li>
                     <li class="tab col s3"><a class="blue-grey-text text-darken-4" href="#test4">Presentaciones</a></li>
                     <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test5">Tipo de producto</a></li>
                 </ul>
@@ -79,7 +79,7 @@
                         <!--Producto de ejemplo 1-->
                             <tr>
                                 <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
-                                <td>Pintura látex blanco ostra high standard.</td>
+                                <td>Pintura l&aacute;tex blanco ostra high standard.</td>
                                 <td>25</td>
                                 <td>$25.00</td>
                                 <td>Cubeta</td>
@@ -98,7 +98,7 @@
                             <!--Producto de ejemplo 2-->
                             <tr>
                                 <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
-                                <td>Pintura pro látex blanco hueso.</td>
+                                <td>Pintura pro l&aacute;tex blanco hueso.</td>
                                 <td>50</td>
                                 <td>$25.00</td>
                                 <td>Cubeta</td>
@@ -112,7 +112,7 @@
                             <!--Producto de ejemplo 3-->
                             <tr>
                                 <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
-                                <td>Pintura pro látex marfil.</td>
+                                <td>Pintura pro l&aacute;tex marfil.</td>
                                 <td>125</td>
                                 <td>$25.00</td>
                                 <td>Cubeta</td>
@@ -214,7 +214,7 @@
                                 <div class="input-field col s12">
                                 <i class="material-icons prefix">search</i>
                                 <input type="text" id="autocomplete-input" class="autocomplete">
-                                <label for="autocomplete-input">Buscar categoria</label>
+                                <label for="autocomplete-input">Buscar categor&iacute;a</label>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                     <table class="bordered highlight responsive-table espacio_inf">
                         <thead class="blue-grey darken-4 white-text">
                             <tr>
-                                <th>Categoria</th>
+                                <th>Categor&iacute;a</th>
                                 <th>Marca</th>
                                 <th></th>
                             </tr>
@@ -435,7 +435,7 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="Pintura látex blanco ostra high standard." id="descripcion" type="text" class="validate">
-                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
+                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripci&oacute;n</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -470,12 +470,12 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <select>
-                                                <option value="" disabled selected>Elija una categoria</option>
-                                                <option value="1">Categoria 1</option>
-                                                <option value="2">Categoria 2</option>
-                                                <option value="3">Categoria 3</option>
+                                                <option value="" disabled selected>Elija una categor&iacute;a</option>
+                                                <option value="1">Categor&iacute;a 1</option>
+                                                <option value="2">Categor&iacute;a 2</option>
+                                                <option value="3">Categor&iacute;a 3</option>
                                             </select>
-                                            <label class="blue-grey-text text-darken-4">Categoria</label>
+                                            <label class="blue-grey-text text-darken-4">Categor&iacute;a</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -545,7 +545,7 @@
         <!-- Modal de categoria nueva -->
         <div id="modal_categoria" class="modal">
             <div class="modal-content">
-                <h4>Agregar categoria</h4>
+                <h4>Agregar categor&iacute;a</h4>
                 <div class="card horizontal">
                     <div class="card-stacked">
                         <div class="card-content">
@@ -655,7 +655,7 @@
         <div id="modal_eliminar" class="modal">
             <div class="modal-content">
                 <h4>Eliminar elemento</h4>
-                <p>¿Esta seguro que desea eliminar este elemento?</p>
+                <p>&iquest;Esta seguro que desea eliminar este elemento&#63;</p>
             </div>
             <div class="modal-footer">
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
@@ -682,7 +682,7 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="Pintura látex blanco ostra high standard." id="descripcion" type="text" class="validate">
-                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
+                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripci&oacute;n</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -714,12 +714,12 @@
                                     </div>
                                     <div class="input-field col s12">
                                         <select>
-                                            <option value="" disabled selected>Elija una categoria</option>
-                                            <option value="1">Categoria 1</option>
-                                            <option value="2">Categoria 2</option>
-                                            <option value="3">Categoria 3</option>
+                                            <option value="" disabled selected>Elija una categor&iacute;a</option>
+                                            <option value="1">Categor&iacute;a 1</option>
+                                            <option value="2">Categor&iacute;a 2</option>
+                                            <option value="3">Categor&iacute;a 3</option>
                                         </select>
-                                        <label class="blue-grey-text text-darken-4">Categoria</label>
+                                        <label class="blue-grey-text text-darken-4">Categor&iacute;a</label>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
@@ -771,7 +771,7 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="Pintura pro látex blanco hueso." id="descripcion" type="text" class="validate">
-                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
+                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripci&oacute;n</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -803,12 +803,12 @@
                                     </div>
                                     <div class="input-field col s12">
                                         <select>
-                                            <option value="" disabled selected>Elija una categoria</option>
-                                            <option value="1">Categoria 1</option>
-                                            <option value="2">Categoria 2</option>
-                                            <option value="3">Categoria 3</option>
+                                            <option value="" disabled selected>Elija una categor&iacute;a</option>
+                                            <option value="1">Categor&iacute;a 1</option>
+                                            <option value="2">Categor&iacute;a 2</option>
+                                            <option value="3">Categor&iacute;a 3</option>
                                         </select>
-                                        <label class="blue-grey-text text-darken-4">Categoria</label>
+                                        <label class="blue-grey-text text-darken-4">Categor&iacute;a</label>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
@@ -862,7 +862,7 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="Pintura pro látex marfil." id="descripcion" type="text" class="validate">
-                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripcion</label>
+                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripci&oacute;n</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -894,12 +894,12 @@
                                     </div>
                                     <div class="input-field col s12">
                                         <select>
-                                            <option value="" disabled selected>Elija una categoria</option>
-                                            <option value="1">Categoria 1</option>
-                                            <option value="2">Categoria 2</option>
-                                            <option value="3">Categoria 3</option>
+                                            <option value="" disabled selected>Elija una categor&iacute;a</option>
+                                            <option value="1">Categor&iacute;a 1</option>
+                                            <option value="2">Categor&iacute;a 2</option>
+                                            <option value="3">Categor&iacute;a 3</option>
                                         </select>
-                                        <label class="blue-grey-text text-darken-4">Categoria</label>
+                                        <label class="blue-grey-text text-darken-4">Categor&iacute;a</label>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
@@ -968,7 +968,7 @@
         <!-- Modal de editar categoria -->
         <div id="modal_categoria_edit" class="modal">
             <div class="modal-content">
-                <h4>Editar categoria</h4>
+                <h4>Editar categor&iacute;a</h4>
                 <div class="card horizontal">
                     <div class="card-stacked">
                         <div class="card-content">
@@ -979,7 +979,7 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input placeholder="Premium" id="categoria" type="text" class="validate">
-                                            <label for="categoria" class="blue-grey-text text-darken-4">Categoria</label>
+                                            <label for="categoria" class="blue-grey-text text-darken-4">Categor&iacute;a</label>
                                         </div>
                                     </div>
                                     <div class="input-field col s12">

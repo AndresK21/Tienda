@@ -32,8 +32,8 @@
                         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="right hide-on-med-and-down">
                             <li><a href="../index.php">Inicio</a></li>
-                            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
-                            <li><a href="../public/contactanos.php">Contactanos</a></li>
+                            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categor&iacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a href="../public/contactanos.php">Cont&aacute;ctanos</a></li>
                             <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
                             <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
                         </ul>
@@ -43,22 +43,22 @@
                     <ul class="side-nav" id="mobile-demo">
                         <li><a href="../index.php">Inicio</a></li>
                         <li><a href="#!">Nosotros</a></li>
-                        <li><a href="contactanos.php">Contactanos</a></li>
-                        <li><a href="iniciar_sesion.php">Iniciar Sesion</a></li>
-                        <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
-                        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="contactanos.php">Cont&aacute;ctanos</a></li>
+                        <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
+                        <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>A&ntilde;adido<span class="new badge">1</span></a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categor&aacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
                     </ul>
         </header>
 
         <main>
             <div class="container">
                 <div>
-                    <h2 class="center-align">¿Quienes somos?</h2>
+                    <h2 class="center-align">&iquest;Quienes somos&#63;</h2>
                 </div>
                 <div style="text-align: justify;">
                     <h5>Somos una empresa de El Salvador que se dedica al comercio detallista y mayorista de productos de pinturas.</h5>
-                    <h5>Orgullosos de ser una empresa salvadoreña nos honramos de contar con  numeroso personal que labora y aporta experiencia, criterio y esfuerzo a nuestra compañía, a nuestros proveedores y principalmente a nuestros clientes. Todo ello sobre una base laboral de importantes prestaciones y beneficios que contribuyen a la estabilidad de la empresa y sus puestos de trabajo.</h5>
-                    <h5>Relacionarse con Mi Pintura es tener la posibilidad de elegir entre un amplio portafolio de colores e importantes marcas nacionales e internacionales. Es experimentar la importancia de formar parte de nuestro personal, proveedores o clientes.</h5>
+                    <h5>Orgullosos de ser una empresa salvadore&ntilde;a nos honramos de contar con un numeroso personal que labora y aporta experiencia, criterio y esfuerzo a nuestra compa&ntilde;ía, a nuestros proveedores y principalmente a nuestros clientes. Todo ello sobre una base laboral de importantes prestaciones y beneficios que contribuyen a la estabilidad de la empresa y sus puestos de trabajo.</h5>
+                    <h5>Relacionarse con Mi Pintura es tener la posibilidad de elegir entre un amplio portafolio de colores e importantes marcas nacionales e internacionales. Es experimentar la importancia de formar parte de nuestro personal, proveedores y clientes.</h5>
                 </div>
 
             </div>
@@ -74,7 +74,7 @@
                     <h2 class="center-align">Misi&oacute;n</h2>
                 </div>
                 <div style="text-align: justify;">
-                    <h5>Ser al año 2022 una empresa que consolide una propuesta profesional e innovadora en cuanto a productos de pintura, con un planteamiento de formación, emprendedor, solidario y pertinente al desarrollo regional; en atención a las necesidades de la población salvadoreña.</h5>
+                    <h5>Ser al año 2022 una empresa que consolide una propuesta profesional e innovadora en cuanto a productos de pintura, con un planteamiento de formaci&oacute;n, emprendedor, solidario y pertinente al desarrollo regional; en atenci&aacute;n a las necesidades de la población salvadore&ntilde;a.</h5>
                 </div>
 
                 <!--Vision-->
@@ -82,7 +82,7 @@
                     <h2 class="center-align">Visi&oacute;n</h2>
                 </div>
                 <div style="text-align: justify;">
-                    <h5>Somos una empresa dedicada a resolver las necesidades de las personas en cuanto a productos de pintura se refiere, preferentemente a la población salvadoreña, mediante nuestros productos de alta calidad, contando con numeroso personal que labora y aporta experiencia, criterio y esfuerzo a nuestra compañía y nuestros proveedores.-</h5>
+                    <h5>Somos una empresa dedicada a resolver las necesidades de las personas en cuanto a productos de pintura se refiere, preferentemente a la población salvadore&ntilde;a, mediante nuestros productos de alta calidad, contando con numeroso personal que labora y aporta experiencia, criterio y esfuerzo a nuestra compa&ntilde;&iacute;a y nuestros proveedores.-</h5>
                 </div>
             </div>
 
@@ -98,12 +98,12 @@
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text center-align">Comun&iacute;cate con nosotros</h5>
-                        <p class="grey-text text-lighten-4 center-align">Tienes alguna duda o comentario&#63;</p>
-                        <p class="grey-text text-lighten-4 center-align">Llamanos</p>
+                        <p class="grey-text text-lighten-4 center-align">&iquest;Tienes alguna duda o comentario&#63;</p>
+                        <p class="grey-text text-lighten-4 center-align">Ll&aacute;manos</p>
                         <p class="grey-text text-lighten-4 center-align">(503) 2278-3033</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Correo electronico</h5>
+                        <h5 class="white-text">Correo electr&oacute;nico</h5>
                         <ul>
                             <li><i class="small  material-icons">email</i><a class="grey-text text-lighten-3 valign-wrapper"  href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blanck"> mipintura@gmail.com</a></li>
                         </ul>

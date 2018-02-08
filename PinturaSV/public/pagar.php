@@ -33,7 +33,7 @@
                             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                             <ul class="right hide-on-med-and-down">
                                 <li><a href="../index.php">Inicio</a></li>
-                                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
+                                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categor&iacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
                                 <li><a href="#!">Nosotros</a></li>
                                 <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
                                 <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
@@ -45,10 +45,10 @@
                         <ul class="side-nav" id="mobile-demo">
                             <li><a href="../index.php">Inicio</a></li>
                             <li><a href="#!">Nosotros</a></li>
-                            <li><a href="contactanos.php">Contactanos</a></li>
-                            <li><a href="iniciar_sesion.php">Contactanos</a></li>
-                            <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
-                            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a href="contactanos.php">Cont&oacute;ctanos</a></li>
+                            <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
+                            <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>A&ntilde;adido<span class="new badge">1</span></a></li>
+                            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categor&oacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
                         </ul>
         </header>
         <main>
@@ -78,7 +78,7 @@
                     <!--Producto de ejemplo 1-->
                     <tr>
                         <td><img class="imagen circle" src="../web/img/producto1.jpg"></td>
-                        <td>Pintura látex blanco ostra high standard.</td>
+                        <td>Pintura l&aacute;tex blanco ostra high standard.</td>
                         <td><input placeholder="2" id="cantidad" type="number" class="validate"></td>
                         <td>$25.00</td>
                         <td>$50.00</td>
@@ -89,7 +89,7 @@
                     <!--Producto de ejemplo 2-->
                     <tr>
                         <td><img class="imagen circle" src="../web/img/producto2.jpg"></td>
-                        <td>Pintura pro látex blanco hueso.</td>
+                        <td>Pintura pro l&aacute;tex blanco hueso.</td>
                         <td><input placeholder="1" id="cantidad" type="number" class="validate"></td>
                         <td>$25.00</td>
                         <td>$25.00</td>
@@ -100,7 +100,7 @@
                     <!--Producto de ejemplo 3-->
                     <tr>
                         <td><img class="imagen circle" src="../web/img/producto3.jpg"></td>
-                        <td>Pintura pro látex marfil.</td>
+                        <td>Pintura pro l&aacute;tex marfil.</td>
                         <td><input placeholder="2" id="cantidad" type="number" class="validate"></td>
                         <td>$25.00</td>
                         <td>$50.00</td>
@@ -124,7 +124,7 @@
             <div id="modal_eliminar" class="modal">
                 <div class="modal-content">
                     <h4>Eliminar producto</h4>
-                    <p>¿Esta seguro que desea eliminar este producto?</p>
+                    <p>&iquest;Esta seguro que desea eliminar este producto&#63;</p>
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
@@ -138,12 +138,12 @@
                 <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text center-align">Comun&iacute;cate con nosotros</h5>
-                        <p class="grey-text text-lighten-4 center-align">Tienes alguna duda o comentario&#63;</p>
-                        <p class="grey-text text-lighten-4 center-align">Llamanos</p>
+                        <p class="grey-text text-lighten-4 center-align">&iquest;Tienes alguna duda o comentario&#63;</p>
+                        <p class="grey-text text-lighten-4 center-align">Ll&aacute;manos</p>
                         <p class="grey-text text-lighten-4 center-align">(503) 2278-3033</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Correo electronico</h5>
+                    <h5 class="white-text">Correo electr&oacute;nico</h5>
                     <ul>
                         <li><i class="small  material-icons">email</i><a class="grey-text text-lighten-3 valign-wrapper"  href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blanck"> mipintura@gmail.com</a></li>
                     </ul>

@@ -43,7 +43,7 @@
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">lock</i>
                                                 <input placeholder="Contraseña antigua" id="contrasena_antigua" type="password" class="validate">
-                                                <label for="contrasena_antigua">Contraseña antigua</label>
+                                                <label for="contrasena_antigua">Contrase&ntilde;a antigua</label>
                                             </div>
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">lock</i>
                                                 <input placeholder="Contraseña nueva" id="contrasena_nueva" type="password" class="validate">
-                                                <label for="contrasena_nueva">Contraseña nueva</label>
+                                                <label for="contrasena_nueva">Contrase&ntilde;a nueva</label>
                                             </div>
                                         </div>
                                     </div>
@@ -65,19 +65,19 @@
                                         <div class="input-field col s6">
                                             <i class="material-icons prefix">email</i>    
                                             <input placeholder="Correo@electronico.com" id="email" type="email" class="validate">
-                                            <label for="email">Correo electronico</label>
+                                            <label for="email">Correo electr&oacute;nico</label>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">lock</i>
                                                 <input placeholder="Confirmar contraseña" id="confirm_contra" type="password" class="validate">
-                                                <label for="confirm_contra">confirmar contraseña</label>
+                                                <label for="confirm_contra">confirmar contrase&ntilde;a</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s12">
-                                            <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">save</i>Confirmar cambios</a>
+                                            <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">save</i>Guardar cambios</a>
                                         </div>
                                     </div>
                                 </form>
