@@ -12,51 +12,19 @@
   </head>
   <body>
         <header>
-            <!-- Dropdown Structure -->
-            <ul id="dropdown1" class="dropdown-content">
-            <li><a href="../public/categoria_aceite.php">Aceite</a></li>
-            <li class="divider"></li>
-            <li><a href="../public/categoria_agua.php">Agua</a></li>
-            </ul>
-            <!-- Dropdown Structure Mobile -->
-            <ul id="dropdown2" class="dropdown-content">
-            <li><a href="../public/categoria_aceite.php">Aceite</a></li>
-            <li class="divider"></li>
-            <li><a href="../public/categoria_agua.php">Agua</a></li>
-            </ul>
-            <div class="navbar-fixed">
-            <nav>
-            <!--Navbar Color Azul-->
-                <div class="nav-wrapper  blue">
-                <img class="brand-logo" src="../web/img/mipintura.png">
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="../index.php">Inicio</a></li>
-                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a href="../public/nosotros.php">Nosotros</a></li>
-                    <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
-                    <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
-                </ul>
-                </div>
-            </div>
-            </nav>
-            <ul class="side-nav" id="mobile-demo">
-            <li><a href="../index.php">Inicio</a></li>
-            <li><a href="../public/nosotros.php">Nosotros</a></li>
-            <li><a href="contactanos.php">Contactanos</a></li>
-            <li><a href="iniciar_sesion.php">Contactanos</a></li>
-            <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
+            <!--Archivo maestro que contiene la barra de navegacion-->
+            <?php
+                include('../controllers/view/nav_public.php');
+            ?>
         </header>
         <main>
             <div class="container">
                 <div>
-                    <h4 class="center-align">Somos tu mejor opcion</h4>
+                    <h4 class="center-align">Somos tu mejor opci&oacute;n</h4>
                 </div>
                 <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width">
                     <li class="tab col s3"><a class="active" href="#test-swipe-1">Dudas o Comentarios</a></li>
-                    <li class="tab col s3"><a href="#test-swipe-2">Ubicacion</a></li>
+                    <li class="tab col s3"><a href="#test-swipe-2">Ubicaci&oacute;n</a></li>
                 </ul>
             <!-- PESTAÑA DE INICIAR SESION -->
                 <div id="test-swipe-1" class="col s12 transparent">
@@ -108,7 +76,7 @@
                 <div id="test-swipe-2" class="col s12">
                     <div class="row">
                         <div id="test2" class="col s12">
-                            <h4 class="center-align">Ubicacion</h4>
+                            <h4 class="center-align">Ubicaci&oacute;n</h4>
                             <div id="google-map-tab" class="col s12">
                                 <!-- GOOGLE MAP -->
                                 <div class="col s12">
@@ -126,28 +94,11 @@
             </div>
             </div>
         </main>
-        <footer class="page-footer  blue darken-2" >
-            <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                <h5 class="white-text center-align">Comun&iacute;cate con nosotros</h5>
-                <p class="grey-text text-lighten-4 center-align">Tienes alguna duda o comentario&#63;</p>
-                <p class="grey-text text-lighten-4 center-align">Llamanos</p>
-                <p class="grey-text text-lighten-4 center-align">(503) 2278-3033</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Correo electronico</h5>
-                <ul>
-                    <li><i class="small  material-icons">email</i><a class="grey-text text-lighten-3 valign-wrapper"  href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blanck"> mipintura@gmail.com</a></li>
-                </ul>
-                </div>
-            </div>
-            </div>
-            <div class="footer-copyright">
-            <div class="container">
-                © 2018 Copyright DDS
-            </div>
-            </div>
+        </main>
+            <!--Archivo maestro que contiene el footer-->
+            <?php
+                include('../controllers/view/footer_public.php');
+            ?>
         </footer>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="../web/js/main.js"></script>

@@ -7,45 +7,14 @@
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Iniciar Sesion</title>
+    <title>Iniciar Sesi&oacute;n</title>
   </head>
   <body>
       <header>
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-          <li><a href="../public/categoria_aceite.php">Aceite</a></li>
-          <li class="divider"></li>
-          <li><a href="../public/categoria_agua.php">Agua</a></li>
-        </ul>
-        <!-- Dropdown Structure Mobile -->
-        <ul id="dropdown2" class="dropdown-content">
-          <li><a href="../public/categoria_aceite.php">Aceite</a></li>
-          <li class="divider"></li>
-          <li><a href="../public/categoria_agua.php">Agua</a></li>
-        </ul>
-        <div class="navbar-fixed">
-        <nav>
-          <!--Navbar Color Azul-->
-            <div class="nav-wrapper  blue">
-              <img class="brand-logo" src="../web/img/mipintura.png">
-              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down">
-                  <li><a href="../index.php">Inicio</a></li>
-                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="../public/nosotros.php">Nosotros</a></li>
-                <li><a href="contactanos.php">Contactanos</a></li>
-                <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="../index.php">Inicio</a></li>
-          <li><a href="../public/nosotros.php">Nosotros</a></li>
-          <li><a href="contactanos.php">Contactanos</a></li>
-          <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
+        <!--Archivo maestro que contiene la barra de navegacion-->
+        <?php
+          include('../controllers/view/nav_public.php');
+        ?>
       </header>
       <main>
       <!-- CONTENEDOR DE LA TABLA -->
@@ -54,10 +23,10 @@
             <h3 class="center-align">Disfruta de multiples beneficios</h3>
           </div>
         <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width">
-          <li class="tab col s3"><a class="active" href="#test-swipe-1">Iniciar Sesion</a></li>
+          <li class="tab col s3"><a class="active" href="#test-swipe-1">Iniciar Sesi&oacute;n</a></li>
           <li class="tab col s3"><a href="#test-swipe-2">Registrarse</a></li>
         </ul>
-        <!-- PESTAÑA DE INICIAR SESION -->
+        <!-- PESTAÑA DE INICIAR Sesi&oacute;n -->
         <div id="test-swipe-1" class="col s12">
           <!-- CONTENEDOR DEl LOGIN -->
             <div class="container">
@@ -83,9 +52,9 @@
                           <a class="waves-effect waves-teal btn-flat"><i class="large material-icons">remove_red_eye</i></a>
                         </div>
                       </div>
-                      <!-- BOTON DE INICIAR SESION -->
+                      <!-- BOTON DE INICIAR Sesi&oacute;n -->
                       <div class="input-field col s12">
-                        <a class="blue waves-effect waves-light btn ">Iniciar Sesion</a>
+                        <a class="blue waves-effect waves-light btn ">Iniciar Sesi&oacute;n</a>
                       </div>
                     </form>
                   </div>
@@ -139,9 +108,9 @@
                       <input id="password icon_prefix" type="password" class="validate">
                       <label for="password icon_prefix">Repetir Contraseña</label>
                     </div>
-                    <!-- BOTON INICIAR SESION -->
+                    <!-- BOTON INICIAR Sesi&oacute;n -->
                     <div class="input-field col s6">
-                      <a class="blue waves-effect waves-light btn">Iniciar Sesion</a>
+                      <a class="blue waves-effect waves-light btn">Iniciar Sesi&oacute;n</a>
                     </div>
                   </div>
                   <!-- TERMINOS Y CONDICIONES -->
@@ -176,29 +145,11 @@
       </div>
       </div>   
     </main>
-    <footer class="page-footer  blue darken-2" >
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text center-align">Comun&iacute;cate con nosotros</h5>
-              <p class="grey-text text-lighten-4 center-align">Tienes alguna duda o comentario&#63;</p>
-              <p class="grey-text text-lighten-4 center-align">Llamanos</p>
-              <p class="grey-text text-lighten-4 center-align">(503) 2278-3033</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Correo electronico</h5>
-              <ul>
-                <li><i class="small  material-icons">email</i><a class="grey-text text-lighten-3 valign-wrapper"  href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blanck"> mipintura@gmail.com</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-            © 2018 Copyright DDS
-          </div>
-        </div>
-      </footer>
+    </main>
+      <!--Archivo maestro que contiene el footer-->
+      <?php
+          include('../controllers/view/footer_public.php');
+      ?> 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="../web/js/main.js"></script>
       <script type="text/javascript" src="../web/js/ini.js"></script>
