@@ -40,12 +40,13 @@
                           <input id="icon_prefix" type="text" class="validate">
                           <label for="icon_prefix"> Usuario</label>
                         </div>
+                      </div>
                         <!-- INGRESAR DE CLAVE -->
                       <div class="row">
                         <div class="input-field col s9">
                             <i class="material-icons prefix">lock</i>
                           <input id="password icon_prefix" type="password" class="validate">
-                          <label for="password icon_prefix">Contraseña</label>
+                          <label for="password icon_prefix">Contrase&ntilde;a</label>
                         </div>
                         <!-- VER CONTRASEÑA -->
                         <div class="input-field col s3">
@@ -81,21 +82,23 @@
                       <input id="email icon_prefix" type="email" class="validate">
                       <label for="email icon_prefix">Email</label>
                     </div>
-                    <div>
+                  </div>
+                  <!-- SEGUNDA FILA -->
+                  <div class="row">
                     <!-- INGRESAR APELLIDOS -->
                     <div class="input-field col s6">
                       <i class="material-icons prefix">account_circle</i>
                       <input id="icon_prefix" type="text" class="validate">
                       <label for="icon_prefix">Apellidos</label>
-                    </div>
-                  <!-- SEGUNDA FILA -->  
-                  <div class="row">
+                    </div>  
                     <!-- INGRESAR CONTRASEÑA -->
                     <div class="input-field col s6">
                         <i class="material-icons prefix">lock</i>
                       <input id="password icon_prefix" type="password" class="validate">
-                      <label for="password icon_prefix">Contraseña</label>
+                      <label for="password icon_prefix">Contrase&ntilde;a</label>
                     </div>
+                  </div>
+                  <div class="row">
                     <!-- INGRESAR NOMBRE DE USUARIO -->
                     <div class="input-field col s6">
                         <i class="material-icons prefix">person_pin</i>
@@ -106,13 +109,14 @@
                     <div class="input-field col s6">
                         <i class="material-icons prefix">security</i>
                       <input id="password icon_prefix" type="password" class="validate">
-                      <label for="password icon_prefix">Repetir Contraseña</label>
+                      <label for="password icon_prefix">Repetir Contrase&ntilde;a</label>
                     </div>
+                  </div>
                     <!-- BOTON INICIAR Sesi&oacute;n -->
                     <div class="input-field col s6">
                       <a class="blue waves-effect waves-light btn">Iniciar Sesi&oacute;n</a>
                     </div>
-                  </div>
+                  
                   <!-- TERMINOS Y CONDICIONES -->
                   <p class="right">
                     <div class="card-action ">

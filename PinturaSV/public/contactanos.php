@@ -41,31 +41,27 @@
                                                 <input id="first_name" type="text" class="validate">
                                                 <label for="first_name">Nombres Completo</label>
                                             </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input id="email" type="email" class="validate">
-                                                    <label for="email">Correo</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="email" type="email" class="validate">
+                                                <label for="email">Correo</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                                <label for="textarea1">Mensaje</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <form class="col s12">
+                                                <div class="row">
+                                                    <button class="blue btn waves-effect waves-light" type="submit" name="action">Enviar
+                                                        <i class="material-icons right">send</i>
+                                                    </button>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <form class="col s12">
-                                                    <div class="row">
-                                                        <div class="input-field col s12">
-                                                            <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                                            <label for="textarea1">Mensaje</label>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="row">
-                                                <form class="col s12">
-                                                    <div class="row">
-                                                        <button class="blue btn waves-effect waves-light" type="submit" name="action">Enviar
-                                                            <i class="material-icons right">send</i>
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                            </form>
                                         </div>
                                     </form>
                                 </div>
