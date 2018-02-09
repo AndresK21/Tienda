@@ -26,7 +26,7 @@
                 <!-- CONTENEDOR PRINCIPAL -->
                 <div class="container"> 
                     <!--CATEGORIA -->
-                    <h4 class="left-align">Pintura de Agua</h4>
+                    <h4 class="left-align">Pintura de Aceite</h4>
                     <!-- BUSQUEDA -->
                     <div class="row">
                             <div class="col s8">
