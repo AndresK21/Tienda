@@ -35,7 +35,7 @@
                 <li><a href="public/nosotros.php">Nosotros</a></li>
                 <li><a href="public/contactanos.php">Cont&aacute;ctanos</a></li>
                 <li><a href="public/iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
-                <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
+                <li><a href="public/pagar.php"><i class="material-icons">shopping_cart</i></a></li>
               </ul>
             </div>
           </div>
@@ -45,7 +45,7 @@
           <li><a href="public/iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
           <li><a href="#!public/nosotros.php">Nosotros</a></li>
           <li><a href="public/contactanos.php">Cont&aacute;ctanos</a></li>
-          <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
+          <li><a href="public/pagar.php"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categor&iacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
       </header>
