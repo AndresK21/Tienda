@@ -30,7 +30,7 @@
 </nav>
 <!--Navbar Mobil-->
 <ul class="side-nav" id="mobile-demo">
-    <li><a href="index.php">Inicio</a></li>
+    <li><a href="../index.php">Inicio</a></li>
     <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
     <li><a href="nosotros.php">Nosotros</a></li>
     <li><a href="contactanos.php">Cont&aacute;ctanos</a></li>
