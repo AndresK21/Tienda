@@ -33,9 +33,8 @@
                             <div class="card-content">
                                 <span class="card-title"><h4>Iniciar sesi&oacute;n</h4></span>
                                 <div class="center-align">
-                                    <img class="responsive-img" src="../web/img/pintura.jpg">
-                                </div>
                                 <div class="row">
+                                    <img class="responsive.img" src="../web/img/pintura.jpg">
                                     <div class="input-field col s12">
                                         <input id="usuario" type="text" class="validate">
                                         <label class="blue-grey-text text-darken-4" for="usuario">Nombre de usuario</label>
@@ -48,8 +47,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-action blue-grey-text text-darken-4">
-                                <a href="dashboard.php">Iniciar sesi&oacute;n</a>
+                            <div class="right-align">
+                                <a href="dashboard.php" class="btn blue-grey darken-4">Iniciar sesi&oacute;n</a>
                             </div>
                         </div>
                     </div>
