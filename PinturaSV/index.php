@@ -49,29 +49,29 @@
           <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categor&iacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
       </header>
-      <!--SLIDER-->
-      <div class="slider">
-        <ul class="slides">
-          <li>
-            <!-- IMAGEN 1 -->
-            <img class="responsive-img" src="web/img/slider/slider1.jpg"> 
-            <div class="caption center-align">
-              <h3 class="pink-text">Pinturas de la mejor calidad</h3>
-            </div>
-          </li>
-          <li>
-            <!-- IMAGEN 2 -->
-            <img src="web/img/slider/slider2.jpg">
-          </li>
-          <li>
-            <!-- IMAGEN 3 -->
-            <img src="web/img/slider/slider3.jpg">
-            <div class="caption left-align">
-            </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+        <!--SLIDER-->
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <!-- IMAGEN 1 -->
+              <img class="responsive-img" src="web/img/slider/slider1.jpg"> 
+              <div class="caption center-align">
+                <h3 class="pink-text">Pinturas de la mejor calidad</h3>
+              </div>
+            </li>
+            <li>
+              <!-- IMAGEN 2 -->
+              <img src="web/img/slider/slider2.jpg">
+            </li>
+            <li>
+              <!-- IMAGEN 3 -->
+              <img src="web/img/slider/slider3.jpg">
+              <div class="caption left-align">
+              </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       <main>
         <!-- CONTENEDOR DE LA PRIMERA CATEGORIA -->
         <div class="container">
@@ -440,7 +440,7 @@
         <div class="parallax-container">
           <div class="parallax"><img src="web/img/paralaxinicio.jpg"></div>
         </div>
-    </main>
+      </main>
       <!--Archivo maestro que contiene el footer-->
       <?php
         include('controllers/view/footer_public.php');
