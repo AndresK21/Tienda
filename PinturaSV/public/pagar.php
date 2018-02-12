@@ -93,8 +93,8 @@
                     <p>&iquest;Esta seguro que desea eliminar este producto&#63;</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Eliminar</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Eliminar</a>
                 </div>
             </div>
         </main>
