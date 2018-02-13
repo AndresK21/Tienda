@@ -73,7 +73,7 @@
                                                     <div class="card-content">
                                                         <p>Pintura l&aacute;tex blanco ostra high standard</p><br>
                                                         <p>Cantidad:1</p><br>
-                                                        <p>Precio Unitario: $25.00</p><br>
+                                                        <p>Precio Unitario: &#36;25.00</p><br>
                                                     </div>
                                                     <!-- BOTONES -->
                                                     <div class="card-action">
@@ -142,7 +142,7 @@
                                                     <div class="card-content">
                                                         <p>Pintura pro l&aacute;tex blanco hueso</p><br>
                                                         <p>Cantidad:1</p><br>
-                                                        <p>Precio Unitario: $25.00</p><br>
+                                                        <p>Precio Unitario: &#36;25.00</p><br>
                                                     </div>
                                                     <!-- BOTONES -->
                                                     <div class="card-action">
@@ -211,7 +211,7 @@
                                                     <div class="card-content">
                                                         <p>Pintura pro l&aacute;tex marfil.</p><br>
                                                         <p>Cantidad:1</p><br>
-                                                        <p>Precio Unitario: $25.00</p><br>
+                                                        <p>Precio Unitario: &#36;25.00</p><br>
                                                     </div>
                                                     <!-- BOTONES -->
                                                     <div class="card-action">
@@ -280,7 +280,7 @@
                                                     <div class="card-content">
                                                         <p>Pintura pro l&aacute;tex marfil.</p><br>
                                                         <p>Cantidad:1</p><br>
-                                                        <p>Precio Unitario: $25.00</p><br>
+                                                        <p>Precio Unitario: &#36;25.00</p><br>
                                                     </div>
                                                     <!-- BOTONES -->
                                                     <div class="card-action">
@@ -352,7 +352,7 @@
                                                 <div class="card-content">
                                                     <p>Pintura l&aacute;tex blanco ostra high standard</p><br>
                                                     <p>Cantidad:1</p><br>
-                                                    <p>Precio Unitario: $25.00</p><br>
+                                                    <p>Precio Unitario: &#36;25.00</p><br>
                                                 </div>
                                                 <!-- BOTONES -->
                                                 <div class="card-action">
@@ -421,7 +421,7 @@
                                                 <div class="card-content">
                                                     <p>Pintura pro l&aacute;tex blanco hueso</p><br>
                                                     <p>Cantidad:1</p><br>
-                                                    <p>Precio Unitario: $25.00</p><br>
+                                                    <p>Precio Unitario: &#36;25.00</p><br>
                                                 </div>
                                                 <!-- BOTONES -->
                                                 <div class="card-action">
@@ -490,7 +490,7 @@
                                                 <div class="card-content">
                                                     <p>Pintura pro l&aacute;tex marfil.</p><br>
                                                     <p>Cantidad:1</p><br>
-                                                    <p>Precio Unitario: $25.00</p><br>
+                                                    <p>Precio Unitario: &#36;25.00</p><br>
                                                 </div>
                                                 <!-- BOTONES -->
                                                 <div class="card-action">
@@ -559,7 +559,7 @@
                                                 <div class="card-content">
                                                     <p>Pintura pro l&aacute;tex marfil.</p><br>
                                                     <p>Cantidad:1</p><br>
-                                                    <p>Precio Unitario: $25.00</p><br>
+                                                    <p>Precio Unitario: &#36;25.00</p><br>
                                                 </div>
                                                 <!-- BOTONES -->
                                                 <div class="card-action">
