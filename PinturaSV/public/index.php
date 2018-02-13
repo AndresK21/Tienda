@@ -2,9 +2,9 @@
   <html>
     <head>
       <!--Import Google Icon Font-->
-      <link href="web/css/icon.css" rel="stylesheet">
+      <link href="../web/css/icon.css" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <title>Inicio</title>
@@ -13,39 +13,39 @@
       <header>
         <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content">
-          <li><a href="public/categoria_aceite.php">Aceite</a></li>
+          <li><a href="categoria_aceite.php">Aceite</a></li>
           <li class="divider"></li>
-          <li><a href="public/categoria_agua.php">Agua</a></li>
+          <li><a href="categoria_agua.php">Agua</a></li>
         </ul>
         <!-- Dropdown Structure Mobile -->
         <ul id="dropdown2" class="dropdown-content">
-          <li><a href="public/categoria_aceite.php">Aceite</a></li>
+          <li><a href="categoria_aceite.php">Aceite</a></li>
           <li class="divider"></li>
-          <li><a href="public/categoria_agua.php">Agua</a></li>
+          <li><a href="categoria_agua.php">Agua</a></li>
         </ul>
         <div class="navbar-fixed">
         <nav>
           <!--Navbar Color Azul-->
             <div class="nav-wrapper  blue">
-              <img class="brand-logo" src="web/img/mipintura.png">
+              <img class="brand-logo" src="../web/img/mipintura.png">
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="index.php">Inicio</a></li>
                 <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categor&iacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="public/nosotros.php">Nosotros</a></li>
-                <li><a href="public/contactanos.php">Cont&aacute;ctanos</a></li>
-                <li><a href="public/iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
-                <li><a href="public/pagar.php"><i class="material-icons">shopping_cart</i></a></li>
+                <li><a href="nosotros.php">Nosotros</a></li>
+                <li><a href="contactanos.php">Cont&aacute;ctanos</a></li>
+                <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
+                <li><a href="pagar.php"><i class="material-icons">shopping_cart</i></a></li>
               </ul>
             </div>
           </div>
         </nav>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="index.php">Inicio</a></li>
-          <li><a href="public/iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
-          <li><a href="#!public/nosotros.php">Nosotros</a></li>
-          <li><a href="public/contactanos.php">Cont&aacute;ctanos</a></li>
-          <li><a href="public/pagar.php"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
+          <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
+          <li><a href="nosotros.php">Nosotros</a></li>
+          <li><a href="contactanos.php">Cont&aacute;ctanos</a></li>
+          <li><a href="pagar.php"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categor&iacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
       </header>
@@ -54,18 +54,18 @@
           <ul class="slides">
             <li>
               <!-- IMAGEN 1 -->
-              <img class="responsive-img" src="web/img/slider/slider1.jpg"> 
+              <img class="responsive-img" src="../web/img/slider/slider1.jpg"> 
               <div class="caption center-align">
                 <h3 class="pink-text">Pinturas de la mejor calidad</h3>
               </div>
             </li>
             <li>
               <!-- IMAGEN 2 -->
-              <img src="web/img/slider/slider2.jpg">
+              <img src="../web/img/slider/slider2.jpg">
             </li>
             <li>
               <!-- IMAGEN 3 -->
-              <img src="web/img/slider/slider3.jpg">
+              <img src="../web/img/slider/slider3.jpg">
               <div class="caption left-align">
               </div>
               </div>
@@ -80,14 +80,14 @@
           </div>
           <div>
             <!-- PRIMERA CATEGORIA -->
-            <h4 class="left-align">Pintura de Aceite <a href="public/categoria_aceite.php" target="_blank" class="blue darken-1 waves-effect waves-light btn"><i class="material-icons right">apps</i>Ver m&aacute;s</a></h4>
+            <h4 class="left-align">Pintura de Aceite <a href="categoria_aceite.php" target="_blank" class="blue darken-1 waves-effect waves-light btn"><i class="material-icons right">apps</i>Ver m&aacute;s</a></h4>
           </div>
           <div class="row">
             <!-- PRIMER PRODUCTO -->
             <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image ">
-                  <img src="web/img/producto1.jpg">
+                  <img src="../web/img/producto1.jpg">
                   <span class="card-title black-text">CUB</span>
                   <!-- MODAL DE VALORACIONES -->
                   <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
@@ -129,7 +129,7 @@
                               <h4 class="header">Producto agregado a su carrito con exito</h4>
                             <div class="card horizontal">
                               <div class="card-image">
-                                <img src="web/img/producto1.jpg">
+                                <img src="../web/img/producto1.jpg">
                               </div>
                               <div class="card-stacked">
                                 <div class="card-content">
@@ -141,7 +141,7 @@
                                 </div>
                                 <div class="card-action">
                                   <a class="blue-text" href="#">Seguir Comprando</a>
-                                  <a class="green-text" href="public/pagar.php">Relizar Pago</a>
+                                  <a class="green-text" href="pagar.php">Relizar Pago</a>
                                 </div>
                               </div>
                             </div>
@@ -155,7 +155,7 @@
             <div class="col s12 m6 l4">
               <div class="card">
                   <div class="card-image ">
-                    <img src="web/img/producto2.jpg">
+                    <img src="../web/img/producto2.jpg">
                     <span class="card-title black-text">GAL</span>
                     <!-- MODAL DE VALORACIONES -->
                     <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
@@ -181,7 +181,7 @@
                           <h4 class="header">Producto agregado a su carrito con exito</h4>
                         <div class="card horizontal">
                           <div class="card-image">
-                            <img src="web/img/producto2.jpg">
+                            <img src="../web/img/producto2.jpg">
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
@@ -193,7 +193,7 @@
                             </div>
                             <div class="card-action">
                               <a class="blue-text" href="#">Seguir Comprando</a>
-                              <a class="green-text" href="public/pagar.php">Relizar Pago</a>
+                              <a class="green-text" href="pagar.php">Relizar Pago</a>
                             </div>
                           </div>
                         </div>
@@ -207,7 +207,7 @@
             <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image ">
-                  <img src="web/img/producto3.jpg">
+                  <img src="../web/img/producto3.jpg">
                   <span class="card-title black-text">CUB</span>
                   <!-- MODAL DE VALORACIONES -->
                   <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
@@ -244,7 +244,7 @@
                           <h4 class="header">Producto agregado a su carrito con exito</h4>
                         <div class="card horizontal">
                           <div class="card-image">
-                            <img src="web/img/producto3.jpg">
+                            <img src="../web/img/producto3.jpg">
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
@@ -256,7 +256,7 @@
                             </div>
                             <div class="card-action">
                               <a class="blue-text" href="#">Seguir Comprando</a>
-                              <a class="green-text" href="public/pagar.php">Relizar Pago</a>
+                              <a class="green-text" href="pagar.php">Relizar Pago</a>
                             </div>
                           </div>
                         </div>
@@ -270,19 +270,19 @@
         </div>
         <!-- PARALAX DE DIVISION -->
         <div class="parallax-container">
-          <div class="parallax"><img src="web/img/paralaxinicio2.jpg"></div>
+          <div class="parallax"><img src="../web/img/paralaxinicio2.jpg"></div>
         </div>
         <!-- CONTENEDOR DE LA SEGUNDA CATEGORIA -->
         <div class="container">
           <div>
-            <h4 class="left-align">Pintura de Agua <a href="public/categoria_agua.php" target="_blank" class="blue darken-1 waves-effect waves-light btn"><i class="material-icons right">apps</i>Ver m&aacute;s</a></h4>
+            <h4 class="left-align">Pintura de Agua <a href="categoria_agua.php" target="_blank" class="blue darken-1 waves-effect waves-light btn"><i class="material-icons right">apps</i>Ver m&aacute;s</a></h4>
           </div>
           <div class="row">
             <!-- PRIMER PRODUCTO -->
             <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image ">
-                  <img src="web/img/producto1.jpg">
+                  <img src="../web/img/producto1.jpg">
                   <span class="card-title black-text">CUB</span>
                   <!-- MODAL DE VALORACIONES -->
                   <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
@@ -308,7 +308,7 @@
                             <h4 class="header">Producto agregado a su carrito con exito</h4>
                           <div class="card horizontal">
                             <div class="card-image">
-                              <img src="web/img/producto1.jpg">
+                              <img src="../web/img/producto1.jpg">
                             </div>
                             <div class="card-stacked">
                               <div class="card-content">
@@ -320,7 +320,7 @@
                               </div>
                               <div class="card-action">
                                 <a class="blue-text" href="#">Seguir Comprando</a>
-                                <a class="green-text" href="public/pagar.php">Relizar Pago</a>
+                                <a class="green-text" href="pagar.php">Relizar Pago</a>
                               </div>
                             </div>
                           </div>
@@ -334,7 +334,7 @@
             <div class="col s12 m6 l4">
               <div class="card">
                   <div class="card-image ">
-                    <img src="web/img/producto2.jpg">
+                    <img src="../web/img/producto2.jpg">
                     <span class="card-title black-text">GAL</span>
                     <!-- MODAL DE VALORACIONES -->
                     <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
@@ -360,7 +360,7 @@
                           <h4 class="header">Producto agregado a su carrito con exito</h4>
                         <div class="card horizontal">
                           <div class="card-image">
-                            <img src="web/img/producto2.jpg">
+                            <img src="../web/img/producto2.jpg">
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
@@ -372,7 +372,7 @@
                             </div>
                             <div class="card-action">
                               <a class="blue-text" href="#">Seguir Comprando</a>
-                              <a class="green-text" href="public/pagar.php">Relizar Pago</a>
+                              <a class="green-text" href="pagar.php">Relizar Pago</a>
                             </div>
                           </div>
                         </div>
@@ -386,7 +386,7 @@
             <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image ">
-                  <img src="web/img/producto3.jpg">
+                  <img src="../web/img/producto3.jpg">
                   <span class="card-title black-text">CUB</span>
                   <!-- MODAL DE VALORACIONES -->
                   <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
@@ -412,7 +412,7 @@
                           <h4 class="header">Producto agregado a su carrito con exito</h4>
                         <div class="card horizontal">
                           <div class="card-image">
-                            <img src="web/img/producto3.jpg">
+                            <img src="../web/img/producto3.jpg">
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
@@ -424,7 +424,7 @@
                             </div>
                             <div class="card-action">
                               <a class="blue-text" href="#">Seguir Comprando</a>
-                              <a class="green-text" href="public/pagar.php">Relizar Pago</a>
+                              <a class="green-text" href="pagar.php">Relizar Pago</a>
                             </div>
                           </div>
                         </div>
@@ -438,17 +438,17 @@
         </div>
         <!-- PARALAX FINAL -->
         <div class="parallax-container">
-          <div class="parallax"><img src="web/img/paralaxinicio.jpg"></div>
+          <div class="parallax"><img src="../web/img/paralaxinicio.jpg"></div>
         </div>
       </main>
       <!--Archivo maestro que contiene el footer-->
       <?php
-        include('controllers/view/footer_public.php');
+        include('../app/view/footer_public.php');
       ?>     
         <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="web/js/main.js"></script>
-        <script type="text/javascript" src="web/js/ini.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="web/js/fontawesom.js"></script>
+        <script type="text/javascript" src="../web/js/main.js"></script>
+        <script type="text/javascript" src="../web/js/ini.js"></script>
+        <script type="text/javascript" src="../js/materialize.min.js"></script>
+        <script type="text/javascript" src="../web/js/fontawesom.js"></script>
     </body>
   </html>

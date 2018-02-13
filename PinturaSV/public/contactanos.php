@@ -14,7 +14,7 @@
         <header>
             <!--Archivo maestro que contiene la barra de navegacion-->
             <?php
-                include('../controllers/view/nav_public.php');
+                include('../app/view/nav_public.php');
             ?>
         </header>
         <main>
@@ -93,7 +93,7 @@
         </main>
             <!--Archivo maestro que contiene el footer-->
             <?php
-                include('../controllers/view/footer_public.php');
+                include('../app/view/footer_public.php');
             ?>
         </footer>
         <!--Import jQuery before materialize.js-->

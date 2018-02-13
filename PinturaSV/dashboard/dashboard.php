@@ -15,7 +15,7 @@
         <header>
             <!--Archivo maestro que contiene la barra de navegacion-->
             <?php
-                include('../controllers/view/nav_dash.php');
+                include('../app/view/nav_dash.php');
             ?>
         </header>
 
@@ -60,7 +60,7 @@
 
         <!--Archivo maestro que contiene el footer-->
         <?php
-            include('../controllers/view/footer_dash.php');
+            include('../app/view/footer_dash.php');
         ?>
         
         <!--Import jQuery before materialize.js-->

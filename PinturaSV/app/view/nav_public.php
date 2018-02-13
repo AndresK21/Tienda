@@ -18,7 +18,7 @@
         <img class="brand-logo" src="../web/img/mipintura.png">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-        <li><a href="../index.php">Inicio</a></li>
+        <li><a href="index.php">Inicio</a></li>
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Categor&iacute;as<i class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="nosotros.php">Nosotros</a></li>
         <li><a href="contactanos.php">Cont&aacute;ctanos</a></li>
@@ -30,7 +30,7 @@
 </nav>
 <!--Navbar Mobil-->
 <ul class="side-nav" id="mobile-demo">
-    <li><a href="../index.php">Inicio</a></li>
+    <li><a href="index.php">Inicio</a></li>
     <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
     <li><a href="nosotros.php">Nosotros</a></li>
     <li><a href="contactanos.php">Cont&aacute;ctanos</a></li>
