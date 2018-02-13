@@ -53,7 +53,7 @@
             
                 <!--Boton fijo en la pantalla para agregar nuevos productos-->
                 <div class="fixed-action-btn">
-                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modalProduc">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Agregar nuevo producto" href="#modalProduc">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
@@ -89,9 +89,9 @@
                                         <label class="white-text" for="test7">.</label>
                                     </p>
                                 </td>
-                                <td><i class="material-icons prefix">visibility</i>
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                <td><i class="material-icons prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Visible/Invisible">visibility</i>
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar producto" href="#modal1"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar producto" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
                                 </td>
                             </tr>
@@ -103,9 +103,9 @@
                                 <td>$25.00</td>
                                 <td>Cubeta</td>
                                 <td></td>
-                                <td><i class="material-icons prefix">visibility</i>
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><i class="material-icons prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Visible/Invisible">visibility</i>
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar producto" href="#modal2"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar producto" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
@@ -122,9 +122,9 @@
                                         <label class="white-text" for="test7">.</label>
                                     </p>
                                 </td>
-                                <td><i class="material-icons prefix">visibility</i>
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><i class="material-icons prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Visible/Invisible">visibility</i>
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar producto" href="#modal3"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar producto" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
@@ -156,7 +156,7 @@
             
                 <!--Boton fijo en la pantalla para agregar nuevos marcas-->
                 <div class="fixed-action-btn">
-                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_marca">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Agregar nueva marca" href="#modal_marca">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
@@ -175,24 +175,24 @@
                             <!--Producto de ejemplo 1-->
                             <tr>
                                 <td>Benjamin Moore.</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar marca" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar marca" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
                                 </td>
                             </tr>
                             <!--Producto de ejemplo 2-->
                             <tr>
                                 <td>Ace royal.</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar marca" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar marca" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
                             <!--Producto de ejemplo 3-->
                             <tr>
                                 <td>Freshaire choice.</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar marca" href="#modal_marca_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar marca" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
@@ -223,7 +223,7 @@
             
                 <!--Boton fijo en la pantalla para agregar nuevas categorias-->
                 <div class="fixed-action-btn">
-                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_categoria">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Agregar nueva categoria" href="#modal_categoria">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
@@ -244,8 +244,8 @@
                             <tr>
                                 <td>Premium</td>
                                 <td>Benjamin Moore.</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar categoría" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar categoría" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
                                 </td>
                             </tr>
@@ -253,8 +253,8 @@
                             <tr>
                                 <td>Est&aacute;ndar.</td>
                                 <td>Ace royal.</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar categoría" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar categoría" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
@@ -262,8 +262,8 @@
                             <tr>
                                 <td>Impermeable</td>
                                 <td>Freshaire choice</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar categoría" href="#modal_categoria_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar categoría" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
@@ -294,7 +294,7 @@
             
                 <!--Boton fijo en la pantalla para agregar nuevas presentaciones-->
                 <div class="fixed-action-btn">
-                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_presen">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Agregar nueva presentación" href="#modal_presen">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
@@ -315,8 +315,8 @@
                             <tr>
                                 <td>Cubeta</td>
                                 <td>Pintura</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar presentación" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar presentación" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
                                 </td>
                             </tr>
@@ -324,8 +324,8 @@
                             <tr>
                                 <td>Galones</td>
                                 <td>Pintura</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar presentación" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar presentación" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
@@ -333,8 +333,8 @@
                             <tr>
                                 <td>Litros</td>
                                 <td>Pintura</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar presentación" href="#modal_presen_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar presentación" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
@@ -365,7 +365,7 @@
             
                 <!--Boton fijo en la pantalla para agregar nuevos tipos de productos-->
                 <div class="fixed-action-btn">
-                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal_tipo_produc">
+                    <a class="btn-floating btn-large modal-trigger blue-grey darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Agregar nuevo tipo de producto" href="#modal_tipo_produc">
                         <i class="large material-icons">add</i>
                     </a>
                 </div>
@@ -384,24 +384,24 @@
                             <!--Producto de ejemplo 1-->
                             <tr>
                                 <td>Pintura.</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar tipo de producto" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar tipo de producto" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
 
                                 </td>
                             </tr>
                             <!--Producto de ejemplo 2-->
                             <tr>
                                 <td>Brochas.</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar tipo de producto" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar tipo de producto" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>
                             <!--Producto de ejemplo 3-->
                             <tr>
                                 <td>Contenedores.</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light modal-trigger espacio" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
+                                <td><a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Editar tipo de producto" href="#modal_tipo_produc_edit"><i class="material-icons blue-text text-darken-3 prefix">edit</i></a>  <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light modal-trigger espacio tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar tipo de producto" href="#modal_eliminar"><i class="material-icons red-text text-darken-3 prefix">delete</i></a>
                                 
                                 </td>
                             </tr>

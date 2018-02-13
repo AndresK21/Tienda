@@ -59,6 +59,50 @@
                 <div class="parallax"><img src="../web/img/parallax4colores.jpg"></div>
             </div>
 
+            <div class="container">
+                <div>
+                    <h2 class="center-align">Valores</h2>
+                </div>
+                <div class="row" style="text-align: justify;">
+                    <div class="col l6 m6 s12">
+                        <ul>
+                            <li><h5>Liderazgo: esforzarse en dar forma a un futuro mejor.</h5></li>
+                            <li><h5>Colaboración: potenciar el talento colectivo.</h5></li>
+                            <li><h5>Rendir cuentas: ser responsables.</h5></li>
+                        </ul>
+                    </div>
+                    <div class="col l6 m6 s12">
+                        <ul>    
+                            <li><h5>Pasión: estar comprometidos con el corazón y con la mente.</li>
+                            <li><h5>Diversidad: contar con un amplio abanico de marcas y ser tan inclusivos como ellas.</h5></li>
+                            <li><h5>Calidad: búsqueda de la excelencia.</h5></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="center-align">Desarrolladores</h2>
+                </div>
+                <div class="row" style="text-align: justify;">
+                    <div class="col l6 m6 s12 hoverable">
+                        <div>
+                            <img class="responsive-img circle" src="../web/img/pintura.jpg" alt="Desarrollador">
+                        </div>
+                        <div>
+                            <h5><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur nostrum voluptatem dolorum? Tempora earum consequuntur at. Accusamus, atque, inventore iste, illo voluptatum cum voluptas ullam ut ad magni numquam alias?</p></h5>
+                        </div>
+                    </div>
+                    <div class="col l6 m6 s12 hoverable">
+                        <div>
+                            <img class="responsive-img circle" src="../web/img/pintura.jpg" alt="Desarrollador">
+                        </div>
+                        <div>
+                            <h5><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur nostrum voluptatem dolorum? Tempora earum consequuntur at. Accusamus, atque, inventore iste, illo voluptatum cum voluptas ullam ut ad magni numquam alias?</p></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </main>
         <!--Archivo maestro que contiene el footer-->
         <?php

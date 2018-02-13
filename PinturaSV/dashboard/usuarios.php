@@ -23,7 +23,7 @@
 
             <!--Boton fijo en la pantalla para agregar nuevos usuarios-->
             <div class="fixed-action-btn">
-                <a class="btn-floating btn-large modal-trigger blue-grey darken-3" href="#modal2">
+                <a class="btn-floating btn-large modal-trigger blue-grey darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Agregar nuevo usuario" href="#modal2">
                     <i class="large material-icons">add</i>
                 </a>
             </div>
@@ -54,31 +54,31 @@
                                 <tbody>
                                 <tr>
                                     <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
-                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar usuario">delete</i></a></td>
                                 </tr>
                                 <tr>
                                     <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
-                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar usuario">delete</i></a></td>
                                 </tr>
                                 <tr>
                                     <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
-                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar usuario">delete</i></a></td>
                                 </tr>
                                 <tr>
                                     <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
-                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar usuario">delete</i></a></td>
                                 </tr>
                                 <tr>
                                     <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
-                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar usuario">delete</i></a></td>
                                 </tr>
                                 <tr>
                                     <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
-                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar usuario">delete</i></a></td>
                                 </tr>
                                 <tr>
                                     <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
-                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix tooltipped" data-position="right" data-delay="50" data-tooltip="Eliminar usuario">delete</i></a></td>
                                 </tr>
                                 </tbody>
                             </table>

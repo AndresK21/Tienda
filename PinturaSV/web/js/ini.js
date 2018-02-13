@@ -6,4 +6,5 @@ $( document ).ready(function(){
     $('ul.tabs').tabs('select_tab', 'tab_id');
     $('ul.tabs').tabs();
     $('select').material_select();
+    $('.tooltipped').tooltip({delay: 50});
 })

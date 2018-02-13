@@ -50,7 +50,7 @@
         </ul>
       </header>
         <!--SLIDER-->
-        <div class="slider">
+        <div class="slider hide-on-small-only">
           <ul class="slides">
             <li>
               <!-- IMAGEN 1 -->
