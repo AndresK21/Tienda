@@ -28,56 +28,12 @@
                 </a>
             </div>
 
-            <!--Mitad de la pantalla donde solo se mostrara la informacion del usuario-->
-            <div class="row">
-                <div class="col s6 z-depth-2">
+            <div class="container">
+                <!--Mitad de la pantalla donde solo se mostrara la informacion del usuario-->
+                <div class="row">
 
-                    <!--Imagen de perfil del usuario-->
-                    <div class="row">
-                        <div class="col s6">
-                            <img class="responsive-img" src="../web/img/usuario.png">
-                        </div>
-                        <div class="col s6">
-
-                            <!--Formulario ineditable donde se muestra la informacion del usuario-->
-                            <div class="row">
-                                <form class="">
-                                    <div class="row">
-                                        <div class="input-field ">
-                                            <input disabled value="I am not editable" id="disabled" type="number" class="validate">
-                                            <label for="nombres" class="blue-grey-text text-darken-4">Nombre completo</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field ">
-                                            <input disabled value="I am not editable" id="disabled" type="number" class="validate">
-                                            <label for="usuario" class="blue-grey-text text-darken-4">Nombre de usuario</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field ">
-                                            <input disabled value="I am not editable" id="disabled" type="number" class="validate">
-                                            <label for="email" class="blue-grey-text text-darken-4">Correo electr&oacute;nico</label>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <input class="with-gap" name="group1" type="radio" id="opc1"  />
-                                        <label for="opc1">Administrador</label>    
-                                    </p>
-                                    <p>
-                                        <input class="with-gap" name="group1" type="radio" id="opc2"  />
-                                        <label for="opc2">Empleado</label>    
-                                    </p>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!--Mitad de la pantalla donde se muestra la lista de usuarios existentes-->
-                <div class="col s6 z-depth-2">
-                    <div>
+                    <!--muestra la lista de usuarios existentes-->
+                    <div class="col s12">
 
                         <div class="">
                             <div class="input-field">
@@ -86,47 +42,48 @@
                             <label for="autocomplete-input" class="blue-grey-text text-darken-4">Buscar usuario</label>
                             </div>
                         </div>
-                        
-                        <table class="bordered highlight responsive-table">
-                            <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                            </thead>
+                            
+                            <table class="bordered highlight responsive-table z-depth-2">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </thead>
 
-                            <tbody>
-                            <tr>
-                                <td>Nombre de usuario</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-                            </tr>
-                            <tr>
-                                <td>Nombre de usuario</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-                            </tr>
-                            <tr>
-                                <td>Nombre de usuario</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-                            </tr>
-                            <tr>
-                                <td>Nombre de usuario</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-                            </tr>
-                            <tr>
-                                <td>Nombre de usuario</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-                            </tr>
-                            <tr>
-                                <td>Nombre de usuario</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-                            </tr>
-                            <tr>
-                                <td>Nombre de usuario</td>
-                                <td><a class="waves-effect waves-light modal-trigger espacio" href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                <tbody>
+                                <tr>
+                                    <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modal-trigger espacio" href="#modal5">Nombre de usuario</td>
+                                    <td><a class="waves-effect waves-light modal-trigger " href="#modal1"><i class="material-icons red-text text-darken-3 prefix">delete</i></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -201,6 +158,59 @@
                 </div>
             </div>
             
+
+            <!-- Modal informacion de usuarios -->
+            <div id="modal5" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                    <h4>Informaci&oacute;n del usuario</h4>
+                    <!--Imagen de perfil del usuario-->
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <img class="responsive-img" src="../web/img/usuario.png">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+
+                                <!--Formulario ineditable donde se muestra la informacion del usuario-->
+                                <div class="">
+                                    <form class="">
+                                        <div class="row">
+                                            <div class="input-field ">
+                                                <input disabled value="I am not editable" id="disabled" type="number" class="validate">
+                                                <label for="nombres" class="blue-grey-text text-darken-4">Nombre completo</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field ">
+                                                <input disabled value="I am not editable" id="disabled" type="number" class="validate">
+                                                <label for="usuario" class="blue-grey-text text-darken-4">Nombre de usuario</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field ">
+                                                <input disabled value="I am not editable" id="disabled" type="number" class="validate">
+                                                <label for="email" class="blue-grey-text text-darken-4">Correo electr&oacute;nico</label>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <input class="with-gap" name="group1" type="radio" id="opc1"  />
+                                            <label for="opc1">Administrador</label>    
+                                        </p>
+                                        <p>
+                                            <input class="with-gap" name="group1" type="radio" id="opc2"  />
+                                            <label for="opc2">Empleado</label>    
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Aceptar</a>
+                </div>
+            </div>
+
         </main>
 
         <!--Archivo maestro que contiene el footer-->
