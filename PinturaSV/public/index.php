@@ -35,16 +35,17 @@
                 <li><a href="nosotros.php">Nosotros</a></li>
                 <li><a href="contactanos.php">Contactanos</a></li>
                 <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
-                <li><a href="#!"><i class="material-icons">shopping_cart</i></a></li>
+                <li><a class="tooltipped"  data-position="bottom"  data-delay="50" data-tooltip="Ver Carrito" href="#!"><i class="material-icons">shopping_cart</i></a></li>
               </ul>
             </div>
           </div>
         </nav>
         <ul class="side-nav" id="mobile-demo">
+        <li class="active"><a href="index.php">Inicio</a></li>
           <li><a href="iniciar_sesion.php">Iniciar Sesi&oacute;n</a></li>
           <li><a href="nosotros.php">Nosotros</a></li>
           <li><a href="contactanos.php">Contactanos</a></li>
-          <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>Añadido<span class="new badge">1</span></a></li>
+          <li><a href="#!"> <i class="material-icons new badge">shopping_cart</i>A&ntilde;adido<span class="new badge">1</span></a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
       </header>
@@ -87,9 +88,9 @@
               <div class="card">
                 <div class="card-image ">
                   <img src="../web/img/producto1.jpg">
-                  <span class="card-title black-text">CUB</span>
+                  <span class="card-title black-text">&#36;25.00</span>
                   <!-- MODAL DE VALORACIONES -->
-                  <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
+                  <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                   <div id="modal9" class="modal bottom-sheet">
                     <div class="modal-content">
                       <!-- COMENTARIOS -->
@@ -125,29 +126,29 @@
                       <div id="modal1" class="modal modal-fixed-footer">
                         <div class="modal-content">
                           <div class="col s12 m12 l12">
-                              <h4 class="header">Añadir al Carrito</h4>
+                              <h5 class="header">A&ntilde;adir al Carrito</h5>
                             <div class="card horizontal">
                               <div class="card-image">
                                 <img src="../web/img/producto1.jpg">
                               </div>
                               <div class="card-stacked">
                                 <div class="card-content">
-                                  <p>Pintura látex blanco ostra high standard</p><br>
-                                  <!-- SUMA DE CANTIDAD-->
+                                  <p>Pintura l&aacute;tex blanco ostra high standard</p><br>
+                                  <p>Presentaci&oacute;n&#58; Cubeta</p><br>
                                   <div class="input-field">
                                     <input placeholder="1" id="cantidad" type="number" class="validate">
                                     <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
                                   </div>
-                                  <p>Precio Unitario: &#36;25.00</p><br>
-                                  <p>Sub-total: &#36;25.00</p><br>
-                                </div>
-                                <div class="modal-footer">
-                                  <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Seguir Comprando</a>
-                                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Añadir al Carrito</a>
+                                  <p>Precio Unitario&#58; &#36;25.00</p><br>
+                                  <p>Sub-total&#58; &#36;25.00</p><br>
                                 </div>
                               </div>
                             </div>
                           </div>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-action modal-close waves-effect waves-red grey-text text-darken-3 btn-flat">Descartar</a>
+                          <a href="#!" class="modal-action modal-close waves-effect waves-green blue-text btn-flat">A&ntilde;adir al Carrito</a>
                         </div>
                       </div>
                   </div>
@@ -158,9 +159,9 @@
               <div class="card">
                   <div class="card-image ">
                     <img src="../web/img/producto2.jpg">
-                    <span class="card-title black-text">GAL</span>
+                    <span class="card-title black-text">&#36;25.00</span>
                     <!-- MODAL DE VALORACIONES -->
-                    <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
+                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                       <div id="modal9" class="modal bottom-sheet">
                         <div class="modal-content">
                           <h4>Este producto tiene 5 estrellas</h4>
@@ -177,55 +178,45 @@
                 <div class="card-action">
                   <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal2"><i class="material-icons right">shopping_cart</i>A&ntilde;adir al Carrito</a>
                     <!-- Modal Structure -->
-                    <div id="modal2" class="modal">
+                    <div id="modal2" class="modal modal-fixed-footer">
                       <div class="modal-content">
                         <div class="col s12 m12 l12">
-                          <h4 class="header">Añadir al Carrito</h4>
-                        <div class="card horizontal">
-                          <div class="card-image">
-                            <img src="../web/img/producto2.jpg">
-                          </div>
-                          <div class="card-stacked">
-                            <div class="card-content">
-                              <p>Pintura pro l&aacute;tex blanco hueso.</p><br>
-                              <div class="input-field">
-                                <input placeholder="1" id="cantidad" type="number" class="validate">
-                                <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                              </div>
-                              <p>Precio Unitario: &#36;25.00</p><br>
-                              <p>Sub-total: &#36;25.00</p><br>
+                            <h5 class="header">A&ntilde;adir al Carrito</h5>
+                          <div class="card horizontal">
+                            <div class="card-image">
+                              <img src="../web/img/producto2.jpg">
                             </div>
-                            <div class="card-action">
-                              <a class="blue-text" href="#">Seguir Comprando</a>
-                              <a class="green-text" href="pagar.php">Añadir al Carrito</a>
+                            <div class="card-stacked">
+                              <div class="card-content">
+                                <p>Pintura l&aacute;tex blanco hueso</p><br>
+                                <p>Presentaci&oacute;n&#58; Gal&oacute;n</p><br>
+                                <div class="input-field">
+                                  <input placeholder="1" id="cantidad" type="number" class="validate">
+                                  <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
+                                </div>
+                                <p>Precio Unitario&#58; &#36;25.00</p><br>
+                                <p>Sub-total&#58; &#36;25.00</p><br>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-red grey-text text-darken-3 btn-flat">Descartar</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green blue-text btn-flat">A&ntilde;adir al Carrito</a>
+                      </div>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
             <!-- TERCER PRODUCTO -->
             <div class="col s12 m6 l4">
               <div class="card">
-                <div class="card-image ">
-                  <img src="../web/img/producto3.jpg">
-                  <span class="card-title black-text">CUB</span>
-                  <!-- MODAL DE VALORACIONES -->
-                  <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
-                  <div id="modal9" class="modal bottom-sheet">
-                    <div class="modal-content">
-                      <h4>Este producto tiene 5 estrellas</h4>
-                      <p>Comentarios</p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                    </div>
-                  </div>
+                  <div class="card-image ">
+                    <img src="../web/img/producto3.jpg">
+                    <span class="card-title black-text">&#36;25.00</span>
                     <!-- MODAL DE VALORACIONES -->
-                    <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
+                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                       <div id="modal9" class="modal bottom-sheet">
                         <div class="modal-content">
                           <h4>Este producto tiene 5 estrellas</h4>
@@ -235,40 +226,41 @@
                           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
                         </div>
                       </div>
-                </div>
+                  </div>
                 <div class="card-content">
-                  <p>Pintura pro l&aacute;tex marfil.</p>
+                  <p>Pintura pro l&aacute;tex marfil</p>
                 </div>
                 <div class="card-action">
                   <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons right">shopping_cart</i>A&ntilde;adir al Carrito</a>
                     <!-- Modal Structure -->
-                    <div id="modal3" class="modal">
+                    <div id="modal3" class="modal modal-fixed-footer">
                       <div class="modal-content">
                         <div class="col s12 m12 l12">
-                          <h4 class="header">Añadir al Carrito</h4>
-                        <div class="card horizontal">
-                          <div class="card-image">
-                            <img src="../web/img/producto3.jpg">
-                          </div>
-                          <div class="card-stacked">
-                            <div class="card-content">
-                              <p>Pintura pro l&aacute;tex marfil.</p><br>
-                              <div class="input-field">
-                                <input placeholder="1" id="cantidad" type="number" class="validate">
-                                <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                              </div>
-                              <p>Precio Unitario: &#36;25.00</p><br>
-                              <p>Sub-total: &#36;25.00</p><br>
+                            <h5 class="header">A&ntilde;adir al Carrito</h5>
+                          <div class="card horizontal">
+                            <div class="card-image">
+                              <img src="../web/img/producto3.jpg">
                             </div>
-                            <div class="card-action">
-                              <a class="blue-text" href="#">Seguir Comprando</a>
-                              <a class="green-text" href="pagar.php">Añadir al Carrito</a>
+                            <div class="card-stacked">
+                              <div class="card-content">
+                                <p>Pintura l&aacute;tex marfil</p><br>
+                                <p>Presentaci&oacute;n&#58; Cubeta</p><br>
+                                <div class="input-field">
+                                  <input placeholder="1" id="cantidad" type="number" class="validate">
+                                  <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
+                                </div>
+                                <p>Precio Unitario&#58; &#36;25.00</p><br>
+                                <p>Sub-total&#58; &#36;25.00</p><br>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-red grey-text text-darken-3 btn-flat">Descartar</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green blue-text btn-flat">A&ntilde;adir al Carrito</a>
+                      </div>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -289,13 +281,29 @@
               <div class="card">
                 <div class="card-image ">
                   <img src="../web/img/producto1.jpg">
-                  <span class="card-title black-text">CUB</span>
+                  <span class="card-title black-text">&#36;25.00</span>
                   <!-- MODAL DE VALORACIONES -->
-                  <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
+                  <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                   <div id="modal9" class="modal bottom-sheet">
                     <div class="modal-content">
-                      <h4>Este producto tiene 5 estrellas</h4>
-                      <p>Comentarios</p>
+                      <!-- COMENTARIOS -->
+                      <ul class="collection">
+                      <li class="collection-header"><h5>Comentarios</h5></li>
+                        <li class="collection-item avatar">
+                          <i class="material-icons circle">comment</i>
+                          <span class="title">Andres Gomez</span>
+                          <p>Excelente<br>
+                            Nunca habia comprado productos de gran calidad
+                          </p>
+                        </li>
+                        <li class="collection-item avatar">
+                          <i class="material-icons circle">comment</i>
+                          <span class="title">David Mejia</span>
+                          <p>Buena Pintura<br>
+                            Lo mejor
+                          </p>
+                        </li>
+                      </ul>
                     </div>
                     <div class="modal-footer">
                       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
@@ -306,35 +314,36 @@
                     <p>Pintura l&aacute;tex blanco ostra high standard.</p>
                   </div>
                   <div class="card-action">
-                    <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal4"><i class="material-icons right">shopping_cart</i>A&ntilde;adir al Carrito</a>
+                    <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons right">shopping_cart</i>A&ntilde;adir al Carrito</a>
                       <!-- Modal Structure -->
-                      <div id="modal4" class="modal">
+                      <div id="modal1" class="modal modal-fixed-footer">
                         <div class="modal-content">
                           <div class="col s12 m12 l12">
-                            <h4 class="header">Añadir al Carrito</h4>
-                          <div class="card horizontal">
-                            <div class="card-image">
-                              <img src="../web/img/producto1.jpg">
-                            </div>
-                            <div class="card-stacked">
-                              <div class="card-content">
-                                <p>Pintura l&aacute;tex blanco ostra high standard.</p><br>
-                                <div class="input-field">
-                                  <input placeholder="1" id="cantidad" type="number" class="validate">
-                                  <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                                </div>
-                                <p>Precio Unitario: &#36;25.00</p><br>
-                                <p>Sub-total: &#36;25.00</p><br>
+                              <h5 class="header">A&ntilde;adir al Carrito</h5>
+                            <div class="card horizontal">
+                              <div class="card-image">
+                                <img src="../web/img/producto1.jpg">
                               </div>
-                              <div class="card-action">
-                                <a class="blue-text" href="#">Seguir Comprando</a>
-                                <a class="green-text" href="pagar.php">Añadir al Carrito</a>
+                              <div class="card-stacked">
+                                <div class="card-content">
+                                  <p>Pintura l&aacute;tex blanco ostra high standard</p><br>
+                                  <p>Presentaci&oacute;n&#58; Cubeta</p><br>
+                                  <div class="input-field">
+                                    <input placeholder="1" id="cantidad" type="number" class="validate">
+                                    <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
+                                  </div>
+                                  <p>Precio Unitario&#58; &#36;25.00</p><br>
+                                  <p>Sub-total&#58; &#36;25.00</p><br>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-action modal-close waves-effect waves-red grey-text text-darken-3 btn-flat">Descartar</a>
+                          <a href="#!" class="modal-action modal-close waves-effect waves-green blue-text btn-flat">A&ntilde;adir al Carrito</a>
+                        </div>
                       </div>
-                    </div>
                   </div>
               </div>
             </div>
@@ -343,9 +352,9 @@
               <div class="card">
                   <div class="card-image ">
                     <img src="../web/img/producto2.jpg">
-                    <span class="card-title black-text">GAL</span>
+                    <span class="card-title black-text">&#36;25.00</span>
                     <!-- MODAL DE VALORACIONES -->
-                    <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
+                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                       <div id="modal9" class="modal bottom-sheet">
                         <div class="modal-content">
                           <h4>Este producto tiene 5 estrellas</h4>
@@ -360,89 +369,91 @@
                   <p>Pintura pro l&aacute;tex blanco hueso.</p>
                 </div>
                 <div class="card-action">
-                  <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal5"><i class="material-icons right">shopping_cart</i>A&ntilde;adir al Carrito</a>
+                  <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal2"><i class="material-icons right">shopping_cart</i>A&ntilde;adir al Carrito</a>
                     <!-- Modal Structure -->
-                    <div id="modal5" class="modal">
+                    <div id="modal2" class="modal modal-fixed-footer">
                       <div class="modal-content">
                         <div class="col s12 m12 l12">
-                          <h4 class="header">Añadir al Carrito</h4>
-                        <div class="card horizontal">
-                          <div class="card-image">
-                            <img src="../web/img/producto2.jpg">
-                          </div>
-                          <div class="card-stacked">
-                            <div class="card-content">
-                              <p>Pintura pro l&aacute;tex blanco hueso.</p><br>
-                              <div class="input-field">
-                                <input placeholder="1" id="cantidad" type="number" class="validate">
-                                <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                              </div>
-                              <p>Precio Unitario: &#36;25.00</p><br>
-                              <p>Sub-total: &#36;25.00</p><br>
+                            <h5 class="header">A&ntilde;adir al Carrito</h5>
+                          <div class="card horizontal">
+                            <div class="card-image">
+                              <img src="../web/img/producto2.jpg">
                             </div>
-                            <div class="card-action">
-                              <a class="blue-text" href="#">Seguir Comprando</a>
-                              <a class="green-text" href="pagar.php">Añadir al Carrito</a>
+                            <div class="card-stacked">
+                              <div class="card-content">
+                                <p>Pintura l&aacute;tex blanco hueso</p><br>
+                                <p>Presentaci&oacute;n&#58; Gal&oacute;n</p><br>
+                                <div class="input-field">
+                                  <input placeholder="1" id="cantidad" type="number" class="validate">
+                                  <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
+                                </div>
+                                <p>Precio Unitario&#58; &#36;25.00</p><br>
+                                <p>Sub-total&#58; &#36;25.00</p><br>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-red grey-text text-darken-3 btn-flat">Descartar</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green blue-text btn-flat">A&ntilde;adir al Carrito</a>
+                      </div>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
             <!-- TERCER PRODUCTO -->
             <div class="col s12 m6 l4">
               <div class="card">
-                <div class="card-image ">
-                  <img src="../web/img/producto3.jpg">
-                  <span class="card-title black-text">CUB</span>
-                  <!-- MODAL DE VALORACIONES -->
-                  <a class="btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9"><i class="material-icons">star</i></a>
-                  <div id="modal9" class="modal bottom-sheet">
-                    <div class="modal-content">
-                      <h4>Este producto tiene 5 estrellas</h4>
-                      <p>Comentarios</p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                    </div>
+                  <div class="card-image ">
+                    <img src="../web/img/producto3.jpg">
+                    <span class="card-title black-text">&#36;25.00</span>
+                    <!-- MODAL DE VALORACIONES -->
+                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
+                      <div id="modal9" class="modal bottom-sheet">
+                        <div class="modal-content">
+                          <h4>Este producto tiene 5 estrellas</h4>
+                          <p>Comentarios</p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                        </div>
+                      </div>
                   </div>
-                </div>
                 <div class="card-content">
-                  <p>Pintura pro l&aacute;tex marfil.</p>
+                  <p>Pintura pro l&aacute;tex marfil</p>
                 </div>
                 <div class="card-action">
-                  <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal6"><i class="material-icons right">shopping_cart</i>A&ntilde;adir al Carrito</a>
+                  <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons right">shopping_cart</i>A&ntilde;adir al Carrito</a>
                     <!-- Modal Structure -->
-                    <div id="modal6" class="modal">
+                    <div id="modal3" class="modal modal-fixed-footer">
                       <div class="modal-content">
                         <div class="col s12 m12 l12">
-                          <h4 class="header">Añadir al Carrito</h4>
-                        <div class="card horizontal">
-                          <div class="card-image">
-                            <img src="../web/img/producto3.jpg">
-                          </div>
-                          <div class="card-stacked">
-                            <div class="card-content">
-                              <p>Pintura pro l&aacute;tex marfil.</p><br>
-                              <div class="input-field">
-                                <input placeholder="1" id="cantidad" type="number" class="validate">
-                                <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                              </div>
-                              <p>Precio Unitario: &#36;25.00</p><br>
-                              <p>Sub-total: &#36;25.00</p><br>
+                            <h5 class="header">A&ntilde;adir al Carrito</h5>
+                          <div class="card horizontal">
+                            <div class="card-image">
+                              <img src="../web/img/producto3.jpg">
                             </div>
-                            <div class="card-action">
-                              <a class="blue-text" href="#">Seguir Comprando</a>
-                              <a class="green-text" href="pagar.php">Añadir al Carrito </a>
+                            <div class="card-stacked">
+                              <div class="card-content">
+                                <p>Pintura l&aacute;tex marfil</p><br>
+                                <p>Presentaci&oacute;n&#58; Cubeta</p><br>
+                                <div class="input-field">
+                                  <input placeholder="1" id="cantidad" type="number" class="validate">
+                                  <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
+                                </div>
+                                <p>Precio Unitario&#58; &#36;25.00</p><br>
+                                <p>Sub-total&#58; &#36;25.00</p><br>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-red grey-text text-darken-3 btn-flat">Descartar</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green blue-text btn-flat">A&ntilde;adir al Carrito</a>
+                      </div>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -470,7 +481,7 @@
                 <div class="col l4 offset-l2 s12">
                   <h5 class="white-text">Correo electronico</h5>
                   <ul>
-                    <li><i class="small  material-icons">email</i><a class="grey-text text-lighten-3 valign-wrapper"  href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blanck"> mipintura@gmail.com</a></li>
+                    <li><i class="small  material-icons">email</i><a class="grey-text text-lighten-3 valign-wrapper"  href="https&#58;//mail.google.com/mail/u/0/#inbox?compose=new" target="_blanck"> mipintura@gmail.com</a></li>
                   </ul>
                 </div>
               </div>

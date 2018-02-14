@@ -57,9 +57,9 @@
                                 <img class="activator" src="../web/img/producto1.jpg">
                             </div>
                             <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">CUB<i class="material-icons right">more_vert</i></span>
+                            <span class="tooltipped card-title activator blue-text text-darker-1" data-position="top"  data-delay="50" data-tooltip="A&ntilde;adir Valoraci&oacute;n">&#36;25.00<i class="material-icons right">more_vert</i></span>
                             <p>Pintura l&aacute;tex blanco ostra high standard.</p>
-                            <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons right">shopping_cart</i>Agregar al carrito</a>
+                            <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons right">shopping_cart</i>A&ntilde;adir </a>
                             <!-- Modal Structure -->
                             <div id="modal1" class="modal">
                                     <div class="modal-content">
@@ -126,9 +126,9 @@
                                 <img class="activator" src="../web/img/producto2.jpg">
                             </div>
                             <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">GAL<i class="material-icons right">more_vert</i></span>
+                            <span class="tooltipped card-title activator blue-text text-darker-1" data-position="top"  data-delay="50" data-tooltip="A&ntilde;adir Valoraci&oacute;n">&#36;25.00<i class="material-icons right">more_vert</i></span>
                             <p>Pintura pro l&aacute;tex blanco hueso</p>
-                            <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal2"><i class="material-icons right">shopping_cart</i>Agregar al carrito</a>
+                            <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal2"><i class="material-icons right">shopping_cart</i>A&ntilde;adir </a>
                             <!-- Modal Structure -->
                             <div id="modal2" class="modal">
                                     <div class="modal-content">
@@ -195,9 +195,9 @@
                                 <img class="activator" src="../web/img/producto3.jpg">
                             </div>
                             <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">CUB<i class="material-icons right">more_vert</i></span>
+                            <span class="tooltipped card-title activator blue-text text-darker-1" data-position="top"  data-delay="50" data-tooltip="A&ntilde;adir Valoraci&oacute;n">&#36;25.00<i class="material-icons right">more_vert</i></span>
                             <p>Pintura pro l&aacute;tex marfil.</p>
-                            <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons right">shopping_cart</i>Agregar al carrito</a>
+                            <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons right">shopping_cart</i>A&ntilde;adir </a>
                             <!-- Modal Structure -->
                             <div id="modal3" class="modal">
                                     <div class="modal-content">
@@ -264,9 +264,9 @@
                                 <img class="activator" src="../web/img/producto4.jpg">
                             </div>
                             <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">CUB<i class="material-icons right">more_vert</i></span>
+                            <span class="tooltipped card-title activator blue-text text-darker-1" data-position="top"  data-delay="50" data-tooltip="A&ntilde;adir Valoraci&oacute;n">&#36;25.00<i class="material-icons right">more_vert</i></span>
                             <p>Pintura pro l&aacute;tex marfil.</p>
-                            <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal4"><i class="material-icons right">shopping_cart</i>Agregar al carrito</a>
+                            <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal4"><i class="material-icons right">shopping_cart</i>A&ntilde;adir </a>
                             <!-- Modal Structure -->
                             <div id="modal4" class="modal">
                                     <div class="modal-content">
@@ -336,9 +336,9 @@
                             <img class="activator" src="../web/img/producto1.jpg">
                         </div>
                         <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">CUB<i class="material-icons right">more_vert</i></span>
+                        <span class="tooltipped card-title activator blue-text text-darker-1" data-position="top"  data-delay="50" data-tooltip="A&ntilde;adir Valoraci&oacute;n">&#36;25.00<i class="material-icons right">more_vert</i></span>
                         <p>Pintura l&aacute;tex blanco ostra high standard.</p>
-                        <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons right">shopping_cart</i>Agregar al carrito</a>
+                        <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons right">shopping_cart</i>A&ntilde;adir </a>
                         <!-- Modal Structure -->
                         <div id="modal1" class="modal">
                                 <div class="modal-content">
@@ -405,9 +405,9 @@
                             <img class="activator" src="../web/img/producto2.jpg">
                         </div>
                         <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">GAL<i class="material-icons right">more_vert</i></span>
+                        <span class="tooltipped card-title activator blue-text text-darker-1" data-position="top"  data-delay="50" data-tooltip="A&ntilde;adir Valoraci&oacute;n">&#36;25.00<i class="material-icons right">more_vert</i></span>
                         <p>Pintura pro l&aacute;tex blanco hueso</p>
-                        <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal2"><i class="material-icons right">shopping_cart</i>Agregar al carrito</a>
+                        <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal2"><i class="material-icons right">shopping_cart</i>A&ntilde;adir </a>
                         <!-- Modal Structure -->
                         <div id="modal2" class="modal">
                                 <div class="modal-content">
@@ -474,9 +474,9 @@
                             <img class="activator" src="../web/img/producto3.jpg">
                         </div>
                         <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">CUB<i class="material-icons right">more_vert</i></span>
+                        <span class="tooltipped card-title activator blue-text text-darker-1" data-position="top"  data-delay="50" data-tooltip="A&ntilde;adir Valoraci&oacute;n">&#36;25.00<i class="material-icons right">more_vert</i></span>
                         <p>Pintura pro l&aacute;tex marfil.</p>
-                        <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons right">shopping_cart</i>Agregar al carrito</a>
+                        <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons right">shopping_cart</i>A&ntilde;adir </a>
                         <!-- Modal Structure -->
                         <div id="modal3" class="modal">
                                 <div class="modal-content">
@@ -543,9 +543,9 @@
                             <img class="activator" src="../web/img/producto4.jpg">
                         </div>
                         <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">CUB<i class="material-icons right">more_vert</i></span>
+                        <span class="tooltipped card-title activator blue-text text-darker-1" data-position="top"  data-delay="50" data-tooltip="A&ntilde;adir Valoraci&oacute;n">&#36;25.00<i class="material-icons right">more_vert</i></span>
                         <p>Pintura pro l&aacute;tex marfil.</p>
-                        <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal4"><i class="material-icons right">shopping_cart</i>Agregar al carrito</a>
+                        <a class=" blue waves-effect waves-light btn modal-trigger" href="#modal4"><i class="material-icons right">shopping_cart</i>A&ntilde;adir </a>
                         <!-- Modal Structure -->
                         <div id="modal4" class="modal">
                                 <div class="modal-content">
