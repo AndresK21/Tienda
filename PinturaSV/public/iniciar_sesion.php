@@ -35,7 +35,7 @@
                     <form class="col s12">
                       <!-- INGRESAR DE USUARIO -->
                       <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col l10 m9 s12">
                           <i class="material-icons prefix">person_pin</i>
                           <input id="icon_prefix" type="text" class="validate">
                           <label for="icon_prefix"> Usuario</label>
@@ -71,13 +71,13 @@
                 <form class="col s12">
                   <div class="row">
                     <!-- INGRESAR NOMBRES -->
-                    <div class="input-field col s6">
+                    <div class="input-field col l6 m6 s12">
                       <i class="material-icons prefix">account_circle</i>
                       <input id="icon_prefix" type="text" class="validate">
                       <label for="icon_prefix">Nombres</label>
                     </div>
                     <!-- INGRESAR CORREO -->
-                    <div class="input-field col s6">
+                    <div class="input-field col l6 m6 s12">
                       <i class="material-icons prefix">email</i>
                       <input id="email icon_prefix" type="email" class="validate">
                       <label for="email icon_prefix">Email</label>
@@ -86,13 +86,13 @@
                   <!-- SEGUNDA FILA -->
                   <div class="row">
                     <!-- INGRESAR APELLIDOS -->
-                    <div class="input-field col s6">
+                    <div class="input-field col l6 m6 s12">
                       <i class="material-icons prefix">account_circle</i>
                       <input id="icon_prefix" type="text" class="validate">
                       <label for="icon_prefix">Apellidos</label>
                     </div>  
                     <!-- INGRESAR CONTRASEÑA -->
-                    <div class="input-field col s6">
+                    <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">lock</i>
                       <input id="password icon_prefix" type="password" class="validate">
                       <label for="password icon_prefix">Contrase&ntilde;a</label>
@@ -100,20 +100,20 @@
                   </div>
                   <div class="row">
                     <!-- INGRESAR NOMBRE DE USUARIO -->
-                    <div class="input-field col s6">
+                    <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">person_pin</i>
                       <input id="email icon_prefix" type="text" class="validate">
                       <label for="icon_prefix">Usuario</label>
                     </div>
                     <!-- INGRESAR CONTRASEÑA2 -->
-                    <div class="input-field col s6">
+                    <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">security</i>
                       <input id="password icon_prefix" type="password" class="validate">
                       <label for="password icon_prefix">Repetir Contrase&ntilde;a</label>
                     </div>
                   </div>
                     <!-- BOTON INICIAR Sesi&oacute;n -->
-                    <div class="input-field col s6">
+                    <div class="input-field col l6 m6 s12">
                       <a class="blue waves-effect waves-light btn">Iniciar Sesi&oacute;n</a>
                     </div>
                   
