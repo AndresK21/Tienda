@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <meta charset="utf-8">
-        <!--Import Google Icon Font-->
-        <link href="../web/css/icon.css" rel="stylesheet">
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--Archivo maestro que contiene las referencias-->
+        <?php
+            include('../app/view/referencias.php');
+        ?>
         <title>Dashboard-Perfil</title>
     </head>
     <body>
@@ -46,21 +43,9 @@
                                             <label for="Nombre_completo">Nombre completo</label>
                                         </div>
                                         <div class="input-field col l6 m6 s12">
-                                            <i class="material-icons prefix">lock</i>
-                                            <input placeholder="Contraseña antigua" id="contrasena_antigua" type="password" class="validate">
-                                            <label for="contrasena_antigua">Contrase&ntilde;a antigua</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col l6 m6 s12">
                                             <i class="material-icons prefix">account_circle</i>
                                             <input placeholder="Usuario" id="descripcion" type="text" class="validate">
                                             <label for="usuario">Usuario</label>
-                                        </div>
-                                        <div class="input-field col l6 m6 s12">
-                                            <i class="material-icons prefix">lock</i>
-                                            <input placeholder="Contraseña nueva" id="contrasena_nueva" type="password" class="validate">
-                                            <label for="contrasena_nueva">Contrase&ntilde;a nueva</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -68,6 +53,18 @@
                                             <i class="material-icons prefix">email</i>    
                                             <input placeholder="Correo@electronico.com" id="email" type="email" class="validate">
                                             <label for="email">Correo electr&oacute;nico</label>
+                                        </div>
+                                        <div class="input-field col l6 m6 s12">
+                                            <i class="material-icons prefix">lock</i>
+                                            <input placeholder="Contraseña antigua" id="contrasena_antigua" type="password" class="validate">
+                                            <label for="contrasena_antigua">Contrase&ntilde;a antigua</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col l6 m6 s12">
+                                            <i class="material-icons prefix">lock</i>
+                                            <input placeholder="Contraseña nueva" id="contrasena_nueva" type="password" class="validate">
+                                            <label for="contrasena_nueva">Contrase&ntilde;a nueva</label>
                                         </div>
                                         <div class="input-field col l6 m6 s12">
                                             <i class="material-icons prefix">lock</i>
