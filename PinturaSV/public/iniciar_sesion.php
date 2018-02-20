@@ -47,12 +47,14 @@
                         </div>
                         <!-- VER CONTRASEÑA -->
                         <div class="input-field col s3">
-                          <a class="waves-effect waves-teal btn-flat"><i class="large material-icons">remove_red_eye</i></a>
+                          <a class="waves-effect waves-teal"><i class="material-icons black-text">visibility</i></a>
                         </div>
                       </div>
                       <!-- BOTON DE INICIAR Sesi&oacute;n -->
-                      <div class="input-field col s12">
-                        <a class="blue waves-effect waves-light btn ">Iniciar Sesi&oacute;n</a>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <a class="blue waves-effect waves-light btn ">Iniciar Sesi&oacute;n</a>
+                        </div>
                       </div>
                     </form>
                   </div>
@@ -113,6 +115,8 @@
                     <div class="input-field col l6 m6 s12">
                       <a class="blue waves-effect waves-light btn">Iniciar Sesi&oacute;n</a>
                     </div>
+                    <div class="white-text">.</div>
+                    <div class="white-text">.</div>
                   
                   <!-- TERMINOS Y CONDICIONES -->
                   <p class="right">

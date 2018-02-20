@@ -471,7 +471,7 @@
               <div class="row">
                 <div class="col l6 s12">
                   <h5 class="white-text center-align">Comun&iacute;cate con nosotros</h5>
-                  <p class="grey-text text-lighten-4 center-align">Tienes alguna duda o comentario&#63;</p>
+                  <p class="grey-text text-lighten-4 center-align">&iquest;Tienes alguna duda o comentario&#63;</p>
                   <p class="grey-text text-lighten-4 center-align">Llamanos</p>
                   <p class="grey-text text-lighten-4 center-align">(503) 2278-3033</p>
                 </div>

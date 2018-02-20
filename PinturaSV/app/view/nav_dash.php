@@ -30,5 +30,5 @@
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="usuarios.php">Usuarios</a></li>
             <li><a href="productos.php">Productos</a></li>
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Bienvenido "Usuario"<i class="material-icons right">arrow_drop_down</i></a></li>>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Bienvenido "Usuario"<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
