@@ -42,11 +42,45 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="left-align">
+                                <a class="modal-trigger" href="#modal_contra">&iquest;Olvido su contrase&ntilde;a&#63;</a>
+                            </div>
                             <div class="right-align">
                                 <a href="dashboard.php" class="btn blue-grey darken-4">Iniciar sesi&oacute;n</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+            <!-- Modal de editar tipo de producto -->
+            <div id="modal_contra" class="modal">
+                <div class="modal-content">
+                    <h4>Recuperar contrase&ntilde;a</h4>
+                    <div class="card horizontal">
+                        <div class="card-stacked">
+                            <div class="card-content">
+
+                                <!--Formulario para editar el tipo de producto-->
+                                <div class="row">
+                                    <form class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="tipo" type="text" class="validate">
+                                                <label for="tipo" class="blue-grey-text text-darken-4">Correo electr&oacute;nico</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Enviar</a>
                 </div>
             </div>
 
