@@ -6,7 +6,7 @@
         ?>
         <title>Dashboard-Iniciar sesi&oacute;n</title>
     </head>
-    <body>
+    <body class="imagen_fondo">
 
         <header>
             <div class="navbar-fixed">  
@@ -23,13 +23,13 @@
             <!--Formulario de inicio de sesion-->
             <div class="container">
                 <div class="row">
-                    <div class="col s12 m12 l12">
+                    <div class="col s12 m6 l6 offset-l3 offset-m3">
                         <div class="card grey lighten-4">
                             <div class="card-content">
                                 <span class="card-title"><h4>Iniciar sesi&oacute;n</h4></span>
                                 <div class="center-align">
                                 <div class="row">
-                                    <img class="responsive-img" src="../web/img/pintura.jpg">
+                                    <img class="responsive-img circle" src="../web/img/pintura.jpg">
                                     <div class="input-field col s12">
                                         <input id="usuario" type="text" class="validate">
                                         <label class="blue-grey-text text-darken-4" for="usuario">Nombre de usuario</label>
