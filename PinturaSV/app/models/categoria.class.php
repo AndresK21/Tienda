@@ -1,110 +1,83 @@
 <?php
 class Categoria extends Validator{
 	//Declaración de propiedades
-	private $id = null;
-	private $nombre = null;
-	private $imagen = null;
-	private $descripcion = null;
+	private $id_categoria = null;
+	private $categoria = null;
+	private $id_marca = null;
 
 	//Métodos para sobrecarga de propiedades
-	public function setId($value){
+	public function setId_categoria($value){
 		if($this->validateId($value)){
-			$this->id = $value;
+			$this->id_categoria = $value;
 			return true;
 		}else{
 			return false;
 		}
 	}
-	public function getId(){
-		return $this->id;
+	public function getId_categoria(){
+		return $this->id_categoria;
 	}
 	
-	public function setNombre($value){
-		if($this->validateAlphanumeric($value, 1, 50)){
-			$this->nombre = $value;
+	public function setCategoria($value){
+		if($this->validateAlphanumeric($value, 1, 80)){
+			$this->categoria = $value;
 			return true;
 		}else{
 			return false;
 		}
 	}
-	public function getNombre(){
+	public function getCategoria(){
 		return $this->nombre;
 	}
 
-	public function setImagen($file){
-		if($this->validateImage($file, $this->imagen, "../../web/img/categorias/", 300, 300)){
-			$this->imagen = $this->getImageName();
+	public function setId_marca($value){
+		if($this->validateId($value)){
+			$this->id_marca = $value;
 			return true;
 		}else{
 			return false;
 		}
 	}
-	public function getImagen(){
-		return $this->imagen;
-	}
-	public function unsetImagen(){
-		if(unlink("../../web/img/categorias/".$this->imagen)){
-			$this->imagen = null;
-			return true;
-		}else{
-			return false;
-		}
-	}
-
-	public function setDescripcion($value){
-		if($value){
-			if($this->validateAlphanumeric($value, 1, 200)){
-				$this->descripcion = $value;
-				return true;
-			}else{
-				return false;
-			}
-		}else{
-			$this->descripcion = null;
-			return true;
-		}		
-	}
-	public function getDescripcion(){
-		return $this->descripcion;
+	public function getId_marca(){
+		return $this->id_marca;
 	}
 
 	//Metodos para el manejo del CRUD
 	public function getCategorias(){
-		$sql = "SELECT id_categoria, nombre_categoria, imagen_categoria, descripcion_categoria FROM categorias ORDER BY nombre_categoria";
+		$sql = "SELECT id_categoria, categoria, id_marca FROM categoria ORDER BY categoria";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchCategoria($value){
-		$sql = "SELECT * FROM categorias WHERE nombre_categoria LIKE ? OR descripcion_categoria LIKE ? ORDER BY nombre_categoria";
+		$sql = "SELECT * FROM categoria WHERE categoria LIKE ? ORDER BY categoria";
 		$params = array("%$value%", "%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createCategoria(){
-		$sql = "INSERT INTO categorias(nombre_categoria, imagen_categoria, descripcion_categoria) VALUES(?, ?, ?)";
-		$params = array($this->nombre, $this->imagen, $this->descripcion);
+		$sql = "INSERT INTO categoria(categoria, id_marca) VALUES (?, ?)";
+		$params = array($this->categoria, $this->id_marca);
 		return Database::executeRow($sql, $params);
 	}
 	public function readCategoria(){
-		$sql = "SELECT nombre_categoria, imagen_categoria, descripcion_categoria FROM categorias WHERE id_categoria = ?";
-		$params = array($this->id);
+		$sql = "SELECT categoria, id_marca FROM categoria WHERE id_categoria = ?";
+		$params = array($this->id_categoria);
 		$categoria = Database::getRow($sql, $params);
 		if($categoria){
-			$this->nombre = $categoria['nombre_categoria'];
-			$this->imagen = $categoria['imagen_categoria'];
-			$this->descripcion = $categoria['descripcion_categoria'];
+			$this->categoria = $categoria['categoria'];
+			$this->id_marca = $categoria['id_marca'];
 			return true;
 		}else{
 			return null;
 		}
 	}
 	public function updateCategoria(){
-		$sql = "UPDATE categorias SET nombre_categoria = ?, imagen_categoria = ?, descripcion_categoria = ? WHERE id_categoria = ?";
-		$params = array($this->nombre, $this->imagen, $this->descripcion, $this->id);
+		$sql = "UPDATE categoria SET categoria= ?, id_marca= ? WHERE id_categoria = ?";
+		$params = array($this->categoria, $this->id_marca, $this->id_categoria);
 		return Database::executeRow($sql, $params);
 	}
 	public function deleteCategoria(){
-		$sql = "DELETE FROM categorias WHERE id_categoria = ?";
-		$params = array($this->id);
+		$sql = "DELETE FROM categoria WHERE id_categoria = ?";
+		$params = array($this->id_categoria);
 		return Database::executeRow($sql, $params);
 	}
 }
