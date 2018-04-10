@@ -37,7 +37,7 @@ class Categoria extends Validator{
 	}
 	public function searchEstado($value){
 		$sql = "SELECT * FROM estado WHERE estado LIKE ? ORDER BY estado";
-		$params = array("%$value%", "%$value%");
+		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createEstado(){

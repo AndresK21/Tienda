@@ -58,13 +58,13 @@ class Usuario extends Validator{
 
 	//Metodos para manejar el CRUD
 	public function getDetalles(){
-		$sql = "SELECT id_detalle, cantidad, id_producto, id_pedido FROM detalle_pedido ORDER BY id_detalle";
+		$sql = "SELECT id_detalle, detalle_pedido.cantidad, nombre, id_pedido FROM detalle_pedido INNER JOIN producto USING(id_producto) ORDER BY id_detalle";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchDetalle($value){
-		$sql = "SELECT id_detalle, cantidad, id_preducto, id_pedido FROM detalle_pedido WHERE id_detalle LIKE ? ORDER BY id_detalle";
-		$params = array("%$value%", "%$value%");
+		$sql = "SELECT id_detalle, detalle_pedido.cantidad, nombre, id_pedido FROM detalle_pedido INNER JOIN producto USING(id_producto) WHERE id_detalle LIKE ? ORDER BY id_detalle";
+		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createDetalle(){
@@ -73,12 +73,12 @@ class Usuario extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function readDetalle(){
-		$sql = "SELECT cantidad, id_producto, id_pedido FROM detalle_pedido WHERE id_detalle = ?";
+		$sql = "SELECT detalle_pedido.cantidad, nombre, id_pedido FROM detalle_pedido INNER JOIN producto USING(id_producto) WHERE id_detalle = ?";
 		$params = array($this->id_detalle);
 		$detalle = Database::getRow($sql, $params);
 		if($detalle){
-			$this->cantidad = $detalle['cantidad'];
-			$this->id_producto = $detalle['id_producto'];
+			$this->cantidad = $detalle['detalle_pedido.cantidad'];
+			$this->id_producto = $detalle['nombre'];
 			$this->id_pedido = $detalle['id_pedido'];
 			return true;
 		}else{

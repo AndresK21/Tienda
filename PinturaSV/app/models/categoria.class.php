@@ -44,13 +44,13 @@ class Categoria extends Validator{
 
 	//Metodos para el manejo del CRUD
 	public function getCategorias(){
-		$sql = "SELECT id_categoria, categoria, id_marca FROM categoria ORDER BY categoria";
+		$sql = "SELECT id_categoria, categoria, marca FROM categoria INNER JOIN marca USING(id_marca) ORDER BY categoria";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchCategoria($value){
-		$sql = "SELECT * FROM categoria WHERE categoria LIKE ? ORDER BY categoria";
-		$params = array("%$value%", "%$value%");
+		$sql = "SELECT id_categoria, categoria, marca FROM categoria INNER JOIN marca USING(id_marca) WHERE categoria LIKE ? ORDER BY categoria";
+		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createCategoria(){
@@ -59,12 +59,12 @@ class Categoria extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function readCategoria(){
-		$sql = "SELECT categoria, id_marca FROM categoria WHERE id_categoria = ?";
+		$sql = "SELECT categoria, marca FROM categoria INNER JOIN marca USING(id_marca) WHERE id_categoria = ?";
 		$params = array($this->id_categoria);
 		$categoria = Database::getRow($sql, $params);
 		if($categoria){
 			$this->categoria = $categoria['categoria'];
-			$this->id_marca = $categoria['id_marca'];
+			$this->id_marca = $categoria['marca'];
 			return true;
 		}else{
 			return null;

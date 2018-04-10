@@ -63,7 +63,7 @@ class Usuario extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function searchValoracion($value){
-		$sql = "SELECT id_valoracion, estrellas, comentario, id_producto FROM valoraciones WHERE estrellas LIKE ? OR comentario LIKE ? ORDER BY estrellas";
+		$sql = "SELECT id_valoracion, estrellas, comentario, nombre FROM valoraciones INNER JOIN productos USING(id_productos) WHERE estrellas LIKE ? OR comentario LIKE ? ORDER BY estrellas";
 		$params = array("%$value%", "%$value%");
 		return Database::getRows($sql, $params);
 	}

@@ -38,7 +38,7 @@ class Categoria extends Validator{
 	}
 	public function searchMarca($value){
 		$sql = "SELECT * FROM marca WHERE marca LIKE ? ORDER BY marca";
-		$params = array("%$value%", "%$value%");
+		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createMarca(){

@@ -71,13 +71,13 @@ class Usuario extends Validator{
 
 	//Metodos para manejar el CRUD
 	public function getPedidos(){
-		$sql = "SELECT id_pedido, estado, fecha, id_cliente, id_empleado FROM pedido ORDER BY fecha";
+		$sql = "SELECT id_pedido, estado, fecha, nombres, apellidos, nombre_completo FROM pedido INNER JOIN cliente USING(id_cliente) INNER JOIN empleado USING(id_empleado) ORDER BY fecha";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchPedido($value){
-		$sql = "SELECT id_pedido, estado, fecha, id_cliente, id_empleado FROM pedido WHERE fecha LIKE ? ORDER BY fecha";
-		$params = array("%$value%", "%$value%");
+		$sql = "SELECT id_pedido, estado, fecha, nombres, apellidos, nombre_completo FROM pedido INNER JOIN cliente USING(id_cliente) INNER JOIN empleado USING(id_empleado) WHERE fecha LIKE ? ORDER BY fecha";
+		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createPedido(){
@@ -86,14 +86,15 @@ class Usuario extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function readPedido(){
-		$sql = "SELECT estado, fecha, id_cliente, id_empleado FROM pedido WHERE id_pedido = ?";
+		$sql = "SELECT estado, fecha, nombres, apellidos, nombre_completo FROM pedido INNER JOIN cliente USING(id_cliente) INNER JOIN empleado USING(id_empleado) WHERE id_pedido = ?";
 		$params = array($this->id_pedido);
 		$pedido = Database::getRow($sql, $params);
 		if($pedido){
 			$this->estado = $pedido['estado'];
 			$this->fecha = $pedido['fecha'];
-			$this->id_cliente = $pedido['id_cliente'];
-			$this->id_empleado = $pedido['id_empleado'];
+			$this->id_cliente = $pedido['nombres'];
+			$this->id_empleado = $pedido['apellidos'];
+			$this->id_empleado = $pedido['nombre_completo'];
 			return true;
 		}else{
 			return null;

@@ -115,12 +115,12 @@ class Usuario extends Validator{
 
 	//Metodos para manejar el CRUD
 	public function getEmpleados(){
-		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, contrasena, id_permiso FROM empleado ORDER BY nombre_completo";
+		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, contrasena, permiso FROM empleado INNER JOIN permisos USING(id_permiso) ORDER BY nombre_completo";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchEmpleado($value){
-		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, id_permiso FROM empleado WHERE nombre_completo LIKE ? ORDER BY nombre_completo";
+		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE nombre_completo LIKE ? ORDER BY nombre_completo";
 		$params = array("%$value%", "%$value%");
 		return Database::getRows($sql, $params);
 	}
@@ -131,14 +131,14 @@ class Usuario extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function readEmpleado(){
-		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, id_permiso FROM empleado WHERE id_empleado = ?";
+		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$user = Database::getRow($sql, $params);
 		if($user){
 			$this->nombre_completo = $user['nombre_completo'];
 			$this->correo_electronico = $user['correo_electronico'];
 			$this->nombre_usuario = $user['nombre_usuario'];
-			$this->id_permiso = $user['id_permiso'];
+			$this->id_permiso = $user['permiso'];
 			return true;
 		}else{
 			return null;

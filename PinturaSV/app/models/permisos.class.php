@@ -38,7 +38,7 @@ class Categoria extends Validator{
 	}
 	public function searchpermiso($value){
 		$sql = "SELECT * FROM permisos WHERE permiso LIKE ? ORDER BY permiso";
-		$params = array("%$value%", "%$value%");
+		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createPermiso(){

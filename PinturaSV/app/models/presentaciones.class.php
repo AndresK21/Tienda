@@ -50,7 +50,7 @@ class Categoria extends Validator{
 	}
 	public function searchPresentacion($value){
 		$sql = "SELECT * FROM presentaciones WHERE presentacion LIKE ? ORDER BY presentacion";
-		$params = array("%$value%", "%$value%");
+		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createPresentacion(){
@@ -59,12 +59,12 @@ class Categoria extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function readPresentacion(){
-		$sql = "SELECT presentacion, id_tipo FROM presentaciones WHERE id_presentacion = ?";
+		$sql = "SELECT presentacion, tipo_p FROM presentaciones INNER JOIN tipo_p USING(id_tipo) WHERE id_presentacion = ?";
 		$params = array($this->id_presentacion);
 		$presentacion = Database::getRow($sql, $params);
 		if($presentacion){
 			$this->presentacion = $presentacion['presentacion'];
-			$this->id_tipo = $presentacion['id_tipo'];
+			$this->id_tipo = $presentacion['tipo_p'];
 			return true;
 		}else{
 			return null;

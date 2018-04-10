@@ -38,7 +38,7 @@ class Categoria extends Validator{
 	}
 	public function searchTipo_p($value){
 		$sql = "SELECT * FROM tipo_p WHERE tipo_p LIKE ? ORDER BY tipo_p";
-		$params = array("%$value%", "%$value%");
+		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createTipo_p(){
