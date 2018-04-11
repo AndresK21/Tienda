@@ -1,5 +1,5 @@
 <?php
-require_once("../../../app/models/empleado.class.php");
+require_once("../../../models/empleado.class.php");
 try{
 	if(isset($_GET['id'])){
 		if($_GET['id'] != $_SESSION['id_empleado']){

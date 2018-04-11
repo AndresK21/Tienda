@@ -1,5 +1,5 @@
 <?php
-require_once("../../../app/models/categoria.class.php");
+require_once("../../../models/categoria.class.php");
 try{
 	if(isset($_GET['id'])){
 		$categoria = new Categoria;

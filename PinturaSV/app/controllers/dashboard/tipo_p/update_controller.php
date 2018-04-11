@@ -1,5 +1,5 @@
 <?php
-require_once("../../../app/models/tipo_p.class.php");
+require_once("../../../models/tipo_p.class.php");
 try{
     if(isset($_GET['id'])){
         $tipo_p = new Tipo_p;

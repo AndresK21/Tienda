@@ -1,5 +1,5 @@
 <?php
-require_once("../../../app/models/producto.class.php");
+require_once("../../../models/producto.class.php");
 try{
     $producto = new Producto;
     if(isset($_POST['crear'])){

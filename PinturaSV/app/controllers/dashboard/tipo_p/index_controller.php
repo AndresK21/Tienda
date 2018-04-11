@@ -1,5 +1,5 @@
 <?php
-require_once("../../../app/models/producto.class.php");
+require_once("../../../models/producto.class.php");
 try{
 	$tipo_p = new Tipo_p;
 	if(isset($_POST['buscar'])){
@@ -18,7 +18,7 @@ try{
 	if($data){
 		require_once("../../app/views/dashboard/producto/index_view.php");
 	}else{
-		Page::showMessage(4, "No hay productos disponibles", "create.php");
+		Page::showMessage(4, "No hay tipos de productos disponibles", "create.php");
 	}
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), "../tipo_p/");
