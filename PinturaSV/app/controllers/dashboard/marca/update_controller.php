@@ -1,5 +1,5 @@
 <?php
-require_once("../../../app/models/marca.class.php");
+require_once("../../../models/marca.class.php");
 try{
     if(isset($_GET['id'])){
         $marca = new Marca;

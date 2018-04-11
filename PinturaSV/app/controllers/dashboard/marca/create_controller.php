@@ -1,5 +1,5 @@
 <?php
-require_once("../../../app/models/marca.class.php");
+require_once("../../../models/marca.class.php");
 try{
     $marca = new Marca;
     if(isset($_POST['crear'])){
