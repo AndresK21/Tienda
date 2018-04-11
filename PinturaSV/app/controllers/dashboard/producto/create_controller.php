@@ -1,45 +1,41 @@
 <?php
-require_once("../../app/models/producto.class.php");
+require_once("../../../app/models/producto.class.php");
 try{
     $producto = new Producto;
     if(isset($_POST['crear'])){
         $_POST = $producto->validateForm($_POST);
         if($producto->setNombre($_POST['nombre'])){
-            if($producto->setPrecio($_POST['precio'])){
-                if($producto->setDescripcion($_POST['descripcion'])){
-                    if($producto->setCategoria($_POST['categoria'])){
-                        if($producto->setEstado(isset($_POST['estado'])?1:0)){
-                            if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
-                                if($producto->setImagen($_FILES['archivo'])){
+            if($producto->setCantidad($_POST['cantidad'])){
+                if($producto->setPrecio($_POST['precio'])){
+                    if($producto->setColor($_POST['color'])){
+                        if($producto->setId_categoria($_POST['id_categoria'])){
+                            if($producto->setId_estado($_Post['id_estado'])){
+                                if($producto->setId_presentacion($_Post['id_presentacion'])){
                                     if($producto->createProducto()){
                                         Page::showMessage(1, "Producto creado", "index.php");
                                     }else{
-                                        if($producto->unsetImagen()){
-                                            throw new Exception(Database::getException());
-                                        }else{
-                                            throw new Exception("Elimine la imagen manualmente");
-                                        }
+                                    throw new Exception("No se pudo cerrar el producto");        
                                     }
                                 }else{
-                                    throw new Exception($producto->getImageError());
+                                    throw new Exception("Presentacion incorrecto");
                                 }
                             }else{
-                                throw new Exception("Seleccione una imagen");
+                                throw new Exception("Estado incorrecto");
                             }
                         }else{
-                            throw new Exception("Estado incorrecto");
+                            throw new Exception("Seleccione una categoría");
                         }
                     }else{
-                        throw new Exception("Seleccione una categoría");
+                        throw new Exception("Color incorrecto");
                     }
                 }else{
-                    throw new Exception("Descripción incorrecta");
+                    throw new Exception("Precio incorrecto");
                 }
             }else{
-                throw new Exception("Precio incorrecto");
+                throw new Exception("Cantidad incorrecta");
             }
         }else{
-            throw new Exception("Nombre incorrecto");
+            throw new Exception("Nombre incorrecta");
         }
     }
 }catch (Exception $error){

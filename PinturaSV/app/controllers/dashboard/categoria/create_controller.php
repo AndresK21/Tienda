@@ -1,34 +1,22 @@
 <?php
-require_once("../../app/models/categoria.class.php");
+require_once("../../../app/models/categoria.class.php");
 try{
     $categoria = new Categoria;
     if(isset($_POST['crear'])){
         $_POST = $categoria->validateForm($_POST);
-        if($categoria->setNombre($_POST['nombre'])){
-            if($categoria->setDescripcion($_POST['descripcion'])){
-                if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
-                    if($categoria->setImagen($_FILES['archivo'])){
-                        if($categoria->createCategoria()){
-                            Page::showMessage(1, "Categoría creada", "index.php");
-                        }else{
-                            if($categoria->unsetImagen()){
-                                throw new Exception(Database::getException());
-                            }else{
-                                throw new Exception("Elimine la imagen manualmente");
-                            }
-                        }
-                    }else{
-                        throw new Exception($categoria->getImageError());
-                    }
+        if($categoria->setCategoria($_POST['categoria'])){
+            if($categoria->setId_marca($_POST['id_marca'])){
+                if($categoria->createCategoria()){
+                    Page::showMessage(1, "Categoría creada", "index.php");
                 }else{
-                    throw new Exception("Seleccione una imagen");
+                    throw new Exception(Database::getException());
                 }
             }else{
-                throw new Exception("Descripción incorrecta");
-            }            
+                throw new Exception("marca incorrecta");
+            }
         }else{
-            throw new Exception("Nombre incorrecto");
-        }        
+            throw new Exception("categoria incorrecto");
+        }
     }
 }catch(Exception $error){
     Page::showMessage(2, $error->getMessage(), null);

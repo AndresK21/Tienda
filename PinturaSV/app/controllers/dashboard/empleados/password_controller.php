@@ -2,15 +2,15 @@
 require_once("../../app/models/usuario.class.php");
 try{
     if(isset($_POST['cambiar'])){
-        $usuario = new Usuario;
+        $usuario = new Empleado;
         $_POST = $usuario->validateForm($_POST);
-        if($usuario->setId($_SESSION['id_usuario'])){
+        if($usuario->setId_empleado($_SESSION['id_empleado'])){
             if($_POST['clave_actual_1'] == $_POST['clave_actual_2']){
-                if($usuario->setClave($_POST['clave_actual_1'])){
-                    if($usuario->checkPassword()){
+                if($usuario->setContrasena($_POST['clave_actual_1'])){
+                    if($usuario->checkContrasena()){
                         if($_POST['clave_nueva_1'] == $_POST['clave_nueva_2']){
-                            if($usuario->setClave($_POST['clave_nueva_1'])){
-                                if($usuario->changePassword()){
+                            if($usuario->setContrasena($_POST['clave_nueva_1'])){
+                                if($usuario->changeContrasena()){
                                     Page::showMessage(1, "Clave cambiada", "index.php");
                                 }else{
                                     throw new Exception(Database::getException());

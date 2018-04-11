@@ -1,5 +1,5 @@
 <?php
-class Usuario extends Validator{
+class Valoraciones extends Validator{
 	//Declaración de propiedades
 	private $id_valoracion = null;
 	private $estrellas = null;

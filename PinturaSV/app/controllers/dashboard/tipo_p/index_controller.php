@@ -1,19 +1,19 @@
 <?php
 require_once("../../../app/models/producto.class.php");
 try{
-	$producto = new Producto;
+	$tipo_p = new Tipo_p;
 	if(isset($_POST['buscar'])){
-		$_POST = $producto->validateForm($_POST);
-		$data = $producto->searchProducto($_POST['busqueda']);
+		$_POST = $tipo_p->validateForm($_POST);
+		$data = $tipo_p->searchTipo_p($_POST['busqueda']);
 		if($data){
 			$rows = count($data);
 			Page::showMessage(4, "Se encontraron $rows resuldatos", null);
 		}else{
 			Page::showMessage(4, "No se encontraron resultados", null);
-			$data = $producto->getProductos();
+			$data = $tipo_p->getTipo_p();
 		}
 	}else{
-		$data = $producto->getProductos();
+		$data = $tipo_p->getTipo_p();
 	}
 	if($data){
 		require_once("../../app/views/dashboard/producto/index_view.php");
@@ -21,6 +21,6 @@ try{
 		Page::showMessage(4, "No hay productos disponibles", "create.php");
 	}
 }catch(Exception $error){
-	Page::showMessage(2, $error->getMessage(), "../account/");
+	Page::showMessage(2, $error->getMessage(), "../tipo_p/");
 }
 ?>

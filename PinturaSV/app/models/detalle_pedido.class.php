@@ -1,5 +1,5 @@
 <?php
-class Usuario extends Validator{
+class Detalle extends Validator{
 	//Declaración de propiedades
 	private $id_detalle = null;
 	private $cantidad = null;

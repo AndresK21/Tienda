@@ -1,18 +1,15 @@
 <?php
-require_once("../../app/models/categoria.class.php");
+require_once("../../../app/models/categoria.class.php");
 try{
 	if(isset($_GET['id'])){
 		$categoria = new Categoria;
-		if($categoria->setId($_GET['id'])){
+		if($categoria->setId_categoria($_GET['id_categoria'])){
 			if($categoria->readCategoria()){
 				if(isset($_POST['eliminar'])){
 					if($categoria->deleteCategoria()){
-						if($categoria->unsetImagen()){
 							Page::showMessage(1, "Categoría eliminada", "index.php");
-						}else{
-							throw new Exception("No se eliminó el archivo de la imagen");
-						}
-					}else{
+					}
+					else{
 						throw new Exception(Database::getException());
 					}
 				}

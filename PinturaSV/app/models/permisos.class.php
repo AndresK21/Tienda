@@ -1,5 +1,5 @@
 <?php
-class Categoria extends Validator{
+class Permisos extends Validator{
 	//Declaración de propiedades
 	private $id_permiso = null;
 	private $permiso = null;

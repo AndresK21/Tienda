@@ -1,5 +1,5 @@
 <?php
-class Categoria extends Validator{
+class Tipo_p extends Validator{
 	//Declaración de propiedades
 	private $id_tipo = null;
 	private $tipo_p = null;

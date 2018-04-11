@@ -1,13 +1,13 @@
 <?php
-require_once("../../app/models/usuario.class.php");
+require_once("../../../app/models/empleado.class.php");
 try{
 	if(isset($_GET['id'])){
-		if($_GET['id'] != $_SESSION['id_usuario']){
-			$usuario = new Usuario;
-			if($usuario->setId($_GET['id'])){
-				if($usuario->readUsuario()){
+		if($_GET['id'] != $_SESSION['id_empleado']){
+			$empleado = new Empleado;
+			if($empleado->setId_empleado($_GET['id'])){
+				if($empleado->readEmpleado()){
 					if(isset($_POST['eliminar'])){
-						if($usuario->deleteUsuario()){
+						if($empleado->deleteEmpleado()){
 							Page::showMessage(1, "Usuario eliminado", "index.php");
 						}else{
 							throw new Exception(Database::getException());
@@ -28,5 +28,5 @@ try{
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), "index.php");
 }
-require_once("../../app/views/dashboard/usuario/delete_view.php");
+require_once("../../app/views/dashboard/empleado/delete_view.php");
 ?>

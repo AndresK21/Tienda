@@ -1,5 +1,5 @@
 <?php
-class Usuario extends Validator{
+class Empleado extends Validator{
 	//Declaración de propiedades
 	private $id_empleado = null;
 	private $nombre_completo = null;
@@ -93,7 +93,7 @@ class Usuario extends Validator{
 			return false;
 		}
 	}
-	public function checkPassword(){
+	public function checkContrasena(){
 		$sql = "SELECT contrasena FROM empleado WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$data = Database::getRow($sql, $params);
@@ -103,7 +103,7 @@ class Usuario extends Validator{
 			return false;
 		}
 	}
-	public function changePassword(){
+	public function changeContrasena(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
 		$sql = "UPDATE empleado SET contrasena = ? WHERE id_empleado = ?";
 		$params = array($hash, $this->id_empleado);

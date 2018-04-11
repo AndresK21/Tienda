@@ -1,38 +1,41 @@
 <?php
-require_once("../../app/models/producto.class.php");
+require_once("../../../app/models/producto.class.php");
 try{
     if(isset($_GET['id'])){
         $producto = new Producto;
-        if($producto->setId($_GET['id'])){
+        if($producto->setId_producto($_GET['id_producto'])){
             if($producto->readProducto()){
                 if(isset($_POST['actualizar'])){
                     $_POST = $producto->validateForm($_POST);
                     if($producto->setNombre($_POST['nombre'])){
-                        if($producto->setPrecio($_POST['precio'])){
-                            if($producto->setDescripcion($_POST['descripcion'])){
-                                if($producto->setCategoria($_POST['categoria'])){
-                                    if($producto->setEstado(isset($_POST['estado'])?1:0)){
-                                        if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
-                                            if(!$producto->setImagen($_FILES['archivo'])){
-                                                throw new Exception($producto->getImageError());
+                        if($producto->setCantidad($_POST['cantidad'])){
+                            if($producto->setPrecio($_POST['precio'])){
+                                if($producto->setColor($_POST['color'])){
+                                    if($producto->setId_categoria($_POST['id_categoria'])){
+                                        if($producto->setId_estado($_Post['id_estado'])){
+                                            if($producto->setId_presentacion($_Post['id_presentacion'])){
+                                                if($producto->updateProducto()){
+                                                    Page::showMessage(1, "Producto modificado", "index.php");
+                                                }else{
+                                                    throw new Exception(Database::getException());
+                                                }
+                                            }else{
+                                                throw new Exception("Presentacion incorrecta");
                                             }
-                                        }
-                                        if($producto->updateProducto()){
-                                            Page::showMessage(1, "Producto modificado", "index.php");
                                         }else{
-                                            throw new Exception(Database::getException());
-                                        }
+                                            throw new Exception("Estado incorrecto");
+                                        }  
                                     }else{
-                                        throw new Exception("Estado incorrecto");
+                                        throw new Exception("Categoria incorrecto");
                                     }
                                 }else{
-                                    throw new Exception("Seleccione una categoría");
+                                    throw new Exception("Color incorrecto");
                                 }
                             }else{
-                                throw new Exception("Descripción incorrecta");
+                                throw new Exception("Precio incorrecta");
                             }
                         }else{
-                            throw new Exception("Precio incorrecto");
+                            throw new Exception("Cantidad incorrecto");
                         }
                     }else{
                         throw new Exception("Nombre incorrecto");

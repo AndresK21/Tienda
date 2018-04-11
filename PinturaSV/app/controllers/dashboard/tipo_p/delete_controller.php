@@ -1,12 +1,12 @@
 <?php
-require_once("../../../app/models/producto.class.php");
+require_once("../../../app/models/tipo_p.class.php");
 try{
 	if(isset($_GET['id'])){
-		$producto = new Producto;
-		if($producto->setId($_GET['id'])){
-			if($producto->readProducto()){
+		$tipo_p = new Tipo_p;
+		if($tipo_p->setId_tipo($_GET['id_tipo'])){
+			if($tipo_p->readTipo_p()){
 				if(isset($_POST['eliminar'])){
-					if($producto->deleteProducto()){
+					if($tipo_p->deleteProducto()){
 					}else{
 						throw new Exception(Database::getException());
 					}

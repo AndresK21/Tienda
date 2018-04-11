@@ -1,5 +1,5 @@
 <?php
-require_once("../../app/models/categoria.class.php");
+require_once("../../../app/models/categoria.class.php");
 try{
 	$categoria = new Categoria;
 	if(isset($_POST['buscar'])){
