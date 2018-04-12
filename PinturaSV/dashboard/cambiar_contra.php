@@ -24,35 +24,36 @@
             <!--Imagen de perfil del usuario-->
             <div class="container">
                 <div class="row z-depth-2">
-                    <div class="col l6 m6 s12">
-                        <img class="responsive-img" src="../web/img/usuario.png">
-                        <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
-                    </div>
                     
                     <div class="white-text">.</div>
                     <div class="">
-                        <div class="col s12 m6 l6">
+                        <div class="col s12 m12 l12">
                         
                             <!--Formulario de editar perfil-->
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
                                         <div class="input-field col l6 m6 s12">
-                                            <i class="material-icons prefix">person</i>
-                                            <input placeholder="Nombre completo" id="nombre" type="text" class="validate">
-                                            <label for="Nombre_completo">Nombre completo</label>
+                                            <i class="material-icons prefix">lock</i>
+                                            <input id="Contrasena_antigua" type="password" class="validate">
+                                            <label for="contrasena_antigua">Contrase&ntilde;a antigua</label>
                                         </div>
                                         <div class="input-field col l6 m6 s12">
-                                            <i class="material-icons prefix">account_circle</i>
-                                            <input placeholder="Usuario" id="descripcion" type="text" class="validate">
-                                            <label for="usuario">Usuario</label>
+                                            <i class="material-icons prefix">security</i>
+                                            <input id="Confirmar contrasena_nueva" type="password" class="validate">
+                                            <label for="contrasena_nueva">Confirmar contrase&ntilde;a antigua</label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col l6 m6 s12">
-                                            <i class="material-icons prefix">email</i>    
-                                            <input placeholder="Correo@electronico.com" id="email" type="email" class="validate">
-                                            <label for="email">Correo electr&oacute;nico</label>
+                                            <i class="material-icons prefix">lock</i>
+                                            <input id="confirm_contra" type="password" class="validate">
+                                            <label for="confirm_contra">Nueva contrase&ntilde;a</label>
+                                        </div>
+                                        <div class="input-field col l6 m6 s12">
+                                            <i class="material-icons prefix">security</i>
+                                            <input id="confirm_contra" type="password" class="validate">
+                                            <label for="confirm_contra">Confirmar nueva contrase&ntilde;a</label>
                                         </div>
                                     </div>
 

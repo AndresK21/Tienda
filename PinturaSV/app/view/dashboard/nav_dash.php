@@ -2,13 +2,17 @@
 <ul id="dropdown1" class="dropdown-content">
     <li><a href="editar_perfil.php">Editar perfil</a></li>
     <li class="divider"></li>
-    <li><a href="inicio.php">Cerrar sesi&oacute;n</a></li>
+    <li><a href="cambiar_contra.php">Cambiar contrase&ntilde;a</a></li>
+    <li class="divider"></li>
+    <li><a href="index.php">Cerrar sesi&oacute;n</a></li>
 </ul>
 <!-- Dropdown Structure Mobile -->
 <ul id="dropdown2" class="dropdown-content">
     <li><a href="editar_perfil.php">Editar perfil</a></li>
     <li class="divider"></li>
-    <li><a href="inicio.php">Cerrar sesi&oacute;n</a></li>
+    <li><a href="cambiar_contra.php">Cambiar contrase&ntilde;a</a></li>
+    <li class="divider"></li>
+    <li><a href="index.php">Cerrar sesi&oacute;n</a></li>
 </ul>
 
 <div class="navbar-fixed">  

@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <?php
-            include('../app/view/referencias.php');
+            include('../app/view/public/referencias.php');
         ?>
         <title>Dashboard</title>
     </head>
@@ -10,7 +10,7 @@
         <header>
             <!--Archivo maestro que contiene la barra de navegacion-->
             <?php
-                include('../app/view/nav_dash.php');
+                include('../app/view/dashboard/nav_dash.php');
             ?>
         </header>
 
@@ -55,7 +55,7 @@
 
         <!--Archivo maestro que contiene el footer-->
         <?php
-            include('../app/view/footer_dash.php');
+            include('../app/view/dashboard/footer_dash.php');
         ?>
         
         <!--Import jQuery before materialize.js-->

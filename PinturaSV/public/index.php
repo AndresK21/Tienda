@@ -2,7 +2,7 @@
   <html lang="es">
     <head>
         <?php
-            include('../app/view/referencias.php');
+            include('../app/view/public/referencias.php');
         ?>
       <title>Inicio</title>
     </head>

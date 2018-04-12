@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
       <?php
-        include('../app/view/referencias.php');
+        include('../app/view/public/referencias.php');
       ?>
     <title>Iniciar Sesi&oacute;n</title>
   </head>
@@ -10,7 +10,7 @@
       <header>
         <!--Archivo maestro que contiene la barra de navegacion-->
         <?php
-          include('../app/view/nav_public.php');
+          include('../app/view/public/nav_public.php');
         ?>
       </header>
       <main>
@@ -153,7 +153,7 @@
     </main>
       <!--Archivo maestro que contiene el footer-->
       <?php
-          include('../app/view/footer_public.php');
+          include('../app/view/public/footer_public.php');
       ?> 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="../web/js/main.js"></script>

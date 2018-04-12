@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <?php
-            include('../app/view/referencias.php');
+            include('../app/view/public/referencias.php');
         ?>
         <title>Dashboard-Iniciar sesi&oacute;n</title>
     </head>
@@ -88,7 +88,7 @@
 
         <!--Archivo maestro que contiene el footer-->
         <?php
-            include('../app/view/footer_dash.php');
+            include('../app/view/dashboard/footer_dash.php');
         ?>
         
         <!--Import jQuery before materialize.js-->
