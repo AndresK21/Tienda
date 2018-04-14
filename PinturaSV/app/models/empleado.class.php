@@ -6,6 +6,7 @@ class Empleado extends Validator{
 	private $correo_electronico = null;
 	private $nombre_usuario = null;
 	private $contrasena = null;
+	private $imagen = null;
 	private $id_permiso = null;
 
 	//Métodos para sobrecarga de propiedades
@@ -69,6 +70,26 @@ class Empleado extends Validator{
 		return $this->contrasena;
 	}
 
+	public function setImagen($file){
+		if($this->validateImage($file, $this->imagen, "../../web/img/productos/", 500, 500)){
+			$this->imagen = $this->getImageName();
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getImagen(){
+		return $this->imagen;
+	}
+	public function unsetImagen(){
+		if(unlink("../../../img/productos/".$this->imagen)){
+			$this->imagen = null;
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	public function setId_permiso($value){
 		if($this->validateId($value)){
 			$this->id_permiso = $value;
@@ -115,29 +136,30 @@ class Empleado extends Validator{
 
 	//Metodos para manejar el CRUD
 	public function getEmpleados(){
-		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, contrasena, permiso FROM empleado INNER JOIN permisos USING(id_permiso) ORDER BY nombre_completo";
+		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, permiso FROM empleado INNER JOIN permisos USING(id_permiso) ORDER BY nombre_completo";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchEmpleado($value){
-		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE nombre_completo LIKE ? ORDER BY nombre_completo";
+		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, imagen, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE nombre_completo LIKE ? ORDER BY nombre_completo";
 		$params = array("%$value%", "%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createEmpleado(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO empleado(nombre_completo, correo_electronico, nombre_usuario, contrasena, id_permiso) VALUES (?, ?, ?, ?, ?)";
-		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->$hash, id_permiso);
+		$sql = "INSERT INTO empleado(nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, id_permiso) VALUES (?, ?, ?, ?, ?,)";
+		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->$hash, $this->imagen, $this->nombre_usuario);
 		return Database::executeRow($sql, $params);
 	}
 	public function readEmpleado(){
-		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE id_empleado = ?";
+		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, imagen, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$user = Database::getRow($sql, $params);
 		if($user){
 			$this->nombre_completo = $user['nombre_completo'];
 			$this->correo_electronico = $user['correo_electronico'];
 			$this->nombre_usuario = $user['nombre_usuario'];
+			$this->imagen = $user['imagen'];
 			$this->id_permiso = $user['permiso'];
 			return true;
 		}else{
@@ -145,8 +167,8 @@ class Empleado extends Validator{
 		}
 	}
 	public function updateEmpleado(){
-		$sql = "UPDATE empleado SET nombre_completo = ?, correo_electronico = ?, nombre_usuario = ?, id_permiso= ? WHERE id_empleado = ?";
-		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->id_permiso, $this->id_empleado);
+		$sql = "UPDATE empleado SET nombre_completo = ?, correo_electronico = ?, nombre_usuario = ?, imagen = ?, id_permiso= ? WHERE id_empleado = ?";
+		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->imagen, $this->id_permiso, $this->id_empleado);
 		return Database::executeRow($sql, $params);
 	}
 	public function deleteEmpleado(){

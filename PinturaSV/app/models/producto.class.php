@@ -6,6 +6,7 @@ class Producto extends Validator{
 	private $cantidad = null;
 	private $precio = null;
 	private $color = null;
+	private $imagen = null;
 	private $id_categoria = null;
 	private $id_estado = null;
 	private $id_presentacion = null;
@@ -71,6 +72,26 @@ class Producto extends Validator{
 		return $this->color;
 	}
 
+	public function setImagen($file){
+		if($this->validateImage($file, $this->imagen, "../../web/img/productos/", 500, 500)){
+			$this->imagen = $this->getImageName();
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getImagen(){
+		return $this->imagen;
+	}
+	public function unsetImagen(){
+		if(unlink("../../../img/productos/".$this->imagen)){
+			$this->imagen = null;
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	public function setId_categoria($value){
 		if($this->validateId($value)){
 			$this->id_categoria = $value;
@@ -114,12 +135,12 @@ class Producto extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getProductos(){
-		$sql = "SELECT id_producto, nombre, cantidad, precio, color, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) ORDER BY nombre";
+		$sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) ORDER BY nombre";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchProducto($value){
-		$sql = "SELECT id_producto, nombre, cantidad, precio, color, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) WHERE nombre LIKE ? ORDER BY nombre";
+		$sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) WHERE nombre LIKE ? ORDER BY nombre";
 		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
@@ -129,12 +150,12 @@ class Producto extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function createProducto(){
-		$sql = "INSERT INTO productos(nombre, cantidad, precio, color, id_categoria, id_estado, id_presentacion) VALUES(?, ?, ?, ?, ?, ?, ?)";
-		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->id_categoria, $this->id_estado, $this->id_presentacion);
+		$sql = "INSERT INTO productos(nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion) VALUES(?, ?, ?, ?, ?, ?, ?)";
+		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->imagen, $this->id_categoria, $this->id_estado, $this->id_presentacion);
 		return Database::executeRow($sql, $params);
 	}
 	public function readProducto(){
-		$sql = "SELECT nombre, cantidad, precio, color, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) WHERE id_producto = ?";
+		$sql = "SELECT nombre, cantidad, precio, color, imagen, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) WHERE id_producto = ?";
 		$params = array($this->id_producto);
 		$producto = Database::getRow($sql, $params);
 		if($producto){
@@ -142,6 +163,7 @@ class Producto extends Validator{
 			$this->cantidad = $producto['cantidad'];
 			$this->precio = $producto['precio'];
 			$this->color = $producto['color'];
+			$this->iamgen = $producto['imagen'];
 			$this->id_categoria = $producto['categoria'];
 			$this->id_estado = $producto['estado'];
 			$this->id_presentacion = $producto['presentacion'];
@@ -151,8 +173,8 @@ class Producto extends Validator{
 		}
 	}
 	public function updateProducto(){
-		$sql = "UPDATE producto SET nombre = ?, cantidad = ?, precio = ?, color = ?, id_categoria = ?, id_estado = ?, id_presentacion = ? WHERE id_producto = ?";
-		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->id_categoria, $this->id_estado, $this->id_presentacion, $this->id_producto);
+		$sql = "UPDATE producto SET nombre = ?, cantidad = ?, precio = ?, color = ?, imagen = ?, id_categoria = ?, id_estado = ?, id_presentacion = ? WHERE id_producto = ?";
+		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->imagen, $this->id_categoria, $this->id_estado, $this->id_presentacion, $this->id_producto);
 		return Database::executeRow($sql, $params);
 	}
 	public function deleteProducto(){
