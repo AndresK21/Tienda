@@ -4,6 +4,7 @@
         <?php
             include('../app/view/public/referencias.php');
         ?>
+        <link rel="stylesheet" href="../web/css/valoraciones.css">
       <title>Inicio</title>
     </head>
     <body>
@@ -87,32 +88,7 @@
                   <img src="../web/img/producto1.jpg">
                   <span class="card-title black-text">&#36;25.00</span>
                   <!-- MODAL DE VALORACIONES -->
-                  <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
-                  <div id="modal9" class="modal bottom-sheet">
-                    <div class="modal-content">
-                      <!-- COMENTARIOS -->
-                      <ul class="collection">
-                      <li class="collection-header"><h5>Comentarios</h5></li>
-                        <li class="collection-item avatar">
-                          <i class="material-icons circle">comment</i>
-                          <span class="title">Andres Gomez</span>
-                          <p>Excelente<br>
-                            Nunca habia comprado productos de gran calidad
-                          </p>
-                        </li>
-                        <li class="collection-item avatar">
-                          <i class="material-icons circle">comment</i>
-                          <span class="title">David Mejia</span>
-                          <p>Buena Pintura<br>
-                            Lo mejor
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                    </div>
-                  </div>
+                  <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal_comentarios" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                 </div>
                   <div class="card-content">
                     <p>Pintura l&aacute;tex blanco ostra high standard.</p>
@@ -158,16 +134,7 @@
                     <img src="../web/img/producto2.jpg">
                     <span class="card-title black-text">&#36;25.00</span>
                     <!-- MODAL DE VALORACIONES -->
-                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
-                      <div id="modal9" class="modal bottom-sheet">
-                        <div class="modal-content">
-                          <h4>Este producto tiene 5 estrellas</h4>
-                          <p>Comentarios</p>
-                        </div>
-                        <div class="modal-footer">
-                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                        </div>
-                      </div>
+                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal_comentarios" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                   </div>
                 <div class="card-content">
                   <p>Pintura pro l&aacute;tex blanco hueso.</p>
@@ -213,16 +180,7 @@
                     <img src="../web/img/producto3.jpg">
                     <span class="card-title black-text">&#36;25.00</span>
                     <!-- MODAL DE VALORACIONES -->
-                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
-                      <div id="modal9" class="modal bottom-sheet">
-                        <div class="modal-content">
-                          <h4>Este producto tiene 5 estrellas</h4>
-                          <p>Comentarios</p>
-                        </div>
-                        <div class="modal-footer">
-                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                        </div>
-                      </div>
+                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal_comentarios" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                   </div>
                 <div class="card-content">
                   <p>Pintura pro l&aacute;tex marfil</p>
@@ -280,32 +238,7 @@
                   <img src="../web/img/producto1.jpg">
                   <span class="card-title black-text">&#36;25.00</span>
                   <!-- MODAL DE VALORACIONES -->
-                  <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
-                  <div id="modal9" class="modal bottom-sheet">
-                    <div class="modal-content">
-                      <!-- COMENTARIOS -->
-                      <ul class="collection">
-                      <li class="collection-header"><h5>Comentarios</h5></li>
-                        <li class="collection-item avatar">
-                          <i class="material-icons circle">comment</i>
-                          <span class="title">Andres Gomez</span>
-                          <p>Excelente<br>
-                            Nunca habia comprado productos de gran calidad
-                          </p>
-                        </li>
-                        <li class="collection-item avatar">
-                          <i class="material-icons circle">comment</i>
-                          <span class="title">David Mejia</span>
-                          <p>Buena Pintura<br>
-                            Lo mejor
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                    </div>
-                  </div>
+                  <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal_comentarios" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                 </div>
                   <div class="card-content">
                     <p>Pintura l&aacute;tex blanco ostra high standard.</p>
@@ -351,16 +284,7 @@
                     <img src="../web/img/producto2.jpg">
                     <span class="card-title black-text">&#36;25.00</span>
                     <!-- MODAL DE VALORACIONES -->
-                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
-                      <div id="modal9" class="modal bottom-sheet">
-                        <div class="modal-content">
-                          <h4>Este producto tiene 5 estrellas</h4>
-                          <p>Comentarios</p>
-                        </div>
-                        <div class="modal-footer">
-                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                        </div>
-                      </div>
+                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal_comentarios" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                   </div>
                 <div class="card-content">
                   <p>Pintura pro l&aacute;tex blanco hueso.</p>
@@ -406,16 +330,7 @@
                     <img src="../web/img/producto3.jpg">
                     <span class="card-title black-text">&#36;25.00</span>
                     <!-- MODAL DE VALORACIONES -->
-                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal9" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
-                      <div id="modal9" class="modal bottom-sheet">
-                        <div class="modal-content">
-                          <h4>Este producto tiene 5 estrellas</h4>
-                          <p>Comentarios</p>
-                        </div>
-                        <div class="modal-footer">
-                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                        </div>
-                      </div>
+                    <a class="btn tooltipped btn-floating modal-trigger halfway-fab waves-effect waves-light blue"  href="#modal_comentarios" data-position="bottom" data-delay="50" data-tooltip="Ver Comentarios"><i class="material-icons">star</i></a>
                   </div>
                 <div class="card-content">
                   <p>Pintura pro l&aacute;tex marfil</p>
@@ -465,7 +380,51 @@
         <script type="text/javascript" src="../web/js/ini.js"></script>
         <script type="text/javascript" src="../js/materialize.min.js"></script>
         <script type="text/javascript" src="../web/js/fontawesom.js"></script>
-    </main> 
+    </main>
+
+    <!-- MODAL PARA COMENTARIOS -->
+    <div id="modal_comentarios" class="modal bottom-sheet">
+      <div class="modal-content">
+          <div class="row">
+            <div class="col s12 m12 l4 offset-l5">
+              <p><h5>Valoracion Actual</h5></li></p>
+              <div class="ec-stars-wrapper">
+                  <!-- 5 ESTRELLAS PARA VALORAR -->
+                  <a class="waves-effect waves-yellow" href="#" data-value="1" title="1 Estrellas">&#9733;</a>
+                  <a class="waves-effect waves-yellow" href="#" data-value="2" title="2 Estrellas">&#9733;</a>
+                  <a class="waves-effect waves-yellow" href="#" data-value="3" title="3 Estrellas">&#9733;</a>
+                  <a class="waves-effect waves-yellow" href="#" data-value="4" title="4 Estrellas">&#9733;</a>
+                  <a class="waves-effect waves-yellow" href="#" data-value="5" title="5 Estrellas">&#9733;</a>
+              </div>
+            </div>
+            <!-- Comentarios -->
+            <div class="col s12 m12 l12">
+              <ul class="collection">
+                  <li class="collection-header"><h5>Comentarios</h5></li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle">comment</i>
+                    <span class="title">Andres Gomez</span>
+                    <p>Excelente<br>
+                      Nunca habia comprado productos de gran calidad
+                    </p>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle">comment</i>
+                    <span class="title">David Mejia</span>
+                    <p>Buena Pintura<br>
+                      Lo mejor
+                    </p>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <!-- COMENTARIOS -->
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        </div>
+      </div>
+    </div>
+
           <footer class="page-footer  blue darken-2" >
             <div class="container">
               <div class="row">
