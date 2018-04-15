@@ -14,6 +14,11 @@ try{
                                     if($producto->setId_categoria($_POST['id_categoria'])){
                                         if($producto->setId_estado($_Post['id_estado'])){
                                             if($producto->setId_presentacion($_Post['id_presentacion'])){
+                                                if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
+                                                    if(!$producto->setImagen($_FILES['archivo'])){
+                                                        throw new Exception($producto->getImageError());
+                                                    }
+                                                }
                                                 if($producto->updateProducto()){
                                                     Page::showMessage(1, "Producto modificado", "index.php");
                                                 }else{
