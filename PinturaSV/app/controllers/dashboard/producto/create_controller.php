@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/producto.class.php");
+require_once("../app/models/producto.class.php");
 try{
     $producto = new Producto;
     if(isset($_POST['crear'])){
@@ -49,5 +49,5 @@ try{
 }catch (Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/producto/create_view.php");
+require_once("../app/view/dashboard/producto/create_view.php");
 ?>
