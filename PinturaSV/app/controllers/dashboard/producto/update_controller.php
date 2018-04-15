@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/producto.class.php");
+require_once("../../models/producto.class.php");
 try{
     if(isset($_GET['id'])){
         $producto = new Producto;

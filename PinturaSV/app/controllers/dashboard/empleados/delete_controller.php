@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/empleado.class.php");
+require_once("../../app/models/empleado.class.php");
 try{
 	if(isset($_GET['id'])){
 		if($_GET['id'] != $_SESSION['id_empleado']){
@@ -28,5 +28,5 @@ try{
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), "index.php");
 }
-require_once("../../app/views/dashboard/empleado/delete_view.php");
+require_once("../../app/view/dashboard/empleado/delete_view.php");
 ?>

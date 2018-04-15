@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/empleado.class.php");
+require_once("../../app/models/empleado.class.php");
 try{
 	$usuario = new Empleado;
 	if(isset($_POST['buscar'])){
@@ -21,6 +21,6 @@ try{
 		Page::showMessage(3, "No hay usuarios disponibles", "create.php");
 	}
 }catch(Exception $error){
-	Page::showMessage(2, $error->getMessage(), "../account/");
+	Page::showMessage(2, $error->getMessage(), "../cuenta/");
 }
 ?>

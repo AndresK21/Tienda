@@ -1,3 +1,10 @@
+<?php
+require_once("../app/models/database.class.php");
+require_once("../app/helpers/validator.class.php");
+require_once("../app/helpers/component.class.php");
+require_once("../app/controllers/dashboard/producto/create_controller.php");
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -413,99 +420,9 @@
 
 
         <!-- Modal de agregar nuevo -->
-        <div id="modalProduc" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <h4>Agregar producto</h4>
-                <div class="card horizontal">
-                    <!--Lugar donde se insertara la imagen del producto-->
-                    <div class="card-image">
-                        <img src="">
-                        <a class="waves-effect waves-light btn blue-grey darken-4"><i class="material-icons left">archive</i>Cambiar foto</a>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-
-                            <!--Formulario para insertar los productos-->
-                            <div class="row">
-                                <form class="col s12">
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="Pintura látex blanco ostra high standard." id="descripcion" type="text" class="validate">
-                                            <label for="Descripcion" class="blue-grey-text text-darken-4">Descripci&oacute;n</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="25" id="cantidad" type="number" class="validate">
-                                            <label for="Cantidad" class="blue-grey-text text-darken-4">Cantidad</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="$25.00" id="precio" type="number" class="validate">
-                                            <label for="Precio" class="blue-grey-text text-darken-4">Precio</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input placeholder="Rojo" id="color" type="text" class="validate">
-                                            <label for="color" class="blue-grey-text text-darken-4">Color</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <select>
-                                                <option value="" disabled selected>Elija una marca</option>
-                                                <option value="1">Marca 1</option>
-                                                <option value="2">Marca 2</option>
-                                                <option value="3">Marca 3</option>
-                                            </select>
-                                            <label class="blue-grey-text text-darken-4">Marca</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <select>
-                                                <option value="" disabled selected>Elija una categor&iacute;a</option>
-                                                <option value="1">Categor&iacute;a 1</option>
-                                                <option value="2">Categor&iacute;a 2</option>
-                                                <option value="3">Categor&iacute;a 3</option>
-                                            </select>
-                                            <label class="blue-grey-text text-darken-4">Categor&iacute;a</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <select>
-                                                <option value="" disabled selected>Elija una presenta&oacute;n</option>
-                                                <option value="1">Presentaci&oacute;n 1</option>
-                                                <option value="2">Presentaci&oacute;n 2</option>
-                                                <option value="3">Presentaci&oacute;n 3</option>
-                                            </select>
-                                            <label class="blue-grey-text text-darken-4">Presentaci&oacute;n</label>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <input class="with-gap" name="group1" type="radio" id="opc1"  />
-                                        <label for="opc1">En existencia</label>    
-                                    </p>
-                                    <p>
-                                        <input class="with-gap" name="group1" type="radio" id="opc2"  />
-                                        <label for="opc2">Sin existencias</label>    
-                                    </p>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Descartar</a>
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Guardar</a>
-            </div>
-        </div>
-
+        <?php
+            include('../app/view/dashboard/producto/create_view.php');
+        ?>
 
         <!-- Modal de marca nueva -->
         <div id="modal_marca" class="modal">

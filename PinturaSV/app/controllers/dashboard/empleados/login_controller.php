@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/empleado.class.php");
+require_once("../../app/models/empleado.class.php");
 try{
 	$object = new Empleado;
 	if($object->getEmpleados()){
@@ -31,5 +31,5 @@ try{
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/account/login_view.php");
+require_once("../../app/view/dashboard/empleado/login_view.php");
 ?>

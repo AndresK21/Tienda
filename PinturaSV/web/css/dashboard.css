@@ -22,16 +22,6 @@ body {
     flex-direction: column;
 }
 
-header, main, footer {
-    padding-left: 300px;
-}
-
-@media only screen and (max-width : 992px) {
-    header, main, footer {
-      padding-left: 0;
-    }
-}
-
 main {
 flex: 1 0 auto;
 }

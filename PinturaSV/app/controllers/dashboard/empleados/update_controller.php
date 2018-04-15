@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/empleado.class.php");
+require_once("../../app/models/empleado.class.php");
 try{
     if(isset($_GET['id'])){
         $empleado = new Empleado;
@@ -41,5 +41,5 @@ try{
 }catch (Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/empleado/update_view.php");
+require_once("../../app/view/dashboard/empleado/update_view.php");
 ?>

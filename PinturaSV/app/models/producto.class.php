@@ -149,6 +149,16 @@ class Producto extends Validator{
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
+	public function getMarcas(){
+		$sql = "SELECT id_marca, marca FROM marca";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+	}
+	public function getpresentaciones(){
+		$sql = "SELECT id_presentacion, presentacion FROM presentaciones";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+	}
 	public function createProducto(){
 		$sql = "INSERT INTO productos(nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion) VALUES(?, ?, ?, ?, ?, ?, ?)";
 		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->imagen, $this->id_categoria, $this->id_estado, $this->id_presentacion);

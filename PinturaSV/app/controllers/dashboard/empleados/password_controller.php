@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/usuario.class.php");
+require_once("../../app/models/usuario.class.php");
 try{
     if(isset($_POST['cambiar'])){
         $usuario = new Empleado;
@@ -37,5 +37,5 @@ try{
 }catch(Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/account/password_view.php");
+require_once("../../app/view/dashboard/empleado/password_view.php");
 ?>
