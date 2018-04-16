@@ -15,7 +15,7 @@
 <nav>
     <!--Navbar Color Azul-->
     <div class="nav-wrapper  blue">
-        <img class="brand-logo" src="../web/img/mipintura.png">
+        <img class="brand-logo" src="../../web/img/mipintura.png">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
         <li><a href="index.php">Inicio</a></li>

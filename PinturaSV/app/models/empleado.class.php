@@ -103,7 +103,7 @@ class Empleado extends Validator{
 	}
 
 	//Métodos para manejar la sesión del usuario
-	public function checkUsuario(){
+	public function checkUsuarios(){
 		$sql = "SELECT id_empleado FROM empleado WHERE nombre_usuario = ?";
 		$params = array($this->nombre_usuario);
 		$data = Database::getRow($sql, $params);

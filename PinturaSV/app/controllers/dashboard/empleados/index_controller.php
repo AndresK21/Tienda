@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/empleado.class.php");
 try{
-	$usuario = new Empleado;
+	$empleado = new Empleado;
 	if(isset($_POST['buscar'])){
 		$_POST = $empleado->validateForm($_POST);
 		$data = $empleado->searchEmpleado($_POST['busqueda']);
@@ -16,7 +16,7 @@ try{
 		$data = $empleado->getEmpleados();
 	}
 	if($data){
-		require_once("../../app/views/dashboard/empleado/index_view.php");
+		require_once("../../app/view/dashboard/empleado/index_view.php");
 	}else{
 		Page::showMessage(3, "No hay usuarios disponibles", "register.php");
 	}

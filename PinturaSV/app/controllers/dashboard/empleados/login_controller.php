@@ -11,7 +11,7 @@ try{
 						if($object->checkContrasena()){
 							$_SESSION['id_empleado'] = $object->getId_empleado();
 							$_SESSION['nombre_usuario'] = $object->getUsuario();
-							Page::showMessage(1, "Autenticación correcta", "dashboard.php");
+							Page::showMessage(1, "Autenticación correcta", "index.php");
 						}else{
 							throw new Exception("Clave inexistente");
 						}
