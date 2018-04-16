@@ -15,7 +15,7 @@ try{
                             if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                                 if($empleado->setImagen($_FILES['archivo'])){
                                     if($empleado->createEmpleado()){
-                                        Page::showMessage(1, "Usuario creado", "index.php");
+                                        Page::showMessage(1, "Usuario creado", "login.php");
                                     }else{
                                         throw new Exception(Database::getException());
                                     }
