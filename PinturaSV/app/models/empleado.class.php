@@ -47,7 +47,7 @@ class Empleado extends Validator{
 	}
 
 	public function setUsuario($value){
-		if($this->validateAlphabetic($value, 1, 20)){
+		if($this->validateAlphanumeric($value, 1, 20)){
 			$this->nombre_usuario = $value;
 			return true;
 		}else{
@@ -71,7 +71,7 @@ class Empleado extends Validator{
 	}
 
 	public function setImagen($file){
-		if($this->validateImage($file, $this->imagen, "../../web/img/productos/", 500, 500)){
+		if($this->validateImage($file, $this->imagen, "../../web/img/empleados/", 500, 500)){
 			$this->imagen = $this->getImageName();
 			return true;
 		}else{
@@ -82,7 +82,7 @@ class Empleado extends Validator{
 		return $this->imagen;
 	}
 	public function unsetImagen(){
-		if(unlink("../../../img/productos/".$this->imagen)){
+		if(unlink("../../../img/empleados/".$this->imagen)){
 			$this->imagen = null;
 			return true;
 		}else{
@@ -147,8 +147,8 @@ class Empleado extends Validator{
 	}
 	public function createEmpleado(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO empleado(nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, id_permiso) VALUES (?, ?, ?, ?, ?,)";
-		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->$hash, $this->imagen, $this->nombre_usuario);
+		$sql = "INSERT INTO empleado(nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, id_permiso) VALUES (?, ?, ?, ?, ?, ?)";
+		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $hash, $this->imagen, $this->id_permiso);
 		return Database::executeRow($sql, $params);
 	}
 	public function readEmpleado(){

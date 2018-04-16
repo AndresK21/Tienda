@@ -12,10 +12,18 @@ try{
                 if($empleado->setUsuario($_POST['nombre_usuario'])){
                     if($empleado->setContrasena($_POST['contrasena'])){
                         if($empleado->setId_permiso($_POST['id_permiso'])){
-                            if($empleado->createEmpleado()){
-                                Page::showMessage(1, "Usuario creado", "index.php");
+                            if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
+                                if($empleado->setImagen($_FILES['archivo'])){
+                                    if($empleado->createEmpleado()){
+                                        Page::showMessage(1, "Usuario creado", "index.php");
+                                    }else{
+                                        throw new Exception(Database::getException());
+                                    }
+                                }else{
+                                    throw new Exception($producto->getImageError());
+                                }
                             }else{
-                                throw new Exception(Database::getException());
+                                throw new Exception("Seleccione una imagen");
                             }
                         }else{
                             throw new Exception("Elige un permiso");

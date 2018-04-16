@@ -16,9 +16,9 @@ try{
 		$data = $empleado->getEmpleados();
 	}
 	if($data){
-		require_once("../../app/views/dashboard/usuario/index_view.php");
+		require_once("../../app/views/dashboard/empleado/index_view.php");
 	}else{
-		Page::showMessage(3, "No hay usuarios disponibles", "create.php");
+		Page::showMessage(3, "No hay usuarios disponibles", "register.php");
 	}
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), "../cuenta/");

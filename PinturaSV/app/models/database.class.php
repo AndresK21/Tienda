@@ -55,6 +55,7 @@ class Database{
         if(self::$error[0] == "00000"){
             return false;
         }else{
+            print_r(self::$error);
             return self::$error[1];
         }
     }
