@@ -1,9 +1,9 @@
 <?php
-require_once("../../models/producto.class.php");
+require_once("../../app/models/producto.class.php");
 try{
     if(isset($_GET['id'])){
         $producto = new Producto;
-        if($producto->setId_producto($_GET['id_producto'])){
+        if($producto->setId_producto($_GET['id'])){
             if($producto->readProducto()){
                 if(isset($_POST['actualizar'])){
                     $_POST = $producto->validateForm($_POST);
@@ -11,9 +11,9 @@ try{
                         if($producto->setCantidad($_POST['cantidad'])){
                             if($producto->setPrecio($_POST['precio'])){
                                 if($producto->setColor($_POST['color'])){
-                                    if($producto->setId_categoria($_POST['id_categoria'])){
-                                        if($producto->setId_estado($_Post['id_estado'])){
-                                            if($producto->setId_presentacion($_Post['id_presentacion'])){
+                                    if($producto->setId_categoria($_POST['categoria'])){
+                                        if($producto->setId_estado($_POST['estado'])){
+                                            if($producto->setId_presentacion($_Post['presentacion'])){
                                                 if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                                                     if(!$producto->setImagen($_FILES['archivo'])){
                                                         throw new Exception($producto->getImageError());
@@ -58,5 +58,5 @@ try{
 }catch (Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/producto/update_view.php");
+require_once("../../app/view/dashboard/producto/update_view.php");
 ?>

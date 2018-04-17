@@ -1,50 +1,72 @@
-<form method='post' enctype='multipart/form-data'>
-    <div class='row'>
-        <div class='input-field col s12 m6'>
-          	<i class='material-icons prefix'>note_add</i>
-          	<input id='nombre' type='text' name='nombre' class='validate' value='<?php print($producto->getNombre()) ?>' required/>
-          	<label for='nombre'>Nombre</label>
-        </div>
-        <div class='input-field col s12 m6'>
-          	<i class='material-icons prefix'>shopping_cart</i>
-          	<input id='precio' type='number' name='precio' class='validate' min='0.01' max='999.99' step='any' value='<?php print($producto->getPrecio()) ?>' required/>
-          	<label for='precio'>Precio ($)</label>
-        </div>
-        <div class='input-field col s12 m6'>
-          	<i class='material-icons prefix'>description</i>
-          	<input id='descripcion' type='text' name='descripcion' class='validate' value='<?php print($producto->getDescripcion()) ?>' required/>
-          	<label for='descripcion'>Descripción</label>
-        </div>
-        <div class='input-field col s12 m6'>
-            <?php
-            Page::showSelect("Categoría", "categoria", $producto->getCategoria(), $producto->getCategorias());
-            ?>
-        </div>
-      	<div class='file-field input-field col s12 m6'>
-            <div class='btn waves-effect'>
-                <span><i class='material-icons'>image</i></span>
-                <input type='file' name='archivo'/>
+<div class="white-text">.</div>
+<div class="white-text">.</div>
+<div class="white-text">.</div>
+
+<!--Formulario para insertar los productos-->
+<div class="row">
+    <form class="col s12" method="post" enctype='multipart/form-data'>
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                <input id="nombre" type="text" name="nombre" class="validate" value='<?php print($producto->getNombre())?>' required>
+                <label for="nombre">Nombre</label>
             </div>
-            <div class='file-path-wrapper'>
-                <input class='file-path validate' type='text' placeholder='Seleccione una imagen'/>
+            <div class="input-field col s12 m6 l6">
+                <input id="cantidad" type="number" name="cantidad" class="validate" value='<?php print($producto->getCantidad())?>' required>
+                <label for="Cantidad">Cantidad</label>
             </div>
         </div>
-        <div class='col s12 m6'>
-            <p>
-                <div class='switch'>
-                    <span>Estado:</span>
-                    <label>
-                        <i class='material-icons'>visibility_off</i>
-                        <input type='checkbox' name='estado' <?php print($producto->getEstado()?"checked":"") ?>/>
-                        <span class='lever'></span>
-                        <i class='material-icons'>visibility</i>
-                    </label>
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                <input id="precio" type="number" name="precio"class="validate" max="999.9" min="0.01" step="any" value='<?php print($producto->getPrecio())?>' required>
+                <label for="Precio">Precio</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <input id="color" type="text" name="color" class="validate" value='<?php print($producto->getColor())?>' required>
+                <label for="color">Color</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class='file-field input-field col s12 m6 l6'>
+                <div class='waves-effect waves-light btn blue-grey darken-4'>
+                    <span><i class='material-icons blue-gray-text text-darken-4'>image</i></span>
+                    <input type='file' name='archivo' required/>
                 </div>
-            </p>
+                <div class='file-path-wrapper'>
+                    <input type='text' class='file-path validate' placeholder='Seleccione una imagen'/>
+                </div>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <?php
+                    Page::showSelect("Categoria", "categoria", $producto->getId_categoria(), $producto->getCategorias());
+                ?>
+            </div>
         </div>
-    </div>
-    <div class='row center-align'>
-        <a href='index.php' class='btn waves-effect grey tooltipped' data-tooltip='Cancelar'><i class='material-icons'>cancel</i></a>
-        <button type='submit' name='actualizar' class='btn waves-effect blue tooltipped' data-tooltip='Actualizar'><i class='material-icons'>save</i></button>
-    </div>
-</form>
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                <?php
+                    Page::showSelect("Presentacion", "presentacion", $producto->getId_presentacion(), $producto->getPresentaciones());
+                ?>
+            </div>
+            <div class="col s12 m6 l6">
+
+                <p>
+                    <div class='switch'>
+                        <span>Estado:</span>
+                        <label>
+                            <i>Sin existencias</i>
+                            <input type='checkbox' name='estado' <?php print($producto->getId_estado()?"checked":"") ?>/>
+                            <span class='lever'></span>
+                            <i>En existencia</i>
+                        </label>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 right-align">
+                <a class='btn waves-effect red darken-3'><i class='material-icons'></i>Cancelar</a>
+                <button type='submit' name='actualizar' class='btn waves-effect blue-grey darken-4'><i class='material-icons'>save</i>Guardar cambios</button>
+            </div>
+        </div>
+    </form>
+</div>

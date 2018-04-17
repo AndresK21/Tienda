@@ -165,7 +165,7 @@ class Producto extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function readProducto(){
-		$sql = "SELECT nombre, cantidad, precio, color, imagen, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) WHERE id_producto = ?";
+		$sql = "SELECT nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion FROM producto WHERE id_producto = ?";
 		$params = array($this->id_producto);
 		$producto = Database::getRow($sql, $params);
 		if($producto){
@@ -173,10 +173,10 @@ class Producto extends Validator{
 			$this->cantidad = $producto['cantidad'];
 			$this->precio = $producto['precio'];
 			$this->color = $producto['color'];
-			$this->iamgen = $producto['imagen'];
-			$this->id_categoria = $producto['categoria'];
-			$this->id_estado = $producto['estado'];
-			$this->id_presentacion = $producto['presentacion'];
+			$this->imagen = $producto['imagen'];
+			$this->id_categoria = $producto['id_categoria'];
+			$this->id_estado = $producto['id_estado'];
+			$this->id_presentacion = $producto['id_presentacion'];
 			return true;
 		}else{
 			return null;

@@ -1,6 +1,10 @@
+<div class="white-text">.</div>
+<div class="white-text">.</div>
+<div class="white-text">.</div>
+
 <!--Formulario para insertar los productos-->
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" method="post">
         <div class="row">
             <div class="input-field col s12 m6 l6">
                 <input id="nombre" type="text" class="validate" value='<?php print($producto->getNombre())?>' required>
