@@ -152,7 +152,7 @@ class Empleado extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function readEmpleado(){
-		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, imagen, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE id_empleado = ?";
+		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, imagen FROM empleado WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$user = Database::getRow($sql, $params);
 		if($user){
@@ -160,15 +160,14 @@ class Empleado extends Validator{
 			$this->correo_electronico = $user['correo_electronico'];
 			$this->nombre_usuario = $user['nombre_usuario'];
 			$this->imagen = $user['imagen'];
-			$this->id_permiso = $user['permiso'];
 			return true;
 		}else{
 			return null;
 		}
 	}
 	public function updateEmpleado(){
-		$sql = "UPDATE empleado SET nombre_completo = ?, correo_electronico = ?, nombre_usuario = ?, imagen = ?, id_permiso= ? WHERE id_empleado = ?";
-		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->imagen, $this->id_permiso, $this->id_empleado);
+		$sql = "UPDATE empleado SET nombre_completo = ?, correo_electronico = ?, nombre_usuario = ?, imagen = ? WHERE id_empleado = ?";
+		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->imagen, $this->id_empleado);
 		return Database::executeRow($sql, $params);
 	}
 	public function deleteEmpleado(){

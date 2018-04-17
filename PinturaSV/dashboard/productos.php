@@ -2,7 +2,7 @@
 require_once("../app/models/database.class.php");
 require_once("../app/helpers/validator.class.php");
 require_once("../app/helpers/component.class.php");
-require_once("../app/controllers/dashboard/producto/create_controller.php");
+require_once("../app/controllers/dashboard/producto/index_controller.php");
 ?>
 
 <!DOCTYPE html>
@@ -44,11 +44,16 @@ require_once("../app/controllers/dashboard/producto/create_controller.php");
                     <div class="row">
                         <div class="col s12">
                             <div class="row">
-                                <div class="input-field col s12">
-                                <i class="material-icons prefix">search</i>
-                                <input type="text" id="autocomplete-input" class="autocomplete">
-                                <label for="autocomplete-input">Buscar producto</label>
-                                </div>
+                                <form method='post'>
+                                    <div class='input-field col s10 m10 l10'>
+                                        <i class='material-icons prefix'>search</i>
+                                        <input id='buscar' type='text' name='busqueda_producto'/>
+                                        <label for='buscar'>Buscador</label>
+                                    </div>
+                                    <div class='input-field col s2 m2 l2'>
+                                        <button type='submit' name='buscar_producto' class='btn waves-effect green tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>check_circle</i></button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
