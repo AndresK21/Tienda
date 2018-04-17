@@ -135,12 +135,12 @@ class Producto extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getProductos(){
-		$sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) ORDER BY nombre";
+		$sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, id_estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN presentaciones USING(id_presentacion) ORDER BY nombre";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchProducto($value){
-		$sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN estado USING(id_estado) INNER JOIN presentaciones USING(id_presentacion) WHERE nombre LIKE ? ORDER BY nombre";
+		$sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, id_estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN presentaciones USING(id_presentacion) WHERE nombre LIKE ? ORDER BY nombre";
 		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}

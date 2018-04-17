@@ -47,10 +47,10 @@ class Page extends Component{
 							<img class='brand-logo' src='../../web/img/mipintura.png'>
 							<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 							<ul class='right hide-on-med-and-down'>
-								<li><a href='../cuenta/dashboard.php'>Dashboard</a></li>
+								<li><a href='../cuenta/index.php'>Dashboard</a></li>
 								<li><a href='usuarios.php'>Usuarios</a></li>
 								<li><a href='../producto/index.php'>Productos</a></li>
-								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Cuenta: <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 							</ul>
 							</div>
 						</nav>
@@ -58,10 +58,10 @@ class Page extends Component{
 				</header>
 
 				<ul class='side-nav' id='mobile-demo'>
-					<li><a href='dashboard.php'>Dashboard</a></li>
-					<li><a href='usuarios.php'>Usuarios</a></li>
-					<li><a href='productos.php'>Productos</a></li>
-					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido Usuario<i class='material-icons right'>arrow_drop_down</i></a></li>
+					<li><a href='../cuenta/index.php'>Dashboard</a></li>
+					<li><a href='../cuenta/usuarios.php'>Usuarios</a></li>
+					<li><a href='../producto/index.php'>Productos</a></li>
+					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 				</ul>
 
 				<main class=''>
