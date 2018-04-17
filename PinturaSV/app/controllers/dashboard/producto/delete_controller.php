@@ -23,5 +23,5 @@ try{
 }catch (Exception $error){
 	Page::showMessage(2, $error->getMessage(), "index.php");
 }
-require_once("../../app/view/dashboard/producto/delete_view.php");
+require_once("../../app/view/dashboard/producto/delete_producto_view.php");
 ?>

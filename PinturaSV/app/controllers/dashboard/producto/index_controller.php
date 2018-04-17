@@ -21,6 +21,6 @@ try{
 		Page::showMessage(4, "No hay productos disponibles", "create.php");
 	}
 }catch(Exception $error){
-	Page::showMessage(2, $error->getMessage(), "../account/");
+	Page::showMessage(2, $error->getMessage(), "../cuenta/");
 }
 ?>

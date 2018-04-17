@@ -58,5 +58,5 @@ try{
 }catch (Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/view/dashboard/producto/update_view.php");
+require_once("../../app/view/dashboard/producto/update_producto_view.php");
 ?>

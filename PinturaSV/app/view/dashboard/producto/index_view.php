@@ -92,15 +92,20 @@
                 <!-- Barra de busqueda -->
                 <div class="container">
                     <div class="row">
-                        <div class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                <i class="material-icons prefix">search</i>
-                                <input type="text" id="autocomplete-input" class="autocomplete">
-                                <label for="autocomplete-input">Buscar marca</label>
+                        <form method="post">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s10">
+                                        <i class="material-icons prefix">search</i>
+                                        <input type="text" id="autocomplete-input" name="busqueda_marca" class="autocomplete">
+                                        <label for="autocomplete-input">Buscar marca</label>
+                                    </div>
+                                    <div class="input-field col s2">
+                                        <button type='submit' name='buscar_marca' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             
@@ -122,6 +127,28 @@
                         </thead>
 
                         <tbody>
+
+                            <?php
+								foreach($data_marca as $row){
+									print("
+									<tr>
+										<td>$row[marca]</td>
+										<td>
+                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar marca' href='update_marca.php'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
+                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar marca' href='delete_marca'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
+										</td>
+									</tr>
+									");
+								}
+							?>
+
+
+
+
+
+
+
+
                             <!--Producto de ejemplo 1-->
                             <tr>
                                 <td>Benjamin Moore.</td>
