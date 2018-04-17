@@ -136,7 +136,7 @@ class Empleado extends Validator{
 
 	//Metodos para manejar el CRUD
 	public function getEmpleados(){
-		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, permiso FROM empleado INNER JOIN permisos USING(id_permiso) ORDER BY nombre_completo";
+		$sql = "SELECT id_empleado, nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, id_permiso FROM empleado ORDER BY nombre_completo";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}

@@ -20,7 +20,7 @@ class Page extends Component{
 			</head>
 			<body>
 		");
-		if(isset($_SESSION['id_usuario'])){
+		if(isset($_SESSION['id_empleado'])){
 			print("
 				<header class='navbar-fixed'>
 					<!-- Dropdown Structure -->
@@ -64,8 +64,8 @@ class Page extends Component{
 					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido Usuario<i class='material-icons right'>arrow_drop_down</i></a></li>
 				</ul>
 
-				<main class='container'>
-					<h3 class='center-align'>$title</h3>
+				<main class=''>
+					
 			");
 		}else{
 			print("
@@ -79,7 +79,7 @@ class Page extends Component{
 					</nav>
 				</div>
 			</header>
-				<main class='container'>
+				<main class=''>
 			");
 			$filename = basename($_SERVER['PHP_SELF']);
 			if($filename != "login.php" && $filename != "register.php"){
@@ -87,7 +87,7 @@ class Page extends Component{
 				self::templateFooter();
 				exit;
 			}else{
-				print("<h3 class='center-align'>$title</h3>");
+				print("");
 			}
 		}
 	}
