@@ -1,5 +1,5 @@
 <?php
-require_once("../../app/models/empleado.class.php");
+require_once("../../app/models/usuario.class.php");
 try{
     if(isset($_POST['cambiar'])){
         $usuario = new Empleado;

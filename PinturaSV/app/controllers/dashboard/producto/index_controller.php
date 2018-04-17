@@ -2,9 +2,9 @@
 require_once("../../app/models/producto.class.php");
 try{
 	$producto = new Producto;
-	if(isset($_POST['buscar_producto'])){
+	if(isset($_POST['buscar'])){
 		$_POST = $producto->validateForm($_POST);
-		$data = $producto->searchProducto($_POST['busqueda_producto']);
+		$data = $producto->searchProducto($_POST['busqueda']);
 		if($data){
 			$rows = count($data);
 			Page::showMessage(4, "Se encontraron $rows resuldatos", null);
@@ -16,7 +16,7 @@ try{
 		$data = $producto->getProductos();
 	}
 	if($data){
-		require_once("../../app/view/dashboard/producto/index_view.php");
+		require_once("../../app/views/dashboard/producto/index_view.php");
 	}else{
 		Page::showMessage(4, "No hay productos disponibles", "create.php");
 	}
