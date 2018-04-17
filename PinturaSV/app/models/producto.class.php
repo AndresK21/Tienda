@@ -160,7 +160,7 @@ class Producto extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function createProducto(){
-		$sql = "INSERT INTO productos(nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion) VALUES(?, ?, ?, ?, ?, ?, ?)";
+		$sql = "INSERT INTO producto(nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
 		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->imagen, $this->id_categoria, $this->id_estado, $this->id_presentacion);
 		return Database::executeRow($sql, $params);
 	}

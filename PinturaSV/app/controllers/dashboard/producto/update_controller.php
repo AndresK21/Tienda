@@ -12,8 +12,8 @@ try{
                             if($producto->setPrecio($_POST['precio'])){
                                 if($producto->setColor($_POST['color'])){
                                     if($producto->setId_categoria($_POST['categoria'])){
-                                        if($producto->setId_estado($_POST['estado'])){
-                                            if($producto->setId_presentacion($_Post['presentacion'])){
+                                        if($producto->setId_estado(isset($_POST['estado'])?1:2)){
+                                            if($producto->setId_presentacion($_POST['presentacion'])){
                                                 if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                                                     if(!$producto->setImagen($_FILES['archivo'])){
                                                         throw new Exception($producto->getImageError());

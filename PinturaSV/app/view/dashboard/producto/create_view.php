@@ -3,25 +3,25 @@
 <div class="white-text">.</div>
 
 <!--Formulario para insertar los productos-->
-<div class="row">
-    <form class="col s12" method="post">
+<div class="row container">
+    <form class="col s12" method="post" enctype='multipart/form-data'>
         <div class="row">
             <div class="input-field col s12 m6 l6">
-                <input id="nombre" type="text" class="validate" value='<?php print($producto->getNombre())?>' required>
+                <input id="nombre" type="text" name="nombre" class="validate" value='<?php print($producto->getNombre())?>' required>
                 <label for="nombre">Nombre</label>
             </div>
             <div class="input-field col s12 m6 l6">
-                <input id="cantidad" type="number" class="validate" value='<?php print($producto->getCantidad())?>' required>
+                <input id="cantidad" type="number" name="cantidad" class="validate" value='<?php print($producto->getCantidad())?>' required>
                 <label for="Cantidad">Cantidad</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12 m6 l6">
-                <input id="precio" type="number" class="validate" max="999.9" min="0.01" step="any" value='<?php print($producto->getPrecio())?>' required>
+                <input id="precio" type="number" name="precio"class="validate" max="999.9" min="0.01" step="any" value='<?php print($producto->getPrecio())?>' required>
                 <label for="Precio">Precio</label>
             </div>
             <div class="input-field col s12 m6 l6">
-                <input id="color" type="text" class="validate" value='<?php print($producto->getPrecio())?>' required>
+                <input id="color" type="text" name="color" class="validate" value='<?php print($producto->getColor())?>' required>
                 <label for="color">Color</label>
             </div>
         </div>
@@ -48,14 +48,24 @@
                 ?>
             </div>
             <div class="col s12 m6 l6">
+
                 <p>
-                    <input class="with-gap" name="group1" type="radio" id="opc1"  />
-                    <label for="opc1">En existencia</label>    
+                    <div class='switch'>
+                        <span>Estado:</span>
+                        <label>
+                            <i>Sin existencias</i>
+                            <input type='checkbox' name='estado' <?php print($producto->getId_estado()?"checked":"") ?>/>
+                            <span class='lever'></span>
+                            <i>En existencia</i>
+                        </label>
+                    </div>
                 </p>
-                <p>
-                    <input class="with-gap" name="group1" type="radio" id="opc2"  />
-                    <label for="opc2">Sin existencias</label>    
-                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 right-align">
+                <a class='btn waves-effect red darken-3' href="index.php"><i class='material-icons'></i>Cancelar</a>
+                <button type='submit' name='crear' class='btn waves-effect blue-grey darken-4'><i class='material-icons'>save</i>Guardar cambios</button>
             </div>
         </div>
     </form>

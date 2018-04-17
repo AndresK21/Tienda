@@ -10,16 +10,16 @@ try{
                     if($producto->setColor($_POST['color'])){
                         if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                             if($producto->setImagen($_FILES['archivo'])){
-                                if($producto->setId_categoria($_POST['id_categoria'])){
-                                    if($producto->setId_estado($_Post['id_estado'])){
-                                        if($producto->setId_presentacion($_Post['id_presentacion'])){
+                                if($producto->setId_categoria($_POST['categoria'])){
+                                    if($producto->setId_estado(isset($_POST['estado'])?1:2)){
+                                        if($producto->setId_presentacion($_POST['presentacion'])){
                                             if($producto->createProducto()){
                                                 Page::showMessage(1, "Producto creado", "index.php");
                                             }else{
-                                            throw new Exception("No se pudo cerrar el producto");        
+                                            throw new Exception("No se pudo crear el producto");        
                                             }
                                         }else{
-                                            throw new Exception("Presentacion incorrecto");
+                                            throw new Exception("Presentacion incorrecta");
                                         }
                                     }else{
                                         throw new Exception("Estado incorrecto");
