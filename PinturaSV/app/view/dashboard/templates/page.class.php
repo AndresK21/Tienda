@@ -20,20 +20,20 @@ class Page extends Component{
 			</head>
 			<body>
 		");
-		if(isset($_SESSION['id_usuario'])){
+		if(isset($_SESSION['id_empleado'])){
 			print("
 				<header class='navbar-fixed'>
 					<!-- Dropdown Structure -->
 					<ul id='dropdown1' class='dropdown-content'>
-						<li><a href='../cuenta/editar_perfil.php'>Editar perfil</a></li>
+						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
 						<li class='divider'></li>
-						<li><a href='../cuenta/cambiar_contra.php'>Cambiar contrase&ntilde;a</a></li>
+						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
 						<li class='divider'></li>
 						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
 					</ul>
 					<!-- Dropdown Structure Mobile -->
 					<ul id='dropdown2' class='dropdown-content'>
-						<li><a href='../cuenta/editar_perfil.php'>Editar perfil</a></li>
+						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
 						<li class='divider'></li>
 						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
 						<li class='divider'></li>
@@ -47,10 +47,10 @@ class Page extends Component{
 							<img class='brand-logo' src='../../web/img/mipintura.png'>
 							<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 							<ul class='right hide-on-med-and-down'>
-								<li><a href='../cuenta/dashboard.php'>Dashboard</a></li>
-								<li><a href='usuarios.php'>Usuarios</a></li>
+								<li><a href='../cuenta/index.php'>Dashboard</a></li>
+								<li><a href='../usuarios/usuarios.php'>Usuarios</a></li>
 								<li><a href='../producto/index.php'>Productos</a></li>
-								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Cuenta: <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Usuario: <b>$_SESSION[nombre_usuario]<i class='material-icons right'>arrow_drop_down</i></a></li>
 							</ul>
 							</div>
 						</nav>
@@ -58,14 +58,13 @@ class Page extends Component{
 				</header>
 
 				<ul class='side-nav' id='mobile-demo'>
-					<li><a href='dashboard.php'>Dashboard</a></li>
-					<li><a href='usuarios.php'>Usuarios</a></li>
-					<li><a href='productos.php'>Productos</a></li>
-					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido Usuario<i class='material-icons right'>arrow_drop_down</i></a></li>
+					<li><a href='../cuenta/index.php'>Dashboard</a></li>
+					<li><a href='../usuarios/usuarios.php'>Usuarios</a></li>
+					<li><a href='../producto/index.php'>Productos</a></li>
+					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Usuario: <b>$_SESSION[nombre_usuario]<i class='material-icons right'>arrow_drop_down</i></a></li>
 				</ul>
 
-				<main class='container'>
-					<h3 class='center-align'>$title</h3>
+				<main>
 			");
 		}else{
 			print("
@@ -79,7 +78,7 @@ class Page extends Component{
 					</nav>
 				</div>
 			</header>
-				<main class='container'>
+				<main>
 			");
 			$filename = basename($_SERVER['PHP_SELF']);
 			if($filename != "login.php" && $filename != "register.php"){
@@ -87,7 +86,7 @@ class Page extends Component{
 				self::templateFooter();
 				exit;
 			}else{
-				print("<h3 class='center-align'>$title</h3>");
+				print("");
 			}
 		}
 	}
