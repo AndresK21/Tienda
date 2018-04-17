@@ -50,7 +50,7 @@ class Page extends Component{
 								<li><a href='../cuenta/dashboard.php'>Dashboard</a></li>
 								<li><a href='usuarios.php'>Usuarios</a></li>
 								<li><a href='../producto/index.php'>Productos</a></li>
-								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Cuenta: <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'><i class='material-icons right'>arrow_drop_down</i></a></li>
 							</ul>
 							</div>
 						</nav>
