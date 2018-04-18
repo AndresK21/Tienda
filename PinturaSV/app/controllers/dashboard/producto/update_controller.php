@@ -16,14 +16,18 @@ try{
                                             if($producto->setId_presentacion($_POST['presentacion'])){
                                                 if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                                                     if(!$producto->setImagen($_FILES['archivo'])){
+                                                        if($producto->updateProducto()){
+                                                            Page::showMessage(1, "Producto modificado", "index.php");
+                                                        }else{
+                                                            throw new Exception(Database::getException());
+                                                        }
+                                                    }else{
                                                         throw new Exception($producto->getImageError());
                                                     }
-                                                }
-                                                if($producto->updateProducto()){
-                                                    Page::showMessage(1, "Producto modificado", "index.php");
                                                 }else{
-                                                    throw new Exception(Database::getException());
+                                                    throw new Exception("Seleccione una imagen");
                                                 }
+                                                
                                             }else{
                                                 throw new Exception("Presentacion incorrecta");
                                             }

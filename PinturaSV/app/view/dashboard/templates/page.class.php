@@ -25,15 +25,15 @@ class Page extends Component{
 				<header class='navbar-fixed'>
 					<!-- Dropdown Structure -->
 					<ul id='dropdown1' class='dropdown-content'>
-						<li><a href='../cuenta/editar_perfil.php'>Editar perfil</a></li>
+						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
 						<li class='divider'></li>
-						<li><a href='../cuenta/cambiar_contra.php'>Cambiar contrase&ntilde;a</a></li>
+						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
 						<li class='divider'></li>
 						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
 					</ul>
 					<!-- Dropdown Structure Mobile -->
 					<ul id='dropdown2' class='dropdown-content'>
-						<li><a href='../cuenta/editar_perfil.php'>Editar perfil</a></li>
+						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
 						<li class='divider'></li>
 						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
 						<li class='divider'></li>
