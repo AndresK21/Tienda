@@ -2,7 +2,7 @@
 require_once("../../app/models/empleado.class.php");
 try{
 	$usuario = new Empleado;
-	if(isset($_POST['busqueda_usuario'])){
+	if(isset($_POST['buscar_usuario'])){
 		$_POST = $usuario->validateForm($_POST);
 		$data = $usuario->searchEmpleado($_POST['busqueda_usuario']);
 		if($data){

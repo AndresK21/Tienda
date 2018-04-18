@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="input-field col s2 m2 l2">
-                <button type='submit' name='busqueda_usuario' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                <button type='submit' name='buscar_usuario' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
             </div>
             <table class="bordered highlight responsive-table z-depth-2">
                 <thead>
