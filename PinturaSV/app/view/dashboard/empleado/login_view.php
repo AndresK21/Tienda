@@ -1,3 +1,6 @@
+<div class="white-text">.</div>
+<div class="white-text">.</div>
+
 <!--Formulario de inicio de sesion-->
 <form method="post" enctype='multipart/form-data'>
 	<div class="container">

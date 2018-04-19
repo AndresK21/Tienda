@@ -134,8 +134,8 @@
 									<tr>
 										<td>$row[marca]</td>
 										<td>
-                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar marca' href='update_marca.php'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
-                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar marca' href='delete_marca'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
+                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar marca' href='update_marca.php?id=$row[id_marca]'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
+                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar marca' href='delete_marca.php?id=$row[id_marca]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
 										</td>
 									</tr>
 									");

@@ -1,3 +1,6 @@
+<div class="white-text">.</div>
+<div class="white-text">.</div>
+
 <!--Formulario de editar perfil-->
 <div class="row">
     <form class="col s12" method="post" enctype='multipart/form-data'>

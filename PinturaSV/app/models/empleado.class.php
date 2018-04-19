@@ -171,6 +171,11 @@ class Empleado extends Validator{
 		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->imagen, $this->id_permiso, $this->id_empleado);
 		return Database::executeRow($sql, $params);
 	}
+	public function updateEmpleado2(){
+		$sql = "UPDATE empleado SET nombre_completo = ?, correo_electronico = ?, nombre_usuario = ? WHERE id_empleado = ?";
+		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $this->id_empleado);
+		return Database::executeRow($sql, $params);
+	}
 	public function deleteEmpleado(){
 		$sql = "DELETE FROM empleado WHERE id_empleado = ?";
 		$params = array($this->id_empleado);

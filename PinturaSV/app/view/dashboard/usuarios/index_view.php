@@ -1,3 +1,6 @@
+<div class="white-text">.</div>
+<div class="white-text">.</div>
+
 <div class="container">
     <!--Boton fijo en la pantalla para agregar nuevos usuarios-->
 
