@@ -60,23 +60,25 @@
 						<tbody>
 						<!--Producto de ejemplo 1-->
 							<?php
-								foreach($data as $row){
+                            if($productos){
+                                foreach($productos as $producto){
 									print("
 									<tr>
-										<td><img src='../../web/img/productos/$row[imagen]' class='materialboxed' width='50' height='50'></td>
-										<td>$row[nombre]</td>
-										<td>$row[cantidad]</td>
-										<td>$row[precio]</td>
-										<td>$row[presentacion]</td>
-										<td><i class='material-icons'>".($row['id_estado']?"check":"")."</i></td>
+										<td><img src='../../web/img/productos/$producto[imagen]' class='materialboxed' width='50' height='50'></td>
+										<td>$producto[nombre]</td>
+										<td>$producto[cantidad]</td>
+										<td>$producto[precio]</td>
+										<td>$producto[presentacion]</td>
+										<td><i class='material-icons'>".($producto['id_estado']?"check":"")."</i></td>
 										<td>
-											<i class='material-icons'>".($row['id_estado']?"visibility":"visibility_off")."</i>
-											<a href='update.php?id=$row[id_producto]' class='blue-text text-darken-3'><i class='material-icons'>edit</i></a>
-											<a href='delete.php?id=$row[id_producto]' class='red-text text-darken-3'><i class='material-icons'>delete</i></a>
+											<i class='material-icons'>".($producto['id_estado']?"visibility":"visibility_off")."</i>
+											<a href='update.php?id=$producto[id_producto]' class='blue-text text-darken-3'><i class='material-icons'>edit</i></a>
+											<a href='delete.php?id=$producto[id_producto]' class='red-text text-darken-3'><i class='material-icons'>delete</i></a>
 										</td>
 									</tr>
 									");
 								}
+                            }
 							?>
 
                         </tbody>
@@ -129,13 +131,13 @@
                         <tbody>
 
                             <?php
-								foreach($data_marca as $row){
+								foreach($marcas as $marca){
 									print("
 									<tr>
-										<td>$row[marca]</td>
+										<td>$marca[marca]</td>
 										<td>
-                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar marca' href='update_marca.php?id=$row[id_marca]'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
-                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar marca' href='delete_marca.php?id=$row[id_marca]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
+                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar marca' href='update_marca.php?id=$marca[id_marca]'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
+                                            <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar marca' href='delete_marca.php?id=$marca[id_marca]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
 										</td>
 									</tr>
 									");
