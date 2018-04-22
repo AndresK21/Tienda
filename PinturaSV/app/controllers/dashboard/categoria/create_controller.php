@@ -1,11 +1,11 @@
 <?php
-require_once("../../../models/categoria.class.php");
+require_once("../../app/models/categoria.class.php");
 try{
     $categoria = new Categoria;
-    if(isset($_POST['crear'])){
+    if(isset($_POST['crear_categoria'])){
         $_POST = $categoria->validateForm($_POST);
         if($categoria->setCategoria($_POST['categoria'])){
-            if($categoria->setId_marca($_POST['id_marca'])){
+            if($categoria->setId_marca($_POST['marca'])){
                 if($categoria->createCategoria()){
                     Page::showMessage(1, "Categoría creada", "index.php");
                 }else{
@@ -21,5 +21,5 @@ try{
 }catch(Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/categoria/create_view.php");
+require_once("../../app/view/dashboard/categoria/create_view.php");
 ?>

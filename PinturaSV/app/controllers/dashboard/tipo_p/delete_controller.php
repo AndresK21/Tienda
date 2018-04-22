@@ -1,12 +1,13 @@
 <?php
-require_once("../../../models/tipo_p.class.php");
+require_once("../../app/models/tipo_p.class.php");
 try{
 	if(isset($_GET['id'])){
 		$tipo_p = new Tipo_p;
-		if($tipo_p->setId_tipo($_GET['id_tipo'])){
+		if($tipo_p->setId_tipo($_GET['id'])){
 			if($tipo_p->readTipo_p()){
 				if(isset($_POST['eliminar'])){
 					if($tipo_p->deleteTipo_p()){
+						Page::showMessage(1, "Tipo de producto eliminado", "index.php");
 					}else{
 						throw new Exception(Database::getException());
 					}
@@ -23,5 +24,5 @@ try{
 }catch (Exception $error){
 	Page::showMessage(2, $error->getMessage(), "index.php");
 }
-require_once("../../app/views/dashboard/producto/delete_view.php");
+require_once("../../app/view/dashboard/tipo_p/delete_view.php");
 ?>

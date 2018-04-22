@@ -1,9 +1,9 @@
 <?php
-require_once("../../../models/categoria.class.php");
+require_once("../../app/models/categoria.class.php");
 try{
 	if(isset($_GET['id'])){
 		$categoria = new Categoria;
-		if($categoria->setId_categoria($_GET['id_categoria'])){
+		if($categoria->setId_categoria($_GET['id'])){
 			if($categoria->readCategoria()){
 				if(isset($_POST['eliminar'])){
 					if($categoria->deleteCategoria()){
@@ -25,5 +25,5 @@ try{
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), "index.php");
 }
-require_once("../../app/views/dashboard/categoria/delete_view.php");
+require_once("../../app/view/dashboard/categoria/delete_view.php");
 ?>

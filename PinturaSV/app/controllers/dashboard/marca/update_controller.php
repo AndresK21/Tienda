@@ -1,11 +1,11 @@
 <?php
-require_once("../../../models/marca.class.php");
+require_once("../../app/models/marca.class.php");
 try{
     if(isset($_GET['id'])){
         $marca = new Marca;
-        if($marca->setId_marca($_GET['id_marca'])){
+        if($marca->setId_marca($_GET['id'])){
             if($marca->readMarca()){
-                if(isset($_POST['actualizar'])){
+                if(isset($_POST['actualizar_marca'])){
                     $_POST = $marca->validateForm($_POST);
                     if($marca->setMarca($_POST['marca'])){
                             if($marca->updateMarca()){
@@ -14,7 +14,7 @@ try{
                                 throw new Exception(Database::getException());
                             }                   
                     }else{
-                        throw new Exception("Marca incorrecto");
+                        throw new Exception("Marca incorrecta");
                     } 
                 }
             }else{
@@ -29,5 +29,5 @@ try{
 }catch(Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/marca/update_view.php");
+require_once("../../app/view/dashboard/marca/update_view.php");
 ?>

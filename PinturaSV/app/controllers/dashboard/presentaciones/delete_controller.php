@@ -1,12 +1,13 @@
 <?php
-require_once("../../../models/presentaciones.class.php");
+require_once("../../app/models/presentaciones.class.php");
 try{
 	if(isset($_GET['id'])){
 		$presentaciones = new Presentaciones;
-		if($presentaciones->setId_tipo($_GET['id_tipo'])){
+		if($presentaciones->setId_Presentacion($_GET['id'])){
 			if($presentaciones->readPresentacion()){
 				if(isset($_POST['eliminar'])){
 					if($presentaciones->deletePresentacion()){
+						Page::showMessage(1, "Presentacion eliminada", "index.php");
 					}else{
 						throw new Exception(Database::getException());
 					}
@@ -23,5 +24,5 @@ try{
 }catch (Exception $error){
 	Page::showMessage(2, $error->getMessage(), "index.php");
 }
-require_once("../../app/views/dashboard/producto/delete_view.php");
+require_once("../../app/view/dashboard/presentaciones/delete_view.php");
 ?>

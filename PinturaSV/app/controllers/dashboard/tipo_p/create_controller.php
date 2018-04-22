@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/tipo_p.class.php");
+require_once("../../app/models/tipo_p.class.php");
 try{
     $tipo_p = new Tipo_p;
     if(isset($_POST['crear'])){
@@ -17,5 +17,5 @@ try{
 }catch (Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/producto/create_view.php");
+require_once("../../app/view/dashboard/tipo_p/create_view.php");
 ?>

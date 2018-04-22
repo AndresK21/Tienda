@@ -7,6 +7,7 @@ try{
 			if($producto->readProducto()){
 				if(isset($_POST['eliminar'])){
 					if($producto->deleteProducto()){
+						Page::showMessage(1, "Producto eliminado", "index.php");
 					}else{
 						throw new Exception(Database::getException());
 					}

@@ -27,7 +27,7 @@ class Categoria extends Validator{
 		}
 	}
 	public function getCategoria(){
-		return $this->nombre;
+		return $this->categoria;
 	}
 
 	public function setId_marca($value){
@@ -45,6 +45,11 @@ class Categoria extends Validator{
 	//Metodos para el manejo del CRUD
 	public function getCategorias(){
 		$sql = "SELECT id_categoria, categoria, marca FROM categoria INNER JOIN marca USING(id_marca) ORDER BY categoria";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+	}
+	public function getMarcas(){
+		$sql = "SELECT id_marca, marca FROM marca ORDER BY marca";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}

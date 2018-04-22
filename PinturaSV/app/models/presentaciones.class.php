@@ -44,18 +44,23 @@ class Presentaciones extends Validator{
 
 	//Metodos para el manejo del CRUD
 	public function getPresentaciones(){
-		$sql = "SELECT id_presentacion, presentacion, id_tipo FROM presentaciones ORDER BY presentacion";
+		$sql = "SELECT id_presentacion, presentacion, tipo_p FROM presentaciones INNER JOIN tipo_p USING(id_tipo) ORDER BY presentacion";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+	}
+	public function getTipos(){
+		$sql = "SELECT id_tipo, tipo_p FROM tipo_p ORDER BY id_tipo";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchPresentacion($value){
-		$sql = "SELECT * FROM presentaciones WHERE presentacion LIKE ? ORDER BY presentacion";
+		$sql = "SELECT id_presentacion, presentacion, tipo_p FROM presentaciones INNER JOIN tipo_p USING(id_tipo) WHERE presentacion LIKE ? ORDER BY presentacion";
 		$params = array("%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createPresentacion(){
 		$sql = "INSERT INTO presentaciones(presentacion, id_tipo) VALUES (?, ?)";
-		$params = array($this->presentacion, $this->id_marca);
+		$params = array($this->presentacion, $this->id_tipo);
 		return Database::executeRow($sql, $params);
 	}
 	public function readPresentacion(){

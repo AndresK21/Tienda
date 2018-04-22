@@ -1,16 +1,16 @@
 <?php
-require_once("../../../models/presentaciones.class.php");
+require_once("../../app/models/presentaciones.class.php");
 try{
     if(isset($_GET['id'])){
         $presentacion = new Presentaciones;
-        if($presentacion->setId_presentacion($_GET['id_presentacion'])){
-            if($presentacion->readTipo_p()){
+        if($presentacion->setId_presentacion($_GET['id'])){
+            if($presentacion->readPresentacion()){
                 if(isset($_POST['actualizar'])){
                     $_POST = $presentacion->validateForm($_POST);
                     if($presentacion->setPresentacion($_POST['presentacion'])){
-                        if($presentacion->setPresentacion($_POST['id_tipo'])){
+                        if($presentacion->setPresentacion($_POST['tipo'])){
                             if($presentacion->updatePresentacion()){
-                                Page::showMessage(1, "Presentacion modificado", "index.php");
+                                Page::showMessage(1, "Presentacion modificada", "index.php");
                             }else{
                                 throw new Exception(Database::getException());
                             }
@@ -34,5 +34,5 @@ try{
 }catch (Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/producto/update_view.php");
+require_once("../../app/view/dashboard/presentaciones/update_view.php");
 ?>

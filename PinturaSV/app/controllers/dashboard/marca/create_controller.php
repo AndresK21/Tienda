@@ -1,8 +1,8 @@
 <?php
-require_once("../../../models/marca.class.php");
+require_once("../../app/models/marca.class.php");
 try{
     $marca = new Marca;
-    if(isset($_POST['crear'])){
+    if(isset($_POST['crear_marca'])){
         $_POST = $marca->validateForm($_POST);
         if($marca->setMarca($_POST['marca'])){
             if($marca->createMarca()){
@@ -11,11 +11,11 @@ try{
                 throw new Exception(Database::getException());
             }
         }else{
-            throw new Exception("Nombre incorrecto");
+            throw new Exception("Marca incorrecta");
         }
     }
 }catch(Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/marca/create_view.php");
+require_once("../../app/view/dashboard/marca/create_view.php");
 ?>

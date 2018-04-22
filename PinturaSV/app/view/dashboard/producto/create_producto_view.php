@@ -1,6 +1,5 @@
 <div class="white-text">.</div>
 <div class="white-text">.</div>
-<div class="white-text">.</div>
 
 <!--Formulario para insertar los productos-->
 <div class="row container">
