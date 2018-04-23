@@ -49,7 +49,7 @@ class Presentaciones extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getTipos(){
-		$sql = "SELECT id_tipo, tipo_p FROM tipo_p ORDER BY id_tipo";
+		$sql = "SELECT id_tipo, tipo_p FROM tipo_p ORDER BY tipo_p";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}

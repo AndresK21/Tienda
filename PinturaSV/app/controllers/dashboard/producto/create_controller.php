@@ -13,11 +13,16 @@ try{
                                 if($producto->setId_categoria($_POST['categoria'])){
                                     if($producto->setId_estado(isset($_POST['estado'])?1:2)){
                                         if($producto->setId_presentacion($_POST['presentacion'])){
-                                            if($producto->createProducto()){
-                                                Page::showMessage(1, "Producto creado", "index.php");
+                                            if($producto->setId_marca($_POST['marca'])){
+                                                if($producto->createProducto()){
+                                                    Page::showMessage(1, "Producto creado", "index.php");
+                                                }else{
+                                                throw new Exception("No se pudo crear el producto");        
+                                                }
                                             }else{
-                                            throw new Exception("No se pudo crear el producto");        
-                                            }
+                                                throw new Exception("Marca incorrecta");
+                                                
+                                            }                                            
                                         }else{
                                             throw new Exception("Presentacion incorrecta");
                                         }

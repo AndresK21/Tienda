@@ -10,6 +10,7 @@ class Producto extends Validator{
 	private $id_categoria = null;
 	private $id_estado = null;
 	private $id_presentacion = null;
+	private $id_marca = null;
 
 	//Métodos para sobrecarga de propiedades
 	public function setId_producto($value){
@@ -128,6 +129,18 @@ class Producto extends Validator{
 		return $this->id_presentacion;
 	}
 
+	public function setId_marca($value){
+		if($this->validateId($value)){
+			$this->id_marca = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getId_marca(){
+		return $this->id_marca;
+	}
+
 	//Metodos para el manejo del CRUD
 	public function getCategoriaProductos(){
 		$sql = "SELECT id_categoria, id_producto, nombre, precio FROM producto INNER JOIN categoria USING(id_categoria) WHERE id_categoria = ? AND id_estado = 1 ORDER BY nombre_producto";
@@ -150,7 +163,7 @@ class Producto extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getMarcas(){
-		$sql = "SELECT id_marca, marca FROM marca";
+		$sql = "SELECT id_marca, marca FROM marca ORDER BY marca";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
@@ -160,12 +173,12 @@ class Producto extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function createProducto(){
-		$sql = "INSERT INTO producto(nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->imagen, $this->id_categoria, $this->id_estado, $this->id_presentacion);
+		$sql = "INSERT INTO producto(nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion, id_marca) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->imagen, $this->id_categoria, $this->id_estado, $this->id_presentacion, $this->id_marca);
 		return Database::executeRow($sql, $params);
 	}
 	public function readProducto(){
-		$sql = "SELECT nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion FROM producto WHERE id_producto = ?";
+		$sql = "SELECT nombre, cantidad, precio, color, imagen, id_categoria, id_estado, id_presentacion, id_marca FROM producto WHERE id_producto = ?";
 		$params = array($this->id_producto);
 		$producto = Database::getRow($sql, $params);
 		if($producto){
@@ -177,14 +190,15 @@ class Producto extends Validator{
 			$this->id_categoria = $producto['id_categoria'];
 			$this->id_estado = $producto['id_estado'];
 			$this->id_presentacion = $producto['id_presentacion'];
+			$this->id_marca = $producto['id_marca'];
 			return true;
 		}else{
 			return null;
 		}
 	}
 	public function updateProducto(){
-		$sql = "UPDATE producto SET nombre = ?, cantidad = ?, precio = ?, color = ?, imagen = ?, id_categoria = ?, id_estado = ?, id_presentacion = ? WHERE id_producto = ?";
-		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->imagen, $this->id_categoria, $this->id_estado, $this->id_presentacion, $this->id_producto);
+		$sql = "UPDATE producto SET nombre = ?, cantidad = ?, precio = ?, color = ?, imagen = ?, id_categoria = ?, id_estado = ?, id_presentacion = ?, id_marca = ? WHERE id_producto = ?";
+		$params = array($this->nombre, $this->cantidad, $this->precio, $this->color, $this->imagen, $this->id_categoria, $this->id_estado, $this->id_presentacion, $this->id_marca, $this->id_producto);
 		return Database::executeRow($sql, $params);
 	}
 	public function deleteProducto(){

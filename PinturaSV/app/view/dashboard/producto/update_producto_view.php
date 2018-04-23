@@ -63,6 +63,13 @@
             </div>
         </div>
         <div class="row">
+            <div class="input-field col s12 m6 l6">
+                <?php
+                    Page::showSelect("Marca", "marca", $producto->getId_marca(), $producto->getMarcas());
+                ?>
+            </div>
+        </div>
+        <div class="row">
             <div class="col s12 right-align">
                 <a class='btn waves-effect red darken-3' href="index.php"><i class='material-icons'></i>Cancelar</a>
                 <button type='submit' name='actualizar' class='btn waves-effect blue-grey darken-4'><i class='material-icons'>save</i>Guardar cambios</button>
