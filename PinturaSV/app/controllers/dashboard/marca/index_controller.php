@@ -2,7 +2,7 @@
 require_once("../../app/models/marca.class.php");
 try{
 	$marca = new Marca;
-	if(isset($_POST['buscar_marca'])){
+	if(isset($_POST['buscar_marca'])){//
 		$_POST = $marca->validateForm($_POST);
 		$marcas = $marca->searchMarca($_POST['busqueda_marca']);
 		if($marcas){

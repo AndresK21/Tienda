@@ -8,7 +8,7 @@ try{
             if($empleado->setCorreo($_POST['correo_electronico'])){
                 if($empleado->setUsuario($_POST['nombre_usuario'])){
                     if($empleado->setContrasena($_POST['contrasena'])){
-                        if($empleado->setId_permiso(isset($_POST['id_permiso'])?2:3)){
+                        if($empleado->setId_permiso(isset($_POST['id_permiso'])?2:3)){ //Establece que el id_permiso solo puede ser 2 o 3
                             if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                                 if($empleado->setImagen($_FILES['archivo'])){
                                     if($empleado->createEmpleado()){

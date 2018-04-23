@@ -5,6 +5,7 @@ require_once("../../app/models/categoria.class.php");
 require_once("../../app/models/presentaciones.class.php");
 require_once("../../app/models/tipo_p.class.php");
 try{
+	//Controlador de productos
 	$producto = new Producto;
 	if(isset($_POST['buscar_producto'])){
 		$_POST = $producto->validateForm($_POST);
@@ -21,6 +22,7 @@ try{
 	}
 
 
+	//Controlador de marcas
 	$marca = new Marca;
 	if(isset($_POST['buscar_marca'])){
 		$_POST = $marca->validateForm($_POST);
@@ -37,6 +39,7 @@ try{
 	}
 
 
+	//Controlador de categorias
 	$categoria = new Categoria;
 	if(isset($_POST['buscar_categoria'])){
 		$_POST = $categoria->validateForm($_POST);
@@ -53,6 +56,7 @@ try{
 	}
 
 
+	//Controlador de presentaciones
 	$presentaciones = new Presentaciones;
 	if(isset($_POST['buscar_presentacion'])){
 		$_POST = $presentaciones->validateForm($_POST);
@@ -69,6 +73,7 @@ try{
 	}
 
 
+	//Controlador de tipo de productos
 	$tipo_p = new Tipo_p;
 	if(isset($_POST['buscar_tipo'])){
 		$_POST = $tipo_p->validateForm($_POST);

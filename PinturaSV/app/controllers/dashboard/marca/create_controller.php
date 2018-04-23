@@ -2,10 +2,10 @@
 require_once("../../app/models/marca.class.php");
 try{
     $marca = new Marca;
-    if(isset($_POST['crear_marca'])){
+    if(isset($_POST['crear_marca'])){ //El controlador funciona con el ñpost con ese nombre
         $_POST = $marca->validateForm($_POST);
         if($marca->setMarca($_POST['marca'])){
-            if($marca->createMarca()){
+            if($marca->createMarca()){ //Se crea la marca
                 Page::showMessage(1, "Marca creada", "index.php");
             }else{
                 throw new Exception(Database::getException());

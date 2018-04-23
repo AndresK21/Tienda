@@ -11,7 +11,7 @@ try{
             if($empleado->setCorreo($_POST['correo_electronico'])){
                 if($empleado->setUsuario($_POST['nombre_usuario'])){
                     if($empleado->setContrasena($_POST['contrasena'])){
-                        if($empleado->setId_permiso("2")){
+                        if($empleado->setId_permiso("2")){ //Establece que solo puede ser administrador
                             if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                                 if($empleado->setImagen($_FILES['archivo'])){
                                     if($empleado->createEmpleado()){

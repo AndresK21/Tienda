@@ -10,9 +10,9 @@ try{
 					if($object->checkPermisos()){
 						if($object->setContrasena($_POST['contrasena'])){
 							if($object->checkContrasena()){
-								$_SESSION['id_empleado'] = $object->getId_empleado();
-								$_SESSION['nombre_usuario'] = $object->getUsuario();
-								$_SESSION['id_permiso'] = $object->getId_permiso();
+								$_SESSION['id_empleado'] = $object->getId_empleado(); //Obtiene el id_empleado para usarlo luego en la pagina template
+								$_SESSION['nombre_usuario'] = $object->getUsuario(); //Obtiene el usuario para usarlo luego en la pagina template
+								$_SESSION['id_permiso'] = $object->getId_permiso(); //Obtiene el id_permiso para usarlo luego en la pagina template
 								Page::showMessage(1, "Autenticación correcta", "index.php");
 							}else{
 								throw new Exception("Clave inexistente");

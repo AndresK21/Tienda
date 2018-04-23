@@ -1,14 +1,14 @@
 <?php
-require_once("../../app/models/tipo_p.class.php");
+require_once("../../app/models/tipo_p.class.php"); //Llama al modelo de tipo de productos
 try{
-    if(isset($_GET['id'])){
+    if(isset($_GET['id'])){ //Lllama el Id del tipo de producto
         $tipo_p = new Tipo_p;
-        if($tipo_p->setId_tipo($_GET['id'])){
+        if($tipo_p->setId_tipo($_GET['id'])){ //Establece el id en la variable id_tipo para utilizarla luego
             if($tipo_p->readTipo_p()){
                 if(isset($_POST['actualizar'])){
                     $_POST = $tipo_p->validateForm($_POST);
                     if($tipo_p->setTipo_p($_POST['tipo_p'])){
-                        if($tipo_p->updateTipo_p()){
+                        if($tipo_p->updateTipo_p()){ //Actualiza el tipo de prodcuto
                             Page::showMessage(1, "Tipo de producto modificado", "index.php");
                         }else{
                             throw new Exception(Database::getException());
@@ -30,5 +30,5 @@ try{
 }catch (Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/view/dashboard/tipo_p/update_view.php");
+require_once("../../app/view/dashboard/tipo_p/update_view.php"); 
 ?>

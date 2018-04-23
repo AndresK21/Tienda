@@ -14,7 +14,7 @@ try{
                                     if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                                         if($producto->setImagen($_FILES['archivo'])){
                                             if($producto->setId_categoria($_POST['categoria'])){
-                                                if($producto->setId_estado(isset($_POST['estado'])?1:2)){
+                                                if($producto->setId_estado(isset($_POST['estado'])?1:2)){ //Establece que el id_estado solo puede ser 1 o 2
                                                     if($producto->setId_presentacion($_POST['presentacion'])){
                                                         if($producto->setId_marca($_POST['marca'])){
                                                             if($producto->updateProducto()){

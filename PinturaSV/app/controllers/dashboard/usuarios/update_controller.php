@@ -1,9 +1,9 @@
 <?php
-require_once("../../app/models/empleado.class.php");
+require_once("../../app/models/empleado.class.php"); //Llama al modelo del empleado
 try{
-    if(isset($_GET['id'])){
+    if(isset($_GET['id'])){ //Selecciona el id del empleado
         $empleado = new Empleado;
-        if($empleado->setId_empleado($_GET['id'])){
+        if($empleado->setId_empleado($_GET['id'])){ //Establece el id en la variable id_emplado para usarla despues
             if($empleado->readEmpleado()){
                 if(isset($_POST['actualizar'])){
                     $_POST = $empleado->validateForm($_POST);
@@ -16,7 +16,7 @@ try{
                                         }
                                     }
                                     if($empleado->setId_permiso(isset($_POST['id_permiso'])?2:3)){
-                                    if($empleado->updateEmpleado()){
+                                    if($empleado->updateEmpleado()){ //Modifica el empleado
                                         Page::showMessage(1, "Usuario modificado", "index.php");
                                     }else{
                                         throw new Exception(Database::getException());

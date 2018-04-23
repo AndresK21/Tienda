@@ -1,15 +1,15 @@
 <?php
 require_once("../../app/models/presentaciones.class.php");
 try{
-    if(isset($_GET['id'])){
+    if(isset($_GET['id'])){ //Llama al id de la presentacion
         $presentacion = new Presentaciones;
-        if($presentacion->setId_presentacion($_GET['id'])){
+        if($presentacion->setId_presentacion($_GET['id'])){ //Estbalece el id en la variable para usarla despues
             if($presentacion->readPresentacion()){
                 if(isset($_POST['actualizar'])){
                     $_POST = $presentacion->validateForm($_POST);
                     if($presentacion->setPresentacion($_POST['presentacion'])){
                         if($presentacion->setId_tipo($_POST['tipo'])){
-                            if($presentacion->updatePresentacion()){
+                            if($presentacion->updatePresentacion()){ //Modifica la presentacion
                                 Page::showMessage(1, "Presentacion modificada", "index.php");
                             }else{
                                 throw new Exception(Database::getException());

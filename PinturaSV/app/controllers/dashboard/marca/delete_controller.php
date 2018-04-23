@@ -1,12 +1,12 @@
 <?php
 require_once("../../app/models/marca.class.php");
 try{
-	if(isset($_GET['id'])){
+	if(isset($_GET['id'])){ //Llama al id de la marca
 		$marca = new Marca;
-		if($marca->setId_marca($_GET['id'])){
+		if($marca->setId_marca($_GET['id'])){ //Establece el id en una variable para usarla despues
 			if($marca->readMarca()){
 				if(isset($_POST['eliminar_marca'])){
-					if($marca->deleteMarca()){
+					if($marca->deleteMarca()){//Borra la marca
 							Page::showMessage(1, "Marca eliminada", "index.php");
 					}
 					else{

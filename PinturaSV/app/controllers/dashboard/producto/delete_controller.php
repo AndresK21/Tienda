@@ -1,12 +1,12 @@
 <?php
-require_once("../../app/models/producto.class.php");
+require_once("../../app/models/producto.class.php");//Llama el modelo de prodcutos
 try{
-	if(isset($_GET['id'])){
+	if(isset($_GET['id'])){//Llama el id de producto
 		$producto = new Producto;
-		if($producto->setId_producto($_GET['id'])){
+		if($producto->setId_producto($_GET['id'])){ //Estableve el id en la variable para usarla despues
 			if($producto->readProducto()){
 				if(isset($_POST['eliminar'])){
-					if($producto->deleteProducto()){
+					if($producto->deleteProducto()){ //Elimina el producto
 						Page::showMessage(1, "Producto eliminado", "index.php");
 					}else{
 						throw new Exception(Database::getException());

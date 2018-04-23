@@ -2,11 +2,11 @@
 require_once("../../app/models/categoria.class.php");
 try{
     $categoria = new Categoria;
-    if(isset($_POST['crear_categoria'])){
+    if(isset($_POST['crear_categoria'])){ //El controlador funciona si el post del formulario se llama aasi
         $_POST = $categoria->validateForm($_POST);
         if($categoria->setCategoria($_POST['categoria'])){
             if($categoria->setId_marca($_POST['marca'])){
-                if($categoria->createCategoria()){
+                if($categoria->createCategoria()){ //Crea una categoria
                     Page::showMessage(1, "Categoría creada", "index.php");
                 }else{
                     throw new Exception(Database::getException());

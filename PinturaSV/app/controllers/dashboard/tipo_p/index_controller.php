@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/producto.class.php");
+require_once("../../app/models/producto.class.php");
 try{
 	$tipo_p = new Tipo_p;
 	if(isset($_POST['buscar'])){

@@ -2,14 +2,14 @@
 require_once("../../app/models/empleado.class.php");
 try{
     $empleado = new Empleado;
-    if($empleado->setId_empleado($_SESSION['id_empleado'])){
+    if($empleado->setId_empleado($_SESSION['id_empleado'])){//Establece el id empleado para obtener los registros del empleado
         if($empleado->readEmpleado()){
             if(isset($_POST['editar'])){
                 $_POST = $empleado->validateForm($_POST);
                 if($empleado->setNombre($_POST['nombre_completo'])){
                     if($empleado->setCorreo($_POST['correo_electronico'])){
                         if($empleado->setUsuario($_POST['nombre_usuario'])){
-                            if($empleado->updateEmpleado2()){
+                            if($empleado->updateEmpleado2()){//Actualiza el empleado
                                 $_SESSION['alias_usuario'] = $empleado->getUsuario();
                                 Page::showMessage(1, "Perfil modificado", "index.php");
                             }else{

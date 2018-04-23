@@ -2,7 +2,7 @@
 require_once("../../app/models/producto.class.php");
 try{
     $producto = new Producto;
-    if(isset($_POST['crear'])){
+    if(isset($_POST['crear'])){ //Establece que el controlador funciona si el post tiene ese nombre
         $_POST = $producto->validateForm($_POST);
         if($producto->setNombre($_POST['nombre'])){
             if($producto->setCantidad($_POST['cantidad'])){
@@ -11,10 +11,10 @@ try{
                         if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                             if($producto->setImagen($_FILES['archivo'])){
                                 if($producto->setId_categoria($_POST['categoria'])){
-                                    if($producto->setId_estado(isset($_POST['estado'])?1:2)){
+                                    if($producto->setId_estado(isset($_POST['estado'])?1:2)){ //Esstablece que id_estado solo puede ser 1 o 2
                                         if($producto->setId_presentacion($_POST['presentacion'])){
                                             if($producto->setId_marca($_POST['marca'])){
-                                                if($producto->createProducto()){
+                                                if($producto->createProducto()){ //Crea el producto
                                                     Page::showMessage(1, "Producto creado", "index.php");
                                                 }else{
                                                 throw new Exception("No se pudo crear el producto");        

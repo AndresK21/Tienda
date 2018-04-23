@@ -1,12 +1,12 @@
 <?php
 require_once("../../app/models/presentaciones.class.php");
 try{
-	if(isset($_GET['id'])){
+	if(isset($_GET['id'])){ //Llama el id de la presentaion
 		$presentaciones = new Presentaciones;
-		if($presentaciones->setId_Presentacion($_GET['id'])){
+		if($presentaciones->setId_Presentacion($_GET['id'])){ //Establece el id en una variable para usarla despues
 			if($presentaciones->readPresentacion()){
 				if(isset($_POST['eliminar'])){
-					if($presentaciones->deletePresentacion()){
+					if($presentaciones->deletePresentacion()){ //Elimina la presentacion
 						Page::showMessage(1, "Presentacion eliminada", "index.php");
 					}else{
 						throw new Exception(Database::getException());

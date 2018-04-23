@@ -1,13 +1,13 @@
 <?php
-require_once("../../app/models/empleado.class.php");
+require_once("../../app/models/empleado.class.php"); //Llama el modelo del empleado
 try{
-	if(isset($_GET['id'])){
-		if($_GET['id'] != $_SESSION['id_empleado']){
+	if(isset($_GET['id'])){ //Llama al id
+		if($_GET['id'] != $_SESSION['id_empleado']){ //No deja eliminarse a si mismo
 			$empleado = new Empleado;
-			if($empleado->setId_empleado($_GET['id'])){
+			if($empleado->setId_empleado($_GET['id'])){ //Establece la variable id_empleado para usarla despues
 				if($empleado->readEmpleado()){
 					if(isset($_POST['eliminar'])){
-						if($empleado->deleteEmpleado()){
+						if($empleado->deleteEmpleado()){ //Elimina al empleado
 							Page::showMessage(1, "Usuario eliminado", "index.php");
 						}else{
 							throw new Exception(Database::getException());
