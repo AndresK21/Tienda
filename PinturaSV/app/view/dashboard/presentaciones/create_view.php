@@ -1,5 +1,5 @@
 <div class="white-text">.</div>
-<!-- Formulario para crear Presentaciones -->
+
 <div class="center-align"><h4>Crear presentaci&oacute;n</h4></div>
 
 <div class="row">

@@ -1,7 +1,6 @@
 <div class="white-text">.</div>
 <div class="white-text">.</div>
 
-<!-- Formulario para eliminar una una presentacion -->
 <form method='post'>
 	<div class='row center-align'>
 		<h4>Una presentacion será borrada ¿está seguro?</h4>

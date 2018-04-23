@@ -1,6 +1,6 @@
-<?
-require_once("../../app/models/database.class.php"); // Modelo de Conexion
-require_once("../../app/helpers/validator.class.php"); 
+<?php
+require_once("../../app/models/database.class.php");
+require_once("../../app/helpers/validator.class.php");
 require_once("../../app/helpers/component.class.php");
 class Page extends Component{
 	public static function templateHeader($title){
@@ -12,7 +12,6 @@ class Page extends Component{
 			<head>
 				<meta charset='utf-8'>
 				<title>Dashboard - $title</title>
-				<!-- Referencias -->
 				<link type='text/css' rel='stylesheet' href='../../css/materialize.min.css'/>
 				<link type='text/css' rel='stylesheet' href='../../web/css/icon.css'/>
 				<link type='text/css' rel='stylesheet' href='../../web/css/dashboard.css'/>
@@ -21,7 +20,6 @@ class Page extends Component{
 			</head>
 			<body>
 		");
-		// Inicio de Sesion del Administrador = Id_permiso = 2 Si existe "entra"
 		if(isset($_SESSION['id_empleado']) && ($_SESSION['id_permiso']) == 2){
 			print("
 				<header class='navbar-fixed'>
@@ -69,7 +67,6 @@ class Page extends Component{
 				<main class=''>
 					
 			");
-		// Inicio de Sesio del empleado normal Id_permiso = 3 Si existe accede al Dash
 		}else if(isset($_SESSION['id_empleado']) && isset($_SESSION['id_permiso']) == 3){
 			print("
 				<header class='navbar-fixed'>
@@ -115,7 +112,6 @@ class Page extends Component{
 				<main class=''>
 					
 			");
-			// Caso contrario solo mostrara el navbar!
 		}else{
 			print("
 			<header>

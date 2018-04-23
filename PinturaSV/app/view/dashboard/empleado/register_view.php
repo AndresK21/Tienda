@@ -2,7 +2,7 @@
 
 <div class="center-align"><h4>Crear empleado</h4></div>
 
-<!--Formulario para el primer perfil-->
+<!--Formulario de editar perfil-->
 <div class="row">
     <form class="col s12" method="post" enctype='multipart/form-data'>
         <div class="row">
@@ -47,7 +47,6 @@
 
         <div class="row">
             <div class="col s12 right-align">
-            <!-- Boton para guardar -->
             <button type='submit' name='crear' class='btn waves-effect blue-grey darken-4'><i class='material-icons'>save</i>Guardar</button>
             </div>
         </div>

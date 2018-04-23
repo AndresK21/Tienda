@@ -53,7 +53,6 @@
                     <div class='switch'>
                         <span>Estado:</span>
                         <label>
-                        <!-- Obtiene el estado existente en el producto -->
                             <i>Sin existencias</i>
                             <input type='checkbox' name='estado' <?php print($producto->getId_estado()?"checked":"") ?>/>
                             <span class='lever'></span>
@@ -65,7 +64,6 @@
         </div>
         <div class="row">
             <div class="input-field col s12 m6 l6">
-                <!-- Obtiene las marcas existentes -->
                 <?php
                     Page::showSelect("Marca", "marca", $producto->getId_marca(), $producto->getMarcas());
                 ?>

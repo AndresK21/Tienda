@@ -1,7 +1,7 @@
 <div class="white-text">.</div>
 
 <div class="center-align"><h4>Cambiar contrase&ntilde;a</h4></div>
-<!-- Formulario para cambiar la contraseña -->
+
 <div class="container">
     <form method='post'>
         <div class='row center-align'>
@@ -36,7 +36,6 @@
         </div>
         <div class="row">
             <div class="input-field col s12 right-align">
-            <!-- Botones para la accion -->
                 <a class='btn waves-effect red darken-3' href="index.php"><i class='material-icons'></i>Cancelar</a>
                 <button type='submit' name='cambiar' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Guardar'><i class='material-icons'>save</i>Guardar cambios</button>
             </div>
