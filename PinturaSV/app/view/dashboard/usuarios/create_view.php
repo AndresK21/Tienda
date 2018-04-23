@@ -43,6 +43,7 @@
                         <div class='switch'>
                             <span>Permiso:</span>
                             <label>
+                                <!-- Obtiene los permisos existentes -->
                                 <i>Usuario</i>
                                 <input type='checkbox' name="id_permiso" <?php print($empleado->getId_permiso()?"checked":"") ?>/>
                                 <span class='lever'></span>
@@ -64,6 +65,7 @@
         </form>
         <div class="row">
             <div class="col s12 right-align">
+                <!-- Botones para accion -->
                 <a class='btn waves-effect red darken-3' href="index.php"><i class='material-icons'></i>Cancelar</a>
                 <button type='submit' name='crear' class='btn waves-effect blue-grey darken-4'><i class='material-icons'>save</i>Guardar cambios</button>
             </div>

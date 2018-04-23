@@ -39,7 +39,8 @@
                     <tr>
                         <td>$row[nombre_completo]</td>
                         <td>
-                            <a href='update.php?id=$row[id_empleado]' class='blue-text text-darken-3'><i class='material-icons'>edit</i></a>
+                        <!-- Botones para acciones -->
+                            <a href='update.php?id=$row[id_empleado]' class='blue-text text-darken-3'><i class='material-icons'>edit</i></a> 
                             <a href='delete.php?id=$row[id_empleado]' class='red-text text-darken-3'><i class='material-icons'>delete</i></a>
                         </td>
                     </tr>

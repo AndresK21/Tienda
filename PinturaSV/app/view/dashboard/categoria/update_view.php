@@ -12,6 +12,7 @@
             </div>
         </div>
         <div class="input-field col s12">
+        <!-- Seleccion de categorias -->
         <?php
             Page::showSelect("Marca", "marca", $categoria->getId_Marca(), $categoria->getMarcas());
         ?>

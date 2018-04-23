@@ -36,6 +36,7 @@
                 </div>
             </div>
             <div class="input-field col s12 m6 l6">
+            <!-- Obtiene las Categorias Existentes -->
                 <?php
                     Page::showSelect("Categoria", "categoria", $producto->getId_categoria(), $producto->getCategorias());
                 ?>
@@ -43,6 +44,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12 m6 l6">
+            <!--Obtiene las Presentaciones Existentes-->
                 <?php
                     Page::showSelect("Presentacion", "presentacion", $producto->getId_presentacion(), $producto->getPresentaciones());
                 ?>
@@ -53,6 +55,7 @@
                     <div class='switch'>
                         <span>Estado:</span>
                         <label>
+                        <!-- Obtiene el valor si existen productos o no -->
                             <i>Sin existencias</i>
                             <input type='checkbox' name='estado' <?php print($producto->getId_estado()?"checked":"") ?>/>
                             <span class='lever'></span>
@@ -64,6 +67,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12 m6 l6">
+            <!--Obtiene las Marcas Existentes -->
                 <?php
                     Page::showSelect("Marca", "marca", $producto->getId_marca(), $producto->getMarcas());
                 ?>
@@ -71,6 +75,7 @@
         </div>
         <div class="row">
             <div class="col s12 right-align">
+                <!-- Botones para acciones -->
                 <a class='btn waves-effect red darken-3' href="index.php"><i class='material-icons'></i>Cancelar</a>
                 <button type='submit' name='crear' class='btn waves-effect blue-grey darken-4'><i class='material-icons'>save</i>Guardar cambios</button>
             </div>

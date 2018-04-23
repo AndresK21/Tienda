@@ -1,6 +1,7 @@
 <div class="white-text">.</div>
 <div class="white-text">.</div>
 
+<!-- IMAGENES PARA EL GRAFICO -->
 <div class='row'>
 	<div class='col s12 m3 l3'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas.jpg' alt='estadistica'></a></div>
 	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas2.jpg' alt='estadistica'></a></div>
@@ -32,6 +33,7 @@
 		<img class='responsive-img' src='../../web/img/estadisticas.jpg' alt='estadistica'>
 	</div>
 	<div class='modal-footer'>
+	<!-- ACCIONES -->
 	<a href='#!' class=' modal-action modal-close waves-effect waves-red btn-flat'>Salir</a>
 	<a href='#!' class=' modal-action modal-close waves-effect waves-green btn-flat'>Aceptar</a>
 	</div>
