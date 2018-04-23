@@ -1,5 +1,6 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Editar marca</h4></div>
 
 <!--Formulario para insertar marcas-->
 <div class="row">

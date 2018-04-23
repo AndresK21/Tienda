@@ -1,5 +1,6 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Crear tipo de producto</h4></div>
 
 <!--Formulario para insertar los tipos de productos-->
 <div class="row">

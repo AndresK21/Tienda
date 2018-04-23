@@ -1,5 +1,6 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Crear empleado</h4></div>
 
 <!--Formulario de editar perfil-->
 <div class="row">

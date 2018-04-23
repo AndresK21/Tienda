@@ -1,5 +1,7 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Editar empleado</h4></div>
+
 <div class="container">
 <!--Formulario para insertar los productos-->
 <div class="row">

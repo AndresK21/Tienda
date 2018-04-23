@@ -1,5 +1,6 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Crear presentaci&oacute;n</h4></div>
 
 <div class="row">
     <form class="col s12" method="post">

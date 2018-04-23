@@ -1,5 +1,6 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Cambiar contrase&ntilde;a</h4></div>
 
 <div class="container">
     <form method='post'>

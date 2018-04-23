@@ -1,6 +1,6 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Editar producto</h4></div>
 
 <!--Formulario para insertar los productos-->
 <div class="row container">

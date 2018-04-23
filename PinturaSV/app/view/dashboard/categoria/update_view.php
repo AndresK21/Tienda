@@ -1,5 +1,6 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Editar categoria</h4></div>
 
 <!--Formulario para insertar las categorias-->
 <div class="row">

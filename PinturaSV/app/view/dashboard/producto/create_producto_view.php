@@ -1,5 +1,6 @@
 <div class="white-text">.</div>
-<div class="white-text">.</div>
+
+<div class="center-align"><h4>Crear producto</h4></div>
 
 <!--Formulario para insertar los productos-->
 <div class="row container">
@@ -10,13 +11,13 @@
                 <label for="nombre">Nombre</label>
             </div>
             <div class="input-field col s12 m6 l6">
-                <input id="cantidad" type="number" name="cantidad" class="validate" value='<?php print($producto->getCantidad())?>' required>
+                <input id="cantidad" type="number" name="cantidad" class="validate" max="999" min="1" step="any" value='<?php print($producto->getCantidad())?>' required>
                 <label for="Cantidad">Cantidad</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12 m6 l6">
-                <input id="precio" type="number" name="precio"class="validate" max="999.9" min="0.01" step="any" value='<?php print($producto->getPrecio())?>' required>
+                <input id="precio" type="number" name="precio" class="validate" max="999.9" min="0.01" step="any" value='<?php print($producto->getPrecio())?>' required>
                 <label for="Precio">Precio</label>
             </div>
             <div class="input-field col s12 m6 l6">
