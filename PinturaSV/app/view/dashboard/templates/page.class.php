@@ -20,7 +20,7 @@ class Page extends Component{
 			</head>
 			<body>
 		");
-		if(isset($_SESSION['id_empleado'])){
+		if(isset($_SESSION['id_empleado']) && ($_SESSION['id_permiso']) == 2){
 			print("
 				<header class='navbar-fixed'>
 					<!-- Dropdown Structure -->
@@ -60,6 +60,51 @@ class Page extends Component{
 				<ul class='side-nav' id='mobile-demo'>
 					<li><a href='../cuenta/index.php'>Dashboard</a></li>
 					<li><a href='../usuarios/index.php'>Usuarios</a></li>
+					<li><a href='../producto/index.php'>Productos</a></li>
+					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+				</ul>
+
+				<main class=''>
+					
+			");
+		}else if(isset($_SESSION['id_empleado']) && isset($_SESSION['id_permiso']) == 3){
+			print("
+				<header class='navbar-fixed'>
+					<!-- Dropdown Structure -->
+					<ul id='dropdown1' class='dropdown-content'>
+						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
+						<li class='divider'></li>
+						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+						<li class='divider'></li>
+						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
+					</ul>
+					<!-- Dropdown Structure Mobile -->
+					<ul id='dropdown2' class='dropdown-content'>
+						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
+						<li class='divider'></li>
+						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+						<li class='divider'></li>
+						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
+					</ul>
+					
+					<div class='navbar-fixed'>  
+						<nav>
+						<!--Navbar Color gris azulado-->
+							<div class='nav-wrapper  blue-grey darken-4'>
+							<img class='brand-logo' src='../../web/img/mipintura.png'>
+							<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+							<ul class='right hide-on-med-and-down'>
+								<li><a href='../cuenta/index.php'>Dashboard</a></li>
+								<li><a href='../producto/index.php'>Productos</a></li>
+								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+							</ul>
+							</div>
+						</nav>
+					</div>
+				</header>
+
+				<ul class='side-nav' id='mobile-demo'>
+					<li><a href='../cuenta/index.php'>Dashboard</a></li>
 					<li><a href='../producto/index.php'>Productos</a></li>
 					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 				</ul>

@@ -6,7 +6,7 @@
     <form class="col s12" method="post" enctype='multipart/form-data'>
     <!--Formulario para ingresar nuevo usuario-->
     <div class="row">
-        <form class="">
+        <form>
             <div class="row">
                 <div class="input-field ">
                     <i class="material-icons prefix">person</i>
@@ -36,19 +36,19 @@
                 </div>
             </div>
             <div class="row">
-                    <div class='col s12 m6'>
-                            <p>
-                                <div class='switch'>
-                                    <span>Permiso:</span>
-                                    <label>
-                                        <i>administrador</i>
-                                        <input type='checkbox' name="id_permiso" <?php print($empleado->getId_permiso()?"checked":"") ?>/>
-                                        <span class='lever'></span>
-                                        <i>usuario</i>
-                                    </label>
-                                </div>
-                            </p>
+                <div class='col s12 m6'>
+                    <p>
+                        <div class='switch'>
+                            <span>Permiso:</span>
+                            <label>
+                                <i>Usuario</i>
+                                <input type='checkbox' name="id_permiso" <?php print($empleado->getId_permiso()?"checked":"") ?>/>
+                                <span class='lever'></span>
+                                <i>Administrador</i>
+                            </label>
                         </div>
+                    </p>
+                </div>
                 <div class='file-field input-field col s12 m6 l6'>
                     <div class='waves-effect waves-light btn blue-grey darken-4'>
                         <span><i class='material-icons blue-gray-text text-darken-4'>image</i></span>
@@ -60,12 +60,11 @@
                 </div>
             </div>
         </form>
-        <div class="input-field col s2">
-            <button type='submit' name='crear' class='btn waves-effect blue-gray tooltipped' data-tooltip='Guardar'><i class='material-icons'>save</i></button>
-        
-        </div>
-        <div class="input-field col s2">
-            <button type='submit' name='Cancelar' class='btn waves-effect blue-gray tooltipped' data-tooltip='Cancelar'><i class='material-icons'>cancel</i></button>
+        <div class="row">
+            <div class="col s12 right-align">
+                <a class='btn waves-effect red darken-3' href="index.php"><i class='material-icons'></i>Cancelar</a>
+                <button type='submit' name='crear' class='btn waves-effect blue-grey darken-4'><i class='material-icons'>save</i>Guardar cambios</button>
+            </div>
         </div>
     </div>
     </form>

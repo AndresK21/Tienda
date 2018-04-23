@@ -28,23 +28,17 @@
                     <label for="usuario" class="blue-grey-text text-darken-4">Usuario</label>
                 </div>
             </div>
-            <div class="row">
-                <div class="input-field ">
-                    <i class="material-icons prefix">security</i>
-                    <input name="contrasena" id="contrasena" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
-                    <label for="contrasena" class="blue-grey-text text-darken-4">Contrase&ntilde;a</label>
-                </div>
-            </div>
+
             <div class="row">
                     <div class='col s12 m6'>
                             <p>
                                 <div class='switch'>
                                     <span>Permiso:</span>
                                     <label>
-                                        <i>administrador</i>
-                                        <input type='checkbox' name="id_permiso" <?php print($empleado->getId_permiso()?"checked":"") ?>/>
+                                        <i>Usuario</i>
+                                        <input type='checkbox' name="id_permiso" <?php print($empleado->getId_permiso()?"":"checked") ?>/>
                                         <span class='lever'></span>
-                                        <i>usuario</i>
+                                        <i>Administrador</i>
                                     </label>
                                 </div>
                             </p>
@@ -60,12 +54,11 @@
                 </div>
             </div>
         </form>
-        <div class="input-field col s2">
-            <button type='submit' name='actualizar' class='btn waves-effect blue-gray tooltipped' data-tooltip='Guardar'><i class='material-icons'>save</i></button>
-        
-        </div>
-        <div class="input-field col s2">
-            <button type='submit' name='Cancelar' class='btn waves-effect blue-gray tooltipped' data-tooltip='Cancelar'><i class='material-icons'>cancel</i></button>
+        <div class="row">
+            <div class="col s12 right-align">
+                <a class='btn waves-effect red darken-3' href="index.php"><i class='material-icons'></i>Cancelar</a>
+                <button type='submit' name='actualizar' class='btn waves-effect blue-grey darken-4'><i class='material-icons'>save</i>Guardar cambios</button>
+            </div>
         </div>
     </div>
     </form>

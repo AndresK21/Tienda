@@ -7,16 +7,21 @@ try{
 			$_POST = $object->validateForm($_POST);
 			if($object->setUsuario($_POST['nombre_usuario'])){
 				if($object->checkUsuarios()){
-					if($object->setContrasena($_POST['contrasena'])){
-						if($object->checkContrasena()){
-							$_SESSION['id_empleado'] = $object->getId_empleado();
-							$_SESSION['nombre_usuario'] = $object->getUsuario();
-							Page::showMessage(1, "Autenticación correcta", "index.php");
+					if($object->checkPermisos()){
+						if($object->setContrasena($_POST['contrasena'])){
+							if($object->checkContrasena()){
+								$_SESSION['id_empleado'] = $object->getId_empleado();
+								$_SESSION['nombre_usuario'] = $object->getUsuario();
+								$_SESSION['id_permiso'] = $object->getId_permiso();
+								Page::showMessage(1, "Autenticación correcta", "index.php");
+							}else{
+								throw new Exception("Clave inexistente");
+							}
 						}else{
-							throw new Exception("Clave inexistente");
+							throw new Exception("Clave menor a 6 caracteres");
 						}
 					}else{
-						throw new Exception("Clave menor a 6 caracteres");
+						throw new Exception("Permiso incorrecto");
 					}
 				}else{
 					throw new Exception("Nombre de usuario inexistente");

@@ -114,6 +114,17 @@ class Empleado extends Validator{
 			return false;
 		}
 	}
+	public function checkPermisos(){
+		$sql = "SELECT id_permiso FROM empleado WHERE id_empleado = ?";
+		$params = array($this->id_empleado);
+		$data = Database::getRow($sql, $params);
+		if($data){
+			$this->id_permiso = $data['id_permiso'];
+			return true;
+		}else{
+			return false;
+		}
+	}
 	public function checkContrasena(){
 		$sql = "SELECT contrasena FROM empleado WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
