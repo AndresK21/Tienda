@@ -29,11 +29,6 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col l6 m6 s12">
-                <i class="material-icons prefix">accessibility</i>
-                <input name="id_permiso" id="permiso" type="number" min="2" max="3" step="any" class="validate" value='<?php print($empleado->getNombre()) ?>' required>
-                <label for="permiso">Permiso</label>
-            </div>
             <div class='file-field input-field col s12 m6 l6'>
                 <div class='waves-effect waves-light btn blue-grey darken-4'>
                     <span><i class='material-icons blue-gray-text text-darken-4'>image</i></span>
