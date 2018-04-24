@@ -67,7 +67,7 @@ class Page extends Component{
 				<main class=''>
 					
 			");
-		}else if(isset($_SESSION['id_empleado']) && isset($_SESSION['id_permiso']) == 3){
+		}else if(isset($_SESSION['id_empleado']) && ($_SESSION['id_permiso']) == 3){
 			print("
 				<header class='navbar-fixed'>
 					<!-- Dropdown Structure -->

@@ -29,7 +29,7 @@
             <div class='file-field input-field col s12 m6 l6'>
                 <div class='waves-effect waves-light btn blue-grey darken-4'>
                     <span><i class='material-icons blue-gray-text text-darken-4'>image</i></span>
-                    <input type='file' name='archivo' required/>
+                    <input type='file' name='archivo'/>
                 </div>
                 <div class='file-path-wrapper'>
                     <input type='text' class='file-path validate' placeholder='Seleccione una imagen'/>

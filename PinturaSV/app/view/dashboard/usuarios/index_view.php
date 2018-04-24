@@ -28,7 +28,10 @@
         <table class="bordered highlight responsive-table z-depth-2">
             <thead>
                 <tr>
-                    <th></th>
+                    <th>Nombre</th>
+                    <th>Usuario</th>
+                    <th>Tipo</th>
+                    <th>Correo electr&oacute;nico</th>
                     <th></th>
                 </tr>
             </thead>
@@ -38,6 +41,9 @@
                     print("
                     <tr>
                         <td>$row[nombre_completo]</td>
+                        <td>$row[nombre_usuario]</td>
+                        <td>$row[permiso]</td>
+                        <td>$row[correo_electronico]</td>
                         <td>
                             <a href='update.php?id=$row[id_empleado]' class='blue-text text-darken-3'><i class='material-icons'>edit</i></a>
                             <a href='delete.php?id=$row[id_empleado]' class='red-text text-darken-3'><i class='material-icons'>delete</i></a>
