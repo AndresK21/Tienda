@@ -49,6 +49,7 @@ class Page extends Component{
 							<ul class='right hide-on-med-and-down'>
 								<li><a href='../cuenta/index.php'>Dashboard</a></li>
 								<li><a href='../usuarios/index.php'>Usuarios</a></li>
+								<li><a href='../clientes/index.php'>Clientes</a></li>
 								<li><a href='../producto/index.php'>Productos</a></li>
 								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 							</ul>
@@ -60,6 +61,7 @@ class Page extends Component{
 				<ul class='side-nav' id='mobile-demo'>
 					<li><a href='../cuenta/index.php'>Dashboard</a></li>
 					<li><a href='../usuarios/index.php'>Usuarios</a></li>
+					<li><a href='../clientes/index.php'>Clientes</a></li>
 					<li><a href='../producto/index.php'>Productos</a></li>
 					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 				</ul>
