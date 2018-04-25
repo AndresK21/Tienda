@@ -50,7 +50,7 @@ class Page extends Component{
 								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Categor&iacute;as<i class='material-icons right'>arrow_drop_down</i></a></li>
 								<li><a href='nosotros.php'>Nosotros</a></li>
 								<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
-								<li><a href='iniciar_sesion.php'>Iniciar Sesi&oacute;n</a></li>
+								<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
 								<li><a href='pagar.php'><i class='material-icons'>shopping_cart</i></a></li>
 								</ul>
 							</div>
@@ -99,7 +99,7 @@ class Page extends Component{
 								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Categor&iacute;as<i class='material-icons right'>arrow_drop_down</i></a></li>
 								<li><a href='nosotros.php'>Nosotros</a></li>
 								<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
-								<li><a href='iniciar_sesion.php'>Iniciar Sesi&oacute;n</a></li>
+								<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -113,7 +113,6 @@ class Page extends Component{
 					<li><a href='nosotros.php'>Nosotros</a></li>
 					<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
 					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Categor&iacute;as<i class='material-icons right'>arrow_drop_down</i></a></li>
-					<li>Bienvenido <b>$_SESSION[nombre_usuario]</b></li>
 				</ul>
 
 				<main class=''>

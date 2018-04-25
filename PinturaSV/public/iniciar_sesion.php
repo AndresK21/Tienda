@@ -121,7 +121,7 @@
                   <!-- TERMINOS Y CONDICIONES -->
                   <p class="right">
                     <div class="card-action ">
-                      <input type="checkbox" id="indeterminate-checkbox" />
+                      <input type="checkbox" id="indeterminate-checkbox" required>
                       <form action="#">
                         <!-- CHECKBOX -->
                       <label for="indeterminate-checkbox">Acepto los
