@@ -8,6 +8,12 @@ class Cliente extends Validator{
 	private $nombre_usuario = null;
 	private $contrasena = null;
 
+	private $cantidad = null;
+	private $fecha = null;
+	private $producto = null;
+	private $precio = null;
+	private $subtotal = null;
+
 	//Métodos para sobrecarga de propiedades
 	public function setId_cliente($value){
 		if($this->validateId($value)){
@@ -58,7 +64,7 @@ class Cliente extends Validator{
 	}
 
 	public function setNombre_usuario($value){
-		if($this->validateAlphabetic($value, 1, 20)){
+		if($this->validateAlphanumeric($value, 1, 20)){
 			$this->nombre_usuario = $value;
 			return true;
 		}else{
@@ -79,6 +85,67 @@ class Cliente extends Validator{
 	}
 	public function getContrasena(){
 		return $this->contrasena;
+	}
+
+
+	public function setCantidad($value){
+		if($this->validateMoney($value)){
+			$this->cantidad = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getCantidad(){
+		return $this->cantidad;
+	}
+
+	public function setFecha($value){
+		if($this->validateAlphanumeric($value)){
+			$this->fecha = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getFecha(){
+		return $this->fecha;
+	}
+
+	public function setProducto($value){
+		if($this->validateAlphanumeric($value)){
+			$this->producto = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getProducto(){
+		return $this->producto;
+	}
+
+	public function setPrecio($value){
+		if($this->validateMoney($value)){
+			$this->precio = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getPrecio(){
+		return $this->precio;
+	}
+
+	public function setSubtotal($value){
+		if($this->validateMoney($value)){
+			$this->subtotal = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getSubtotal(){
+		return $this->subtotal;
 	}
 
 	//Métodos para manejar la sesión del usuario
@@ -117,6 +184,11 @@ class Cliente extends Validator{
 	public function getClientes(){
 		$sql = "SELECT id_cliente, nombres, apellidos, email, nombre_usuario, contrasena FROM cliente ORDER BY apellidos";
 		$params = array(null);
+		return Database::getRows($sql, $params);
+	}
+	public function getVentas(){
+		$sql = "SELECT id_cliente, fecha, detalle_pedido.cantidad, producto.nombre, precio, precio * detalle_pedido.cantidad AS subtotal FROM detalle_pedido INNER JOIN pedido USING(id_pedido) INNER JOIN cliente USING(id_cliente) INNER JOIN producto USING(id_producto) WHERE id_cliente = ?";
+		$params = array($this->id_cliente);
 		return Database::getRows($sql, $params);
 	}
 	public function searchCliente($value){
