@@ -1,9 +1,9 @@
 <?php
-require_once("../../../models/cliente.class.php");
+require_once("../../app/models/cliente.class.php");
 $object = new Cliente;
 if($object->logOut()){
-    Page::showMessage(1, "Autenticación eliminada", "index.php");
+    Page::showMessage(1, "Autenticación eliminada", "../categorias/categorias.php");
 }else{
-    Page::showMessage(2, "Ocurrió un problema", "dashboard.php");
+    Page::showMessage(2, "Ocurrió un problema", "../categorias/categorias.php");
 }
 ?>

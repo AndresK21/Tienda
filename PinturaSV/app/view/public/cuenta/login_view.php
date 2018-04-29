@@ -1,5 +1,3 @@
-
-
 <form method="post" enctype='multipart/form-data'>
     <div class="container">
         <div>
@@ -66,6 +64,21 @@
                         <input name="nombres" id="nombres" type="text" class="validate" value='<?php print($cliente->getNombres()) ?>' required />
                         <label for="icon_prefix">Nombres</label>
                     </div>
+                    <!-- INGRESAR APELLIDOS -->
+                    <div class="input-field col l6 m6 s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input name="apellidos" id="apellidos" type="text" class="validate" value='<?php print($cliente->getApellidos()) ?>' required />
+                        <label for="icon_prefix">Apellidos</label>
+                    </div>
+                </div>
+                <!-- SEGUNDA FILA -->
+                <div class="row">
+                <!-- INGRESAR NOMBRE DE USUARIO -->
+                <div class="input-field col l6 m6 s12">
+                        <i class="material-icons prefix">person_pin</i>
+                        <input name="nombre_usuarior" id="nombre_usuarior" type="text" class="validate" value='<?php print($cliente->getNombre_usuario()) ?>' required />
+                        <label for="icon_prefix">Usuario</label>
+                    </div>
                     <!-- INGRESAR CORREO -->
                     <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">email</i>
@@ -73,27 +86,12 @@
                         <label for="email icon_prefix">Email</label>
                     </div>
                 </div>
-                <!-- SEGUNDA FILA -->
                 <div class="row">
-                    <!-- INGRESAR APELLIDOS -->
-                    <div class="input-field col l6 m6 s12">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input name="apellidos" id="apellidos" type="text" class="validate" value='<?php print($cliente->getApellidos()) ?>' required />
-                        <label for="icon_prefix">Apellidos</label>
-                    </div>  
                     <!-- INGRESAR CONTRASEÑA1 -->
                     <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">lock</i>
                         <input name="contrasena1" id="contrasena1" type="password" class="validate" value='<?php print($cliente->getContrasena()) ?>' required />
                         <label for="password icon_prefix">Contrase&ntilde;a</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- INGRESAR NOMBRE DE USUARIO -->
-                    <div class="input-field col l6 m6 s12">
-                        <i class="material-icons prefix">person_pin</i>
-                        <input name="nombre_usuarior" id="nombre_usuarior" type="text" class="validate" value='<?php print($cliente->getNombre_usuario()) ?>' required />
-                        <label for="icon_prefix">Usuario</label>
                     </div>
                     <!-- INGRESAR CONTRASEÑA2 -->
                     <div class="input-field col l6 m6 s12">

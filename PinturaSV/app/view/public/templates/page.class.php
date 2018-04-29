@@ -17,6 +17,7 @@ class Page extends Component{
 				<link href='../../web/css/style.css' rel='stylesheet'>
 				<!--Import materialize.css-->
 				<link type='text/css' rel='stylesheet' href='../../css/materialize.min.css'  media='screen,projection'/>
+				<link href='../../web/css/googlemaps.css' rel='stylesheet'>
 				<script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
 				<!--Let browser know website is optimized for mobile-->
 				<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
@@ -25,19 +26,27 @@ class Page extends Component{
 		");
 		if(isset($_SESSION['id_cliente'])){
 			print("
-				<header class='navbar-fixed'>
 					<!-- Dropdown Structure -->
-					<ul id='dropdown1' class='dropdown-content'>
-						<li><a href='categoria_aceite.php'>Aceite</a></li>
+					<ul id='dropdown3' class='dropdown-content'>
+						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
 						<li class='divider'></li>
-						<li><a href='categoria_agua.php'>Agua</a></li>
+						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+						<li class='divider'></li>
+						<li><a href='../cuenta/compras.php'>Compras realizadas</a></li>
+						<li class='divider'></li>
+						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
 					</ul>
 					<!-- Dropdown Structure Mobile -->
-					<ul id='dropdown2' class='dropdown-content'>
-						<li><a href='categoria_aceite.php'>Aceite</a></li>
+					<ul id='dropdown4' class='dropdown-content'>
+						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
 						<li class='divider'></li>
-						<li><a href='categoria_agua.php'>Agua</a></li>
+						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+						<li class='divider'></li>
+						<li><a href='../cuenta/compras.php'>Compras realizadas</a></li>
+						<li class='divider'></li>
+						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
 					</ul>
+
 					<!--Navbar Fijo-->
 					<div class='navbar-fixed'>
 						<nav>
@@ -48,10 +57,10 @@ class Page extends Component{
 								<ul class='right hide-on-med-and-down'>
 								<li><a href='index.php'>Inicio</a></li>
 								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-								<li><a href='nosotros.php'>Nosotros</a></li>
-								<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
-								<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+								<li><a href='../nosotros.php'>Nosotros</a></li>
+								<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
 								<li><a href='pagar.php'><i class='material-icons'>shopping_cart</i></a></li>
+								<li><a class='dropdown-button' href='#!' data-activates='dropdown3'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 								</ul>
 							</div>
 						</nav>
@@ -61,12 +70,11 @@ class Page extends Component{
 				<!--Navbar Mobil-->
 				<ul class='side-nav' id='mobile-demo'>
 					<li><a href='index.php'>Inicio</a></li>
-					<li><a href='iniciar_sesion.php'>Iniciar Sesi&oacute;n</a></li>
-					<li><a href='nosotros.php'>Nosotros</a></li>
-					<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
+					<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+					<li><a href='../nosotros.php'>Nosotros</a></li>
+					<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
 					<li><a href='pagar.php'> <i class='material-icons new badge'>shopping_cart</i>Añadido<span class='new badge'>1</span></a></li>
-					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Categor&iacute;as<i class='material-icons right'>arrow_drop_down</i></a></li>
-					<li>Bienvenido <b>$_SESSION[nombre_usuario]</b></li>
+					<li><a class='dropdown-button' href='#!' data-activates='dropdown4'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 				</ul>
 
 				<main class=''>
@@ -86,8 +94,8 @@ class Page extends Component{
 								<ul class='right hide-on-med-and-down'>
 								<li><a href='index.php'>Inicio</a></li>
 								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-								<li><a href='nosotros.php'>Nosotros</a></li>
-								<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
+								<li><a href='../nosotros/index.php'>Nosotros</a></li>
+								<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
 								<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
 								</ul>
 							</div>
@@ -98,10 +106,10 @@ class Page extends Component{
 				<!--Navbar Mobil-->
 				<ul class='side-nav' id='mobile-demo'>
 					<li><a href='index.php'>Inicio</a></li>
-					<li><a href='iniciar_sesion.php'>Iniciar Sesi&oacute;n</a></li>
-					<li><a href='nosotros.php'>Nosotros</a></li>
-					<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
-					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Categor&iacute;as<i class='material-icons right'>arrow_drop_down</i></a></li>
+					<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+					<li><a href='../nosotros.php'>Nosotros</a></li>
+					<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
+					<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
 				</ul>
 
 				<main class=''>
@@ -141,6 +149,9 @@ class Page extends Component{
         		<script type='text/javascript' src='../../web/js/main.js'></script>
         		<script type='text/javascript' src='../../web/js/ini.js'></script>
 				<script type='text/javascript' src='../../js/materialize.min.js'></script>
+				<script type='text/javascript' src='../../web/js/fontawesom.js'></script>
+        		<script type='text/javascript' src='../../web/js/inicial.js'></script>
+        		<script type='text/javascript' src='../../web/js/googlemaps.js'></script>
 			</body>
 			</html>
 		");
