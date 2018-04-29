@@ -47,7 +47,7 @@ class Page extends Component{
 								<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 								<ul class='right hide-on-med-and-down'>
 								<li><a href='index.php'>Inicio</a></li>
-								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Categor&iacute;as<i class='material-icons right'>arrow_drop_down</i></a></li>
+								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
 								<li><a href='nosotros.php'>Nosotros</a></li>
 								<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
 								<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
@@ -75,18 +75,7 @@ class Page extends Component{
 		}else{
 			print("
 				<header class='navbar-fixed'>
-					<!-- Dropdown Structure -->
-					<ul id='dropdown1' class='dropdown-content'>
-						<li><a href='categoria_aceite.php'>Aceite</a></li>
-						<li class='divider'></li>
-						<li><a href='categoria_agua.php'>Agua</a></li>
-					</ul>
-					<!-- Dropdown Structure Mobile -->
-					<ul id='dropdown2' class='dropdown-content'>
-						<li><a href='categoria_aceite.php'>Aceite</a></li>
-						<li class='divider'></li>
-						<li><a href='categoria_agua.php'>Agua</a></li>
-					</ul>
+					
 					<!--Navbar Fijo-->
 					<div class='navbar-fixed'>
 						<nav>
@@ -96,7 +85,7 @@ class Page extends Component{
 								<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 								<ul class='right hide-on-med-and-down'>
 								<li><a href='index.php'>Inicio</a></li>
-								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Categor&iacute;as<i class='material-icons right'>arrow_drop_down</i></a></li>
+								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
 								<li><a href='nosotros.php'>Nosotros</a></li>
 								<li><a href='contactanos.php'>Cont&aacute;ctanos</a></li>
 								<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>

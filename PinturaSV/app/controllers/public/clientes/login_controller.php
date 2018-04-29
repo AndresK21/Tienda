@@ -11,7 +11,7 @@ try{
 							if($cliente->checkPassword_cliente()){
 								$_SESSION['id_cliente'] = $cliente->getId_cliente(); //Obtiene el id_empleado para usarlo luego en la pagina template
 								$_SESSION['nombre_usuario'] = $cliente->getNombre_usuario(); //Obtiene el usuario para usarlo luego en la pagina template
-								Page::showMessage(1, "Autenticación correcta", "index.php");
+								Page::showMessage(1, "Autenticación correcta", "../index/index.php");
 							}else{
 								throw new Exception("Clave inexistente");
 							}
@@ -42,7 +42,7 @@ try{
 						if($_POST['contrasena1'] == $_POST['contrasena2']){ //Verifica que la clave sea igual
 						if($cliente->setContrasena($_POST['contrasena1'])){
 							if($cliente->createCliente()){
-								Page::showMessage(1, "Usuario creado", "index.php");
+								Page::showMessage(1, "Usuario creado", "../index/index.php");
 							}else{
 								throw new Exception(Database::getException());
 							}
