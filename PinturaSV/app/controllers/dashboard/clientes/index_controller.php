@@ -5,7 +5,7 @@ try{
 	$cliente = new Cliente;
 	if(isset($_POST['buscar_cliente'])){
 		$_POST = $cliente->validateForm($_POST);
-		$data = $cliente->searchClientes($_POST['busqueda_cliente']);
+		$data = $cliente->searchCliente($_POST['busqueda_cliente']);
 		if($data){
 			$rows = count($data);
 			Page::showMessage(4, "Se encontraron $rows resuldatos", null);
