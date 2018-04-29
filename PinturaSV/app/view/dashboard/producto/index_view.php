@@ -71,7 +71,7 @@
                                 <td>$producto[presentacion]</td>
                                 <td><i class='material-icons'>".($producto['id_estado']?"check":"")."</i></td>
                                 <td>
-                                    <i class='material-icons'>".($producto['id_estado']?"visibility":"visibility_off")."</i>
+                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Ver comentarios' href='comentarios.php?id=$producto[id_producto]'><i class='material-icons blue-grey-text text-darken-4 prefix'>comment</i></a>
                                     <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar producto' href='update.php?id=$producto[id_producto]'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
                                     <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar producto' href='delete.php?id=$producto[id_producto]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
                                 </td>

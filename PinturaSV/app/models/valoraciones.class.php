@@ -4,7 +4,7 @@ class Valoraciones extends Validator{
 	private $id_valoracion = null;
 	private $estrellas = null;
 	private $comentario = null;
-	private $id_prodcuto = null;
+	private $id_producto = null;
 
 	//Métodos para sobrecarga de propiedades
 	public function setId_valoracion($value){
@@ -61,6 +61,22 @@ class Valoraciones extends Validator{
 		$sql = "SELECT id_valoracion, estrellas, comentario, id_producto FROM valoraciones ORDER BY estrellas";
 		$params = array(null);
 		return Database::getRows($sql, $params);
+	}
+	public function getValoraciones2(){
+		$sql = "SELECT id_valoracion, comentario, id_producto FROM valoraciones WHERE id_producto = ?";
+		$params = array($this->id_producto);
+		return Database::getRows($sql, $params);
+	}
+	public function readProducto(){
+		$sql = "SELECT id_producto, nombre, cantidad, precio, color FROM producto WHERE id_producto = ?";
+		$params = array($this->id_producto);
+		$producto = Database::getRow($sql, $params);
+		if($producto){
+			$this->id_producto = $producto['id_producto'];
+			return true;
+		}else{
+			return null;
+		}
 	}
 	public function searchValoracion($value){
 		$sql = "SELECT id_valoracion, estrellas, comentario, nombre FROM valoraciones INNER JOIN productos USING(id_productos) WHERE estrellas LIKE ? OR comentario LIKE ? ORDER BY estrellas";

@@ -26,7 +26,7 @@
     </div>
     <div class="row">
         <table class="bordered highlight responsive-table z-depth-2">
-            <thead>
+            <thead class="blue-grey darken-4 white-text">
                 <tr>
                     <th>Nombre</th>
                     <th>Usuario</th>
@@ -45,8 +45,8 @@
                         <td>$row[permiso]</td>
                         <td>$row[correo_electronico]</td>
                         <td>
-                            <a href='update.php?id=$row[id_empleado]' class='blue-text text-darken-3'><i class='material-icons'>edit</i></a>
-                            <a href='delete.php?id=$row[id_empleado]' class='red-text text-darken-3'><i class='material-icons'>delete</i></a>
+                            <a href='update.php?id=$row[id_empleado]' class='blue-text text-darken-3 tooltipped' data-position='right' data-delay='50' data-tooltip='Editar usuario'><i class='material-icons'>edit</i></a>
+                            <a href='delete.php?id=$row[id_empleado]' class='red-text text-darken-3 tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar usuario'><i class='material-icons'>delete</i></a>
                         </td>
                     </tr>
                         ");
