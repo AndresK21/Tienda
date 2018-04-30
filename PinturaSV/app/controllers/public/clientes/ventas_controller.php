@@ -16,9 +16,9 @@ try{
         throw new Exception("Cliente incorrecto");
     }
 if($data){
-    require_once("../../app/view/public/clientes/ventas_view.php");
+    require_once("../../app/view/public/cuenta/ventas_view.php");
 }else{
-    Page::showMessage(3, "No hay ventas disponibles", "index.php");
+    Page::showMessage(3, "No hay compras disponibles", "index.php");
 }
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), "../cuenta/");

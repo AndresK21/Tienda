@@ -13,6 +13,7 @@ class Cliente extends Validator{
 	private $producto = null;
 	private $precio = null;
 	private $subtotal = null;
+	private $id_pedido = null;
 
 	//Métodos para sobrecarga de propiedades
 	public function setId_cliente($value){
@@ -147,14 +148,26 @@ class Cliente extends Validator{
 	public function getSubtotal(){
 		return $this->subtotal;
 	}
+	public function setId_pedido($value){
+		if($this->validateId($value)){
+			$this->id_pedido = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getId_pedido(){
+		return $this->id_pedido;
+	}
 
 	//Métodos para manejar la sesión del usuario
 	public function checkUsuario_cliente(){
-		$sql = "SELECT id_cliente FROM cliente WHERE nombre_usuario = ?";
+		$sql = "SELECT id_cliente, id_pedido FROM cliente INNER JOIN pedido USING(id_cliente) WHERE nombre_usuario = ?";
 		$params = array($this->nombre_usuario);
 		$data = Database::getRow($sql, $params);
 		if($data){
 			$this->id_cliente = $data['id_cliente'];
+			$this->id_pedido = $data['id_pedido'];
 			return true;
 		}else{
 			return false;
@@ -187,7 +200,7 @@ class Cliente extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getVentas(){
-		$sql = "SELECT id_cliente, fecha, detalle_pedido.cantidad, producto.nombre, precio, precio * detalle_pedido.cantidad AS subtotal FROM detalle_pedido INNER JOIN pedido USING(id_pedido) INNER JOIN cliente USING(id_cliente) INNER JOIN producto USING(id_producto) WHERE id_cliente = ?";
+		$sql = "SELECT id_cliente, fecha, detalle_pedido.cantidad, producto.nombre, precio, precio * detalle_pedido.cantidad AS subtotal FROM detalle_pedido INNER JOIN pedido USING(id_pedido) INNER JOIN cliente USING(id_cliente) INNER JOIN producto USING(id_producto) WHERE detalle_pedido.estado = 1 AND id_cliente = ?";
 		$params = array($this->id_cliente);
 		return Database::getRows($sql, $params);
 	}

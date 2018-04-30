@@ -57,9 +57,9 @@ class Page extends Component{
 								<ul class='right hide-on-med-and-down'>
 								<li><a href='index.php'>Inicio</a></li>
 								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-								<li><a href='../nosotros.php'>Nosotros</a></li>
-								<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
-								<li><a href='pagar.php'><i class='material-icons'>shopping_cart</i></a></li>
+								<li><a href='../nosotros/index.php'>Nosotros</a></li>
+								<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
+								<li><a href='../carrito/index.php'><i class='material-icons'>shopping_cart</i></a></li>
 								<li><a class='dropdown-button' href='#!' data-activates='dropdown3'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 								</ul>
 							</div>
@@ -71,9 +71,9 @@ class Page extends Component{
 				<ul class='side-nav' id='mobile-demo'>
 					<li><a href='index.php'>Inicio</a></li>
 					<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-					<li><a href='../nosotros.php'>Nosotros</a></li>
-					<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
-					<li><a href='pagar.php'> <i class='material-icons new badge'>shopping_cart</i>Añadido<span class='new badge'>1</span></a></li>
+					<li><a href='../nosotros/index.php'>Nosotros</a></li>
+					<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
+					<li><a href='../carrito/index.php'> <i class='material-icons new badge'>shopping_cart</i>Añadido<span class='new badge'>1</span></a></li>
 					<li><a class='dropdown-button' href='#!' data-activates='dropdown4'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 				</ul>
 

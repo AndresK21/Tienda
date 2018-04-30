@@ -36,7 +36,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12 right-align">
-                <a class='btn waves-effect red darken-3' href="index.php"><i class='material-icons'></i>Cancelar</a>
+                <a class='btn waves-effect red darken-3' href="login.php"><i class='material-icons'></i>Cancelar</a>
                 <button type='submit' name='cambiar' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Guardar'><i class='material-icons'>save</i>Guardar cambios</button>
             </div>
         </div>

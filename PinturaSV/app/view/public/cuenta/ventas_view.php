@@ -1,11 +1,11 @@
 <div class="white-text">.</div>
 
-<div class="center-align"><h4>Compras del cliente</h4></div>
+<div class="center-align"><h4>Compras realizadas</h4></div>
 
 <div class="container">
     <!--Parte de clasificacion de la tabla-->
     <table class="bordered highlight responsive-table espacio_inf">
-        <thead class="blue-grey darken-4 white-text">
+        <thead class="blue white-text">
             <tr>
                 <th>Fecha</th>
                 <th>Cantidad</th>
