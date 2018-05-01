@@ -6,7 +6,7 @@ require_once("../../app/models/presentaciones.class.php");
 require_once("../../app/models/tipo_p.class.php");
 try{
 	//Controlador de productos
-	$producto = new Producto;
+$producto = new Producto;
 	if(isset($_POST['buscar_producto'])){
 		$_POST = $producto->validateForm($_POST);
 		$data_productos = $producto->searchProducto($_POST['busqueda_producto']);
@@ -19,7 +19,7 @@ try{
 		}
 	}else{
 		$data_productos = $producto->getProductos();
-	}
+	}	
 
 
 	//Controlador de marcas

@@ -1,21 +1,21 @@
 <?php
-require_once("../app/models/producto.class.php");
-try{
-	if(isset($_GET['id'])){
-		$producto = new Producto;
-		if($producto->setId($_GET['id'])){
-			if($producto->readProducto()){
-				require_once("../app/views/public/producto/detalle_view.php");
+require_once("../../app/models/producto.class.php");
+	try{
+		if(isset($_GET['id'])){
+			$producto = new Producto;
+			if($producto->setId_producto($_GET['id'])){
+				if($producto->readProducto2()){
+					require_once("../../app/view/public/categorias/detalle_view.php");
+				}else{
+					throw new Exception("Producto inexistente");
+				}
 			}else{
-				throw new Exception("Producto inexistente");
+				throw new Exception("Producto incorrecto");
 			}
 		}else{
-			throw new Exception("Producto incorrecto");
+			throw new Exception("Seleccione producto");
 		}
-	}else{
-		throw new Exception("Seleccione producto");
+	}catch(Exception $error){
+		Page::showMessage(3, $error->getMessage(), "index.php");
 	}
-}catch(Exception $error){
-	Page::showMessage(3, $error->getMessage(), "index.php");
-}
 ?>

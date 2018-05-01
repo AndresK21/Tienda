@@ -10,6 +10,7 @@ class Producto extends Validator{
 	private $id_categoria = null;
 	private $id_estado = null;
 	private $id_presentacion = null;
+	private $presentacion = null;
 	private $id_marca = null;
 
 	//Métodos para sobrecarga de propiedades
@@ -23,6 +24,18 @@ class Producto extends Validator{
 	}
 	public function getId_producto(){
 		return $this->id_producto;
+	}
+
+	public function setpresentacion($value){
+		if($this->validateAlphanumeric($value)){
+			$this->presentacion = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getpresentacion(){
+		return $this->presentacion;
 	}
 	
 	public function setNombre($value){
@@ -143,8 +156,17 @@ class Producto extends Validator{
 
 	//Metodos para el manejo del CRUD
 	public function getCategoriaProductos(){
-		$sql = "SELECT id_categoria, id_producto, nombre, precio FROM producto INNER JOIN categoria USING(id_categoria) WHERE id_categoria = ? AND id_estado = 1 ORDER BY nombre_producto";
+		$sql = "SELECT categoria.categoria, producto.id_producto, producto.nombre, producto.precio, producto.imagen, presentaciones.presentacion FROM producto 
+		INNER JOIN categoria ON producto.id_categoria = categoria.id_categoria INNER JOIN presentaciones ON producto.id_presentacion = presentaciones.id_presentacion
+		WHERE producto.id_categoria = ? AND producto.id_estado = 1";
 		$params = array($this->id_categoria);
+		return Database::getRows($sql, $params);
+	}
+	public function getPresentacionesProductos(){
+		$sql = "SELECT presentaciones.presentacion, producto.id_producto, producto.nombre, producto.precio, producto.imagen FROM producto 
+		INNER JOIN presentaciones ON producto.id_presentacion = presentaciones.id_presentacion 
+		WHERE producto.id_presentacion = ? AND producto.id_estado = 1";
+		$params = array($this->id_presentacion);
 		return Database::getRows($sql, $params);
 	}
 	public function getProductos(){
@@ -155,6 +177,13 @@ class Producto extends Validator{
 	public function searchProducto($value){
 		$sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, id_estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN presentaciones USING(id_presentacion) WHERE nombre LIKE ? ORDER BY nombre";
 		$params = array("%$value%");
+		return Database::getRows($sql, $params);
+	}
+	public function searchProducto2($value, $value2, $value3){
+		$sql = "SELECT categoria,id_producto, nombre, cantidad, precio, color, imagen, id_estado, presentacion FROM producto 
+		INNER JOIN categoria USING(id_categoria) INNER JOIN presentaciones USING(id_presentacion) 
+		WHERE nombre LIKE ? AND presentaciones.id_presentacion = ? AND categoria.id_categoria = ? ORDER BY nombre";
+		$params = array("%$value%", $value2, $value3);
 		return Database::getRows($sql, $params);
 	}
 	public function getCategorias(){
@@ -190,6 +219,26 @@ class Producto extends Validator{
 			$this->id_categoria = $producto['id_categoria'];
 			$this->id_estado = $producto['id_estado'];
 			$this->id_presentacion = $producto['id_presentacion'];
+			$this->id_marca = $producto['id_marca'];
+			return true;
+		}else{
+			return null;
+		}
+	}
+	public function readProducto2(){
+		$sql = "SELECT nombre, cantidad, precio, color, imagen, id_categoria, id_estado, presentacion, id_marca FROM producto 
+		INNER JOIN presentaciones ON producto.id_presentacion = presentaciones.id_presentacion  WHERE id_producto = ?";
+		$params = array($this->id_producto);
+		$producto = Database::getRow($sql, $params);
+		if($producto){
+			$this->nombre = $producto['nombre'];
+			$this->cantidad = $producto['cantidad'];
+			$this->precio = $producto['precio'];
+			$this->color = $producto['color'];
+			$this->imagen = $producto['imagen'];
+			$this->id_categoria = $producto['id_categoria'];
+			$this->id_estado = $producto['id_estado'];
+			$this->presentacion = $producto['presentacion'];
 			$this->id_marca = $producto['id_marca'];
 			return true;
 		}else{

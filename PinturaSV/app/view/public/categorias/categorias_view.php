@@ -11,7 +11,7 @@
                     </div>
                     <div class='card-content'>
                         <span class='card-title center activator grey-text text-darken-4'>$categoria[categoria]</span>
-                        <p class='center'><a href='productos.php?id=$categoria[id_categoria]' class='tooltipped' data-tooltip='Ver más'><i class='small material-icons'>format_paint</i></a></p>
+                        <p class='center'><a href='productos_categorias.php?id=$categoria[id_categoria]' class='tooltipped' data-tooltip='Ver más'><i class='small material-icons'>format_paint</i></a></p>
                     </div>
                 </div>
             </div>
