@@ -17,7 +17,6 @@ try{
     }else {
         throw new Exception("Cliente incorrecto");
     }
-
     if(isset($_SESSION['id_pedido'])){
         $producto = new Detalle;
         if($producto->setId_pedido($_SESSION['id_pedido'])){

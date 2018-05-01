@@ -55,7 +55,7 @@ class Page extends Component{
 								<img class='brand-logo' src='../../web/img/mipintura.png'>
 								<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 								<ul class='right hide-on-med-and-down'>
-								<li><a href='index.php'>Inicio</a></li>
+								<li><a href='../index/index.php'>Inicio</a></li>
 								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
 								<li><a href='../nosotros/index.php'>Nosotros</a></li>
 								<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
@@ -92,7 +92,7 @@ class Page extends Component{
 								<img class='brand-logo' src='../../web/img/mipintura.png'>
 								<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
 								<ul class='right hide-on-med-and-down'>
-								<li><a href='index.php'>Inicio</a></li>
+								<li><a href='../index/index.php'>Inicio</a></li>
 								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
 								<li><a href='../nosotros/index.php'>Nosotros</a></li>
 								<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
