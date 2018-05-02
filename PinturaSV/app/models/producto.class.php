@@ -162,6 +162,13 @@ class Producto extends Validator{
 		$params = array($this->id_categoria);
 		return Database::getRows($sql, $params);
 	}
+	public function getCategoriaProductos2($empieza, $por_pagina){
+		$query = "SELECT categoria.categoria, producto.id_producto, producto.nombre, producto.precio, producto.imagen, presentaciones.presentacion FROM producto 
+		INNER JOIN categoria ON producto.id_categoria = categoria.id_categoria INNER JOIN presentaciones ON producto.id_presentacion = presentaciones.id_presentacion
+		WHERE producto.id_categoria = ? AND producto.id_estado = 1 LIMIT $empieza, $por_pagina";
+		$params = array($this->id_categoria);
+		return Database::getRows($query, $params);
+	}
 	public function getPresentacionesProductos(){
 		$sql = "SELECT presentaciones.presentacion, producto.id_producto, producto.nombre, producto.precio, producto.imagen FROM producto 
 		INNER JOIN presentaciones ON producto.id_presentacion = presentaciones.id_presentacion 
@@ -174,9 +181,19 @@ class Producto extends Validator{
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
+	public function getProductosTop(){
+		$sql = "SELECT `id_producto` ,producto.nombre, producto.cantidad, producto.precio, producto.color, producto.imagen, categoria, id_estado, presentacion FROM detalle_pedido INNER JOIN producto USING (id_producto) INNER JOIN categoria USING(id_categoria) INNER JOIN presentaciones USING(id_presentacion) GROUP BY id_producto";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+	}
 	public function searchProducto($value){
 		$sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, id_estado, presentacion FROM producto INNER JOIN categoria USING(id_categoria) INNER JOIN presentaciones USING(id_presentacion) WHERE nombre LIKE ? ORDER BY nombre";
 		$params = array("%$value%");
+		return Database::getRows($sql, $params);
+	}
+	public function producto_wholetable(){
+		$sql = "SELECT * FROM producto";
+		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
 	public function searchProducto2($value, $value2, $value3){

@@ -31,19 +31,19 @@
         $categoria = $data_productos[0]['categoria'];
         print("<h4 class='center blue-text'>$categoria</h4>");
         print("<div class='row'>");
-        foreach($data_productos as $productob){
+        foreach($data_productos as $productob2){
             print("
             <div class='col s12 m6 l3'>
                 <div class='card sticky-action'>
                     <div class='card-image waves-effect waves-block waves-light'>
-                        <img src='../../web/img/productos/$productob[imagen]' class='materialboxed'>
+                        <img src='../../web/img/productos/$productob2[imagen]' class='materialboxed'>
                     </div>
                     <div class='card-content'>
-                            <span class='card-title'>$productob[nombre]</span>
-                            <p>Precio (US$) $productob[precio]</p>
-                            <p>Presentacion $productob[presentacion]</p>
+                            <span class='card-title'>$productob2[nombre]</span>
+                            <p>Precio (US$) $productob2[precio]</p>
+                            <p>Presentacion $productob2[presentacion]</p>
                         <!-- BOTON DE COMPRA -->
-                        <a href='detalle_producto.php?id=$productob[id_producto]' class='blue waves-effect waves-light btn modal-trigger'><i class='material-icons right'>shopping_cart</i>A&ntilde;adir </a>
+                        <a href='detalle_producto.php?id=$productob2[id_producto]' class='blue waves-effect waves-light btn modal-trigger'><i class='material-icons right'>shopping_cart</i>A&ntilde;adir </a>
 
                         <!-- ESPACIO -->
                         <div class='white-text'>.</div>
@@ -58,4 +58,27 @@
             ");
         }
         ?>
+
+         
 </div>
+        <?php
+            //seleccionar todo de la tabla usuarios
+            $resultado=$productob->getCategoriaProductos();
+
+            //Contar el total de registros
+            $total_registros = count($resultado);
+
+            //usando ceil para dividir el total de registros entre $por_pagina este ultimo es de 5
+            $total_paginas = ceil($total_registros / $por_pagina);  
+
+            //link a primera pagina
+            
+            print("<ul class='pagination center'><a href='productos_categorias.php?id=".$productob->getId_categoria()."&pagina=1'>".''."<i class='material-icons'>first_page</i></a></li>");
+
+            for ($i=1; $i<=$total_paginas; $i++) {
+
+            print("<li class='waves-effect white-text ligactive'><a href='productos_categorias.php?id=".$productob->getId_categoria()."&pagina=".$i."'>".$i."</a></li>");
+            };
+            // link a la ultima pagina
+            print("<a href='productos_categorias.php?id=".$productob->getId_categoria()."&pagina=$total_paginas'>".''."<i class='material-icons'>last_page</i></a></li>");
+        ?>
