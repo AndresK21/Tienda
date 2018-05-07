@@ -18,6 +18,7 @@ class Page extends Component{
 				<!--Import materialize.css-->
 				<link type='text/css' rel='stylesheet' href='../../css/materialize.min.css'  media='screen,projection'/>
 				<link href='../../web/css/googlemaps.css' rel='stylesheet'>
+				<link rel='stylesheet' href='../../web/css/valoraciones.css'>
 				<script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
 				<!--Let browser know website is optimized for mobile-->
 				<meta name='viewport' content='width=device-width, initial-scale=1.0'/>

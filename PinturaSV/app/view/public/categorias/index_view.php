@@ -62,10 +62,8 @@
                             <p>Precio (US$) $productob[precio]</p>
                             <p>$productob[presentacion]</p>
                             <p>Categoria: $productob[categoria]</p>
-    
                         <!-- ESPACIO -->
                         <div class='white-text'>.</div>
-    
                     </div>
                 </div>
             </div>

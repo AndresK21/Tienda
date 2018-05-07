@@ -63,10 +63,16 @@ class Valoraciones extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getValoracionesProducto(){
-		$sql = "SELECT id_producto, id_valoracion, nombre_usuario, estrellas, comentario FROM valoraciones INNER JOIN cliente ON cliente.id_cliente = valoraciones.id_cliente WHERE id_producto = ? ";
+		$sql = "SELECT ROUND(AVG(estrellas))AS estrella,valoraciones.id_producto, valoraciones.id_valoracion, cliente.nombre_usuario, valoraciones.comentario FROM valoraciones INNER JOIN cliente ON cliente.id_cliente = valoraciones.id_cliente WHERE id_producto = ? ";
 		$params = array($this->id_producto);
 		return Database::getRows($sql, $params);
 	}
+	public function getEstrellasPromedio(){
+		$sql = "SELECT ROUND(AVG(estrellas)) AS Estrellas FROM valoraciones WHERE id_producto = ? ";
+		$params = array($this->id_producto);
+		return Database::getRows($sql, $params);
+	}
+
 	public function getValoraciones2(){
 		$sql = "SELECT id_valoracion, comentario, id_producto FROM valoraciones WHERE id_producto = ?";
 		$params = array($this->id_producto);

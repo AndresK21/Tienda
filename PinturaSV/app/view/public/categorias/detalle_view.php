@@ -16,7 +16,7 @@
             ");
         ?>
                         <form method='post'>
-                            <div class='input-field col s12 m6'>
+                            <div class='input-field col s12 m6 l4 offset-l5'>
                                 <i class='material-icons prefix'>list</i>
                                 <input id='cantida' type='number' name='cantidad' min='1' max='999' step='any' class='validate' value='<?php print($detalle->getCantidad()) ?>' required />
                                 <label for='cantida'>Cantidad</label>
@@ -27,6 +27,26 @@
                 </div>
             </form>
         
+        <!-- COMENTARIOS -->
+        <?php
+            foreach($valoracion2 as $valoracionesR){
+            print("  
+            <div class='card-reveal'>
+            <h5><p class='center'>Valoración Actual: $valoracionesR[estrella] estrellas</p></h5>
+        </div>
+            <h5><p class='center'>Comentarios</p></h5>
+            <ul class='collection'>
+                <li class='collection-header'><h5></h5></li>
+                <li class='collection-item avatar'>
+                <i class='material-icons circle'>comment</i>
+                <span class='card-title'>$valoracionesR[nombre_usuario]</span>
+                <p>$valoracionesR[comentario]</p>
+                </li>
+            </ul>
+            
+            ");
+            }
+        ?>
         </div>
     </div>
 </div>

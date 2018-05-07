@@ -1,13 +1,17 @@
 <?php
 require_once("../../app/models/producto.class.php");
 require_once("../../app/models/detalle_pedido.class.php");
+require_once("../../app/models/valoraciones.class.php");
 	try{
+
 		if(isset($_GET['id'])){
 			$producto = new Producto;
 			$detalle = new Detalle;
+			$valoraciones = new Valoraciones;
 			if($producto->setId_producto($_GET['id'])){
 				if($producto->readProducto2()){
-
+					if($valoraciones->setId_producto($_GET['id'])){
+						$valoracion2 = $valoraciones->getValoracionesProducto();
 					if(isset($_POST['agregar'])){
 						$_POST = $detalle->validateForm($_POST);
 						if($detalle->setCantidad($_POST['cantidad'])){
@@ -15,6 +19,7 @@ require_once("../../app/models/detalle_pedido.class.php");
 								if($detalle->setId_pedido($_SESSION['id_pedido'])){
 									if($detalle->createDetalle()){
 										Page::showMessage(1, "Producto agregado al carrito", "../categorias/categorias.php");
+											
 										}else{
 											throw new Exception(Database::getException());
 										}
@@ -28,7 +33,9 @@ require_once("../../app/models/detalle_pedido.class.php");
 							throw new Exception("Cantidad incorrecta");
 						}
 					}
-					
+				}else{
+					throw new Exception("Valoracion incorrecta");
+				}
 				}else{
 					throw new Exception("Producto inexistente");
 				}
