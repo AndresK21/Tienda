@@ -64,7 +64,7 @@
     <div class="row" style="text-align: justify;">
         <div class="col l6 m6 s12 hoverable">
             <div>
-                <img class="responsive-img circle" src="../../web/img/pintura.jpg" alt="Desarrollador">
+                <img class="responsive-img circle" src="../../web/img/diego.jpg" alt="Desarrollador">
             </div>
             <div>
                 <h5><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur nostrum voluptatem dolorum? Tempora earum consequuntur at. Accusamus, atque, inventore iste, illo voluptatum cum voluptas ullam ut ad magni numquam alias?</p></h5>
@@ -72,7 +72,7 @@
         </div>
         <div class="col l6 m6 s12 hoverable">
             <div>
-                <img class="responsive-img circle" src="../../web/img/pintura.jpg" alt="Desarrollador">
+                <img class="responsive-img circle" src="../../web/img/andres.jpg" alt="Desarrollador">
             </div>
             <div>
                 <h5><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur nostrum voluptatem dolorum? Tempora earum consequuntur at. Accusamus, atque, inventore iste, illo voluptatum cum voluptas ullam ut ad magni numquam alias?</p></h5>
