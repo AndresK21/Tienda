@@ -26,32 +26,57 @@
 </div>
 <div class='container row'>
 <?php
-    foreach($productos as $productob){
-    print("
-    <div class='col s12 m6 l4'>
-        <div class='card sticky-action'>
-            <div class='card-image waves-effect waves-block waves-light'>
-                <img src='../../web/img/productos/$productob[imagen]' class='materialboxed'>
+    if(isset($_SESSION['id_cliente'])){
+        foreach($productos as $productob){
+            print("
+            <div class='col s12 m6 l4'>
+                <div class='card sticky-action'>
+                    <div class='card-image waves-effect waves-block waves-light'>
+                        <img src='../../web/img/productos/$productob[imagen]' class='materialboxed'>
+                    </div>
+                    <div class='card-content'>
+                            <span class='card-title'>$productob[nombre]</span>
+                            <p>Precio (US$) $productob[precio]</p>
+                            <p>$productob[presentacion]</p>
+                            <p>Categoria: $productob[categoria]</p>
+                        <!-- BOTON DE COMPRA -->
+                        <a href='../categorias/detalle_producto.php?id=$productob[id_producto]' class='blue waves-effect waves-light btn modal-trigger'><i class='material-icons right'>shopping_cart</i>A&ntilde;adir </a>
+    
+                        <!-- ESPACIO -->
+                        <div class='white-text'>.</div>
+    
+                        <!-- BOTON DE COMENTARIOS -->
+                        <a class='blue tooltipped waves-effect waves-light btn modal-trigger halfway-fab'  href='#' type='submit' name='action' data-position='bottom' data-delay='50' data-tooltip='Ver Comentarios'>Comentarios
+                            <i class='material-icons'>comment</i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class='card-content'>
-                    <span class='card-title'>$productob[nombre]</span>
-                    <p>Precio (US$) $productob[precio]</p>
-                    <p>$productob[presentacion]</p>
-                    <p>Categoria: $productob[categoria]</p>
-                <!-- BOTON DE COMPRA -->
-                <a href='../categorias/detalle_producto.php?id=$productob[id_producto]' class='blue waves-effect waves-light btn modal-trigger'><i class='material-icons right'>shopping_cart</i>A&ntilde;adir </a>
-
-                <!-- ESPACIO -->
-                <div class='white-text'>.</div>
-
-                <!-- BOTON DE COMENTARIOS -->
-                <a class='blue tooltipped waves-effect waves-light btn modal-trigger halfway-fab'  href='#' type='submit' name='action' data-position='bottom' data-delay='50' data-tooltip='Ver Comentarios'>Comentarios
-                    <i class='material-icons'>comment</i>
-                </a>
+            ");
+        }
+    }else{
+        foreach($productos as $productob){
+            print("
+            <div class='col s12 m6 l4'>
+                <div class='card sticky-action'>
+                    <div class='card-image waves-effect waves-block waves-light'>
+                        <img src='../../web/img/productos/$productob[imagen]' class='materialboxed'>
+                    </div>
+                    <div class='card-content'>
+                            <span class='card-title'>$productob[nombre]</span>
+                            <p>Precio (US$) $productob[precio]</p>
+                            <p>$productob[presentacion]</p>
+                            <p>Categoria: $productob[categoria]</p>
+    
+                        <!-- ESPACIO -->
+                        <div class='white-text'>.</div>
+    
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    ");
-}
+            ");
+        }
+    }
+        
 ?>
 </div>

@@ -27,7 +27,7 @@
                 <div class="row">
                 <div class="input-field col s9">
                     <i class="material-icons prefix">lock</i>
-                    <input name="contrasena" id="contrasena" type="password" class="validate" '<?php print($cliente->getContrasena()) ?>' required />
+                    <input name="contrasena" id="contrasena" type="password" class="validate" value='<?php print($cliente->getContrasena()) ?>' required />
                     <label for="password icon_prefix">Contrase&ntilde;a</label>
                 </div>
                 <!-- VER CONTRASEÑA -->

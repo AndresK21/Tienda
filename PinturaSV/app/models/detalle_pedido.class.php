@@ -22,7 +22,7 @@ class Detalle extends Validator{
 	}
 	
 	public function setCantidad($value){
-		if($this->validateAlphanumeric($value)){
+		if($this->validateMoney($value)){
 			$this->cantidad = $value;
 			return true;
 		}else{
@@ -116,7 +116,7 @@ class Detalle extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function createDetalle(){
-		$sql = "INSERT INTO detalle_pedido(cantidad, id_producto, id_pedidoo) VALUES (?, ?, ?)";
+		$sql = "INSERT INTO detalle_pedido(cantidad, id_producto, id_pedido) VALUES (?, ?, ?)";
 		$params = array($this->cantidad, $this->id_producto, $this->id_pedido);
 		return Database::executeRow($sql, $params);
 	}
