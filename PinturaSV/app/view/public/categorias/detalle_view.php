@@ -18,7 +18,7 @@
                         <form method='post'>
                             <div class='input-field col s12 m6 l4 offset-l5'>
                                 <i class='material-icons prefix'>list</i>
-                                <input id='cantida' type='number' name='cantidad' min='1' max='999' step='any' class='validate' value='<?php print($detalle->getCantidad()) ?>' required />
+                                <input id='cantida' type='number' name='cantidad' min='1' max="<?php print($producto->getExistencias()) ?>" step='any' class='validate' value='<?php print($detalle->getCantidad()) ?>' required />
                                 <label for='cantida'>Cantidad</label>
                             </div>
                         </div>

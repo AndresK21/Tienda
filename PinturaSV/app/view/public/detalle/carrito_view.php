@@ -15,7 +15,6 @@
             <th>Subtotal</th>
             <th></th>
             <th></th>
-            <th></th>
         </tr>
         </thead>
 
@@ -27,9 +26,9 @@
                 <tr>
                     <td><img src='../../web/img/productos/$row[imagen]' class='materialboxed' width='50' height='50'></td>
                     <td>$row[nombre]</td>
-                    <td><input id='cantidad' type='number' class='validate' value='$row[cantidad]' min='1' max='999' step='any'></td>
-                    <td>$row[precio]</td>
-                    <td>$row[subtotal]</td>
+                    <td>$row[cantidad]</td>
+                    <td>$$row[precio]</td>
+                    <td>$$row[subtotal]</td>
                     <td>
                         <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar elemento' href='delete.php?id=$row[id_detalle]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
                     </td>
@@ -45,7 +44,7 @@
         <?php
             foreach($data2 as $row2){
                 print("
-                    <h5 style='text-decoration: underline;'>Total a pagar:  $row2[total]</h5>
+                    <h5 style='text-decoration: underline;'>Total a pagar:  $$row2[total]</h5>
                 ");
             }
         ?>
