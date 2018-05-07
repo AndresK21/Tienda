@@ -78,8 +78,6 @@ class Detalle extends Validator{
 	public function getId_cliente(){
 		return $this->id_cliente;
 	}
-
-
 	//Metodos para manejar el CRUD
 	public function getDetalles(){
 		$sql = "SELECT id_detalle, detalle_pedido.cantidad, nombre, id_pedido FROM detalle_pedido INNER JOIN producto USING(id_producto) ORDER BY id_detalle";
