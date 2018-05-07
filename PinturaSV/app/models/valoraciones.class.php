@@ -5,6 +5,7 @@ class Valoraciones extends Validator{
 	private $estrellas = null;
 	private $comentario = null;
 	private $id_producto = null;
+	private $id_cliente = null;
 
 	//Métodos para sobrecarga de propiedades
 	public function setId_valoracion($value){
@@ -18,14 +19,22 @@ class Valoraciones extends Validator{
 	public function getId_valoracion(){
 		return $this->id_valoracion;
 	}
-	
-	public function setEstrellas($value){
-		if($this->validateAlphanumeric($value)){
-			$this->estrellas = $value;
+
+	public function setId_cliente($value){
+		if($this->validateId($value)){
+			$this->id_cliente = $value;
 			return true;
 		}else{
 			return false;
 		}
+	}
+	public function getId_cliente(){
+		return $this->id_cliente;
+	}
+	
+	public function setEstrellas($value){ 
+			$this->estrellas = $value;
+			return true; 
 	}
 	public function getEstrellas(){
 		return $this->estrellas;
@@ -93,8 +102,8 @@ class Valoraciones extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function createValoracion(){
-		$sql = "INSERT INTO valoraciones(estrellas, comentario, id_producto) VALUES (?, ?, ?)";
-		$params = array($this->estrellas, $this->comentario, $this->id_producto);
+		$sql = "INSERT INTO valoraciones(estrellas, comentario, id_producto, id_cliente) VALUES (?, ?, ?,?)";
+		$params = array($this->estrellas, $this->comentario, $this->id_producto, $this->id_cliente);
 		return Database::executeRow($sql, $params);
 	}
 	public function readValoracion(){

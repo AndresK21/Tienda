@@ -200,7 +200,7 @@ class Cliente extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getVentas(){
-		$sql = "SELECT id_cliente, fecha, detalle_pedido.cantidad, producto.nombre, precio, precio * detalle_pedido.cantidad AS subtotal FROM detalle_pedido INNER JOIN pedido USING(id_pedido) INNER JOIN cliente USING(id_cliente) INNER JOIN producto USING(id_producto) WHERE detalle_pedido.estado = 1 AND id_cliente = ?";
+		$sql = "SELECT id_cliente, fecha, detalle_pedido.cantidad, producto.nombre, precio, precio * detalle_pedido.cantidad AS subtotal, producto.id_producto FROM detalle_pedido INNER JOIN pedido USING(id_pedido) INNER JOIN cliente USING(id_cliente) INNER JOIN producto USING(id_producto) WHERE detalle_pedido.estado = 1 AND id_cliente = ?";
 		$params = array($this->id_cliente);
 		return Database::getRows($sql, $params);
 	}
