@@ -11,6 +11,7 @@ require_once("../../app/models/valoraciones.class.php");
 				if($producto->readProducto2()){
 					if($valoraciones->setId_producto($_GET['id'])){
 						$valoracion2 = $valoraciones->getValoracionesProducto();
+						$valoracion3 = $valoraciones->getEstrellasPromedio();
 					if(isset($_POST['agregar'])){
 						$_POST = $detalle->validateForm($_POST);
 						if($detalle->setCantidad($_POST['cantidad'])){

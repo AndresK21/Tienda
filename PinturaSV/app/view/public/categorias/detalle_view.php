@@ -26,15 +26,24 @@
                     </div>
                 </div>
             </form>
+
+
+        <?php
+        foreach($valoracion3 as $valoracionesE){
+        print("  
+        <div class='card-reveal'>
+        <h5><p class='center'>Valoración Actual: $valoracionesE[Estrellas] estrellas</p></h5>
+        </div>
+        ");
+        }
+        ?>
         
         <!-- COMENTARIOS -->
+        <h5><p class="center">Comentarios</p></h5>
         <?php
             foreach($valoracion2 as $valoracionesR){
             print("  
-            <div class='card-reveal'>
-            <h5><p class='center'>Valoración Actual: $valoracionesR[estrella] estrellas</p></h5>
-        </div>
-            <h5><p class='center'>Comentarios</p></h5>
+            
             <ul class='collection'>
                 <li class='collection-header'><h5></h5></li>
                 <li class='collection-item avatar'>
