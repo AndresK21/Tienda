@@ -46,14 +46,8 @@
                                 <p>Presentacion $productob2[presentacion]</p>
                             <!-- BOTON DE COMPRA -->
                             <a href='detalle_producto.php?id=$productob2[id_producto]' class='blue waves-effect waves-light btn modal-trigger'><i class='material-icons right'>shopping_cart</i>A&ntilde;adir </a>
-    
                             <!-- ESPACIO -->
                             <div class='white-text'>.</div>
-    
-                            <!-- BOTON DE COMENTARIOS -->
-                            <a class='blue tooltipped waves-effect waves-light btn modal-trigger halfway-fab'  href='#' type='submit' name='action' data-position='bottom' data-delay='50' data-tooltip='Ver Comentarios'>Rese&ntilde;as
-                                <i class='material-icons'>comment</i>
-                            </a>
                         </div>
                     </div>
                 </div>

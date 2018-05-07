@@ -44,11 +44,6 @@
     
                         <!-- ESPACIO -->
                         <div class='white-text'>.</div>
-    
-                        <!-- BOTON DE COMENTARIOS -->
-                        <a class='blue tooltipped waves-effect waves-light btn modal-trigger halfway-fab'  href='#' type='submit' name='action' data-position='bottom' data-delay='50' data-tooltip='Ver Comentarios'>Comentarios
-                            <i class='material-icons'>comment</i>
-                        </a>
                     </div>
                 </div>
             </div>
