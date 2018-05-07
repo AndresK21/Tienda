@@ -4,7 +4,7 @@ try{
 
 
 	//cantidad de registros por página
-	$por_pagina=2;
+	$por_pagina=4;
 	if (isset($_GET["pagina"])) {
 	$pagina = $_GET["pagina"];
 	}

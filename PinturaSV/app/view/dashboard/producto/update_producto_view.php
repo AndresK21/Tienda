@@ -11,7 +11,7 @@
                 <label for="nombre">Nombre</label>
             </div>
             <div class="input-field col s12 m6 l6">
-                <input id="cantidad" type="number" name="cantidad" class="validate" value='<?php print($producto->getCantidad())?>' required>
+                <input id="cantidad" type="number" name="cantidad" class="validate" min="1" max="999" value='<?php print($producto->getCantidad())?>' required>
                 <label for="Cantidad">Cantidad</label>
             </div>
         </div>

@@ -10,6 +10,7 @@ require_once("../../app/models/valoraciones.class.php");
 			if($producto->setId_producto($_GET['id'])){
 				if($producto->readProducto2()){
 					if($valoraciones->setId_producto($_GET['id'])){
+						
 						$valoracion2 = $valoraciones->getValoracionesProducto();
 					if(isset($_POST['agregar'])){
 						$_POST = $detalle->validateForm($_POST);

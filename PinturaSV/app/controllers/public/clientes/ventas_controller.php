@@ -21,6 +21,6 @@ if($data){
     Page::showMessage(3, "No hay compras disponibles", "../index.php");
 }
 }catch(Exception $error){
-	Page::showMessage(2, $error->getMessage(), "../index/");
+	Page::showMessage(2, $error->getMessage(), "../index/index.php");
 }
 ?>
