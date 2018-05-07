@@ -31,32 +31,57 @@
         $categoria = $data_productos[0]['categoria'];
         print("<h4 class='center blue-text'>$categoria</h4>");
         print("<div class='row'>");
-        foreach($data_productos as $productob2){
-            print("
-            <div class='col s12 m6 l3'>
-                <div class='card sticky-action'>
-                    <div class='card-image waves-effect waves-block waves-light'>
-                        <img src='../../web/img/productos/$productob2[imagen]' class='materialboxed'>
-                    </div>
-                    <div class='card-content'>
-                            <span class='card-title'>$productob2[nombre]</span>
-                            <p>Precio (US$) $productob2[precio]</p>
-                            <p>Presentacion $productob2[presentacion]</p>
-                        <!-- BOTON DE COMPRA -->
-                        <a href='detalle_producto.php?id=$productob2[id_producto]' class='blue waves-effect waves-light btn modal-trigger'><i class='material-icons right'>shopping_cart</i>A&ntilde;adir </a>
 
-                        <!-- ESPACIO -->
-                        <div class='white-text'>.</div>
-
-                        <!-- BOTON DE COMENTARIOS -->
-                        <a class='blue tooltipped waves-effect waves-light btn modal-trigger halfway-fab'  href='#' type='submit' name='action' data-position='bottom' data-delay='50' data-tooltip='Ver Comentarios'>Rese&ntilde;as
-                            <i class='material-icons'>comment</i>
-                        </a>
+        if(isset($_SESSION['id_cliente'])){
+            foreach($data_productos as $productob2){
+                print("
+                <div class='col s12 m6 l3'>
+                    <div class='card sticky-action'>
+                        <div class='card-image waves-effect waves-block waves-light'>
+                            <img src='../../web/img/productos/$productob2[imagen]' class='materialboxed'>
+                        </div>
+                        <div class='card-content'>
+                                <span class='card-title'>$productob2[nombre]</span>
+                                <p>Precio (US$) $productob2[precio]</p>
+                                <p>Presentacion $productob2[presentacion]</p>
+                            <!-- BOTON DE COMPRA -->
+                            <a href='detalle_producto.php?id=$productob2[id_producto]' class='blue waves-effect waves-light btn modal-trigger'><i class='material-icons right'>shopping_cart</i>A&ntilde;adir </a>
+    
+                            <!-- ESPACIO -->
+                            <div class='white-text'>.</div>
+    
+                            <!-- BOTON DE COMENTARIOS -->
+                            <a class='blue tooltipped waves-effect waves-light btn modal-trigger halfway-fab'  href='#' type='submit' name='action' data-position='bottom' data-delay='50' data-tooltip='Ver Comentarios'>Rese&ntilde;as
+                                <i class='material-icons'>comment</i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            ");
+                ");
+            }
+        }else{
+            foreach($data_productos as $productob2){
+                print("
+                <div class='col s12 m6 l3'>
+                    <div class='card sticky-action'>
+                        <div class='card-image waves-effect waves-block waves-light'>
+                            <img src='../../web/img/productos/$productob2[imagen]' class='materialboxed'>
+                        </div>
+                        <div class='card-content'>
+                                <span class='card-title'>$productob2[nombre]</span>
+                                <p>Precio (US$) $productob2[precio]</p>
+                                <p>Presentacion $productob2[presentacion]</p>
+
+                            <!-- ESPACIO -->
+                            <div class='white-text'>.</div>
+    
+                        </div>
+                    </div>
+                </div>
+                ");
+            }
         }
+        
         ?>
 
          
