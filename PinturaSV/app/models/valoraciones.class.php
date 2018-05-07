@@ -54,8 +54,6 @@ class Valoraciones extends Validator{
 	public function getId_producto(){
 		return $this->id_producto;
 	}
-
-
 	//Metodos para manejar el CRUD
 	public function getValoraciones(){
 		$sql = "SELECT id_valoracion, estrellas, comentario, id_producto FROM valoraciones ORDER BY estrellas";

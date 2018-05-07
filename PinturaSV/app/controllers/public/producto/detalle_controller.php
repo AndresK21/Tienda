@@ -3,7 +3,6 @@ require_once("../../app/models/producto.class.php");
 require_once("../../app/models/detalle_pedido.class.php");
 require_once("../../app/models/valoraciones.class.php");
 	try{
-
 		if(isset($_GET['id'])){
 			$producto = new Producto;
 			$detalle = new Detalle;
