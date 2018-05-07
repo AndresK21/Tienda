@@ -34,7 +34,7 @@
     </table>
 
     <div class="row right-align">
-        <a class='btn waves-effect green darken-3' href="index.php"><i class='material-icons'></i>Entendido</a>
+        <a class='btn waves-effect green darken-3' href="../index/index.php"><i class='material-icons'></i>Entendido</a>
     </div>
 
 </div>
