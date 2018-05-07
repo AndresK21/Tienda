@@ -15,7 +15,6 @@
             <th>Subtotal</th>
             <th></th>
             <th></th>
-            <th></th>
         </tr>
         </thead>
 
@@ -27,7 +26,7 @@
                 <tr>
                     <td><img src='../../web/img/productos/$row[imagen]' class='materialboxed' width='50' height='50'></td>
                     <td>$row[nombre]</td>
-                    <td><input id='cantidad' type='number' class='validate' value='$row[cantidad]' min='1' max='999' step='any'></td>
+                    <td>$row[cantidad]</td>
                     <td>$row[precio]</td>
                     <td>$row[subtotal]</td>
                     <td>

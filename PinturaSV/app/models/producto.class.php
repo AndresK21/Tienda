@@ -13,6 +13,8 @@ class Producto extends Validator{
 	private $presentacion = null;
 	private $id_marca = null;
 
+	private $existencias = null;
+
 	//Métodos para sobrecarga de propiedades
 	public function setId_producto($value){
 		if($this->validateId($value)){
@@ -24,6 +26,18 @@ class Producto extends Validator{
 	}
 	public function getId_producto(){
 		return $this->id_producto;
+	}
+
+	public function setExistencias($value){
+		if($this->validateAlphanumeric($value)){
+			$this->existencias = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getExistencias(){
+		return $this->existencias;
 	}
 
 	public function setpresentacion($value){
@@ -243,7 +257,7 @@ class Producto extends Validator{
 		}
 	}
 	public function readProducto2(){
-		$sql = "SELECT nombre, cantidad, precio, color, imagen, id_categoria, id_estado, presentacion, id_marca FROM producto 
+		$sql = "SELECT nombre, cantidad, precio, color, imagen, id_categoria, id_estado, presentacion, id_marca, cantidad FROM producto 
 		INNER JOIN presentaciones ON producto.id_presentacion = presentaciones.id_presentacion  WHERE id_producto = ?";
 		$params = array($this->id_producto);
 		$producto = Database::getRow($sql, $params);
@@ -257,6 +271,7 @@ class Producto extends Validator{
 			$this->id_estado = $producto['id_estado'];
 			$this->presentacion = $producto['presentacion'];
 			$this->id_marca = $producto['id_marca'];
+			$this->existencias = $producto['cantidad'];
 			return true;
 		}else{
 			return null;
