@@ -24,7 +24,7 @@ try{
                 
             }
         }else{
-            Page::showMessage(2, "Error en obtener valores", null);
+            
         }
     }else{
         throw new Exception("Cliente incorrecto");
