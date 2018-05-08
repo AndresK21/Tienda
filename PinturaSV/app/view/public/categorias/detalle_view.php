@@ -27,7 +27,7 @@
                 </div>
             </form>
 
-
+        <!-- ESTRELLAS -->
         <?php
         foreach($valoracion3 as $valoracionesE){
         print("  

@@ -31,7 +31,6 @@
         $categoria = $data_productos[0]['categoria'];
         print("<h4 class='center blue-text'>$categoria</h4>");
         print("<div class='row'>");
-
         if(isset($_SESSION['id_cliente'])){
             foreach($data_productos as $productob2){
                 print("
@@ -91,11 +90,8 @@
             $total_paginas = ceil($total_registros / $por_pagina);  
 
             //link a primera pagina
-            
             print("<ul class='pagination center'><a href='productos_categorias.php?id=".$productob->getId_categoria()."&pagina=1'>".''."<i class='material-icons'>first_page</i></a></li>");
-
             for ($i=1; $i<=$total_paginas; $i++) {
-
             print("<li class='waves-effect white-text ligactive'><a href='productos_categorias.php?id=".$productob->getId_categoria()."&pagina=".$i."'>".$i."</a></li>");
             };
             // link a la ultima pagina
