@@ -5,7 +5,7 @@
 <div class="container">
     <form method='post'>
         <div class='row center-align'>
-            <label>CLAVE ACTUAL</label>
+            <span>CLAVE ACTUAL</span>
         </div>
         <div class='row'>
             <div class='input-field col s12 m6'>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class='row center-align'>
-            <label>CLAVE NUEVA</label>
+            <span>CLAVE NUEVA</span>
         </div>
         <div class='row'>
             <div class='input-field col s12 m6'>

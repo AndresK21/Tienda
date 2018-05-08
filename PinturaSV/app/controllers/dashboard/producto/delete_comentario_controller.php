@@ -4,9 +4,9 @@ try{
 	if(isset($_GET['id'])){//Llama el id de producto
 		$valoracion = new Valoraciones;
 		if($valoracion->setId_valoracion($_GET['id'])){ //Estableve el id en la variable para usarla despues
-			if($valoracion->readValoracion()){
+			if($valoracion->readValoracion()){ //Obtiene los comentarios disponibles por producto
 				if(isset($_POST['eliminar'])){
-					if($valoracion->deleteValoracion()){ //Elimina el producto
+					if($valoracion->deleteValoracion()){ //Elimina el comentario
 						Page::showMessage(1, "Comentario eliminado", "index.php");
 					}else{
 						throw new Exception(Database::getException());

@@ -1,12 +1,12 @@
 <?php
 require_once("../../app/models/valoraciones.class.php");
 try{
-    if(isset($_GET['id'])){
-        $producto = new Valoraciones;
-        if($producto->setId_producto($_GET['id'])){
-            if($producto->readProducto()){
+    if(isset($_GET['id'])){ //Obtiene el id del producto para utilizarlo despues/ evalua si el id ha sido obtenido
+        $producto = new Valoraciones; //Referencia con el modelo de "valoraciones"
+        if($producto->setId_producto($_GET['id'])){ //Establece el id en la variable para usarla despues en la funcion
+            if($producto->readProducto()){ 
                 if($producto){
-                    $data = $producto->getValoraciones2();
+                    $data = $producto->getValoraciones2(); //Obtiene los comentarios del producto
                 }else{
                     throw new Exception(Database::getException());
                 }

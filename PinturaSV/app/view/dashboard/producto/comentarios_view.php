@@ -1,11 +1,11 @@
-<div class="white-text">.</div>
+<div class="white-text">.</div> <!--Espacio de margen-->
 
-<div class="center-align"><h4>Comentarios del producto</h4></div>
+<div class="center-align"><h4>Comentarios del producto</h4></div> <!--Titulo de la pagina-->
 
 <div class="container">
     <!--Parte de clasificacion de la tabla-->
-    <table class="bordered highlight responsive-table espacio_inf">
-        <thead class="blue-grey darken-4 white-text">
+    <table class="bordered highlight responsive-table espacio_inf"> <!--Tabla donde se mostraran los comentarios del producto-->
+        <thead class="blue-grey darken-4 white-text"> <!--Indices de la tabla-->
             <tr>
                 <th>Comentario</th>
                 <th></th>
@@ -13,7 +13,7 @@
             </tr>
         </thead>
 
-        <tbody>
+        <tbody> <!--Contenido de la tabla-->
         <!--Producto de ejemplo 1-->
             <?php
             if($data){
@@ -33,6 +33,6 @@
         </tbody>
     </table>
     <div class="row right-align">
-        <a class='btn waves-effect green darken-3' href="index.php"><i class='material-icons'></i>Entendido</a>
+        <a class='btn waves-effect green darken-3' href="index.php"><i class='material-icons'></i>Entendido</a> <!--Boton que lleva a inicio-->
     </div>
 </div>
