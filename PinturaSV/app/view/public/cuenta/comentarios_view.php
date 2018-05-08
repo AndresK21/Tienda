@@ -14,8 +14,7 @@
                 <label for="radio3">★</label>
                 <input id="radio4" type="radio" name="estrellas" value="2">
                 <label for="radio4">★</label>
-                <input id="radio5" type="radio" name="estrellas" value="1">
-                <label for="radio5">★</label>
+                
                 </p>
             <!-- COMENTARIOS -->
             <div class="card-action">
