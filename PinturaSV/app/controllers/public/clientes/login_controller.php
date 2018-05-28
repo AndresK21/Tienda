@@ -30,9 +30,6 @@ try{
 		Page::showMessage(3, "No hay usuarios disponibles", "register.php");
 	}
 
-
-
-
 	$cliente = new Cliente;
 	if(isset($_POST['crear'])){
 		$_POST = $cliente->validateForm($_POST);
