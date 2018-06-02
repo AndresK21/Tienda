@@ -10,20 +10,20 @@ try{
                     if($empleado->setNombre($_POST['nombre_completo'])){
                         if($empleado->setCorreo($_POST['correo_electronico'])){
                             if($empleado->setUsuario($_POST['nombre_usuario'])){
-                                    if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
-                                        if(!$empleado->setImagen($_FILES['archivo'])){
-                                            throw new Exception($empleado->getImageError());
-                                        }
+                                if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
+                                    if(!$empleado->setImagen($_FILES['archivo'])){
+                                        throw new Exception($empleado->getImageError());
                                     }
-                                    if($empleado->setId_permiso(isset($_POST['id_permiso'])?2:3)){
+                                }
+                                if($empleado->setId_permiso(isset($_POST['id_permiso'])?2:3)){
                                     if($empleado->updateEmpleado()){ //Modifica el empleado
                                         Page::showMessage(1, "Usuario modificado", "index.php");
                                     }else{
-                                        throw new Exception(Database::getException());
+                                    throw new Exception(Database::getException());
                                     }
-                                    }else{
-                                        throw new Exception("Permiso incorrecto");
-                                    }
+                                }else{
+                                    throw new Exception("Permiso incorrecto");
+                                }
                             }else{
                                 throw new Exception("Usuario incorrecta");
                             }

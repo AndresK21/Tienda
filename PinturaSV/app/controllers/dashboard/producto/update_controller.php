@@ -11,35 +11,30 @@ try{
                         if($producto->setCantidad($_POST['cantidad'])){
                             if($producto->setPrecio($_POST['precio'])){
                                 if($producto->setColor($_POST['color'])){
-                                    if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
-                                        if($producto->setImagen($_FILES['archivo'])){
-                                            if($producto->setId_categoria($_POST['categoria'])){
-                                                if($producto->setId_estado(isset($_POST['estado'])?1:2)){ //Establece que el id_estado solo puede ser 1 o 2
-                                                    if($producto->setId_presentacion($_POST['presentacion'])){
-                                                        if($producto->setId_marca($_POST['marca'])){
-                                                            if($producto->updateProducto()){
-                                                                Page::showMessage(1, "Producto modificado", "index.php");
-                                                            }else{
-                                                            throw new Exception("No se pudo crear el producto");        
-                                                            }
+                                    if($producto->setId_categoria($_POST['categoria'])){
+                                        if($producto->setId_estado(isset($_POST['estado'])?1:2)){ //Establece que el id_estado solo puede ser 1 o 2
+                                            if($producto->setId_presentacion($_POST['presentacion'])){
+                                                if($producto->setId_marca($_POST['marca'])){
+                                                    if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
+                                                        if(!$producto->setImagen($_FILES['archivo'])){
+                                                            throw new Exception($producto->getImageError());
+                                                        }
+                                                        }if($producto->updateProducto()){
+                                                            Page::showMessage(1, "Producto modificado", "index.php");
                                                         }else{
-                                                            throw new Exception("Marca incorrecta");
-                                                            
-                                                        }                                            
-                                                    }else{
-                                                        throw new Exception("Presentacion incorrecta");
-                                                    }
+                                                            throw new Exception("No se pudo crear el producto");        
+                                                        }
                                                 }else{
-                                                    throw new Exception("Estado incorrecto");
-                                                }
+                                                    throw new Exception("Marca incorrecta");     
+                                                }                                            
                                             }else{
-                                                throw new Exception("Seleccione una categoría");
+                                                throw new Exception("Presentacion incorrecta");
                                             }
                                         }else{
-                                            throw new Exception($producto->getImageError());
+                                            throw new Exception("Estado incorrecto");
                                         }
                                     }else{
-                                        throw new Exception("Seleccione una imagen");
+                                        throw new Exception("Seleccione una categoría");
                                     }
                                 }else{
                                     throw new Exception("Color incorrecto");

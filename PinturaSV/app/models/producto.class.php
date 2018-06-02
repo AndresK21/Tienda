@@ -112,7 +112,7 @@ class Producto extends Validator{
 		return $this->imagen;
 	}
 	public function unsetImagen(){
-		if(unlink("../../../img/productos/".$this->imagen)){
+		if(unlink("../../web/img/productos/".$this->imagen)){
 			$this->imagen = null;
 			return true;
 		}else{
