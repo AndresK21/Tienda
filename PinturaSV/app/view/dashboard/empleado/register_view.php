@@ -25,8 +25,8 @@
             </div>
             <div class="input-field col l6 m6 s12">
                 <i class="material-icons prefix">security</i>
-                <input name="contrasena" id="contrasena" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
-                <label for="contrasena">Contrase&ntilde;a</label>
+                <input name="contrasena" id="contrasen" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
+                <label for="contrasen">Contrase&ntilde;a</label>
             </div>
         </div>
         <div class="row">
