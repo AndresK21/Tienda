@@ -34,7 +34,6 @@ class Valoraciones extends Validator{
 	
 	public function setEstrellas($value){ 
 			$this->estrellas = $value;
-			return true; 
 	}
 	public function getEstrellas(){
 		return $this->estrellas;
@@ -70,7 +69,7 @@ class Valoraciones extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getValoracionesProducto(){
-		$sql = "SELECT valoraciones.id_producto, valoraciones.id_valoracion, cliente.nombre_usuario, valoraciones.comentario FROM valoraciones INNER JOIN cliente ON cliente.id_cliente = valoraciones.id_cliente WHERE id_producto = ? ";
+		$sql = "SELECT valoraciones.id_producto, valoraciones.id_valoracion, cliente.nombre_usuario, valoraciones.comentario FROM valoraciones INNER JOIN cliente ON cliente.id_cliente = valoraciones.id_cliente WHERE id_producto = ? AND valoraciones.comentario != NULL ";
 		$params = array($this->id_producto);
 		return Database::getRows($sql, $params);
 	}
