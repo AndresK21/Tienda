@@ -25,7 +25,7 @@
                         <td>$row[cantidad]</td>
                         <td>$row[nombre]</td>
                         <td>$row[subtotal]</td>
-                        <td><a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='A&ntilde;adir Comentario' href='valoracion.php?id=$row[id_producto]'><i class='material-icons blue-grey-text text-darken-4 prefix'>comment</i></a></td>
+                        <td><a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='A&ntilde;adir Comentario' href='comentarios.php?id=$row[id_producto]'><i class='material-icons blue-grey-text text-darken-4 prefix'>comment</i></a></td>
                     </tr>
                     ");
                 }

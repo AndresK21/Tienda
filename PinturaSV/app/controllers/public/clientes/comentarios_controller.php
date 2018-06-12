@@ -10,7 +10,7 @@ try{
                 if($valoraciones->setEstrellas($_POST['estrellas'])){ // Llenamos las estrellas con el numero correspondiente
                     if($valoraciones->setComentario($_POST['comentario'])){ // Llenamos el comentario
                         if($valoraciones->createValoracion()){ // metodo crear valoracion
-                            Page::showMessage(1, "Valoracion creada", null);
+                            Page::showMessage(1, "Valoracion creada", "../cuenta/compras.php");
                         }else{
                             Page::showMessage(3, "Valoracion no creada",null);
                         }
@@ -21,13 +21,13 @@ try{
                     Page::showMessage(3, "Estrellas No disponibles", null);
                 }
             }else{
-                
+                Page::showMessage(3, "Error en el Producto Seleccionado",null);
             }
         }else{
-            
+
         }
     }else{
-        throw new Exception("Cliente incorrecto");
+        throw new Exception("Error en el Cliente");
     }
     if($valoraciones){
 		require_once("../../app/view/public/cuenta/comentarios_view.php");
@@ -35,6 +35,6 @@ try{
 		throw new Exception("No Disponible");
 	}
 }catch(Exception $error){
-    Page::showMessage(2, $error->getMessage(), "../index/");
+    Page::showMessage(2, $error->getMessage(), "login.php");
 }
 ?>
