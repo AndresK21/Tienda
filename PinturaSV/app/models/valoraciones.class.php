@@ -69,7 +69,12 @@ class Valoraciones extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getValoracionesProducto(){
-		$sql = "SELECT valoraciones.id_producto, valoraciones.id_valoracion, cliente.nombre_usuario, valoraciones.comentario FROM valoraciones INNER JOIN cliente ON cliente.id_cliente = valoraciones.id_cliente WHERE id_producto = ? AND valoraciones.comentario != NULL ";
+		$sql = "SELECT valoraciones.id_producto, valoraciones.id_valoracion, cliente.nombre_usuario, valoraciones.comentario FROM valoraciones INNER JOIN cliente ON cliente.id_cliente = valoraciones.id_cliente WHERE id_producto = ? AND valoraciones.comentario IS NOT NULL ";
+		$params = array($this->id_producto);
+		return Database::getRows($sql, $params);
+	}
+	public function getValoracionesProducto2($empieza, $por_pagina){
+		$sql = "SELECT valoraciones.id_producto, valoraciones.id_valoracion, cliente.nombre_usuario, valoraciones.comentario FROM valoraciones INNER JOIN cliente ON cliente.id_cliente = valoraciones.id_cliente WHERE id_producto = ? AND valoraciones.comentario IS NOT NULL LIMIT $empieza, $por_pagina";
 		$params = array($this->id_producto);
 		return Database::getRows($sql, $params);
 	}

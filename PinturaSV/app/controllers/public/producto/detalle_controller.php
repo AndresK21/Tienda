@@ -3,6 +3,18 @@ require_once("../../app/models/producto.class.php");
 require_once("../../app/models/detalle_pedido.class.php");
 require_once("../../app/models/valoraciones.class.php");
 	try{
+
+		//cantidad de registros por página
+		$por_pagina=5;
+		if (isset($_GET["pagina"])) {
+		$pagina = $_GET["pagina"];
+		}
+		else {
+		$pagina=1;
+		}
+		// la pagina inicia en 0 y se multiplica $por_pagina
+		$empieza = ($pagina-1) * $por_pagina;
+
 		if(isset($_GET['id'])){
 			$producto = new Producto;
 			$detalle = new Detalle;
@@ -10,7 +22,7 @@ require_once("../../app/models/valoraciones.class.php");
 			if($producto->setId_producto($_GET['id'])){
 				if($producto->readProducto2()){
 					if($valoraciones->setId_producto($_GET['id'])){
-						$valoracion2 = $valoraciones->getValoracionesProducto();
+						$valoracion2 = $valoraciones->getValoracionesProducto2($empieza, $por_pagina);
 						$valoracion3 = $valoraciones->getEstrellasPromedio();
 					if(isset($_POST['agregar'])){
 						$_POST = $detalle->validateForm($_POST);

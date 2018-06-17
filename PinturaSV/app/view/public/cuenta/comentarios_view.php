@@ -24,14 +24,14 @@
             </div>
             <!-- COMENTARIOS -->
             <h4><span class="card-title grey-text text-darken-4">Realiza un comentario:</span></h4>
-                <!-- TEXT AREA PARA COMENTAR -->
-                <div class="row">
-                    <div class="input-field col s12 l6">
-                        <input id="hola" type="text" name="comentario"     >
-                        <label for="hola">Comentar</label>
-                        <button class="btn tooltipped waves-effect waves-light" type="submit" name="valorar" data-position="botton" data-delay="50" data-tooltip="Enviar Comentario">Enviar</button>
-                    </div>
+            <!-- TEXT AREA PARA COMENTAR -->
+            <div class="row">
+                <div class="input-field col s12 l6">
+                    <input id="hola" type="text" name="comentario"     >
+                    <label for="hola">Comentar</label>
+                    <button class="btn tooltipped waves-effect waves-light" type="submit" name="valorar" data-position="botton" data-delay="50" data-tooltip="Enviar Comentario">Enviar</button>
                 </div>
+            </div>
         </div>
     </div>
 </form>
