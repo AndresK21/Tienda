@@ -6,6 +6,16 @@ require_once("../../app/models/presentaciones.class.php");
 require_once("../../app/models/tipo_p.class.php");
 try{
 	//Controlador de productos
+	$por_pagina=4;
+	if (isset($_GET["pagina"])) {
+	$pagina = $_GET["pagina"];
+	}
+	else {
+	$pagina=1;
+	}
+	// la pagina inicia en 0 y se multiplica $por_pagina
+	$empieza = ($pagina-1) * $por_pagina;
+
 $producto = new Producto;
 	if(isset($_POST['buscar_producto'])){
 		$_POST = $producto->validateForm($_POST);
@@ -15,10 +25,10 @@ $producto = new Producto;
 			Page::showMessage(4, "Se encontraron $rows resuldatos", null);
 		}else{
 			Page::showMessage(4, "No se encontraron resultados", null);
-			$data_productos = $producto->getProductos();
+			$data_productos = $producto->getProductos2($empieza, $por_pagina);
 		}
 	}else{
-		$data_productos = $producto->getProductos();
+		$data_productos = $producto->getProductos2($empieza, $por_pagina);
 	}	
 
 

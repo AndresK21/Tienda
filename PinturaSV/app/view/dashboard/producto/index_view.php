@@ -61,19 +61,19 @@
                 <!--Producto de ejemplo 1-->
                     <?php
                     if($data_productos){
-                        foreach($data_productos as $producto){
+                        foreach($data_productos as $producto2){
                             print("
                             <tr>
-                                <td><img src='../../web/img/productos/$producto[imagen]' class='materialboxed' width='50' height='50'></td>
-                                <td>$producto[nombre]</td>
-                                <td>$producto[cantidad]</td>
-                                <td>$producto[precio]</td>
-                                <td>$producto[presentacion]</td>
-                                <td><i class='material-icons'>".($producto['id_estado']?"check":"")."</i></td>
+                                <td><img src='../../web/img/productos/$producto2[imagen]' class='materialboxed' width='50' height='50'></td>
+                                <td>$producto2[nombre]</td>
+                                <td>$producto2[cantidad]</td>
+                                <td>$producto2[precio]</td>
+                                <td>$producto2[presentacion]</td>
+                                <td><i class='material-icons'>".($producto2['id_estado']?"check":"")."</i></td>
                                 <td>
-                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Ver comentarios' href='comentarios.php?id=$producto[id_producto]'><i class='material-icons blue-grey-text text-darken-4 prefix'>comment</i></a>
-                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar producto' href='update.php?id=$producto[id_producto]'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
-                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar producto' href='delete.php?id=$producto[id_producto]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
+                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Ver comentarios' href='comentarios.php?id=$producto2[id_producto]'><i class='material-icons blue-grey-text text-darken-4 prefix'>comment</i></a>
+                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar producto' href='update.php?id=$producto2[id_producto]'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
+                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar producto' href='delete.php?id=$producto2[id_producto]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
                                 </td>
                             </tr>
                             ");
@@ -83,6 +83,26 @@
 
                 </tbody>
             </table>
+
+            <?php
+            //seleccionar todo de la tabla usuarios
+            $resultado=$producto->getProductos();
+
+            //Contar el total de registros
+            $total_registros = count($resultado);
+
+            //usando ceil para dividir el total de registros entre $por_pagina este ultimo es de 5
+            $total_paginas = ceil($total_registros / $por_pagina);  
+
+            //link a primera pagina
+            print("<ul class='pagination center'><a href='index.php?id=".$producto->getId_producto()."&pagina=1'>".''."<i class='material-icons'>first_page</i></a></li>");
+            for ($i=1; $i<=$total_paginas; $i++) {
+            print("<li class='waves-effect white-text ligactive'><a href='index.php?id=".$producto->getId_producto()."&pagina=".$i."'>".$i."</a></li>");
+            };
+            // link a la ultima pagina
+            print("<a href='index.php?id=".$producto->getId_producto()."&pagina=$total_paginas'>".''."<i class='material-icons'>last_page</i></a></li>");
+        ?>
+
         </div>
 
     </div>
