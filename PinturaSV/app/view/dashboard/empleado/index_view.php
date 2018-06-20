@@ -2,25 +2,18 @@
 <div class="white-text">.</div>
 
 <div class='row'>
-	<div class='col s12 m3 l3'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas2.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas3.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m3 l3'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas4.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas5.jpg' alt='estadistica'></a></div>
-</div>
-<div class='row'>
-	<div class='col s12 m3 l3'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas5.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas4.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas3.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m3 l3'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas2.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas.jpg' alt='estadistica'></a></div>
-</div>
-<div class='row'>
-	<div class='col s12 m3 l3'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas2.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas3.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m3 l3'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas4.jpg' alt='estadistica'></a></div>
-	<div class='col s12 m2 l2'><a class='modal-trigger' href='#modal1'><img class='responsive-img' src='../../web/img/estadisticas5.jpg' alt='estadistica'></a></div>
+	<div class='col s12 m3 l3'>
+		<canvas id="myChart" height="300"></canvas>
+	</div>
+	<div class='col s12 m3 l3'>
+		<canvas id="myChart2" height="300"></canvas>
+	</div>
+	<div class='col s12 m3 l3'>
+		<canvas id="myChart3" height="300"></canvas>
+	</div>
+	<div class='col s12 m3 l3'>
+		<canvas id="myChart4" height="300"></canvas>
+	</div>
 </div>
 
 

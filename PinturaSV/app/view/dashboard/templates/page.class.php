@@ -15,6 +15,7 @@ class Page extends Component{
 				<link type='text/css' rel='stylesheet' href='../../css/materialize.min.css'/>
 				<link type='text/css' rel='stylesheet' href='../../web/css/icon.css'/>
 				<link type='text/css' rel='stylesheet' href='../../web/css/dashboard.css'/>
+				<script type='text/javascript' src='../../web/js/Chart.bundle.min.js'></script>
 				<script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
 				<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 			</head>
@@ -167,7 +168,8 @@ class Page extends Component{
 				<!--Import jQuery before materialize.js-->
 				<script type='text/javascript' src='../../web/js/jquery-3.2.1.min.js'></script>
         		<script type='text/javascript' src='../../web/js/main.js'></script>
-        		<script type='text/javascript' src='../../web/js/ini.js'></script>
+				<script type='text/javascript' src='../../web/js/ini.js'></script>
+				<script type='text/javascript' src='../../web/js/graficos.js'></script>
 				<script type='text/javascript' src='../..//js/materialize.min.js'></script>
 			</body>
 			</html>
