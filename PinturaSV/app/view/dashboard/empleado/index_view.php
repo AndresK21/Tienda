@@ -126,7 +126,7 @@
 				}]
 			}
 		}
-	}, 10000);
+	}, 5000);
 
 
 	var ctx = document.getElementById("myChart2").getContext('2d');
@@ -138,7 +138,7 @@
 				por eso se utiliza el "foreach", en esta primera instancia solo se necesitan los nombres
 				de los productos.*/ 
 				<?php
-					$sql = "SELECT AVG(estrellas) AS estrellas, valoraciones.id_producto, nombre FROM valoraciones INNER JOIN producto USING(id_producto) GROUP BY id_producto LIMIT 5";
+					$sql = "SELECT ROUND(AVG(estrellas), 1) AS estrellas, valoraciones.id_producto, nombre FROM valoraciones INNER JOIN producto USING(id_producto) GROUP BY id_producto LIMIT 5";
 					$params = array(null);
 					$result = Database::getRows($sql, $params);
 
@@ -158,7 +158,7 @@
 					por eso se utiliza el "foreach", en esta segunda instancia solo se necesitan los valores
 					de los respectivos productos.*/
 					<?php
-						$sql = "SELECT AVG(estrellas) AS estrellas, valoraciones.id_producto, nombre FROM valoraciones INNER JOIN producto USING(id_producto) GROUP BY id_producto LIMIT 5";
+						$sql = "SELECT ROUND(AVG(estrellas), 1) AS estrellas, valoraciones.id_producto, nombre FROM valoraciones INNER JOIN producto USING(id_producto) GROUP BY id_producto LIMIT 5";
 						$params = array(null);
 						$result = Database::getRows($sql, $params);
 
@@ -214,7 +214,7 @@
 				}]
 			}
 		}
-	}, 10000);
+	}, 5000);
 
 
 	var ctx = document.getElementById("myChart3").getContext('2d');
@@ -226,7 +226,7 @@
 				por eso se utiliza el "foreach", en esta primera instancia solo se necesitan los nombres
 				de los productos.*/ 
 				<?php
-					$sql = "SELECT AVG(estrellas) AS estrellas, categoria FROM valoraciones INNER JOIN producto USING(id_producto) INNER JOIN categoria USING(id_categoria) GROUP BY id_categoria LIMIT 5";
+					$sql = "SELECT ROUND(AVG(estrellas), 1) AS estrellas, categoria FROM valoraciones INNER JOIN producto USING(id_producto) INNER JOIN categoria USING(id_categoria) GROUP BY id_categoria LIMIT 5";
 					$params = array(null);
 					$result = Database::getRows($sql, $params);
 
@@ -246,7 +246,7 @@
 					por eso se utiliza el "foreach", en esta segunda instancia solo se necesitan los valores
 					de los respectivos productos.*/
 					<?php
-						$sql = "SELECT AVG(estrellas) AS estrellas, categoria FROM valoraciones INNER JOIN producto USING(id_producto) INNER JOIN categoria USING(id_categoria) GROUP BY id_categoria LIMIT 5";
+						$sql = "SELECT ROUND(AVG(estrellas), 1) AS estrellas, categoria FROM valoraciones INNER JOIN producto USING(id_producto) INNER JOIN categoria USING(id_categoria) GROUP BY id_categoria LIMIT 5";
 						$params = array(null);
 						$result = Database::getRows($sql, $params);
 
@@ -302,7 +302,7 @@
 				}]
 			}
 		}
-	}, 10000);
+	}, 5000);
 
 
 	var ctx = document.getElementById("myChart4").getContext('2d');
@@ -351,7 +351,7 @@
 				}]
 			}
 		}
-	}, 10000);
+	}, 5000);
 
 
 	var ctx = document.getElementById("myChart5").getContext('2d');
@@ -400,7 +400,7 @@
 				}]
 			}
 		}
-	}, 10000);
+	}, 5000);
 
 
 	var ctx = document.getElementById("myChart6").getContext('2d');
@@ -449,7 +449,7 @@
 				}]
 			}
 		}
-	}, 10000);
+	}, 5000);
 </script>
 
 <div class="white-text">.</div>
