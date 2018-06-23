@@ -9,19 +9,19 @@
             <div class="input-field col l6 m6 s12">
                 <i class="material-icons prefix">person</i>
                 <input id="nombre" name="nombre_completo" type="text" class="validate" value='<?php print($empleado->getNombre()) ?>' required />
-                <label for="Nombre_completo">Nombre completo</label>
+                <label for="Nombre_completo" class="black-text">Nombre completo</label>
             </div>
             <div class="input-field col l6 m6 s12">
                 <i class="material-icons prefix">email</i>    
                 <input id="email" name="correo_electronico" type="email" class="validate" value='<?php print($empleado->getCorreo()) ?>' required />
-                <label for="email">Correo electr&oacute;nico</label>
+                <label for="email" class="black-text">Correo electr&oacute;nico</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col l6 m6 s12">
                 <i class="material-icons prefix">account_circle</i>
                 <input id="usuario" name="nombre_usuario" type="text" class="validate" value='<?php print($empleado->getUsuario()) ?>' required />
-                <label for="usuario">Usuario</label>
+                <label for="usuario" class="black-text">Usuario</label>
             </div>
         </div>        
 

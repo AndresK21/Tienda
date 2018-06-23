@@ -16,11 +16,11 @@
                 <div class="input-field">
                     <i class="material-icons blue-grey-text text-darken-4 prefix">search</i>
                     <input type="text" id="autocomplete-input" name='busqueda_usuario' class="autocomplete">
-                    <label for="autocomplete-input" class="blue-grey-text text-darken-4">Buscar usuario</label>
+                    <label for="autocomplete-input" class="black-text">Buscar usuario</label>
                 </div>
             </div>
             <div class="input-field col s2">
-                <button type='submit' name='buscar_usuario' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                <button type='submit' name='buscar_usuario' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
             </div>
         </form>
     </div>

@@ -7,7 +7,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="presenta" type="text" name="presentacion" class="validate" value='<?php print($presentacion->getPresentacion())?>' required />
-                <label for="presenta" class="blue-grey-text text-darken-4">Presentaci&oacute;n</label>
+                <label for="presenta" class="black-text">Presentaci&oacute;n</label>
             </div>
         </div>
         <div class="input-field col s12">

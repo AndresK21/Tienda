@@ -11,12 +11,12 @@
             <div class='input-field col s12 m6'>
                 <i class='material-icons prefix'>lock</i>
                 <input id='clave_actual_1' type='password' name='clave_actual_1' class='validate' />
-                <label for='clave_actual_1'>Clave</label>
+                <label for='clave_actual_1' class="black-text">Clave</label>
             </div>
             <div class='input-field col s12 m6'>
                 <i class='material-icons prefix'>security</i>
                 <input id='clave_actual_2' type='password' name='clave_actual_2' class='validate' />
-                <label for='clave_actual_2'>Confirmar clave</label>
+                <label for='clave_actual_2' class="black-text">Confirmar clave</label>
             </div>
         </div>
         <div class='row center-align'>
@@ -26,12 +26,12 @@
             <div class='input-field col s12 m6'>
                 <i class='material-icons prefix'>lock</i>
                 <input id='clave_nueva_1' type='password' name='clave_nueva_1' class='validate' />
-                <label for='clave_nueva_1'>Clave</label>
+                <label for='clave_nueva_1' class="black-text">Clave</label>
             </div>
             <div class='input-field col s12 m6'>
                 <i class='material-icons prefix'>security</i>
                 <input id='clave_nueva_2' type='password' name='clave_nueva_2' class='validate' />
-                <label for='clave_nueva_2'>Confirmar clave</label>
+                <label for='clave_nueva_2' class="black-text">Confirmar clave</label>
             </div>
         </div>
         <div class="row">

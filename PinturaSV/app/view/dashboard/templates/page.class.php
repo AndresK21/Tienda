@@ -169,7 +169,6 @@ class Page extends Component{
 				<script type='text/javascript' src='../../web/js/jquery-3.2.1.min.js'></script>
         		<script type='text/javascript' src='../../web/js/main.js'></script>
 				<script type='text/javascript' src='../../web/js/ini.js'></script>
-				<script type='text/javascript' src='../../web/js/graficos.js'></script>
 				<script type='text/javascript' src='../..//js/materialize.min.js'></script>
 			</body>
 			</html>

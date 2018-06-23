@@ -2,11 +2,11 @@
 <div class="row">
     <div class="col s12">
         <ul class="tabs blue-grey-text text-darken-4">
-            <li class="tab col s3"><a class="active blue-grey-text text-darken-4" href="#test1">Productos</a></li>
-            <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test2">Marca</a></li>
-            <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test3">Categor&Iacute;a</a></li>
-            <li class="tab col s3"><a class="blue-grey-text text-darken-4" href="#test4">Presentaciones</a></li>
-            <li class="tab col s2"><a class="blue-grey-text text-darken-4" href="#test5">Tipo de producto</a></li>
+            <li class="tab col s3"><a class="active black-text" href="#test1">Productos</a></li>
+            <li class="tab col s2"><a class="black-text" href="#test2">Marca</a></li>
+            <li class="tab col s2"><a class="black-text" href="#test3">Categor&Iacute;a</a></li>
+            <li class="tab col s3"><a class="black-text" href="#test4">Presentaciones</a></li>
+            <li class="tab col s2"><a class="black-text" href="#test5">Tipo de producto</a></li>
         </ul>
     </div>
 
@@ -22,10 +22,10 @@
                             <div class="input-field col s10">
                                 <i class="material-icons prefix">search</i>
                                 <input type="text" id="buscar_label" name='busqueda_producto' class="autocomplete">
-                                <label for="buscar_label">Buscar producto</label>
+                                <label for="buscar_label" class="black-text">Buscar producto</label>
                             </div>
                             <div class="input-field col s2">
-                                <button type='submit' name='buscar_producto' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                                <button type='submit' name='buscar_producto' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
                             </div>
                         </div>
                     </div>
@@ -120,10 +120,10 @@
                             <div class="input-field col s10">
                                 <i class="material-icons prefix">search</i>
                                 <input type="text" id="autocomplete-input" name="busqueda_marca" class="autocomplete">
-                                <label for="autocomplete-input">Buscar marca</label>
+                                <label for="autocomplete-input" class="black-text">Buscar marca</label>
                             </div>
                             <div class="input-field col s2">
-                                <button type='submit' name='buscar_marca' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                                <button type='submit' name='buscar_marca' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
                             </div>
                         </div>
                     </div>
@@ -183,10 +183,10 @@
                             <div class="input-field col s10">
                                 <i class="material-icons prefix">search</i>
                                 <input type="text" id="categoria" name="busqueda_categoria">
-                                <label for="categoria">Buscar categor&iacute;a</label>
+                                <label for="categoria" class="black-text">Buscar categor&iacute;a</label>
                             </div>
                             <div class="input-field col s2">
-                                <button type='submit' name='buscar_categoria' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                                <button type='submit' name='buscar_categoria' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
                             </div>
                         </div>
                     </div>
@@ -250,10 +250,10 @@
                             <div class="input-field col s10">
                                 <i class="material-icons prefix">search</i>
                                 <input type="text" id="presen" name="busqueda_presentacion">
-                                <label for="presen">Buscar presentaci&oacute;n</label>
+                                <label for="presen" class="black-text">Buscar presentaci&oacute;n</label>
                             </div>
                             <div class="input-field col s2">
-                                <button type='submit' name='buscar_presentacion' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                                <button type='submit' name='buscar_presentacion' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
                             </div>
                         </div>
                     </div>
@@ -317,10 +317,10 @@
                             <div class="input-field col s10">
                                 <i class="material-icons prefix">search</i>
                                 <input type="text" id="tipo_" name="busqueda_tipo">
-                                <label for="tipo_">Buscar tipo de producto</label>
+                                <label for="tipo_" class="black-text">Buscar tipo de producto</label>
                             </div>
                             <div class="input-field col s2">
-                                <button type='submit' name='buscar_tipo' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                                <button type='submit' name='buscar_tipo' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="categoria1" name="categoria" type="text" class="validate" value='<?php print($categoria->getCategoria())?>' required />
-                <label for="categoria1" class="blue-grey-text text-darken-4">Categoria</label>
+                <label for="categoria1" class="blacktext">Categoria</label>
             </div>
         </div>
         <div class="input-field col s12">

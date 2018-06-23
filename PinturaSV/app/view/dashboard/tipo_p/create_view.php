@@ -8,7 +8,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="tip" type="text" name="tipo_p" class="validate" value='<?php print($tipo_p->getTipo_p())?>' required />
-                <label for="tip" class="blue-grey-text text-darken-4">Tipo de producto</label>
+                <label for="tip" class="black-text">Tipo de producto</label>
             </div>
         </div>
         <div class="row">

@@ -10,10 +10,10 @@
                     <div class="input-field col s10">
                         <i class="material-icons prefix">search</i>
                         <input type="text" id="buscar_label" name='busqueda_cliente' class="autocomplete">
-                        <label for="buscar_label">Buscar cliente</label>
+                        <label for="buscar_label" class="black-text">Buscar cliente</label>
                     </div>
                     <div class="input-field col s2">
-                        <button type='submit' name='buscar_cliente' class='btn waves-effect blue-gray tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
+                        <button type='submit' name='buscar_cliente' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Buscar por nombre'><i class='material-icons'>search</i></button>
                     </div>
                 </div>
             </div>
