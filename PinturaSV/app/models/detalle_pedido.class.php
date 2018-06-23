@@ -132,14 +132,13 @@ class Detalle extends Validator{
 		}
 	}
 	public function readDetalle2(){
-		$sql = "SELECT detalle_pedido.cantidad, detalle_pedido.estado, nombre, id_pedido FROM detalle_pedido INNER JOIN producto USING(id_producto) WHERE id_pedido = ?";
+		$sql = "SELECT detalle_pedido.cantidad, nombre, id_pedido FROM detalle_pedido INNER JOIN producto USING(id_producto) WHERE id_pedido = ?";
 		$params = array($this->id_pedido);
 		$detalle = Database::getRow($sql, $params);
 		if($detalle){
 			$this->cantidad = $detalle['cantidad'];
 			$this->id_producto = $detalle['nombre'];
 			$this->id_pedido = $detalle['id_pedido'];
-			$this->estado = $detalle['estado'];
 			return true;
 		}else{
 			return null;
@@ -151,9 +150,9 @@ class Detalle extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function updateDetalle2(){
-		$sql = "UPDATE detalle_pedido SET estado = ? WHERE id_pedido = ? AND estado = 0";
+		$sql = "UPDATE detalle_pedido SET estado = ?, fecha = ? WHERE id_pedido = ? AND estado = 0";
 		$fecha = date('y-m-d');
-		$params = array($this->estado, $this->id_pedido);
+		$params = array($this->estado, $fecha, $this->id_pedido);
 		return Database::executeRow($sql, $params);
 	}
 	public function deleteDetalle(){
