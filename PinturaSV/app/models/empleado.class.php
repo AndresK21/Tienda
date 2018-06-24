@@ -115,11 +115,12 @@ class Empleado extends Validator{
 		}
 	}
 	public function checkPermisos(){
-		$sql = "SELECT id_permiso FROM empleado WHERE id_empleado = ?";
+		$sql = "SELECT id_permiso, nombre_completo FROM empleado WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$data = Database::getRow($sql, $params);
 		if($data){
 			$this->id_permiso = $data['id_permiso'];
+			$this->nombre_completo = $data['nombre_completo'];
 			return true;
 		}else{
 			return false;

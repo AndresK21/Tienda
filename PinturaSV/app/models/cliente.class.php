@@ -200,7 +200,7 @@ class Cliente extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function getClientes2($empieza, $por_pagina){
-		$sql = "SELECT id_cliente, nombres, apellidos, email, nombre_usuario, contrasena FROM cliente ORDER BY apellidos  LIMIT $empieza, $por_pagina";
+		$sql = "SELECT id_cliente, nombres, apellidos, email, nombre_usuario, contrasena FROM cliente ORDER BY apellidos LIMIT $empieza, $por_pagina";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 	}
