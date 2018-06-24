@@ -8,7 +8,7 @@
         function Header()
         {
             // Logo
-            $this->Image('../../../../web/img/mipintura_negro1.png',10,8,33);
+            $this->Image('../../../../web/img/mipintura_negro1.png',10,8,40);
             // Arial bold 15
             $this->SetFont('Arial','B',15);
             // Movernos a la derecha
@@ -22,6 +22,7 @@
         // Pie de p�gina
         function Footer()
         {
+            date_default_timezone_set("America/El_Salvador");
             $hoy = getdate();
             // Posici�n: a 1,5 cm del final
             $this->SetY(-15);
