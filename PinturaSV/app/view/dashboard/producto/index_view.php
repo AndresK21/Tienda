@@ -42,48 +42,56 @@
 
 
         <div class="container">
-            <!--Parte de clasificacion de la tabla-->
-            <table class="bordered highlight responsive-table espacio_inf">
-                <thead class="blue-grey darken-4 white-text">
-                    <tr>
-                        <th>Imagen</th>
-                        <th>Descripci&oacute;n</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
-                        <th>Presentaci&oacute;n</th>
-                        <th>Existencias</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
+            <div class="row">
+                <!--Parte de clasificacion de la tabla-->
+                <table class="bordered highlight responsive-table">
+                    <thead class="blue-grey darken-4 white-text">
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Descripci&oacute;n</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Presentaci&oacute;n</th>
+                            <th>Existencias</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                <!--Producto de ejemplo 1-->
-                    <?php
-                    if($data_productos){
-                        foreach($data_productos as $producto2){
-                            print("
-                            <tr>
-                                <td><img src='../../web/img/productos/$producto2[imagen]' class='materialboxed' width='50' height='50'></td>
-                                <td>$producto2[nombre]</td>
-                                <td>$producto2[cantidad]</td>
-                                <td>$producto2[precio]</td>
-                                <td>$producto2[presentacion]</td>
-                                <td><i class='material-icons'>".($producto2['id_estado']?"check":"")."</i></td>
-                                <td>
-                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Ver comentarios' href='comentarios.php?id=$producto2[id_producto]'><i class='material-icons blue-grey-text text-darken-4 prefix'>comment</i></a>
-                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar producto' href='update.php?id=$producto2[id_producto]'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
-                                    <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar producto' href='delete.php?id=$producto2[id_producto]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
-                                </td>
-                            </tr>
-                            ");
+                    <tbody>
+                    <!--Producto de ejemplo 1-->
+                        <?php
+                        if($data_productos){
+                            foreach($data_productos as $producto2){
+                                print("
+                                <tr>
+                                    <td><img src='../../web/img/productos/$producto2[imagen]' class='materialboxed' width='50' height='50'></td>
+                                    <td>$producto2[nombre]</td>
+                                    <td>$producto2[cantidad]</td>
+                                    <td>$producto2[precio]</td>
+                                    <td>$producto2[presentacion]</td>
+                                    <td><i class='material-icons'>".($producto2['id_estado']?"check":"")."</i></td>
+                                    <td>
+                                        <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Ver comentarios' href='comentarios.php?id=$producto2[id_producto]'><i class='material-icons blue-grey-text text-darken-4 prefix'>comment</i></a>
+                                        <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Editar producto' href='update.php?id=$producto2[id_producto]'><i class='material-icons blue-text text-darken-3 prefix'>edit</i></a>
+                                        <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar producto' href='delete.php?id=$producto2[id_producto]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
+                                    </td>
+                                </tr>
+                                ");
+                            }
                         }
-                    }
-                    ?>
+                        ?>
 
-                </tbody>
-            </table>
-
+                    </tbody>
+                </table>
+            </div>
+            <?php
+                print("
+                <div class='right-align'>
+                    <a href='../../app/view/dashboard/producto/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Generar reporte de clientes'><i class='material-icons'>content_paste</i>    Generar reporte</a>
+                </div>
+                ");
+            ?>
             <?php
             //seleccionar todo de la tabla usuarios
             $resultado=$producto->getProductos();

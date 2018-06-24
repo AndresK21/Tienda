@@ -11,7 +11,7 @@ try{
 		}else{
 			Page::showMessage(4, "No se encontraron resultados", null); //Muestra todos los registros
 			$data = $usuario->getEmpleados();
-		}
+		}	
 	}else{
 		$data = $usuario->getEmpleados(); //Muestra todos los registros
 	}
