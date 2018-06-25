@@ -60,7 +60,7 @@
     // T�tulos de las columnas
     $header = array('Apellidos', 'Nombres', 'Usuario', 'Correo electronico');
     // Carga de datos
-    $sql = "SELECT id_cliente, nombres, apellidos, email, nombre_usuario, contrasena FROM cliente ORDER BY apellidos";
+    $sql = "SELECT id_cliente, nombres, apellidos, email, nombre_usuario FROM cliente ORDER BY apellidos";
     $params = array(null);
     $result = Database::getRows($sql, $params);
 

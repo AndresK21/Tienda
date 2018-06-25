@@ -35,6 +35,8 @@
         // Una tabla m�s completa
         function ImprovedTable($header, $result)
         {   
+            $total = null;
+            $fecha = null;
             // Anchuras de las columnas
             $w = array(75, 27, 25, 25, 25);
             // Cabeceras
@@ -44,15 +46,28 @@
             // Datos
             foreach($result as $row)
             {
+                $fecha = date_create($row['fecha']);
+
                 $this->Cell($w[0],6,$row['nombre'],'LR');
-                $this->Cell($w[1],6,$row['fecha'],'LR');
+                $this->Cell($w[1],6,date_format($fecha, 'd-m-Y'),'LR');
                 $this->Cell($w[2],6,$row['cant'],'LR');
                 $this->Cell($w[3],6,'$'.$row['precio'],'LR');
                 $this->Cell($w[4],6,'$'.$row['venta'],'LR');
+
+                $total = $total + $row['venta'];
                 $this->Ln();
             }
             // L�nea de cierre
             $this->Cell(array_sum($w),0,'','T');
+            $this->Ln();
+            $this->Cell($w[0],0,null,'LR');
+            $this->Cell($w[1],0,null,'LR');
+            $this->Cell($w[2],0,null,'LR');
+            $this->Cell($w[3],7,'Total:','LB',0,'R');
+
+            $total = number_format($total, 2);
+
+            $this->Cell($w[4],7,'$'.$total,'RB',0,'L');
         }
     }
 
