@@ -10,11 +10,11 @@
             // Logo
             $this->Image('../../../../web/img/mipintura_negro1.png',10,8,40);
             // Arial bold 15
-            $this->SetFont('Arial','B',15);
+            $this->SetFont('Arial','B',18);
             // Movernos a la derecha
             $this->Cell(80);
             // T�tulo
-            $this->Cell(30,10,'Reporte de empleados',0,1,'C');
+            $this->Cell(40,10,'Empleados registrados',0,0,'C');
             // Salto de l�nea
             $this->Ln(20);
         }

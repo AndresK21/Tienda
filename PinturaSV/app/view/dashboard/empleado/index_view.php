@@ -1,4 +1,5 @@
 <div class="white-text">.</div>
+<div class="center-align"><h3>Gr&aacute;ficos</h3></div>
 <div class="white-text">.</div>
 
 <div class='row'>
@@ -15,6 +16,9 @@
 		<canvas id="myChart3" height="215"></canvas>
 	</div>
 </div>
+
+<div class="white-text">.</div>
+
 <div class="row">
 	<div class='col s12 m4 l4'>
 		<div class="center-align"><h5>Grafico de ejemplo</h5></div>
@@ -30,17 +34,76 @@
 	</div>
 </div>
 
+<div class="white-text">.</div>
+<div class="white-text">.</div>
+<div class="center-align"><h3>Reportes</h3></div>
+<div class="white-text">.</div>
 
-
-<!-- Modal de especificacion de estadisticas -->
-<div id='modal1' class='modal modal-fixed-footer'>
-	<div class='modal-content'>
-	<h4>Estad&iacute;sticas de visitas</h4>
-		<img class='responsive-img' src='../../web/img/estadisticas.jpg' alt='estadistica'>
+<div class='row'>
+	<div class='col s12 m4 l4'>
+		<?php
+			print("
+			<div class='center-align'>
+				<a href='../../app/view/dashboard/usuarios/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de empleados'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+			</div>
+			");
+		?>
+		<div class="center-align"><h5>Lista de empleados</h5></div>
 	</div>
-	<div class='modal-footer'>
-	<a href='#!' class=' modal-action modal-close waves-effect waves-red btn-flat'>Salir</a>
-	<a href='#!' class=' modal-action modal-close waves-effect waves-green btn-flat'>Aceptar</a>
+	<div class='col s12 m4 l4'>
+		<?php
+			print("
+			<div class='center-align'>
+				<a href='../../app/view/dashboard/clientes/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de clientes'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+			</div>
+			");
+		?>
+		<div class="center-align"><h5>Lista de clientes</h5></div>
+	</div>
+	<div class='col s12 m4 l4'>
+		<?php
+			print("
+			<div class='center-align'>
+				<a href='../../app/view/dashboard/producto/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de productos'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+			</div>
+			");
+		?>
+		<div class="center-align"><h5>Lista de productos</h5></div>
+	</div>
+</div>
+
+<div class="white-text">.</div>
+
+<div class="row">
+	<div class='col s12 m4 l4'>
+		<?php
+			print("
+			<div class='center-align'>
+				<a href='../../app/view/dashboard/empleado/reporte_ventas.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de ventas'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+			</div>
+			");
+		?>
+		<div class="center-align"><h5>Reporte de ventas</h5></div>
+	</div>
+	<div class='col s12 m4 l4'>
+		<?php
+			print("
+			<div class='center-align'>
+				<a href='../../app/view/dashboard/usuarios/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de empleados'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+			</div>
+			");
+		?>
+		<div class="center-align"><h5>Reporte de ejemplo</h5></div>
+	</div>
+	<div class='col s12 m4 l4'>
+		<?php
+			print("
+			<div class='center-align'>
+				<a href='../../app/view/dashboard/usuarios/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de empleados'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+			</div>
+			");
+		?>
+		<div class="center-align"><h5>Reporte de ejemplo</h5></div>
 	</div>
 </div>
 

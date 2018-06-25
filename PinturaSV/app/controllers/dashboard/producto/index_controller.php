@@ -6,7 +6,7 @@ require_once("../../app/models/presentaciones.class.php");
 require_once("../../app/models/tipo_p.class.php");
 try{
 	//Controlador de productos
-	$por_pagina=4;
+	$por_pagina=10;
 	if (isset($_GET["pagina"])) {
 	$pagina = $_GET["pagina"];
 	}
