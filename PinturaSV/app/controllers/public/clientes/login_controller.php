@@ -66,8 +66,6 @@ try{
 		}
 	}
 }
-
-
 catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), null);
 }

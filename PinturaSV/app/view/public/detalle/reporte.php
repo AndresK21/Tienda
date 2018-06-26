@@ -34,9 +34,10 @@
         }
         // Una tabla m�s completa
         function ImprovedTable($header, $result)
-        {   
+        {
+            $total = null;
             // Anchuras de las columnas
-            $w = array(20, 45, 35, 35,35);
+            $w = array(20, 65, 35, 35,35);
             // Cabeceras
             for($i=0;$i<count($header);$i++)
                 $this->Cell($w[$i],7, $header[$i] ,1,0,'C');
@@ -49,10 +50,21 @@
                 $this->Cell($w[2],6,$row['CANT'],'LR');
                 $this->Cell($w[3],6,$row['PRE'],'LR');
                 $this->Cell($w[4],6,$row['subtotal'],'LR');
+                $total = $total + $row['subtotal'];
                 $this->Ln();
             }
             // L�nea de cierre
             $this->Cell(array_sum($w),0,'','T');
+
+            $this->Ln();
+            $this->Cell($w[0],0,null,'LR');
+            $this->Cell($w[1],0,null,'LR');
+            $this->Cell($w[2],0,null,'LR');
+            $this->Cell($w[3],7,'Total:','LB',0,'R');
+
+            $total = number_format($total, 2);
+
+            $this->Cell($w[4],7,'$'.$total,'RB',0,'L');
         }
     }
 
@@ -61,7 +73,7 @@
     // T�tulos de las columnas
     $header = array('ID', 'Producto', 'Cantidad', 'Precio', 'Subtotal');
     // Carga de datos
-    $sql = "SELECT id_cliente, id_detalle, id_pedido, producto.id_producto AS ID, producto.imagen, producto.nombre AS NOM, detalle_pedido.cantidad AS CANT, precio AS PRE, precio * detalle_pedido.cantidad AS subtotal FROM detalle_pedido INNER JOIN pedido USING(id_pedido) INNER JOIN cliente USING(id_cliente) INNER JOIN producto USING(id_producto) WHERE detalle_pedido.estado = 1 AND id_cliente = ?";
+    $sql = "SELECT id_cliente, id_detalle, id_pedido, producto.id_producto AS ID, producto.imagen, producto.nombre AS NOM, detalle_pedido.cantidad AS CANT, precio AS PRE, precio * detalle_pedido.cantidad AS subtotal, precio*SUM(detalle_pedido.cantidad) AS TOT FROM detalle_pedido INNER JOIN pedido USING(id_pedido) INNER JOIN cliente USING(id_cliente) INNER JOIN producto USING(id_producto) WHERE detalle_pedido.estado = 1 AND id_cliente = ? GROUP BY ID";
     $params = array($_GET['id']);
     $result = Database::getRows($sql, $params);
 
