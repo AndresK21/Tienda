@@ -12,6 +12,8 @@ try{
 								$_SESSION['id_cliente'] = $cliente->getId_cliente(); //Obtiene el id_empleado para usarlo luego en la pagina template
 								$_SESSION['nombre_usuario'] = $cliente->getNombre_usuario(); //Obtiene el usuario para usarlo luego en la pagina template
 								$_SESSION['id_pedido'] = $cliente->getId_pedido();
+								$_SESSION['nombres'] = $cliente->getNombres();
+								$_SESSION['apellidos'] = $cliente->getApellidos();
 								Page::showMessage(1, "Autenticación correcta", "../index/index.php");
 							}else{
 								throw new Exception("Clave inexistente");

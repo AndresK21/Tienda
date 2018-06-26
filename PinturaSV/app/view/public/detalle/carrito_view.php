@@ -49,7 +49,13 @@
             }
         ?>
         <form method="post">
-            <button type='submit' name='comprar' class='btn waves-effect espacio_inf'><i class='material-icons right'>shopping_cart</i>Hacer compra</button>
+            <?php
+        print("
+        <div class='right-align'>
+            <button name='comprar' class='btn waves-effect espacio_inf' data-tooltip='Realizar Compra'><i class='material-icons right'>shopping_cart</i>Hacer compra</button>
+        </div>
+        ");
+    ?>
         </form>
     </div>
 </div>

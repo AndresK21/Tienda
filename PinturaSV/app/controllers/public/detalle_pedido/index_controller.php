@@ -1,5 +1,6 @@
 <?php
 require_once("../../app/models/detalle_pedido.class.php");
+require_once("../../app/models/cliente.class.php");
 try{
     $detalle = new Detalle;
     if($detalle->setId_cliente($_SESSION['id_cliente'])){
@@ -24,7 +25,7 @@ try{
                     $_POST = $producto->validateForm($_POST);
                     if($producto->setEstado("1")){
 						if($producto->updateDetalle2()){
-							Page::showMessage(1, "Compra realizada", "../categorias/categorias.php");
+							Page::showMessage(1, "Compra realizada", "../../app/view/public/detalle/reporte.php?id=$_SESSION[id_cliente]&apellido=$_SESSION[apellidos]&nombre=$_SESSION[nombres]");
 						}else{
 							throw new Exception("No se pudo realizar la compra");        
 						}  

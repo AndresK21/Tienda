@@ -162,12 +162,13 @@ class Cliente extends Validator{
 
 	//Métodos para manejar la sesión del usuario
 	public function checkUsuario_cliente(){
-		$sql = "SELECT id_cliente, id_pedido FROM cliente INNER JOIN pedido USING(id_cliente) WHERE nombre_usuario = ?";
+		$sql = "SELECT id_cliente, id_pedido, nombres, apellidos FROM cliente INNER JOIN pedido USING(id_cliente) WHERE nombre_usuario = ?";
 		$params = array($this->nombre_usuario);
 		$data = Database::getRow($sql, $params);
 		if($data){
 			$this->id_cliente = $data['id_cliente'];
-			$this->id_pedido = $data['id_pedido'];
+			$this->nombres = $data['nombres'];
+			$this->apellidos = $data['apellidos'];
 			return true;
 		}else{
 			return false;
