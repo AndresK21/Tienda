@@ -14,14 +14,14 @@
             // Movernos a la derecha
             $this->Cell(80);
             // T�tulo
-            $this->Cell(40,10,'Listado de productos',0,0,'C');
+            $this->Cell(40,10,'Clientes con mas compras',0,0,'C');
             // Salto de l�nea
             $this->Ln(20);
         }
 
         // Pie de p�gina
         function Footer()
-        {   
+        {
             date_default_timezone_set("America/El_Salvador");
             $hoy = getdate();
             // Posici�n: a 1,5 cm del final
@@ -36,7 +36,7 @@
         function ImprovedTable($header, $result)
         {   
             // Anchuras de las columnas
-            $w = array(70, 28, 35, 30, 30);
+            $w = array(85, 70, 35);
             // Cabeceras
             for($i=0;$i<count($header);$i++)
                 $this->Cell($w[$i],7, $header[$i] ,1,0,'C');
@@ -44,11 +44,9 @@
             // Datos
             foreach($result as $row)
             {
-                $this->Cell($w[0],6,$row['nombre'],'LR');
-                $this->Cell($w[1],6,$row['marca'],'LR');
-                $this->Cell($w[2],6,$row['presentacion'],'LR');
-                $this->Cell($w[3],6,$row['cantidad'],'LR');
-                $this->Cell($w[4],6,'$'.$row['precio'],'LR');
+                $this->Cell($w[0],6,$row['apellidos'].' '.$row['nombres'],'LR');
+                $this->Cell($w[1],6,$row['email'],'LR');
+                $this->Cell($w[2],6,$row['cant'],'LR');
                 $this->Ln();
             }
             // L�nea de cierre
@@ -59,9 +57,9 @@
     // Creaci�n del objeto de la clase heredada
     $pdf = new PDF();
     // T�tulos de las columnas
-    $header = array('Nombre', 'Marca', 'Presentacion', 'Cantidad', 'Precio U.');
+    $header = array('Cliente', 'Correo electronico', 'Cantidad');
     // Carga de datos
-    $sql = "SELECT id_producto, nombre, cantidad, precio, color, imagen, categoria, id_estado, presentacion, marca FROM producto INNER JOIN marca USING(id_marca) INNER JOIN categoria USING(id_categoria) INNER JOIN presentaciones USING(id_presentacion) ORDER BY nombre";
+    $sql = "SELECT SUM(detalle_pedido.cantidad) AS cant, detalle_pedido.id_pedido, nombres, apellidos, email, nombre_usuario FROM detalle_pedido INNER JOIN pedido USING(id_pedido) INNER JOIN cliente USING(id_cliente) GROUP BY id_cliente ORDER BY cant DESC";
     $params = array(null);
     $result = Database::getRows($sql, $params);
 

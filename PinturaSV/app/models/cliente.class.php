@@ -210,8 +210,8 @@ class Cliente extends Validator{
 		return Database::getRows($sql, $params);
 	}
 	public function searchCliente($value){
-		$sql = "SELECT id_cliente, nombres, apellidos, email, nombre_usuario FROM cliente WHERE nombres LIKE ?  OR apellidos LIKE ? ORDER BY apellidos";
-		$params = array("%$value%", "%$value%");
+		$sql = "SELECT id_cliente, nombres, apellidos, email, nombre_usuario FROM cliente WHERE nombres LIKE ? OR apellidos LIKE ? OR nombre_usuario LIKE ? ORDER BY apellidos";
+		$params = array("%$value%", "%$value%", "%$value%");
 		return Database::getRows($sql, $params);
 	}
 	public function createCliente(){

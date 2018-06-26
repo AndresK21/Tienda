@@ -9,7 +9,7 @@
                 <div class="input-field">
                     <i class="material-icons prefix">search</i>
                     <input type="text" id="buscar_label" name='busqueda_cliente' class="autocomplete">
-                    <label for="buscar_label" class="black-text">Buscar cliente</label>
+                    <label for="buscar_label" class="black-text">Buscar cliente por nombre o usuario</label>
                 </div>
             </div>
             <div class="input-field col s2">
