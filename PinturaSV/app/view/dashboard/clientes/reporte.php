@@ -35,20 +35,33 @@
         // Una tabla m�s completa
         function ImprovedTable($header, $result)
         {   
+            // Colores, ancho de línea y fuente en negrita
+            $this->SetFillColor(56,132,195);
+            $this->SetTextColor(255);
+            $this->SetDrawColor(56,132,195);
+            $this->SetLineWidth(.3);
+            $this->SetFont('','B');
             // Anchuras de las columnas
             $w = array(45, 45, 35, 70);
             // Cabeceras
             for($i=0;$i<count($header);$i++)
-                $this->Cell($w[$i],7, $header[$i] ,1,0,'C');
+                $this->Cell($w[$i],7, $header[$i] ,1,0,'C', true);
             $this->Ln();
+
+            // Restauración de colores y fuentes
+            $this->SetFillColor(224,235,255);
+            $this->SetTextColor(0);
+            $this->SetFont('');
             // Datos
+            $fill = false;
             foreach($result as $row)
             {
-                $this->Cell($w[0],6,$row['apellidos'],'LR');
-                $this->Cell($w[1],6,$row['nombres'],'LR');
-                $this->Cell($w[2],6,$row['nombre_usuario'],'LR');
-                $this->Cell($w[3],6,$row['email'],'LR');
+                $this->Cell($w[0],6,$row['apellidos'],'LR',0,'L',$fill);
+                $this->Cell($w[1],6,$row['nombres'],'LR',0,'L',$fill);
+                $this->Cell($w[2],6,$row['nombre_usuario'],'LR',0,'L',$fill);
+                $this->Cell($w[3],6,$row['email'],'LR',0,'L',$fill);
                 $this->Ln();
+                $fill = !$fill;
             }
             // L�nea de cierre
             $this->Cell(array_sum($w),0,'','T');
@@ -57,6 +70,7 @@
 
     // Creaci�n del objeto de la clase heredada
     $pdf = new PDF();
+    $pdf->setTitle('Reporte de clientes');
     // T�tulos de las columnas
     $header = array('Apellidos', 'Nombres', 'Usuario', 'Correo electronico');
     // Carga de datos

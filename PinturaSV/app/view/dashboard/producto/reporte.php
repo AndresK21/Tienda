@@ -35,21 +35,34 @@
         // Una tabla m�s completa
         function ImprovedTable($header, $result)
         {   
+            // Colores, ancho de línea y fuente en negrita
+            $this->SetFillColor(56,132,195);
+            $this->SetTextColor(255);
+            $this->SetDrawColor(56,132,195);
+            $this->SetLineWidth(.3);
+            $this->SetFont('','B');
             // Anchuras de las columnas
             $w = array(70, 28, 35, 30, 30);
             // Cabeceras
             for($i=0;$i<count($header);$i++)
-                $this->Cell($w[$i],7, $header[$i] ,1,0,'C');
+                $this->Cell($w[$i],7, $header[$i] ,1,0,'C', true);
             $this->Ln();
+
+            // Restauración de colores y fuentes
+            $this->SetFillColor(224,235,255);
+            $this->SetTextColor(0);
+            $this->SetFont('');
             // Datos
+            $fill = false;
             foreach($result as $row)
             {
-                $this->Cell($w[0],6,$row['nombre'],'LR');
-                $this->Cell($w[1],6,$row['marca'],'LR');
-                $this->Cell($w[2],6,$row['presentacion'],'LR');
-                $this->Cell($w[3],6,$row['cantidad'],'LR');
-                $this->Cell($w[4],6,'$'.$row['precio'],'LR');
+                $this->Cell($w[0],6,$row['nombre'],'LR',0,'L',$fill);
+                $this->Cell($w[1],6,$row['marca'],'LR',0,'L',$fill);
+                $this->Cell($w[2],6,$row['presentacion'],'LR',0,'L',$fill);
+                $this->Cell($w[3],6,$row['cantidad'],'LR',0,'L',$fill);
+                $this->Cell($w[4],6,'$'.$row['precio'],'LR',0,'L',$fill);
                 $this->Ln();
+                $fill = !$fill;
             }
             // L�nea de cierre
             $this->Cell(array_sum($w),0,'','T');
@@ -58,6 +71,7 @@
 
     // Creaci�n del objeto de la clase heredada
     $pdf = new PDF();
+    $pdf->setTitle('Reporte de productos');
     // T�tulos de las columnas
     $header = array('Nombre', 'Marca', 'Presentacion', 'Cantidad', 'Precio U.');
     // Carga de datos

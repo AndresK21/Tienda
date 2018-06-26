@@ -37,42 +37,58 @@
         {   
             $total = null;
             $fecha = null;
+
+            // Colores, ancho de línea y fuente en negrita
+            $this->SetFillColor(56,132,195);
+            $this->SetTextColor(255);
+            $this->SetDrawColor(56,132,195);
+            $this->SetLineWidth(.3);
+            $this->SetFont('','B');
             // Anchuras de las columnas
             $w = array(75, 27, 25, 25, 25);
             // Cabeceras
             for($i=0;$i<count($header);$i++)
-                $this->Cell($w[$i],7, $header[$i] ,1,0,'C');
+                $this->Cell($w[$i],7, $header[$i] ,1,0,'C', true);
             $this->Ln();
+
+            // Restauración de colores y fuentes
+            $this->SetFillColor(224,235,255);
+            $this->SetTextColor(0);
+            $this->SetFont('');
             // Datos
+            $fill = false;
             foreach($result as $row)
             {
                 $fecha = date_create($row['fecha']);
 
-                $this->Cell($w[0],6,$row['nombre'],'LR');
-                $this->Cell($w[1],6,date_format($fecha, 'd-m-Y'),'LR');
-                $this->Cell($w[2],6,$row['cant'],'LR');
-                $this->Cell($w[3],6,'$'.$row['precio'],'LR');
-                $this->Cell($w[4],6,'$'.$row['venta'],'LR');
+                $this->Cell($w[0],6,$row['nombre'],'LR',0,'L',$fill);
+                $this->Cell($w[1],6,date_format($fecha, 'd-m-Y'),'LR',0,'L',$fill);
+                $this->Cell($w[2],6,$row['cant'],'LR',0,'L',$fill);
+                $this->Cell($w[3],6,'$'.$row['precio'],'LR',0,'L',$fill);
+                $this->Cell($w[4],6,'$'.$row['venta'],'LR',0,'L',$fill);
 
                 $total = $total + $row['venta'];
                 $this->Ln();
+                $fill = !$fill;
             }
             // L�nea de cierre
             $this->Cell(array_sum($w),0,'','T');
+            
             $this->Ln();
             $this->Cell($w[0],0,null,'LR');
             $this->Cell($w[1],0,null,'LR');
             $this->Cell($w[2],0,null,'LR');
-            $this->Cell($w[3],7,'Total:','LB',0,'R');
+            $this->Cell($w[3],7,'Total:','LB',0,'R',$fill);
 
             $total = number_format($total, 2);
 
-            $this->Cell($w[4],7,'$'.$total,'RB',0,'L');
+            $this->Cell($w[4],7,'$'.$total,'RB',0,'L',$fill);
         }
     }
 
     // Creaci�n del objeto de la clase heredada
     $pdf = new PDF();
+    $pdf->setTitle('Reporte de ventas');
     // T�tulos de las columnas
     $header = array('Producto', 'Fecha', 'Cantidad', 'Precio U.', 'Venta');
     // Carga de datos
