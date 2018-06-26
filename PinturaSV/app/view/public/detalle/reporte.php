@@ -70,6 +70,7 @@
 
     // Creaci�n del objeto de la clase heredada
     $pdf = new PDF();
+    $pdf->setTitle('Ticket');
     // T�tulos de las columnas
     $header = array('ID', 'Producto', 'Cantidad', 'Precio', 'Subtotal');
     // Carga de datos
