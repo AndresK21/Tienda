@@ -33,7 +33,6 @@
                         <a class='waves-effect waves-light modal-trigger espacio tooltipped' data-position='right' data-delay='50' data-tooltip='Eliminar elemento' href='delete.php?id=$row[id_detalle]'><i class='material-icons red-text text-darken-3 prefix'>delete</i></a>
                     </td>
                 </tr>
-                $_SESSION[id_pedido]
                 ");
             }
         ?>
