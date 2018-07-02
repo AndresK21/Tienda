@@ -34,7 +34,16 @@
         }
         // Una tabla m�s completa
         function ImprovedTable($header, $result)
-        {
+        {$hoy = getdate();
+
+            $this->Cell(0,6,'Nombre: '.$_GET['apellido'].' '.$_GET['nombre'],0,0);
+            $this->Ln();
+            $this->Cell(0,6,'Fecha: '.$hoy['hours'].':'.$hoy['minutes'].' del '.$hoy['mday'].'/'.$hoy['mon'].'/'.$hoy['year'],0,0);
+            $this->Ln();
+
+
+
+
             $total = null;
             // Anchuras de las columnas
             $w = array(20, 65, 35, 35,35);
@@ -67,7 +76,6 @@
             $this->Cell($w[4],7,'$'.$total,'RB',0,'L');
         }
     }
-
     // Creaci�n del objeto de la clase heredada
     $pdf = new PDF();
     $pdf->setTitle('Ticket');
