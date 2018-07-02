@@ -29,16 +29,16 @@
             // Arial italic 8
             $this->SetFont('Arial','I',8);
             // N�mero de p�gina
-            $this->Cell(0,10,'Reporte generado por '.$_GET['apellido'].' '.$_GET['nombre'].' a las '.$hoy['hours'].':'.$hoy['minutes'].' del '.$hoy['mday'].'/'.$hoy['mon'].'/'.$hoy['year'],0,0);
+            
             $this->Cell(0,10,'Pagina '.$this->PageNo().'/{nb}',0,0,'R');
         }
         // Una tabla m�s completa
         function ImprovedTable($header, $result)
         {$hoy = getdate();
 
-            $this->Cell(0,6,'Nombre: '.$_GET['apellido'].' '.$_GET['nombre'],0,0);
+            $this->Cell(0,6,'A nombre de: '.$_GET['nombre'].' '.$_GET['apellido'],0,0);
             $this->Ln();
-            $this->Cell(0,6,'Fecha: '.$hoy['hours'].':'.$hoy['minutes'].' del '.$hoy['mday'].'/'.$hoy['mon'].'/'.$hoy['year'],0,0);
+            $this->Cell(0,6,'Fecha: '.$hoy['mday'].'/'.$hoy['mon'].'/'.$hoy['year'],0,0);
             $this->Ln();
 
 
