@@ -169,6 +169,7 @@ class Cliente extends Validator{
 			$this->id_cliente = $data['id_cliente'];
 			$this->nombres = $data['nombres'];
 			$this->apellidos = $data['apellidos'];
+			$this->id_pedido = $data['id_pedido'];
 			return true;
 		}else{
 			return false;
