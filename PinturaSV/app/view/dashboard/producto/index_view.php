@@ -93,23 +93,23 @@
                 ");
             ?>
             <?php
-            //seleccionar todo de la tabla usuarios
-            $resultado=$producto->getProductos();
+                //seleccionar todo de la tabla usuarios
+                $resultado=$producto->getProductos();
 
-            //Contar el total de registros
-            $total_registros = count($resultado);
+                //Contar el total de registros
+                $total_registros = count($resultado);
 
-            //usando ceil para dividir el total de registros entre $por_pagina este ultimo es de 5
-            $total_paginas = ceil($total_registros / $por_pagina);  
+                //usando ceil para dividir el total de registros entre $por_pagina este ultimo es de 5
+                $total_paginas = ceil($total_registros / $por_pagina);  
 
-            //link a primera pagina
-            print("<ul class='pagination center'><a href='index.php?id=".$producto->getId_producto()."&pagina=1'>".''."<i class='material-icons tooltipped' data-position='top' data-delay='50' data-tooltip='Primer pagina'>first_page</i></a></li>");
-            for ($i=1; $i<=$total_paginas; $i++) {
-            print("<li class='waves-effect white-text ligactive'><a href='index.php?id=".$producto->getId_producto()."&pagina=".$i."'>".$i."</a></li>");
-            };
-            // link a la ultima pagina
-            print("<a href='index.php?id=".$producto->getId_producto()."&pagina=$total_paginas'>".''."<i class='material-icons tooltipped' data-position='top' data-delay='50' data-tooltip='Ultima pagina'>last_page</i></a></li>");
-        ?>
+                //link a primera pagina
+                print("<ul class='pagination center'><a href='index.php?id=".$producto->getId_producto()."&pagina=1'>".''."<i class='material-icons tooltipped' data-position='top' data-delay='50' data-tooltip='Primer pagina'>first_page</i></a></li>");
+                for ($i=1; $i<=$total_paginas; $i++) {
+                print("<li class='waves-effect white-text ligactive'><a href='index.php?id=".$producto->getId_producto()."&pagina=".$i."'>".$i."</a></li>");
+                };
+                // link a la ultima pagina
+                print("<a href='index.php?id=".$producto->getId_producto()."&pagina=$total_paginas'>".''."<i class='material-icons tooltipped' data-position='top' data-delay='50' data-tooltip='Ultima pagina'>last_page</i></a></li>");
+            ?>
 
         </div>
 
