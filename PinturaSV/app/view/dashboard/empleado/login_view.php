@@ -25,7 +25,7 @@
 						</div>
 					</div>
 					<div class="left-align">
-						<a class="modal-trigger" href="#modal_contra">&iquest;Olvido su contrase&ntilde;a&#63;</a>
+						<a class="modal-trigger" href="correo.php">&iquest;Olvido su contrase&ntilde;a&#63;</a>
 					</div>
 					<div class="white-text">.</div>
 					<div class="right-align blue-grey-text">
