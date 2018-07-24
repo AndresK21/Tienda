@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2018 a las 20:33:54
--- Versión del servidor: 10.1.30-MariaDB
--- Versión de PHP: 7.2.1
+-- Tiempo de generación: 24-07-2018 a las 21:45:48
+-- Versión del servidor: 10.1.31-MariaDB
+-- Versión de PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -78,7 +78,8 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`id_cliente`, `nombres`, `apellidos`, `email`, `nombre_usuario`, `contrasena`) VALUES
 (5, 'Andres Oswaldo', 'Henriquez Gomez', 'andresdosmil@gmail.com', 'AndresK21', '$2y$10$svX9qHHUgA1zXjzIzGd5puez2PLyikPcqZLhGnAKV6JWx79//N0vu'),
-(9, 'Nombre', 'Apellido', 'usuario@gmail.com', 'cliente', '$2y$10$zpwy33ITsGcfXWcD/j6ms.a1KdKYmTy7qm/ALoZjMAUQFyuXSUEy2');
+(9, 'Nombre', 'Apellido', 'usuario@gmail.com', 'cliente', '$2y$10$zpwy33ITsGcfXWcD/j6ms.a1KdKYmTy7qm/ALoZjMAUQFyuXSUEy2'),
+(10, 'Diego', 'Guzman', 'diego.christopher@hotmail.com', 'DGuzman23', '$2y$10$qYk095lSv0Jm//zNx7WaluxvXfZrgC2hqE7M2eKAqeAANzT83Fo.a');
 
 --
 -- Disparadores `cliente`
@@ -129,7 +130,7 @@ INSERT INTO `detalle_pedido` (`id_detalle`, `id_producto`, `cantidad`, `fecha`, 
 (84, 17, 50, '2018-04-24', 0, 9),
 (85, 17, 25, '2018-04-24', 0, 6),
 (86, 24, 25, '2018-04-24', 1, 16),
-(87, 18, 6, '2018-04-24', 1, 16),
+(87, 18, 6, '2018-04-24', 0, 16),
 (88, 18, 4, '2018-04-24', 1, 16),
 (89, 24, 2, '2018-04-24', 1, 16),
 (90, 17, 5, '2018-05-08', 1, 16),
@@ -162,7 +163,34 @@ INSERT INTO `detalle_pedido` (`id_detalle`, `id_producto`, `cantidad`, `fecha`, 
 (118, 29, 5, '2018-06-22', 1, 16),
 (119, 31, 6, '2018-06-22', 1, 16),
 (120, 32, 7, '2018-06-22', 1, 16),
-(121, 34, 8, '2018-06-22', 1, 16);
+(121, 34, 8, '2018-06-22', 1, 16),
+(122, 17, 1, '2018-06-26', 1, 19),
+(123, 18, 1, '2018-06-26', 1, 19),
+(124, 30, 2, '2018-06-26', 1, 19),
+(125, 30, 20, '2018-06-26', 1, 19),
+(126, 17, 1, '2018-06-26', 1, 19),
+(127, 28, 23, '2018-06-26', 1, 19),
+(128, 33, 1, '2018-06-26', 1, 19),
+(129, 33, 1, '2018-06-26', 1, 19),
+(130, 35, 1, '2018-06-26', 1, 19),
+(131, 18, 1, '2018-06-26', 1, 19),
+(132, 33, 1, '2018-06-26', 1, 19),
+(133, 35, 1, '2018-06-26', 1, 19),
+(134, 33, 1, '2018-06-26', 1, 19),
+(135, 33, 1, '2018-06-26', 1, 19),
+(136, 33, 1, '2018-06-26', 1, 19),
+(137, 19, 1, '2018-06-26', 1, 19),
+(138, 28, 1, '2018-06-26', 1, 19),
+(139, 35, 1, '2018-06-26', 1, 19),
+(140, 21, 1, '2018-06-26', 1, 19),
+(141, 35, 1, '2018-06-26', 1, 19),
+(142, 30, 2, '2018-06-26', 1, 19),
+(143, 33, 1, '2018-06-26', 1, 19),
+(144, 30, 2, '2018-06-26', 1, 19),
+(145, 21, 2, '2018-06-26', 1, 19),
+(146, 33, 1, '2018-06-26', 1, 19),
+(147, 18, 1, '2018-07-02', 1, 19),
+(148, 33, 1, '2018-07-02', 1, 19);
 
 --
 -- Disparadores `detalle_pedido`
@@ -204,8 +232,7 @@ CREATE TABLE `empleado` (
 --
 
 INSERT INTO `empleado` (`id_empleado`, `nombre_completo`, `correo_electronico`, `nombre_usuario`, `contrasena`, `imagen`, `id_permiso`) VALUES
-(12, 'Andres Oswaldo Henriquez Gomez', 'andresdosmil@gmail.com', 'AndresK21', '$2y$10$oZFiPM3D55wVi6cFNh4PN.saiZKcq48wHO6c5tpqTbx5lTVb8z0W2', '5adf32ba124d4.jpg', 2),
-(13, 'Diego Edgardo Guzman Huezo', 'diegochristopher23@gmail.com', 'Diego', '$2y$10$TZXFvyMk/qBtZd1mFokD7uQAUhJ1IuIeqlo8ywH.QxmK4T1JigcKO', '5adf334d97b49.jpg', 3);
+(14, 'Diego Edgardo Guzman Huezo', 'diego.christopher@hotmail.com', 'Diego', '$2y$10$QNyl46npdBQYFvuEMEe.OeChiVCSAAfa78LwMraMnlCy8rJtV708.', '5b578164388cc.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -271,10 +298,11 @@ INSERT INTO `pedido` (`id_pedido`, `estado`, `fecha`, `id_cliente`, `id_empleado
 (9, 1, '2018-04-15', NULL, NULL),
 (10, 1, '2018-04-15', NULL, NULL),
 (11, 1, '2018-04-17', NULL, NULL),
-(15, 1, '2018-04-25', NULL, 12),
-(16, 1, '2018-04-29', 5, 12),
-(17, 1, '2018-05-07', NULL, 12),
-(18, 1, '2018-05-08', 9, 12);
+(15, 1, '2018-04-25', NULL, NULL),
+(16, 1, '2018-04-29', 5, NULL),
+(17, 1, '2018-05-07', NULL, NULL),
+(18, 1, '2018-05-08', 9, NULL),
+(19, 1, '2018-06-25', 10, NULL);
 
 -- --------------------------------------------------------
 
@@ -339,22 +367,22 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`id_producto`, `nombre`, `cantidad`, `precio`, `color`, `imagen`, `id_categoria`, `id_estado`, `id_presentacion`, `id_marca`) VALUES
-(17, 'pintura 2', 997, '4.00', 'rojo', 'producto1.jpg', 8, 1, 5, 3),
-(18, 'pintura 3', 996, '4.00', 'rojo', 'producto2.jpg', 8, 1, 5, 3),
-(19, 'Pintura 1', 996, '2.00', 'azul', 'producto3.jpg', 8, 1, 5, 3),
-(21, 'Producto 4', 995, '25.00', 'azul', '5addf9415712e.jpg', 8, 1, 5, 3),
+(17, 'pintura 2', 995, '4.00', 'rojo', 'producto1.jpg', 8, 1, 5, 3),
+(18, 'pintura 3', 993, '4.00', 'rojo', 'producto2.jpg', 8, 1, 5, 3),
+(19, 'Pintura 1', 995, '2.00', 'azul', 'producto3.jpg', 8, 1, 5, 3),
+(21, 'Producto 4', 992, '25.00', 'azul', '5addf9415712e.jpg', 8, 1, 5, 3),
 (24, 'Producto 5', 997, '15.00', 'rojo', '5ade510c094bf.jpg', 8, 1, 5, 3),
 (25, 'Producto 6', 997, '2.50', 'Azul', '5af0ba37bbb37.jpg', 8, 1, 5, 4),
 (26, 'Producto 7', 995, '1.00', 'Rosado', '5af0ba944200e.jpg', 8, 1, 5, 3),
 (27, 'Producto 8', 996, '5.00', 'Amarillo', '5af0baebb4547.jpg', 8, 1, 5, 3),
-(28, 'Producto 9', 996, '1.50', 'Azul', '5af0bbdb88f69.jpg', 9, 1, 5, 4),
+(28, 'Producto 9', 972, '1.50', 'Azul', '5af0bbdb88f69.jpg', 9, 1, 5, 4),
 (29, 'Producto 10', 994, '1.00', 'Cafe', '5af0bc0062de9.jpg', 9, 1, 6, 3),
-(30, 'Producto 11', 997, '5.00', 'Verde', '5af0bd1732615.jpg', 9, 1, 5, 3),
+(30, 'Producto 11', 971, '5.00', 'Verde', '5af0bd1732615.jpg', 9, 1, 5, 3),
 (31, 'Producto 12', 993, '12.00', 'Magenta', '5af0bd3a0bd1a.jpg', 9, 1, 6, 3),
 (32, 'Producto 13', 992, '3.50', 'Celeste', '5af0bd873ce53.jpg', 9, 1, 6, 3),
-(33, 'Producto 14', 996, '2.50', 'Naranja', '5af0bdb00c40e.jpg', 9, 1, 5, 3),
+(33, 'Producto 14', 987, '2.50', 'Naranja', '5af0bdb00c40e.jpg', 9, 1, 5, 3),
 (34, 'Producto 15', 991, '1.50', 'Plateado', '5af0bddec9d32.jpg', 9, 1, 6, 4),
-(35, 'Producto 16', 995, '4.00', 'Dorado', '5af0be07f2554.jpg', 9, 1, 5, 4);
+(35, 'Producto 16', 991, '4.00', 'Dorado', '5af0be07f2554.jpg', 9, 1, 5, 4);
 
 -- --------------------------------------------------------
 
@@ -527,19 +555,19 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 
 --
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `estado`
@@ -557,7 +585,7 @@ ALTER TABLE `marca`
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `permisos`
@@ -581,7 +609,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `tipo_p`
 --
 ALTER TABLE `tipo_p`
-  MODIFY `id_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `valoraciones`
