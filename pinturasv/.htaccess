@@ -2,8 +2,8 @@
 # | Custom error messages/pages                                        |
 # ----------------------------------------------------------------------
 
-ErrorDocument 404 http://localhost/Tienda/PinturaSV/ERROR404.html
-ErrorDocument 403 http://localhost/Tienda/PinturaSV/ERROR403.html
+ErrorDocument 404 /Tienda/pinturasv/ERROR404.html
+ErrorDocument 403 /Tienda/pinturasv/ERROR403.html
 
 # ----------------------------------------------------------------------
 # | Error prevention                                                   |
