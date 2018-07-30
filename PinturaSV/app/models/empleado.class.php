@@ -8,6 +8,8 @@ class Empleado extends Validator{
 	private $contrasena = null;
 	private $imagen = null;
 	private $id_permiso = null;
+	private $nombre_correo = null;
+	private $email = null;
 
 	//Métodos para sobrecarga de propiedades
 	public function setId_empleado($value){
@@ -102,6 +104,30 @@ class Empleado extends Validator{
 		return $this->id_permiso;
 	}
 
+
+	public function setNombreCorreo($value){
+		if($this->validateAlphabetic($value, 1, 150)){
+			$this->nombre_correo = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getNombreCorreo(){
+		return $this->nombre_correo;
+	}
+	public function setMail($value){
+		if($this->validateEmail($value)){
+			$this->email = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getMail(){
+		return $this->email;
+	}
+
 	//Métodos para manejar la sesión del usuario
 	public function checkUsuarios(){
 		$sql = "SELECT id_empleado FROM empleado WHERE nombre_usuario = ?";
@@ -109,6 +135,19 @@ class Empleado extends Validator{
 		$data = Database::getRow($sql, $params);
 		if($data){
 			$this->id_empleado = $data['id_empleado'];
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function checkUsuarios2(){
+		$sql = "SELECT id_empleado, nombre_usuario, correo_electronico FROM empleado WHERE correo_electronico = ?";
+		$params = array($this->email);
+		$data = Database::getRow($sql, $params);
+		if($data){
+			$this->id_empleado = $data['id_empleado'];
+			$this->nombre_usuario = $data['nombre_usuario'];
+			$this->email = $data['correo_electronico'];
 			return true;
 		}else{
 			return false;
@@ -196,6 +235,14 @@ class Empleado extends Validator{
 	public function deleteEmpleado(){
 		$sql = "DELETE FROM empleado WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
+		return Database::executeRow($sql, $params);
+	}
+
+
+	public function updateContra($contra){
+		$hash = password_hash($contra, PASSWORD_DEFAULT);
+		$sql = "UPDATE empleado SET contrasena = ? WHERE correo_electronico = ?";
+		$params = array($hash, $this->email);
 		return Database::executeRow($sql, $params);
 	}
 }
