@@ -15,6 +15,8 @@ class Cliente extends Validator{
 	private $subtotal = null;
 	private $id_pedido = null;
 
+	private $nombre_correo = null;
+
 	//Métodos para sobrecarga de propiedades
 	public function setId_cliente($value){
 		if($this->validateId($value)){
@@ -160,6 +162,20 @@ class Cliente extends Validator{
 		return $this->id_pedido;
 	}
 
+	public function setNombreCorreo($value){
+		if($this->validateAlphabetic($value, 1, 150)){
+			$this->nombre_correo = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	public function getNombreCorreo(){
+		return $this->nombre_correo;
+	}
+
+
 	//Métodos para manejar la sesión del usuario
 	public function checkUsuario_cliente(){
 		$sql = "SELECT id_cliente, id_pedido, nombres, apellidos FROM cliente INNER JOIN pedido USING(id_cliente) WHERE nombre_usuario = ?";
@@ -175,6 +191,29 @@ class Cliente extends Validator{
 			return false;
 		}
 	}
+
+
+	public function checkUsuarios_Cliente2(){
+		$sql = "SELECT id_cliente, nombre_usuario, email FROM cliente WHERE email = ?";
+		$params = array($this->email);
+		$data = Database::getRow($sql, $params);
+		if($data){
+			$this->id_cliente = $data['id_cliente'];
+			$this->nombre_usuario = $data['nombre_usuario'];
+			$this->email = $data['email'];
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	public function updateContraCliente($contra){
+		$hash = password_hash($contra, PASSWORD_DEFAULT);
+		$sql = "UPDATE cliente SET contrasena = ? WHERE email = ?";
+		$params = array($hash, $this->email);
+		return Database::executeRow($sql, $params);
+	}
+
 	public function checkPassword_cliente(){
 		$sql = "SELECT contrasena FROM cliente WHERE id_cliente = ?";
 		$params = array($this->id_cliente);

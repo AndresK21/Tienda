@@ -14,10 +14,10 @@
     <div class="container">
         <div class="row">
             <!-- FORMULARIO DE USUARIO -->
-            <form class="col s12">
+            <form class="col s12 ">
                 <!-- INGRESAR DE USUARIO -->
                 <div class="row">
-                <div class="input-field col l10 m9 s12">
+                <div class="input-field col l9 offset-l1 m9 offset-m1 s12">
                     <i class="material-icons prefix">person_pin</i>
                     <input name="nombre_usuario" id="usuario" type="text" class="validate" value='<?php print($cliente->getNombre_usuario()) ?>' required />
                     <label for="icon_prefix"> Usuario</label>
@@ -25,19 +25,19 @@
                 </div>
                 <!-- INGRESAR DE CLAVE -->
                 <div class="row">
-                <div class="input-field col s9">
+                    <div class="input-field col l9 offset-l1 m9 offset-m1 s12">
                     <i class="material-icons prefix">lock</i>
                     <input name="contrasena" id="contrasena" type="password" class="validate" value='<?php print($cliente->getContrasena()) ?>' required />
                     <label for="password icon_prefix">Contrase&ntilde;a</label>
                 </div>
-                <!-- VER CONTRASEÑA -->
-                <div class="input-field col s3">
-                    <a class="waves-effect waves-teal"><i class="material-icons black-text">visibility</i></a>
                 </div>
+                <!-- RECUPERACION -->
+                <div class="col l9 offset-l1 m9 offset-m1 s12">
+                    <a href="correo_cliente.php">&iquest;Olvido su contrase&ntilde;a&#63;</a>
                 </div>
                 <!-- BOTON DE INICIAR Sesi&oacute;n -->
                 <div class="row">
-                <div class="input-field col s12">
+                    <div class="input-field col l9 offset-l4 m9 offset-m4 s12 offset-s3">
                     <button type='submit' name='iniciar' class="blue waves-effect waves-light btn ">Iniciar Sesi&oacute;n</button>
                 </div>
                 </div>
@@ -100,13 +100,7 @@
                         <label for="password icon_prefix">Repetir Contrase&ntilde;a</label>
                     </div>
                 </div>
-                    <!-- BOTON INICIAR Sesi&oacute;n -->
-                    <div class="input-field col l6 m6 s12">
-                        <button type='submit' name='crear' class="blue waves-effect waves-light btn ">Iniciar Sesi&oacute;n</button>
-                    </div>
-                    <div class="white-text">.</div>
-                    <div class="white-text">.</div>
-                
+
                 <!-- TERMINOS Y CONDICIONES -->
                 <p class="right">
                     <div class="card-action ">
@@ -131,6 +125,14 @@
                             </div>
                         </a>
                     </div>
+
+                    <!-- BOTON INICIAR Sesi&oacute;n -->
+                    <div class="input-field col l9 offset-l5 m9 offset-m4 s2 offset-s3">
+                        <button type='submit' name='crear' class="blue waves-effect waves-light btn ">Iniciar Sesi&oacute;n</button>
+                    </div>
+                    <div class="white-text">.</div>
+                    <div class="white-text">.</div>
+                
                 </form>
             </div>
         </div>
