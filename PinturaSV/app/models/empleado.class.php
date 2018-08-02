@@ -7,6 +7,7 @@ class Empleado extends Validator{
 	private $nombre_usuario = null;
 	private $contrasena = null;
 	private $imagen = null;
+	private $fecha = null;
 	private $id_permiso = null;
 	private $nombre_correo = null;
 	private $email = null;
@@ -90,6 +91,18 @@ class Empleado extends Validator{
 		}else{
 			return false;
 		}
+	}
+
+	public function setFecha($value){
+		if($this->validateAlphanumeric($value, 1, 15)){
+			$this->fecha = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getFecha(){
+		return $this->fecha;
 	}
 
 	public function setId_permiso($value){
@@ -177,8 +190,9 @@ class Empleado extends Validator{
 	}
 	public function changeContrasena(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "UPDATE empleado SET contrasena = ? WHERE id_empleado = ?";
-		$params = array($hash, $this->id_empleado);
+		$sql = "UPDATE empleado SET contrasena = ?, fecha_registro = ? WHERE id_empleado = ?";
+		$fech = date('Y-m-d h:i:s');
+		$params = array($hash, $fech, $this->id_empleado);
 		return Database::executeRow($sql, $params);
 	}
 	public function logOut(){
@@ -203,12 +217,13 @@ class Empleado extends Validator{
 	}
 	public function createEmpleado(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO empleado(nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, id_permiso) VALUES (?, ?, ?, ?, ?, ?)";
-		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $hash, $this->imagen, $this->id_permiso);
+		$sql = "INSERT INTO empleado(nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, fecha_registro, id_permiso) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		$fech = date('y-m-d');
+		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $hash, $this->imagen, $fech, $this->id_permiso);
 		return Database::executeRow($sql, $params);
 	}
 	public function readEmpleado(){
-		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, imagen, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE id_empleado = ?";
+		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, imagen, fecha_registro, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$user = Database::getRow($sql, $params);
 		if($user){
@@ -217,6 +232,7 @@ class Empleado extends Validator{
 			$this->nombre_usuario = $user['nombre_usuario'];
 			$this->imagen = $user['imagen'];
 			$this->id_permiso = $user['permiso'];
+			$this->fecha = $user['fecha_registro'];
 			return true;
 		}else{
 			return null;

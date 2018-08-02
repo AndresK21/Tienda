@@ -2,6 +2,7 @@
 require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
 require_once("../../app/helpers/component.class.php");
+require_once("../../app/models/empleado.class.php");
 class Page extends Component{
 	public static function templateHeader($title){
 		session_start();
@@ -22,99 +23,146 @@ class Page extends Component{
 			<body>
 		");
 		if(isset($_SESSION['id_empleado']) && ($_SESSION['id_permiso']) == 2){
-			print("
-				<header class='navbar-fixed'>
-					<!-- Dropdown Structure -->
-					<ul id='dropdown1' class='dropdown-content'>
-						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
-					</ul>
-					<!-- Dropdown Structure Mobile -->
-					<ul id='dropdown2' class='dropdown-content'>
-						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
-					</ul>
-					
-					<div class='navbar-fixed'>  
-						<nav>
-						<!--Navbar Color gris azulado-->
-							<div class='nav-wrapper  blue-grey darken-4'>
-							<img class='brand-logo' src='../../web/img/mipintura.png'>
-							<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
-							<ul class='right hide-on-med-and-down'>
+			$hoy = date('Y-m-d h:i:s');
+			$hoy2 = new DateTime($hoy);
+			$empleado = new Empleado;
+			if($empleado->setId_empleado($_SESSION['id_empleado'])){//Establece el id empleado para obtener los registros del empleado
+				if($empleado->readEmpleado()){
+					$fecha1 = new DateTime($empleado->getFecha());
+					$tiempo = $fecha1->diff($hoy2);
+					if($tiempo->d >= 90){
+						print("
+							<header>
+								<div class='navbar-fixed'>  
+									<nav>
+									<!--Navbar Color gris azulado-->
+										<div class='nav-wrapper  blue-grey darken-4'>
+										<img class='brand-logo' src='../../web/img/mipintura.png'>
+										</div>
+									</nav>
+								</div>
+							</header>
+								<main class=''>
+							");
+							self::showMessage(3, "¡Debe cambiar su contraseña!", "../cuenta/password2.php");
+							self::templateFooter();
+							exit;						
+					}else{
+						print("
+							<header class='navbar-fixed'>
+								<!-- Dropdown Structure -->
+								<ul id='dropdown1' class='dropdown-content'>
+									<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
+									<li class='divider'></li>
+									<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+									<li class='divider'></li>
+									<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
+								</ul>
+								<!-- Dropdown Structure Mobile -->
+								<ul id='dropdown2' class='dropdown-content'>
+									<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
+									<li class='divider'></li>
+									<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+									<li class='divider'></li>
+									<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
+								</ul>
+								
+								<div class='navbar-fixed'>  
+									<nav>
+									<!--Navbar Color gris azulado-->
+										<div class='nav-wrapper  blue-grey darken-4'>
+										<img class='brand-logo' src='../../web/img/mipintura.png'>
+										<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+										<ul class='right hide-on-med-and-down'>
+											<li><a href='../cuenta/index.php'>Dashboard</a></li>
+											<li><a href='../usuarios/index.php'>Usuarios</a></li>
+											<li><a href='../clientes/index.php'>Clientes</a></li>
+											<li><a href='../producto/index.php'>Productos</a></li>
+											<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+										</ul>
+										</div>
+									</nav>
+								</div>
+							</header>
+
+							<ul class='side-nav' id='mobile-demo'>
 								<li><a href='../cuenta/index.php'>Dashboard</a></li>
 								<li><a href='../usuarios/index.php'>Usuarios</a></li>
 								<li><a href='../clientes/index.php'>Clientes</a></li>
 								<li><a href='../producto/index.php'>Productos</a></li>
-								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+								<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 							</ul>
-							</div>
-						</nav>
-					</div>
-				</header>
 
-				<ul class='side-nav' id='mobile-demo'>
-					<li><a href='../cuenta/index.php'>Dashboard</a></li>
-					<li><a href='../usuarios/index.php'>Usuarios</a></li>
-					<li><a href='../clientes/index.php'>Clientes</a></li>
-					<li><a href='../producto/index.php'>Productos</a></li>
-					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
-				</ul>
-
-				<main class=''>
-					
-			");
+							<main class=''>
+								
+						");
+						printf('%d años, %d meses, %d días, %d horas, %d minutos', $tiempo->y, $tiempo->m, $tiempo->d, $tiempo->h, $tiempo->i);
+					}
+				}
+			}
+			
+			
 		}else if(isset($_SESSION['id_empleado']) && ($_SESSION['id_permiso']) == 3){
-			print("
-				<header class='navbar-fixed'>
-					<!-- Dropdown Structure -->
-					<ul id='dropdown1' class='dropdown-content'>
-						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
-					</ul>
-					<!-- Dropdown Structure Mobile -->
-					<ul id='dropdown2' class='dropdown-content'>
-						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
-					</ul>
-					
-					<div class='navbar-fixed'>  
-						<nav>
-						<!--Navbar Color gris azulado-->
-							<div class='nav-wrapper  blue-grey darken-4'>
-							<img class='brand-logo' src='../../web/img/mipintura.png'>
-							<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
-							<ul class='right hide-on-med-and-down'>
+			$hoy = date('Y-m-d h:i:s');
+			$hoy2 = new DateTime($hoy);
+			$empleado = new Empleado;
+			if($empleado->setId_empleado($_SESSION['id_empleado'])){//Establece el id empleado para obtener los registros del empleado
+				if($empleado->readEmpleado()){
+					$fecha1 = new DateTime($empleado->getFecha());
+					$tiempo = $fecha1->diff($hoy2);
+					if($tiempo->d >= 90){
+						self::showMessage(3, "¡Debe cambiar su contraseña!", "../cuenta/password.php");
+						self::templateFooter();
+					}else{
+						print("
+							<header class='navbar-fixed'>
+								<!-- Dropdown Structure -->
+								<ul id='dropdown1' class='dropdown-content'>
+									<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
+									<li class='divider'></li>
+									<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+									<li class='divider'></li>
+									<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
+								</ul>
+								<!-- Dropdown Structure Mobile -->
+								<ul id='dropdown2' class='dropdown-content'>
+									<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
+									<li class='divider'></li>
+									<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+									<li class='divider'></li>
+									<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
+								</ul>
+								
+								<div class='navbar-fixed'>  
+									<nav>
+									<!--Navbar Color gris azulado-->
+										<div class='nav-wrapper  blue-grey darken-4'>
+										<img class='brand-logo' src='../../web/img/mipintura.png'>
+										<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+										<ul class='right hide-on-med-and-down'>
+											<li><a href='../cuenta/index.php'>Dashboard</a></li>
+											<li><a href='../producto/index.php'>Productos</a></li>
+											<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+										</ul>
+										</div>
+									</nav>
+								</div>
+							</header>
+
+							<ul class='side-nav' id='mobile-demo'>
 								<li><a href='../cuenta/index.php'>Dashboard</a></li>
 								<li><a href='../producto/index.php'>Productos</a></li>
-								<li><a class='dropdown-button' href='#!' data-activates='dropdown1'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+								<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
 							</ul>
-							</div>
-						</nav>
-					</div>
-				</header>
 
-				<ul class='side-nav' id='mobile-demo'>
-					<li><a href='../cuenta/index.php'>Dashboard</a></li>
-					<li><a href='../producto/index.php'>Productos</a></li>
-					<li><a class='dropdown-button' href='#!' data-activates='dropdown2'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
-				</ul>
+							<main class=''>
+								
+						");
+						printf('%d años, %d meses, %d días, %d horas, %d minutos', $tiempo->y, $tiempo->m, $tiempo->d, $tiempo->h, $tiempo->i);
+					}
+				}
+			}
 
-				<main class=''>
-					
-			");
 		}else{
 			print("
 			<header>
@@ -130,7 +178,7 @@ class Page extends Component{
 				<main class=''>
 			");
 			$filename = basename($_SERVER['PHP_SELF']);
-			if($filename != "login.php" && $filename != "register.php"){
+			if($filename != "login.php" && $filename != "register.php" && $filename != "correo.php"){
 				self::showMessage(3, "¡Debe iniciar sesión!", "../cuenta/login.php");
 				self::templateFooter();
 				exit;
