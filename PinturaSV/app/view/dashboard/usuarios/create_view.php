@@ -31,10 +31,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field ">
+                    <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">security</i>
-                        <input name="contrasena" id="contrasen" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
+                        <input name="contrasena1" id="contrasen" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
                         <label for="contrasen" class="black-text">Contrase&ntilde;a</label>
+                    </div>
+                    <div class="input-field col l6 m6 s12">
+                        <i class="material-icons prefix">security</i>
+                        <input name="contrasena2" id="contrase" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
+                        <label for="contrase" class="black-text">Confirme la contrase&ntilde;a</label>
                     </div>
                 </div>
                 <div class="row">

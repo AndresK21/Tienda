@@ -109,7 +109,9 @@ class Validator{
 
 	public function validatePassword($value){
 		if(strlen($value) >= 8){
-			return true;
+			if(preg_match("/^.*(?=.*\d)(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).*$/", $value)){
+				return true;
+			}
 		}else{
 			return false;
 		}

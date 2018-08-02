@@ -23,13 +23,6 @@
                 <input name="nombre_usuario" id="usuario" type="text" class="validate" value='<?php print($empleado->getUsuario()) ?>' required />
                 <label for="usuario" class="black-text">Usuario</label>
             </div>
-            <div class="input-field col l6 m6 s12">
-                <i class="material-icons prefix">security</i>
-                <input name="contrasena" id="contrasen" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
-                <label for="contrasen" class="black-text">Contrase&ntilde;a</label>
-            </div>
-        </div>
-        <div class="row">
             <div class='file-field input-field col s12 m6 l6'>
                 <div class='waves-effect waves-light btn blue-grey darken-4'>
                     <span><i class='material-icons blue-gray-text text-darken-4'>image</i></span>
@@ -40,8 +33,19 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="input-field col l6 m6 s12">
+                <i class="material-icons prefix">security</i>
+                <input name="contrasena1" id="contrasen" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
+                <label for="contrasen" class="black-text">Contrase&ntilde;a</label>
+            </div>
+            <div class="input-field col l6 m6 s12">
+                <i class="material-icons prefix">security</i>
+                <input name="contrasena2" id="contrase" type="password" class="validate" value='<?php print($empleado->getContrasena()) ?>' required />
+                <label for="contrase" class="black-text">Confirme la contrase&ntilde;a</label>
+            </div>
+        </div>
         
-
         <div class="white-text">.</div>
         <div class="white-text">.</div>
 
