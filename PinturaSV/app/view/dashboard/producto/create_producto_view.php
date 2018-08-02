@@ -7,21 +7,21 @@
     <form class="col s12" method="post" enctype='multipart/form-data'>
         <div class="row">
             <div class="input-field col s12 m6 l6">
-                <input id="nombre" type="text" name="nombre" class="validate" value='<?php print($producto->getNombre())?>' required>
+                <input id="nombre" type="text" name="nombre" class="validate" autocomplete="off" value='<?php print($producto->getNombre())?>' required>
                 <label for="nombre" class="black-text">Nombre</label>
             </div>
             <div class="input-field col s12 m6 l6">
-                <input id="cantidad" type="number" name="cantidad" class="validate" max="999" min="1" step="any" value='<?php print($producto->getCantidad())?>' required>
+                <input id="cantidad" type="number" name="cantidad" class="validate" max="999" min="1" step="any" autocomplete="off" value='<?php print($producto->getCantidad())?>' required>
                 <label for="Cantidad" class="black-text">Cantidad</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12 m6 l6">
-                <input id="precio" type="number" name="precio" class="validate" max="999.9" min="0.01" step="any" value='<?php print($producto->getPrecio())?>' required>
+                <input id="precio" type="number" name="precio" class="validate" max="999.9" min="0.01" step="any" autocomplete="off" value='<?php print($producto->getPrecio())?>' required>
                 <label for="Precio" class="black-text">Precio</label>
             </div>
             <div class="input-field col s12 m6 l6">
-                <input id="color" type="text" name="color" class="validate" value='<?php print($producto->getColor())?>' required>
+                <input id="color" type="text" name="color" class="validate" autocomplete="off" value='<?php print($producto->getColor())?>' required>
                 <label for="color" class="black-text">Color</label>
             </div>
         </div>

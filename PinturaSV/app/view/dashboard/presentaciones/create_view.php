@@ -6,7 +6,7 @@
     <form class="col s12" method="post">
         <div class="row">
             <div class="input-field col s12">
-                <input id="presenta" type="text" name="presentacion" class="validate" value='<?php print($presentaciones->getPresentacion())?>' required />
+                <input id="presenta" type="text" name="presentacion" class="validate" autocomplete="off" value='<?php print($presentaciones->getPresentacion())?>' required />
                 <label for="presenta" class="black-text">Presentaci&oacute;n</label>
             </div>
         </div>

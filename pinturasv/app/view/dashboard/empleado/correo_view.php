@@ -11,11 +11,11 @@
 						<div class="center-align">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="nombr" type="text" name="nombre" class="validate" required>
+                                    <input id="nombr" type="text" name="nombre" class="validate" autocomplete="off" required>
                                     <label for="nombr" class="black-text">Nombre completo</label>
                                 </div>
                                 <div class="input-field col s12">
-                                    <input id="cmail" type="email" name="correo" class="validate" required>
+                                    <input id="cmail" type="email" name="correo" class="validate" autocomplete="off" required>
                                     <label for="cmail" class="black-text">Correo electr&oacute;nico</label>
                                 </div>
                             </div>

@@ -7,7 +7,7 @@
     <form class="col s12" method="post">
         <div class="row">
             <div class="input-field col s12">
-                <input id="categoria1" name="categoria" type="text" class="validate" value='<?php print($categoria->getCategoria())?>' required />
+                <input id="categoria1" name="categoria" type="text" class="validate" autocomplete="off" value='<?php print($categoria->getCategoria())?>' required />
                 <label for="categoria1" class="black-text">Categoria</label>
             </div>
         </div>
