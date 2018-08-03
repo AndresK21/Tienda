@@ -183,7 +183,11 @@ class Page extends Component{
 				self::templateFooter();
 				exit;
 			}else{
-				print("");
+				print($_SESSION['cont']);
+				if($_SESSION['cont'] > 3){
+					$empleado->updateEstado();
+					self::showMessage(3, "Ha superado el limite de intentos de inicio de sesión", "../cuenta/login.php");
+				}
 			}
 		}
 	}

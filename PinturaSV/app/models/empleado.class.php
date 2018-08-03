@@ -8,6 +8,7 @@ class Empleado extends Validator{
 	private $contrasena = null;
 	private $imagen = null;
 	private $fecha = null;
+	private $estado = null;
 	private $id_permiso = null;
 	private $nombre_correo = null;
 	private $email = null;
@@ -23,6 +24,17 @@ class Empleado extends Validator{
 	}
 	public function getId_empleado(){
 		return $this->id_empleado;
+	}
+	public function setEstado($value){
+		if($this->validateId($value)){
+			$this->estado = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getEstado(){
+		return $this->estado;
 	}
 	
 	public function setNombre($value){
@@ -179,10 +191,11 @@ class Empleado extends Validator{
 		}
 	}
 	public function checkContrasena(){
-		$sql = "SELECT contrasena FROM empleado WHERE id_empleado = ?";
+		$sql = "SELECT contrasena, estado FROM empleado WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$data = Database::getRow($sql, $params);
 		if(password_verify($this->contrasena, $data['contrasena'])){
+			$this->estado = $data['estado'];
 			return true;
 		}else{
 			return false;
@@ -217,9 +230,9 @@ class Empleado extends Validator{
 	}
 	public function createEmpleado(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO empleado(nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, fecha_registro, id_permiso) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		$sql = "INSERT INTO empleado(nombre_completo, correo_electronico, nombre_usuario, contrasena, imagen, fecha_registro, id_permiso, estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 		$fech = date('y-m-d');
-		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $hash, $this->imagen, $fech, $this->id_permiso);
+		$params = array($this->nombre_completo, $this->correo_electronico, $this->nombre_usuario, $hash, $this->imagen, $fech, $this->id_permiso, 1);
 		return Database::executeRow($sql, $params);
 	}
 	public function readEmpleado(){
@@ -259,6 +272,11 @@ class Empleado extends Validator{
 		$hash = password_hash($contra, PASSWORD_DEFAULT);
 		$sql = "UPDATE empleado SET contrasena = ? WHERE correo_electronico = ?";
 		$params = array($hash, $this->email);
+		return Database::executeRow($sql, $params);
+	}
+	public function updateEstado(){
+		$sql = "UPDATE empleado SET estado = 0 WHERE correo_electronico = ?";
+		$params = array($this->email);
 		return Database::executeRow($sql, $params);
 	}
 }

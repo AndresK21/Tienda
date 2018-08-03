@@ -1,5 +1,6 @@
 <?php
 require_once("../../app/models/empleado.class.php");
+$_SESSION['cont'] = 0;
 try{
 	$object = new Empleado;
 	if($object->getEmpleados()){
@@ -10,13 +11,18 @@ try{
 					if($object->checkPermisos()){
 						if($object->setContrasena($_POST['contrasena'])){
 							if($object->checkContrasena()){
-								$_SESSION['id_empleado'] = $object->getId_empleado(); //Obtiene el id_empleado para usarlo luego en la pagina template
-								$_SESSION['nombre_usuario'] = $object->getUsuario(); //Obtiene el usuario para usarlo luego en la pagina template
-								$_SESSION['nombre_completo'] = $object->getNombre(); //Obtiene el Nombre completo para usarlo luego en la pagina template
-								$_SESSION['id_permiso'] = $object->getId_permiso(); //Obtiene el id_permiso para usarlo luego en la pagina template
-								Page::showMessage(1, "Autenticación correcta", "index.php");
+								if($object->getEstado() == 1){
+									$_SESSION['id_empleado'] = $object->getId_empleado(); //Obtiene el id_empleado para usarlo luego en la pagina template
+									$_SESSION['nombre_usuario'] = $object->getUsuario(); //Obtiene el usuario para usarlo luego en la pagina template
+									$_SESSION['nombre_completo'] = $object->getNombre(); //Obtiene el Nombre completo para usarlo luego en la pagina template
+									$_SESSION['id_permiso'] = $object->getId_permiso(); //Obtiene el id_permiso para usarlo luego en la pagina template
+									Page::showMessage(1, "Autenticación correcta", "index.php");
+								}else{
+									throw new Exception("Ha superado el limite de intentos de inicio de sesion por hoy");
+								}
 							}else{
-								throw new Exception("Clave inexistente");
+								throw new Exception("Clave incorrecta");
+								$_SESSION['cont'] = $_SESSION['cont'] + 1;
 							}
 						}else{
 							throw new Exception("La clave debe tener al menos 8 dígitos, al menos un número, al menos una minúscula, al menos una mayúscula y al menos un caracter especial");
@@ -26,6 +32,7 @@ try{
 					}
 				}else{
 					throw new Exception("Nombre de usuario inexistente");
+					$_SESSION['cont'] = $_SESSION['cont'] + 1;
 				}
 			}else{
 				throw new Exception("Nombre de usuario incorrecto");
