@@ -116,5 +116,12 @@ class Validator{
 			return false;
 		}
 	}
+	public function validatePassword2($value){
+		if(strlen($value) >= 8){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
 ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-07-2018 a las 21:45:48
+-- Tiempo de generación: 04-08-2018 a las 22:57:06
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.4
 
@@ -79,7 +79,56 @@ CREATE TABLE `cliente` (
 INSERT INTO `cliente` (`id_cliente`, `nombres`, `apellidos`, `email`, `nombre_usuario`, `contrasena`) VALUES
 (5, 'Andres Oswaldo', 'Henriquez Gomez', 'andresdosmil@gmail.com', 'AndresK21', '$2y$10$svX9qHHUgA1zXjzIzGd5puez2PLyikPcqZLhGnAKV6JWx79//N0vu'),
 (9, 'Nombre', 'Apellido', 'usuario@gmail.com', 'cliente', '$2y$10$zpwy33ITsGcfXWcD/j6ms.a1KdKYmTy7qm/ALoZjMAUQFyuXSUEy2'),
-(10, 'Diego', 'Guzman', 'diego.christopher@hotmail.com', 'DGuzman23', '$2y$10$qYk095lSv0Jm//zNx7WaluxvXfZrgC2hqE7M2eKAqeAANzT83Fo.a');
+(10, 'Armando', 'Lydia', 'neque.sed@metus.com', 'William', 'VLP60HTC8YH'),
+(11, 'Blaze', 'Aline', 'porta@utodiovel.ca', 'Regina', 'MHP19FHQ1FM'),
+(12, 'Travis', 'Aline', 'correoelectr@gmail.com', 'Uta', 'UQR69GSU1LR'),
+(13, 'Nehru', 'Ila', 'correoelectr3@gmail.com', 'Elizabeth', 'SLW38KLT9MC'),
+(14, 'Salvador', 'Kaye', 'Mauris@diam.com', 'Mara', 'HNZ31FQM9VN'),
+(15, 'Timothy', 'Bianca', 'semper@nec.edu', 'Evangeline', 'TXD35MSL6PC'),
+(16, 'Kirk', 'Kelly', 'correoelectr5@gmail.com', 'Nathan', 'AAU16VFC8TP'),
+(17, 'Clarke', 'Jana', 'Sed@eleifendCras.com', 'Xena', 'NRT13WNE0FN'),
+(18, 'Gregory', 'Fallon', 'mauris.erat@loremegetmollis.co.uk', 'Ruth', 'WJN09KJE1SQ'),
+(19, 'Adam', 'Denise', 'fermentum.arcu.Vestibulum@at.com', 'Ashton', 'GGY93XSR5JA'),
+(20, 'Duncan', 'Nomlanga', 'correoelectr8@gmail.com', 'Sylvester', 'LMS93MML1CH'),
+(21, 'Quentin', 'Alika', 'ante.Nunc@necorci.edu', 'Xyla', 'XUX61UWI0XY'),
+(22, 'Gil', 'Elizabeth', 'vitae.aliquam.eros@Suspendisse.ca', 'Scarlet', 'DHF03OMD7KT'),
+(23, 'Warren', 'Brooke', 'orci@Cumsociisnatoque.co.uk', 'Daniel', 'RZM67VRM5RY'),
+(24, 'Thaddeus', 'Lucy', 'correoelectr6@gmail.com', 'Eleanor', 'ALN99DGT1QB'),
+(25, 'Francis', 'Marah', 'correoelectr7@gmail.com', 'Tamara', 'JGD64UFX7XP'),
+(26, 'Ashton', 'Ava', 'diam.eu.dolor@vitae.ca', 'Elaine', 'VAI08LIF7KC'),
+(27, 'Finn', 'Jaden', 'in.aliquet.lobortis@mi.co.uk', 'Caleb', 'ZVE63RZJ8SZ'),
+(28, 'Stuart', 'Bree', 'interdum@loremutaliquam.edu', 'Tanisha', 'ZTK92ZVX7GG'),
+(29, 'Ashton', 'Brianna', 'commodo@velit.ca', 'Nichole', 'WOE94LYO2VT'),
+(40, 'Hunter', 'Zelda', 'bibendum.Donec@et.net', 'Quail', 'TDS04LUK5QG'),
+(41, 'Tyler', 'Amy', 'sem@et.edu', 'Todd', 'FHF10HWA0ZF'),
+(42, 'Leo', 'Winter', 'sem.vitae@sitametorci.com', 'MacKensie', 'TBO40EDC6CW'),
+(43, 'Edward', 'Jael', 'correoelectr4@gmail.com', 'Mohammad', 'TRK77LCB4GY'),
+(44, 'Vincent', 'Jaime', 'libero.Donec@eteuismodet.net', 'Lilah', 'AZS04SGB9IN'),
+(45, 'Mohammad', 'Tara', 'correoelectr9@gmail.com', 'Rogan', 'RSH14CRN6DQ'),
+(46, 'Joel', 'Nayda', 'aptent@duiCumsociis.co.uk', 'Harrison', 'LCN35GCI3UJ'),
+(47, 'Rahim', 'Phyllis', 'Ut@iaculis.net', 'Driscoll', 'IUS43XBX9DN'),
+(48, 'Wayne', 'Leila', 'at@Curabiturconsequatlectus.co.uk', 'Abigail', 'EBQ20WUC6JH'),
+(49, 'Ferris', 'Bianca', 'correoelectr2@gmail.com', 'Hedwig', 'TQI34VRT3VA'),
+(80, 'Allistair', 'Yuri', 'pellentesque.eget@lacus.ca', 'Mallory', 'GCG48VLK6GH'),
+(81, 'Yoshio', 'Alisa', 'correoelectr1@gmail.com', 'Burke', 'CLA78GAK7SH'),
+(82, 'Kyle', 'Xantha', 'vel@diam.co.uk', 'August', 'GAL26DUW5WT'),
+(83, 'Honorato', 'Yael', 'correoelectr10@gmail.com', 'Jacob', 'UWO83TEH4OW'),
+(84, 'Ryder', 'Zephr', 'a.odio@necluctus.ca', 'Grady', 'LEH63USV3XK'),
+(85, 'Adam', 'Adria', 'massa@a.ca', 'Kylan', 'KVI34CWT1AI'),
+(86, 'Austin', 'Eleanor', 'nulla.In@volutpatNulla.co.uk', 'Fay', 'MGK00MUO8HO'),
+(87, 'Craig', 'Zia', 'sed.leo@semper.org', 'Baker', 'OTJ47BER3CO'),
+(88, 'Nash', 'Halee', 'Nulla.eget.metus@dui.net', 'Francis', 'KLC11CUO5CL'),
+(89, 'Brennan', 'Jayme', 'ipsum@eratSed.co.uk', 'Ian', 'CEC72MDQ4CM'),
+(90, 'Tanner', 'Tamara', 'pede@facilisisnon.net', 'Aimee', 'NLS41HZH6NB'),
+(91, 'Kirk', 'Neve', 'eu.augue@ullamcorper.co.uk', 'Kermit', 'BBP65CLU0KP'),
+(92, 'Edan', 'Donna', 'Proin.vel@euodioPhasellus.edu', 'Sade', 'LIS36CBT7PT'),
+(93, 'Phillip', 'Quin', 'risus.Duis.a@pedeNuncsed.edu', 'Mariko', 'UOD41OTB2HF'),
+(94, 'Sylvester', 'Cally', 'Nulla@inlobortistellus.com', 'Rinah', 'AYX74JML6GQ'),
+(95, 'Hammett', 'Serina', 'justo.nec@placerat.com', 'Kasimir', 'LUE45KEW0BR'),
+(96, 'Robert', 'Hermione', 'ridiculus@facilisis.ca', 'Melyssa', 'HKR88WFF7HX'),
+(97, 'Galvin', 'Margaret', 'vel.faucibus@sit.com', 'Rhea', 'QCD49DWM4TF'),
+(98, 'Tarik', 'Maggy', 'Sed@dolor.net', 'Zane', 'WYE52YUZ5MX'),
+(99, 'Theodore', 'Regina', 'auctor@enimmitempor.ca', 'Tatyana', 'GFF42UTS8YZ');
 
 --
 -- Disparadores `cliente`
@@ -130,7 +179,7 @@ INSERT INTO `detalle_pedido` (`id_detalle`, `id_producto`, `cantidad`, `fecha`, 
 (84, 17, 50, '2018-04-24', 0, 9),
 (85, 17, 25, '2018-04-24', 0, 6),
 (86, 24, 25, '2018-04-24', 1, 16),
-(87, 18, 6, '2018-04-24', 0, 16),
+(87, 18, 6, '2018-04-24', 1, 16),
 (88, 18, 4, '2018-04-24', 1, 16),
 (89, 24, 2, '2018-04-24', 1, 16),
 (90, 17, 5, '2018-05-08', 1, 16),
@@ -164,33 +213,9 @@ INSERT INTO `detalle_pedido` (`id_detalle`, `id_producto`, `cantidad`, `fecha`, 
 (119, 31, 6, '2018-06-22', 1, 16),
 (120, 32, 7, '2018-06-22', 1, 16),
 (121, 34, 8, '2018-06-22', 1, 16),
-(122, 17, 1, '2018-06-26', 1, 19),
-(123, 18, 1, '2018-06-26', 1, 19),
-(124, 30, 2, '2018-06-26', 1, 19),
-(125, 30, 20, '2018-06-26', 1, 19),
-(126, 17, 1, '2018-06-26', 1, 19),
-(127, 28, 23, '2018-06-26', 1, 19),
-(128, 33, 1, '2018-06-26', 1, 19),
-(129, 33, 1, '2018-06-26', 1, 19),
-(130, 35, 1, '2018-06-26', 1, 19),
-(131, 18, 1, '2018-06-26', 1, 19),
-(132, 33, 1, '2018-06-26', 1, 19),
-(133, 35, 1, '2018-06-26', 1, 19),
-(134, 33, 1, '2018-06-26', 1, 19),
-(135, 33, 1, '2018-06-26', 1, 19),
-(136, 33, 1, '2018-06-26', 1, 19),
-(137, 19, 1, '2018-06-26', 1, 19),
-(138, 28, 1, '2018-06-26', 1, 19),
-(139, 35, 1, '2018-06-26', 1, 19),
-(140, 21, 1, '2018-06-26', 1, 19),
-(141, 35, 1, '2018-06-26', 1, 19),
-(142, 30, 2, '2018-06-26', 1, 19),
-(143, 33, 1, '2018-06-26', 1, 19),
-(144, 30, 2, '2018-06-26', 1, 19),
-(145, 21, 2, '2018-06-26', 1, 19),
-(146, 33, 1, '2018-06-26', 1, 19),
-(147, 18, 1, '2018-07-02', 1, 19),
-(148, 33, 1, '2018-07-02', 1, 19);
+(122, 21, 45, '2018-06-23', 1, 16),
+(123, 25, 100, '2018-06-23', 1, 16),
+(124, 34, 100, '2018-06-23', 1, 16);
 
 --
 -- Disparadores `detalle_pedido`
@@ -224,6 +249,9 @@ CREATE TABLE `empleado` (
   `nombre_usuario` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
   `contrasena` varchar(220) COLLATE utf8mb4_spanish_ci NOT NULL,
   `imagen` varchar(120) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `fecha_registro` datetime NOT NULL,
+  `estado` int(2) DEFAULT NULL,
+  `fecha_bloqueo` datetime DEFAULT NULL,
   `id_permiso` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci COMMENT='tabla de los empleados ()<usaran el dasboard';
 
@@ -231,8 +259,32 @@ CREATE TABLE `empleado` (
 -- Volcado de datos para la tabla `empleado`
 --
 
-INSERT INTO `empleado` (`id_empleado`, `nombre_completo`, `correo_electronico`, `nombre_usuario`, `contrasena`, `imagen`, `id_permiso`) VALUES
-(14, 'Diego Edgardo Guzman Huezo', 'diego.christopher@hotmail.com', 'Diego', '$2y$10$QNyl46npdBQYFvuEMEe.OeChiVCSAAfa78LwMraMnlCy8rJtV708.', '5b578164388cc.jpg', 2);
+INSERT INTO `empleado` (`id_empleado`, `nombre_completo`, `correo_electronico`, `nombre_usuario`, `contrasena`, `imagen`, `fecha_registro`, `estado`, `fecha_bloqueo`, `id_permiso`) VALUES
+(14, 'Jonah Barnes', 'vel.arcu@Nullamvitaediam.net', 'Emmanuel', 'Ariana Matthews', 'Sodales Industries', '0000-00-00 00:00:00', NULL, NULL, 3),
+(15, 'Oleg Durham', 'correo10@gmail.com', 'Brian', 'Myra Strong', 'Accumsan Neque Et LLP', '0000-00-00 00:00:00', NULL, NULL, 3),
+(16, 'Porter Kramer', 'correoelectro@gmail.com', 'Blake', 'Martina Sellers', 'Rhoncus Limited', '0000-00-00 00:00:00', NULL, NULL, 2),
+(17, 'Dante Petersen', 'in.faucibus@laciniaSed.edu', 'Kevin', 'Uta Richardson', 'Ipsum Suspendisse Corporation', '0000-00-00 00:00:00', NULL, NULL, 2),
+(18, 'Kelly Lyons', 'sociis.natoque@id.ca', 'Adrian', 'Eve Lindsay', 'Libero Lacus LLC', '0000-00-00 00:00:00', NULL, NULL, 2),
+(19, 'Allistair Cross', 'correo1@gmail.com', 'Nash', 'Scarlet Klein', 'Interdum Company', '0000-00-00 00:00:00', NULL, NULL, 3),
+(20, 'Xanthus Guerra', 'sit.amet.dolom@hotmail.com', 'Fuller', 'Elaine Andrews', 'At LLP', '0000-00-00 00:00:00', NULL, NULL, 2),
+(21, 'Asher Harvey', 'correo4@gmail.com', 'Byron', 'Elizabeth Nixon', 'Tellus Limited', '0000-00-00 00:00:00', NULL, NULL, 2),
+(22, 'Jason Jackson', 'molestie.dapibus@molestie.com', 'Walter', 'Dahlia Atkinson', 'Metus Vivamus Euismod LLP', '0000-00-00 00:00:00', NULL, NULL, 2),
+(23, 'Bruno Carver', 'correo5@gmail.com', 'Henry', 'Joy Collins', 'Lobortis Class PC', '0000-00-00 00:00:00', NULL, NULL, 2),
+(44, 'Linus Hale', 'orci.sem.eget@vitaeerat.org', 'Mufutau', 'Ayanna Wagner', 'Lectus Justo Eu LLC', '0000-00-00 00:00:00', NULL, NULL, 2),
+(45, 'Cairo Kelly', 'ac@mollis.edu', 'Alan', 'Signe Molina', 'Lorem Incorporated', '0000-00-00 00:00:00', NULL, NULL, 3),
+(46, 'Eaton Bishop', 'rhoncus.id@ac.ca', 'Chadwick', 'Imani Clemons', 'Ridiculus Associates', '0000-00-00 00:00:00', NULL, NULL, 3),
+(47, 'Ignatius Conway', 'correo8@gmail.com', 'Neville', 'Zorita Roberts', 'Aliquet Proin PC', '0000-00-00 00:00:00', NULL, NULL, 2),
+(48, 'Blaze Adams', 'augue.id@Pellentesque.net', 'Barclay', 'Sydney Williamson', 'Mi Lacinia Limited', '0000-00-00 00:00:00', NULL, NULL, 2),
+(49, 'Carl Talley', 'et.lacinia@elit.ca', 'Tarik', 'Sharon Howe', 'Eu Lacus Consulting', '0000-00-00 00:00:00', NULL, NULL, 2),
+(50, 'Ahmed Mcintyre', 'imperdiet@Sedauctor.net', 'Vincent', 'Cynthia Petty', 'Diam Pellentesque Habitant Incorporated', '0000-00-00 00:00:00', NULL, NULL, 2),
+(51, 'Eaton Hubbard', 'nascetur.ridiculus@diam.ca', 'Bruno', 'Carol Pena', 'Montes PC', '0000-00-00 00:00:00', NULL, NULL, 3),
+(52, 'Patrick Henson', 'correo11@gmail.com', 'Gary', 'Breanna Gould', 'Dis Parturient Montes Incorporated', '0000-00-00 00:00:00', NULL, NULL, 2),
+(53, 'Stephen Fuller', 'ut.dolor.dapibus@enim.co.uk', 'Castor', 'Gretchen Decker', 'Mollis Duis Sit Ltd', '0000-00-00 00:00:00', NULL, NULL, 3),
+(54, 'Octavius Sellers', 'convallis.ante@ligula.co.uk', 'Norman', 'Kiara Trujillo', 'Lorem Eu Metus LLP', '0000-00-00 00:00:00', NULL, NULL, 2),
+(55, 'Malachi Payne', 'correo9@gmail.com', 'Laith', 'Jada Fields', 'Et Libero Consulting', '0000-00-00 00:00:00', NULL, NULL, 2),
+(56, 'Erich Mcleod', 'blandit.congue.In@Sed.edu', 'Cairo', 'Skyler Mueller', 'Cursus Associates', '0000-00-00 00:00:00', NULL, NULL, 2),
+(120, 'Andres Oswaldo Henriquez Gomez', 'andresdosmil@gmail.com', 'AndresK21', '$2y$10$p1G1pXZMgNJZupLu3a9Kc.wWI4qvpDDdEIn/SySj7.L/mp9hwfqC2', '5b633d9ee31e6.jpg', '2018-08-02 12:31:25', 1, NULL, 2),
+(121, 'Diego Edgardo Guzman Huezo', 'diegocristopher@gmail.com', 'diego', '$2y$10$tVaiUffVhBeg1ROkRowp9OvEVhykae6E.YQa0E/qc/WUHR5jiADqa', '5b637f022400c.jpg', '2018-08-02 00:00:00', 0, NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -292,17 +344,66 @@ CREATE TABLE `pedido` (
 --
 
 INSERT INTO `pedido` (`id_pedido`, `estado`, `fecha`, `id_cliente`, `id_empleado`) VALUES
-(6, 1, '2000-01-01', NULL, NULL),
-(7, 1, '2000-01-01', NULL, NULL),
-(8, 1, '2000-01-01', NULL, NULL),
-(9, 1, '2018-04-15', NULL, NULL),
-(10, 1, '2018-04-15', NULL, NULL),
-(11, 1, '2018-04-17', NULL, NULL),
-(15, 1, '2018-04-25', NULL, NULL),
+(6, 1, '2000-01-01', 5, NULL),
+(7, 1, '2000-01-01', 9, NULL),
+(8, 1, '2000-01-01', 9, NULL),
+(9, 1, '2018-04-15', 9, NULL),
+(10, 1, '2018-04-15', 5, NULL),
+(11, 1, '2018-04-17', 5, NULL),
+(15, 1, '2018-04-25', 9, NULL),
 (16, 1, '2018-04-29', 5, NULL),
-(17, 1, '2018-05-07', NULL, NULL),
+(17, 1, '2018-05-07', 9, NULL),
 (18, 1, '2018-05-08', 9, NULL),
-(19, 1, '2018-06-25', 10, NULL);
+(19, 1, '2018-06-24', 10, NULL),
+(20, 1, '2018-06-24', 11, NULL),
+(21, 1, '2018-06-24', 12, NULL),
+(22, 1, '2018-06-24', 13, NULL),
+(23, 1, '2018-06-24', 14, NULL),
+(24, 1, '2018-06-24', 15, NULL),
+(25, 1, '2018-06-24', 16, NULL),
+(26, 1, '2018-06-24', 17, NULL),
+(27, 1, '2018-06-24', 18, NULL),
+(28, 1, '2018-06-24', 19, NULL),
+(29, 1, '2018-06-24', 20, NULL),
+(30, 1, '2018-06-24', 21, NULL),
+(31, 1, '2018-06-24', 22, NULL),
+(32, 1, '2018-06-24', 23, NULL),
+(33, 1, '2018-06-24', 24, NULL),
+(34, 1, '2018-06-24', 25, NULL),
+(35, 1, '2018-06-24', 26, NULL),
+(36, 1, '2018-06-24', 27, NULL),
+(37, 1, '2018-06-24', 28, NULL),
+(38, 1, '2018-06-24', 29, NULL),
+(42, 1, '2018-06-24', 40, NULL),
+(43, 1, '2018-06-24', 41, NULL),
+(44, 1, '2018-06-24', 42, NULL),
+(45, 1, '2018-06-24', 43, NULL),
+(46, 1, '2018-06-24', 44, NULL),
+(47, 1, '2018-06-24', 45, NULL),
+(48, 1, '2018-06-24', 46, NULL),
+(49, 1, '2018-06-24', 47, NULL),
+(50, 1, '2018-06-24', 48, NULL),
+(51, 1, '2018-06-24', 49, NULL),
+(68, 1, '2018-06-24', 80, NULL),
+(69, 1, '2018-06-24', 81, NULL),
+(70, 1, '2018-06-24', 82, NULL),
+(71, 1, '2018-06-24', 83, NULL),
+(72, 1, '2018-06-24', 84, NULL),
+(73, 1, '2018-06-24', 85, NULL),
+(74, 1, '2018-06-24', 86, NULL),
+(75, 1, '2018-06-24', 87, NULL),
+(76, 1, '2018-06-24', 88, NULL),
+(77, 1, '2018-06-24', 89, NULL),
+(78, 1, '2018-06-24', 90, NULL),
+(79, 1, '2018-06-24', 91, NULL),
+(80, 1, '2018-06-24', 92, NULL),
+(81, 1, '2018-06-24', 93, NULL),
+(82, 1, '2018-06-24', 94, NULL),
+(83, 1, '2018-06-24', 95, NULL),
+(84, 1, '2018-06-24', 96, NULL),
+(85, 1, '2018-06-24', 97, NULL),
+(86, 1, '2018-06-24', 98, NULL),
+(87, 1, '2018-06-24', 99, NULL);
 
 -- --------------------------------------------------------
 
@@ -367,22 +468,22 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`id_producto`, `nombre`, `cantidad`, `precio`, `color`, `imagen`, `id_categoria`, `id_estado`, `id_presentacion`, `id_marca`) VALUES
-(17, 'pintura 2', 995, '4.00', 'rojo', 'producto1.jpg', 8, 1, 5, 3),
-(18, 'pintura 3', 993, '4.00', 'rojo', 'producto2.jpg', 8, 1, 5, 3),
-(19, 'Pintura 1', 995, '2.00', 'azul', 'producto3.jpg', 8, 1, 5, 3),
-(21, 'Producto 4', 992, '25.00', 'azul', '5addf9415712e.jpg', 8, 1, 5, 3),
+(17, 'pintura 2', 997, '4.00', 'rojo', 'producto1.jpg', 8, 1, 5, 3),
+(18, 'pintura 3', 996, '4.00', 'rojo', 'producto2.jpg', 8, 1, 5, 3),
+(19, 'Pintura 1', 996, '2.00', 'azul', 'producto3.jpg', 8, 1, 5, 3),
+(21, 'Producto 4', 950, '25.00', 'azul', '5addf9415712e.jpg', 8, 1, 5, 3),
 (24, 'Producto 5', 997, '15.00', 'rojo', '5ade510c094bf.jpg', 8, 1, 5, 3),
-(25, 'Producto 6', 997, '2.50', 'Azul', '5af0ba37bbb37.jpg', 8, 1, 5, 4),
+(25, 'Producto 6', 897, '2.50', 'Azul', '5af0ba37bbb37.jpg', 8, 1, 5, 4),
 (26, 'Producto 7', 995, '1.00', 'Rosado', '5af0ba944200e.jpg', 8, 1, 5, 3),
 (27, 'Producto 8', 996, '5.00', 'Amarillo', '5af0baebb4547.jpg', 8, 1, 5, 3),
-(28, 'Producto 9', 972, '1.50', 'Azul', '5af0bbdb88f69.jpg', 9, 1, 5, 4),
+(28, 'Producto 9', 996, '1.50', 'Azul', '5af0bbdb88f69.jpg', 9, 1, 5, 4),
 (29, 'Producto 10', 994, '1.00', 'Cafe', '5af0bc0062de9.jpg', 9, 1, 6, 3),
-(30, 'Producto 11', 971, '5.00', 'Verde', '5af0bd1732615.jpg', 9, 1, 5, 3),
+(30, 'Producto 11', 997, '5.00', 'Verde', '5af0bd1732615.jpg', 9, 1, 5, 3),
 (31, 'Producto 12', 993, '12.00', 'Magenta', '5af0bd3a0bd1a.jpg', 9, 1, 6, 3),
 (32, 'Producto 13', 992, '3.50', 'Celeste', '5af0bd873ce53.jpg', 9, 1, 6, 3),
-(33, 'Producto 14', 987, '2.50', 'Naranja', '5af0bdb00c40e.jpg', 9, 1, 5, 3),
-(34, 'Producto 15', 991, '1.50', 'Plateado', '5af0bddec9d32.jpg', 9, 1, 6, 4),
-(35, 'Producto 16', 991, '4.00', 'Dorado', '5af0be07f2554.jpg', 9, 1, 5, 4);
+(33, 'Producto 14', 996, '2.50', 'Naranja', '5af0bdb00c40e.jpg', 9, 1, 5, 3),
+(34, 'Producto 15', 891, '1.50', 'Plateado', '5af0bddec9d32.jpg', 9, 1, 6, 4),
+(35, 'Producto 16', 995, '4.00', 'Dorado', '5af0be07f2554.jpg', 9, 1, 5, 4);
 
 -- --------------------------------------------------------
 
@@ -555,19 +656,19 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT de la tabla `estado`
@@ -585,7 +686,7 @@ ALTER TABLE `marca`
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT de la tabla `permisos`
@@ -609,7 +710,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `tipo_p`
 --
 ALTER TABLE `tipo_p`
-  MODIFY `id_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_tipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `valoraciones`

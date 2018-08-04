@@ -8,6 +8,7 @@ class Empleado extends Validator{
 	private $contrasena = null;
 	private $imagen = null;
 	private $fecha = null;
+	private $fecha2 = null;
 	private $estado = null;
 	private $id_permiso = null;
 	private $nombre_correo = null;
@@ -84,6 +85,17 @@ class Empleado extends Validator{
 	public function getContrasena(){
 		return $this->contrasena;
 	}
+	public function setContrasena2($value){
+		if($this->validatePassword2($value)){
+			$this->contrasena = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getContrasena2(){
+		return $this->contrasena;
+	}
 
 	public function setImagen($file){
 		if($this->validateImage($file, $this->imagen, "../../web/img/empleados/", 500, 500)){
@@ -106,7 +118,7 @@ class Empleado extends Validator{
 	}
 
 	public function setFecha($value){
-		if($this->validateAlphanumeric($value, 1, 15)){
+		if($this->validateAlphanumeric($value, 1, 30)){
 			$this->fecha = $value;
 			return true;
 		}else{
@@ -115,6 +127,17 @@ class Empleado extends Validator{
 	}
 	public function getFecha(){
 		return $this->fecha;
+	}
+	public function setFecha2($value){
+		if($this->validateAlphanumeric($value, 1, 30)){
+			$this->fecha2 = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getFecha2(){
+		return $this->fecha2;
 	}
 
 	public function setId_permiso($value){
@@ -191,11 +214,12 @@ class Empleado extends Validator{
 		}
 	}
 	public function checkContrasena(){
-		$sql = "SELECT contrasena, estado FROM empleado WHERE id_empleado = ?";
+		$sql = "SELECT contrasena, estado, fecha_bloqueo FROM empleado WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$data = Database::getRow($sql, $params);
 		if(password_verify($this->contrasena, $data['contrasena'])){
 			$this->estado = $data['estado'];
+			$this->fecha2 = $data['fecha_bloqueo'];
 			return true;
 		}else{
 			return false;
@@ -274,9 +298,15 @@ class Empleado extends Validator{
 		$params = array($hash, $this->email);
 		return Database::executeRow($sql, $params);
 	}
-	public function updateEstado(){
-		$sql = "UPDATE empleado SET estado = 0 WHERE correo_electronico = ?";
-		$params = array($this->email);
+	public function updateEstado($user){
+		$sql = "UPDATE empleado SET estado = 0, fecha_bloqueo = ? WHERE nombre_usuario = ?";
+		$fech = date('Y-m-d h:i:s');
+		$params = array($fech, $user);
+		return Database::executeRow($sql, $params);
+	}
+	public function updateEstado2($user){
+		$sql = "UPDATE empleado SET estado = 1 WHERE nombre_usuario = ?";
+		$params = array($user);
 		return Database::executeRow($sql, $params);
 	}
 }

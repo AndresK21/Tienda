@@ -5,7 +5,7 @@ require_once("../../app/PHPMailer/class.phpmailer.php");
 require_once("../../app/PHPMailer/class.smtp.php");
 
 function generar($length = 8) { 
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+*';
     $charactersLength = strlen($characters);
     $randomString = '';
     for ($i = 0; $i < $length; $i++) {
