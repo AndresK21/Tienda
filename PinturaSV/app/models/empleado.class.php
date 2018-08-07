@@ -10,6 +10,7 @@ class Empleado extends Validator{
 	private $fecha = null;
 	private $fecha2 = null;
 	private $estado = null;
+	private $ip = null;
 	private $id_permiso = null;
 	private $nombre_correo = null;
 	private $email = null;
@@ -151,6 +152,17 @@ class Empleado extends Validator{
 	public function getId_permiso(){
 		return $this->id_permiso;
 	}
+	public function setIp($value){
+		if($this->validateAlphanumeric($value, 1, 20)){
+			$this->ip = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getIp(){
+		return $this->ip;
+	}
 
 
 	public function setNombreCorreo($value){
@@ -260,7 +272,7 @@ class Empleado extends Validator{
 		return Database::executeRow($sql, $params);
 	}
 	public function readEmpleado(){
-		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, imagen, fecha_registro, permiso FROM empleado INNER JOIN permisos USING(id_permiso) WHERE id_empleado = ?";
+		$sql = "SELECT nombre_completo, correo_electronico, nombre_usuario, imagen, fecha_registro, permiso, ip FROM empleado INNER JOIN permisos USING(id_permiso) WHERE id_empleado = ?";
 		$params = array($this->id_empleado);
 		$user = Database::getRow($sql, $params);
 		if($user){
@@ -270,6 +282,7 @@ class Empleado extends Validator{
 			$this->imagen = $user['imagen'];
 			$this->id_permiso = $user['permiso'];
 			$this->fecha = $user['fecha_registro'];
+			$this->ip = $user['ip'];
 			return true;
 		}else{
 			return null;
@@ -307,6 +320,16 @@ class Empleado extends Validator{
 	public function updateEstado2($user){
 		$sql = "UPDATE empleado SET estado = 1 WHERE nombre_usuario = ?";
 		$params = array($user);
+		return Database::executeRow($sql, $params);
+	}
+	public function insertIp(){
+		$sql = "UPDATE empleado SET ip = ? WHERE nombre_usuario = ?";
+		$params = array($this->ip, $this->nombre_usuario);
+		return Database::executeRow($sql, $params);
+	}
+	public function unsetIp(){
+		$sql = "UPDATE empleado SET ip = null WHERE nombre_usuario = ?";
+		$params = array($this->nombre_usuario);
 		return Database::executeRow($sql, $params);
 	}
 }

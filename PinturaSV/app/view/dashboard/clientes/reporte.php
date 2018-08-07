@@ -22,6 +22,10 @@
         // Pie de p�gina
         function Footer()
         {
+            if(!isset($_SESSION)) { 
+                session_start(); 
+            }
+
             date_default_timezone_set("America/El_Salvador");
             $hoy = getdate();
             // Posici�n: a 1,5 cm del final
@@ -29,7 +33,7 @@
             // Arial italic 8
             $this->SetFont('Arial','I',8);
             // N�mero de p�gina
-            $this->Cell(0,10,'Reporte generado por '.$_GET['id'].' a las '.$hoy['hours'].':'.$hoy['minutes'].' del '.$hoy['mday'].'/'.$hoy['mon'].'/'.$hoy['year'],0,0);
+            $this->Cell(0,10,'Reporte generado por '.$_SESSION['nombre_completo'].' a las '.$hoy['hours'].':'.$hoy['minutes'].' del '.$hoy['mday'].'/'.$hoy['mon'].'/'.$hoy['year'],0,0);
             $this->Cell(0,10,'Pagina '.$this->PageNo().'/{nb}',0,0,'R');
         }
         // Una tabla m�s completa

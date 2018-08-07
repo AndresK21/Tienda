@@ -53,7 +53,7 @@
 		<?php
 			print("
 			<div class='center-align'>
-				<a href='../../app/view/dashboard/usuarios/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de empleados'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+				<a href='../../app/view/dashboard/usuarios/reporte.php' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de empleados'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
 			</div>
 			");
 		?>
@@ -63,7 +63,7 @@
 		<?php
 			print("
 			<div class='center-align'>
-				<a href='../../app/view/dashboard/clientes/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de clientes'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+				<a href='../../app/view/dashboard/clientes/reporte.php' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de clientes'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
 			</div>
 			");
 		?>
@@ -73,7 +73,7 @@
 		<?php
 			print("
 			<div class='center-align'>
-				<a href='../../app/view/dashboard/producto/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de productos'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+				<a href='../../app/view/dashboard/producto/reporte.php' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de productos'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
 			</div>
 			");
 		?>
@@ -88,7 +88,7 @@
 		<?php
 			print("
 			<div class='center-align'>
-				<a href='../../app/view/dashboard/empleado/reporte_ventas.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de ventas'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+				<a href='../../app/view/dashboard/empleado/reporte_ventas.php' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de ventas'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
 			</div>
 			");
 		?>
@@ -98,7 +98,7 @@
 		<?php
 			print("
 			<div class='center-align'>
-				<a href='../../app/view/dashboard/empleado/reporte_cliente.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de clientes'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+				<a href='../../app/view/dashboard/empleado/reporte_cliente.php' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de clientes'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
 			</div>
 			");
 		?>

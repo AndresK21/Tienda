@@ -6,7 +6,7 @@ try{
         $_POST = $usuario->validateForm($_POST);
         if($usuario->setId_empleado($_SESSION['id_empleado'])){
             if($_POST['clave_actual_1'] == $_POST['clave_actual_2']){ //Verifica que la clave antigua sea igual
-                if($usuario->setContrasena($_POST['clave_actual_1'])){
+                if($usuario->setContrasena2($_POST['clave_actual_1'])){
                     if($usuario->checkContrasena()){
                         if($_POST['clave_nueva_1'] == $_POST['clave_nueva_2']){ //Verifica que la clave nueva sea igual
                             if($usuario->setContrasena($_POST['clave_nueva_1'])){

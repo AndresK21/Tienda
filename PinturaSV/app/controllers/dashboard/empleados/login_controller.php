@@ -1,6 +1,8 @@
 <?php
 require_once("../../app/models/empleado.class.php");
 try{
+	$ip2 = getenv('REMOTE_ADDR');
+
 	$object = new Empleado;
 	if($object->getEmpleados()){
 		if(isset($_POST['iniciar'])){
@@ -17,6 +19,9 @@ try{
 									$_SESSION['nombre_completo'] = $object->getNombre(); //Obtiene el Nombre completo para usarlo luego en la pagina template
 									$_SESSION['id_permiso'] = $object->getId_permiso(); //Obtiene el id_permiso para usarlo luego en la pagina template
 									$_SESSION['ultimoAcceso'] = time(); //Obtiene el tiempo de cuando se logea para posteriormente usarlo para cerrar la sesion por inactividad
+									$_SESSION['cont'] = 0;
+									$object->setIp($ip2);
+									$object->insertIp();
 									Page::showMessage(1, "Autenticación correcta", "index.php");
 								}else{
 									$valor = date('Y-m-d h:i:s');
@@ -29,6 +34,10 @@ try{
 										$_SESSION['nombre_usuario'] = $object->getUsuario(); //Obtiene el usuario para usarlo luego en la pagina template
 										$_SESSION['nombre_completo'] = $object->getNombre(); //Obtiene el Nombre completo para usarlo luego en la pagina template
 										$_SESSION['id_permiso'] = $object->getId_permiso(); //Obtiene el id_permiso para usarlo luego en la pagina template
+										$_SESSION['ultimoAcceso'] = time(); //Obtiene el tiempo de cuando se logea para posteriormente usarlo para cerrar la sesion por inactividad
+										$_SESSION['cont'] = 0;
+										$object->setIp($ip2);
+										$object->insertIp();
 										Page::showMessage(1, "Autenticación correcta", "index.php");
 									}else{
 										throw new Exception("Su cuenta ha sido bloqueada por exceder los intentos de inicio de sesión");

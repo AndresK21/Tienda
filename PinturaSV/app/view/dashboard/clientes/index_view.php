@@ -58,7 +58,7 @@
     <?php
         print("
         <div class='right-align'>
-            <a href='../../app/view/dashboard/clientes/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Generar reporte de clientes'><i class='material-icons'>content_paste</i>    Generar reporte</a>
+            <a href='../../app/view/dashboard/clientes/reporte.php' target='_blank' class='btn waves-effect blue-grey darken-4 tooltipped' data-tooltip='Generar reporte de clientes'><i class='material-icons'>content_paste</i>    Generar reporte</a>
         </div>
         ");
     ?>
