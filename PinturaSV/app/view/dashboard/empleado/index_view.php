@@ -109,7 +109,7 @@
 		<?php
 			/*print("
 			<div class='center-align'>
-				<a href='../../app/view/dashboard/usuarios/reporte.php?id=$_SESSION[nombre_completo]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de empleados'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
+				<a href='../../app/view/dashboard/usuarios/reporte.php?id=$_SESSION[nombre_completo_d]' target='_blank' class='waves-effect waves-light tooltipped' data-tooltip='Generar reporte de empleados'><i class='material-icons blue-grey-text text-darken-4 large prefix'>content_paste</i></a>
 			</div>
 			");*/
 		?>

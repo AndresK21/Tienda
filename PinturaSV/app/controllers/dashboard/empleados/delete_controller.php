@@ -2,7 +2,7 @@
 require_once("../../app/models/empleado.class.php");
 try{
 	if(isset($_GET['id'])){ //Obtiene el id del empleado
-		if($_GET['id'] != $_SESSION['id_empleado']){ //Verifica que no se pueda eliminar a si mismo
+		if($_GET['id'] != $_SESSION['id_empleado_d']){ //Verifica que no se pueda eliminar a si mismo
 			$empleado = new Empleado;
 			if($empleado->setId_empleado($_GET['id'])){//Establece la variable para usarla despues
 				if($empleado->readEmpleado()){

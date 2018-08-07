@@ -4,6 +4,7 @@ require_once("../../app/helpers/validator.class.php");
 require_once("../../app/helpers/component.class.php");
 class Page extends Component{
 	public static function templateHeader($title){
+		session_name("pagina_dashboard");
 		session_start();
 		ini_set("date.timezone","America/El_Salvador");
 		print("

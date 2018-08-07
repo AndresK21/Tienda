@@ -327,9 +327,9 @@ class Empleado extends Validator{
 		$params = array($this->ip, $this->nombre_usuario);
 		return Database::executeRow($sql, $params);
 	}
-	public function unsetIp(){
+	public function unsetIp($usuario){
 		$sql = "UPDATE empleado SET ip = null WHERE nombre_usuario = ?";
-		$params = array($this->nombre_usuario);
+		$params = array($usuario);
 		return Database::executeRow($sql, $params);
 	}
 }
