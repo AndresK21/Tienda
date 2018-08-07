@@ -10,12 +10,12 @@
         <div class='row'>
             <div class='input-field col s12 m6'>
                 <i class='material-icons prefix'>lock</i>
-                <input id='clave_actual_1' type='password' name='clave_actual_1' class='validate'/>
+                <input id='clave_actual_1' type='password' name='clave_actual_1' class='validate' autocomplete='off'/>
                 <label for='clave_actual_1'>Clave</label>
             </div>
             <div class='input-field col s12 m6'>
                 <i class='material-icons prefix'>security</i>
-                <input id='clave_actual_2' type='password' name='clave_actual_2' class='validate'/>
+                <input id='clave_actual_2' type='password' name='clave_actual_2' class='validate' autocomplete='off'/>
                 <label for='clave_actual_2'>Confirmar clave</label>
             </div>
         </div>
@@ -25,12 +25,12 @@
         <div class='row'>
             <div class='input-field col s12 m6'>
                 <i class='material-icons prefix'>lock</i>
-                <input id='clave_nueva_1' type='password' name='clave_nueva_1' class='validate'/>
+                <input id='clave_nueva_1' type='password' name='clave_nueva_1' class='validate' autocomplete='off'/>
                 <label for='clave_nueva_1'>Clave</label>
             </div>
             <div class='input-field col s12 m6'>
                 <i class='material-icons prefix'>security</i>
-                <input id='clave_nueva_2' type='password' name='clave_nueva_2' class='validate'/>
+                <input id='clave_nueva_2' type='password' name='clave_nueva_2' class='validate' autocomplete='off'/>
                 <label for='clave_nueva_2'>Confirmar clave</label>
             </div>
         </div>

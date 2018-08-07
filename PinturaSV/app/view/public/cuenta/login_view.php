@@ -19,7 +19,7 @@
                 <div class="row">
                 <div class="input-field col l9 offset-l1 m9 offset-m1 s12">
                     <i class="material-icons prefix">person_pin</i>
-                    <input name="nombre_usuario" id="usuario" type="text" class="validate" value='<?php print($cliente->getNombre_usuario()) ?>' required />
+                    <input name="nombre_usuario" id="usuario" type="text" class="validate" autocomplete="off" value='<?php print($cliente->getNombre_usuario()) ?>' required />
                     <label for="icon_prefix"> Usuario</label>
                 </div>
                 </div>
@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="input-field col l9 offset-l1 m9 offset-m1 s12">
                     <i class="material-icons prefix">lock</i>
-                    <input name="contrasena" id="contrasena" type="password" class="validate" value='<?php print($cliente->getContrasena()) ?>' required />
+                    <input name="contrasena" id="contrasena" type="password" class="validate" autocomplete="off" value='<?php print($cliente->getContrasena()) ?>' required />
                     <label for="password icon_prefix">Contrase&ntilde;a</label>
                 </div>
                 </div>
@@ -61,13 +61,13 @@
                     <!-- INGRESAR NOMBRES -->
                     <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">account_circle</i>
-                        <input name="nombres" id="nombres" type="text" class="validate" value='<?php print($cliente->getNombres()) ?>' required />
+                        <input name="nombres" id="nombres" type="text" class="validate" autocomplete="off" value='<?php print($cliente->getNombres()) ?>' required />
                         <label for="icon_prefix">Nombres</label>
                     </div>
                     <!-- INGRESAR APELLIDOS -->
                     <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">account_circle</i>
-                        <input name="apellidos" id="apellidos" type="text" class="validate" value='<?php print($cliente->getApellidos()) ?>' required />
+                        <input name="apellidos" id="apellidos" type="text" class="validate" autocomplete="off" value='<?php print($cliente->getApellidos()) ?>' required />
                         <label for="icon_prefix">Apellidos</label>
                     </div>
                 </div>
@@ -76,13 +76,13 @@
                 <!-- INGRESAR NOMBRE DE USUARIO -->
                 <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">person_pin</i>
-                        <input name="nombre_usuarior" id="nombre_usuarior" type="text" class="validate" value='<?php print($cliente->getNombre_usuario()) ?>' required />
+                        <input name="nombre_usuarior" id="nombre_usuarior" type="text" class="validate" autocomplete="off" value='<?php print($cliente->getNombre_usuario()) ?>' required />
                         <label for="icon_prefix">Usuario</label>
                     </div>
                     <!-- INGRESAR CORREO -->
                     <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">email</i>
-                        <input name="email" id="email" type="email" class="validate" value='<?php print($cliente->getEmail()) ?>' required />
+                        <input name="email" id="email" type="email" class="validate" autocomplete="off" value='<?php print($cliente->getEmail()) ?>' required />
                         <label for="email icon_prefix">Email</label>
                     </div>
                 </div>
@@ -90,13 +90,13 @@
                     <!-- INGRESAR CONTRASEÑA1 -->
                     <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">lock</i>
-                        <input name="contrasena1" id="contrasena1" type="password" class="validate" value='<?php print($cliente->getContrasena()) ?>' required />
+                        <input name="contrasena1" id="contrasena1" type="password" class="validate" autocomplete="off" value='<?php print($cliente->getContrasena()) ?>' required />
                         <label for="password icon_prefix">Contrase&ntilde;a</label>
                     </div>
                     <!-- INGRESAR CONTRASEÑA2 -->
                     <div class="input-field col l6 m6 s12">
                         <i class="material-icons prefix">security</i>
-                        <input name="contrasena2" id="contrasena2" type="password" class="validate" required />
+                        <input name="contrasena2" id="contrasena2" type="password" class="validate" autocomplete="off" required />
                         <label for="password icon_prefix">Repetir Contrase&ntilde;a</label>
                     </div>
                 </div>
