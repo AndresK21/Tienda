@@ -44,8 +44,23 @@ try{
                         $mail->addAddress($correo, $usuario);
         
                         $mail->Subject = 'Recuperar acceso';
-                        $mail->Body = 'Su nueva contraseña es '.$nueva.' Recomendamos cambie esta contraseña al iniciar sesion';
-        
+                        $mail -> isHTML(true);
+                        $mail->Body = "
+                        <head>
+                            <style>
+                            body{
+                                background-color: #345623; 
+                                font-family: 'Tahoma', arial;
+                            }
+                            </style>
+                        </head>
+                        <body>
+                        
+                        <div> 
+                            Su nueva contraseña es $nueva Recomendamos cambie esta contraseña al iniciar sesion
+                        </div>
+                        </body>";
+                        
                         if(!$mail->send()){
                             Page::showMessage(2, "Error, mensaje no enviado. Error: ".$mail->ErrorInfo, "correo_cliente.php");
                         }else{

@@ -7,7 +7,7 @@ try{
 			$_POST = $cliente->validateForm($_POST);
 			if($cliente->setNombre_usuario($_POST['nombre_usuario'])){
 				if($cliente->checkUsuario_cliente()){
-						if($cliente->setContrasena($_POST['contrasena'])){
+						if($cliente->setContrasena2($_POST['contrasena'])){
 							if($cliente->checkPassword_cliente()){
 								$_SESSION['id_cliente'] = $cliente->getId_cliente(); //Obtiene el id_empleado para usarlo luego en la pagina template
 								$_SESSION['nombre_usuario'] = $cliente->getNombre_usuario(); //Obtiene el usuario para usarlo luego en la pagina template

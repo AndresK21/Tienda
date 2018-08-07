@@ -91,6 +91,18 @@ class Cliente extends Validator{
 	}
 
 
+	public function setContrasena2($value){
+		if($this->validatePassword2($value)){
+			$this->contrasena = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getContrasena2(){
+		return $this->contrasena;
+	}
+
 	public function setCantidad($value){
 		if($this->validateMoney($value)){
 			$this->cantidad = $value;
