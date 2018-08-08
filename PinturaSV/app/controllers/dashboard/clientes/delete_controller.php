@@ -2,7 +2,7 @@
 require_once("../../app/models/cliente.class.php");
 try{
     $cliente = new Cliente;
-	if(isset($_GET['id'])){
+	if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){
         if($cliente->setId_cliente($_GET['id'])){
             if($cliente->readCliente()){
                 if(isset($_POST['eliminar'])){

@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/tipo_p.class.php"); //Llama al modelo de tipo de productos
 try{
-    if(isset($_GET['id'])){ //Lllama el Id del tipo de producto
+    if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Lllama el Id del tipo de producto
         $tipo_p = new Tipo_p;
         if($tipo_p->setId_tipo($_GET['id'])){ //Establece el id en la variable id_tipo para utilizarla luego
             if($tipo_p->readTipo_p()){

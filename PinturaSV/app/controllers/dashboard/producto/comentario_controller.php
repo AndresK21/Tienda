@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/valoraciones.class.php");
 try{
-    if(isset($_GET['id'])){ //Obtiene el id del producto para utilizarlo despues/ evalua si el id ha sido obtenido
+    if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Obtiene el id del producto para utilizarlo despues/ evalua si el id ha sido obtenido
         $producto = new Valoraciones; //Referencia con el modelo de "valoraciones"
         if($producto->setId_producto($_GET['id'])){ //Establece el id en la variable para usarla despues en la funcion
             if($producto->readProducto()){ 

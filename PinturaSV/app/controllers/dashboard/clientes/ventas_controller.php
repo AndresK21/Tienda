@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/cliente.class.php");
 try{
-    if(isset($_GET['id'])){ //Obtiene el id del cliente para utilizarlo despues/ evalua si el id ha sido obtenido
+    if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Obtiene el id del cliente para utilizarlo despues/ evalua si el id ha sido obtenido
         $cliente = new Cliente; //Referencia al modelo de "Clientes"
         if($cliente->setId_cliente($_GET['id'])){ //Establece el id en una variable, que sera necearia en la funcion
             if($cliente->readCliente()){

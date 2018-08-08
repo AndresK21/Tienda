@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/empleado.class.php"); //Llama el modelo del empleado
 try{
-	if(isset($_GET['id'])){ //Llama al id
+	if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Llama al id
 		if($_GET['id'] != $_SESSION['id_empleado_d']){ //No deja eliminarse a si mismo
 			$empleado = new Empleado;
 			if($empleado->setId_empleado($_GET['id'])){ //Establece la variable id_empleado para usarla despues

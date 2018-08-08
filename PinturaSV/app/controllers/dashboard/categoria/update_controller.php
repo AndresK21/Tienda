@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/categoria.class.php");
 try{
-    if(isset($_GET['id'])){ //Llama el id de la categoria
+    if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Llama el id de la categoria
         $categoria = new Categoria;
         if($categoria->setId_categoria($_GET['id'])){ //Establece el id en una pvariable para usarla despues
             if($categoria->readCategoria()){

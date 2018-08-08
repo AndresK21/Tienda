@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/marca.class.php");
 try{
-	if(isset($_GET['id'])){ //Llama al id de la marca
+	if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Llama al id de la marca
 		$marca = new Marca;
 		if($marca->setId_marca($_GET['id'])){ //Establece el id en una variable para usarla despues
 			if($marca->readMarca()){

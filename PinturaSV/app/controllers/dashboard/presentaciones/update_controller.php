@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/presentaciones.class.php");
 try{
-    if(isset($_GET['id'])){ //Llama al id de la presentacion
+    if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Llama al id de la presentacion
         $presentacion = new Presentaciones;
         if($presentacion->setId_presentacion($_GET['id'])){ //Estbalece el id en la variable para usarla despues
             if($presentacion->readPresentacion()){

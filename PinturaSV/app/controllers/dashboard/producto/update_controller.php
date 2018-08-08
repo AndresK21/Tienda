@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/producto.class.php");
 try{
-    if(isset($_GET['id'])){
+    if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){
         $producto = new Producto;
         if($producto->setId_producto($_GET['id'])){
             if($producto->readProducto()){
