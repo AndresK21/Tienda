@@ -49,16 +49,15 @@ try{
                         <head>
                             <style>
                             body{
-                                background-color: #345623; 
+                                color: #0ab5f5;
                                 font-family: 'Tahoma', arial;
                             }
                             </style>
                         </head>
                         <body>
-                        
-                        <div> 
-                            Su nueva contraseña es $nueva Recomendamos cambie esta contraseña al iniciar sesion
-                        </div>
+                            <div> 
+                                <p>Su nueva contrase&ntilde;a es $nueva Recomendamos cambie esta contrase&ntilde;a al iniciar sesion</p>
+                            </div>
                         </body>";
                         
                         if(!$mail->send()){

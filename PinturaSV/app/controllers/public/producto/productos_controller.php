@@ -25,7 +25,7 @@ try{
 		}
 	}
 	else{
-		if(isset($_GET['id'])){ // Al entrar llenar la vista con productos de la categoria que selecciono previamente 
+		if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Obtiene el id del cliente para utilizarlo despues/ evalua si el id ha sido obtenido
 			if($productob->setId_categoria($_GET['id'])){ // Obtenemos la categoria
 				$data_productos = $productob->getCategoriaProductos2($empieza, $por_pagina); // Obtenemos los productos con la paginacion (LIMI)
 			}else{

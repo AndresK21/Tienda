@@ -15,7 +15,7 @@ require_once("../../app/models/valoraciones.class.php");
 		// la pagina inicia en 0 y se multiplica $por_pagina
 		$empieza = ($pagina-1) * $por_pagina;
 
-		if(isset($_GET['id'])){
+		if(isset($_GET['id']) && $_SERVER['HTTP_REFERER']){ //Obtiene el id del cliente para utilizarlo despues/ evalua si el id ha sido obtenido
 			$producto = new Producto;
 			$detalle = new Detalle;
 			$valoraciones = new Valoraciones;
@@ -58,7 +58,7 @@ require_once("../../app/models/valoraciones.class.php");
 			throw new Exception("Seleccione producto");
 		}
 	}catch(Exception $error){
-		Page::showMessage(3, $error->getMessage(), "index.php");
+		Page::showMessage(3, $error->getMessage(), "categorias.php");
 	}
 	require_once("../../app/view/public/categorias/detalle_view.php");
 ?>

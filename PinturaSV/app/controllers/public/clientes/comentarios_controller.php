@@ -3,7 +3,8 @@ require_once("../../app/helpers/validator.class.php"); // Llama las validaciones
 require_once("../../app/models/valoraciones.class.php");// Llama el modelo de las valoraciones
 try{
     $valoraciones = new Valoraciones;
-    if($valoraciones->setId_cliente($_SESSION['id_cliente'])){ // Obtenemos el id del cliente
+    
+    if($valoraciones->setId_cliente($_SESSION['id_cliente']) && $_SERVER['HTTP_REFERER']){ // Obtenemos el id del cliente
         if(isset($_POST['valorar'])){ // Declaramos la varible a 
             $_POST = $valoraciones -> validateForm($_POST); // Campo de validacion
             if($valoraciones->setId_producto($_GET['id'])){ // Obtenemos el id del producto a valorar
@@ -37,7 +38,7 @@ try{
         throw new Exception("Error en el Cliente");
     }
 }catch(Exception $error){
-    Page::showMessage(2, $error->getMessage(), "login.php");
+    Page::showMessage(2, $error->getMessage(), "compras.php");
 }
 require_once("../../app/view/public/cuenta/comentarios_view.php");
 ?>
