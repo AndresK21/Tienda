@@ -37,7 +37,7 @@ class Page extends Component{
 					if($empleado->getIp() == null){
 						$empleado->setIp($ip);
 						$empleado->insertIp();
-					}						
+					}	//Debo quitar esta llave para que iniciar en dos dispositivos diferentes funcione					
 					//if($ip == $empleado->getIp()){
 
 						$fechaGuardada = $_SESSION["ultimoAcceso_d"];  
