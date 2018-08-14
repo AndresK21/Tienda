@@ -26,7 +26,7 @@
 </div>
 <div class='container row'>
 <?php
-    if(isset($_SESSION['id_cliente'])){
+    if(isset($_SESSION['id_cliente_p'])){
         foreach($productos as $productob){
             print("
             <div class='col s12 m6 l4'>

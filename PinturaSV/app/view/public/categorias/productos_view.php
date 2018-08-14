@@ -31,7 +31,7 @@
         $categoria = $data_productos[0]['categoria'];
         print("<h4 class='center blue-text'>$categoria</h4>");
         print("<div class='row'>");
-        if(isset($_SESSION['id_cliente'])){
+        if(isset($_SESSION['id_cliente_p'])){
             foreach($data_productos as $productob2){
                 print("
                 <div class='col s12 m6 l3'>
