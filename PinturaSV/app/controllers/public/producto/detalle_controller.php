@@ -28,7 +28,7 @@ require_once("../../app/models/valoraciones.class.php");
 						$_POST = $detalle->validateForm($_POST);
 						if($detalle->setCantidad($_POST['cantidad'])){
 							if($detalle->setId_producto($_GET['id'])){
-								if($detalle->setId_pedido($_SESSION['id_pedido'])){
+								if($detalle->setId_pedido($_SESSION['id_pedido_p'])){
 									if($detalle->createDetalle()){
 										Page::showMessage(1, "Producto agregado al carrito", "../categorias/categorias.php");
 											

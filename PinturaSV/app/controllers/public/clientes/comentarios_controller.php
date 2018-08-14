@@ -4,7 +4,7 @@ require_once("../../app/models/valoraciones.class.php");// Llama el modelo de la
 try{
     $valoraciones = new Valoraciones;
     
-    if($valoraciones->setId_cliente($_SESSION['id_cliente']) && $_SERVER['HTTP_REFERER']){ // Obtenemos el id del cliente
+    if($valoraciones->setId_cliente($_SESSION['id_cliente_p']) && $_SERVER['HTTP_REFERER']){ // Obtenemos el id del cliente
         if(isset($_POST['valorar'])){ // Declaramos la varible a 
             $_POST = $valoraciones -> validateForm($_POST); // Campo de validacion
             if($valoraciones->setId_producto($_GET['id'])){ // Obtenemos el id del producto a valorar

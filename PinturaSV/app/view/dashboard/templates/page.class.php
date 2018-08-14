@@ -186,9 +186,8 @@ class Page extends Component{
 					//if($ip == $empleado->getIp()){
 
 						$fechaGuardada = $_SESSION["ultimoAcceso_d"];  
-						$ahora = time();  
-						$tiempo_transcurrido = $ahora-$fechaGuardada;   
-
+						$ahora = time();
+						$tiempo_transcurrido = $ahora-$fechaGuardada;
 						//comparamos el tiempo transcurrido  
 						if($tiempo_transcurrido >= 300) {  
 							//si pasaron 10 minutos o más  

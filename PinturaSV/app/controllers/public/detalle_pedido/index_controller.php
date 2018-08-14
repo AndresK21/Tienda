@@ -3,7 +3,7 @@ require_once("../../app/models/detalle_pedido.class.php");
 require_once("../../app/models/cliente.class.php");
 try{
     $detalle = new Detalle;
-    if($detalle->setId_cliente($_SESSION['id_cliente'])){
+    if($detalle->setId_cliente($_SESSION['id_cliente_p'])){
         if($detalle->readCliente()){
             if($detalle){
                 $data = $detalle->getVentas();
@@ -17,15 +17,15 @@ try{
     }else {
         throw new Exception("Cliente incorrecto");
     }
-    if(isset($_SESSION['id_pedido'])){
+    if(isset($_SESSION['id_pedido_p'])){
         $producto = new Detalle;
-        if($producto->setId_pedido($_SESSION['id_pedido'])){
+        if($producto->setId_pedido($_SESSION['id_pedido_p'])){
             if($producto->readDetalle2()){
                 if(isset($_POST['comprar'])){
                     $_POST = $producto->validateForm($_POST);
                     if($producto->setEstado("1")){
 						if($producto->updateDetalle2()){
-							Page::showMessage(1, "Compra realizada", "../../app/view/public/detalle/reporte.php?id=$_SESSION[id_cliente]&apellido=$_SESSION[apellidos]&nombre=$_SESSION[nombres]");
+							Page::showMessage(1, "Compra realizada", "../../app/view/public/detalle/reporte.php?id=$_SESSION[id_cliente_p]&apellido=$_SESSION[apellidos_p]&nombre=$_SESSION[nombres_p]");
 						}else{
 							throw new Exception("No se pudo realizar la compra");        
 						}  

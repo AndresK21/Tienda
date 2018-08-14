@@ -2,6 +2,7 @@
 require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
 require_once("../../app/helpers/component.class.php");
+require_once("../../app/models/cliente.class.php");
 class Page extends Component{
 	public static function templateHeader($title){
 		session_name("pagina_publica");
@@ -26,62 +27,197 @@ class Page extends Component{
 			</head>
 			<body>
 		");
-		if(isset($_SESSION['id_cliente'])){
-			print("
-					<!-- Dropdown Structure -->
-					<ul id='dropdown3' class='dropdown-content'>
-						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/compras.php'>Compras realizadas</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
-					</ul>
-					<!-- Dropdown Structure Mobile -->
-					<ul id='dropdown4' class='dropdown-content'>
-						<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/compras.php'>Compras realizadas</a></li>
-						<li class='divider'></li>
-						<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
-					</ul>
+		if(isset($_SESSION['id_cliente_p'])){
+			$cliente = new Cliente;	
 
-					<!--Navbar Fijo-->
-					<div class='navbar-fixed'>
-						<nav>
-							<!--Navbar Color Azul-->
-							<div class='nav-wrapper  blue'>
-								<img class='brand-logo' src='../../web/img/mipintura.png'>
-								<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
-								<ul class='right hide-on-med-and-down'>
-								<li><a href='../index/index.php'>Inicio</a></li>
-								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-								<li><a href='../nosotros/index.php'>Nosotros</a></li>
-								<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
-								<li><a href='../carrito/index.php'><i class='material-icons'>shopping_cart</i></a></li>
-								<li><a class='dropdown-button' href='#!' data-activates='dropdown3'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
-								</ul>
-							</div>
-						</nav>
-					</div>
-				</header>
+			/*if (array_key_exists('HTTP_CLIENT_IP', $_SERVER)){
+				$ip= $_SERVER['HTTP_CLIENT_IP'];
+			}*/ //Para usar en un hosting
 
-				<!--Navbar Mobil-->
-				<ul class='side-nav' id='mobile-demo'>
-					<li><a href='index.php'>Inicio</a></li>
-					<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-					<li><a href='../nosotros/index.php'>Nosotros</a></li>
-					<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
-					<li><a href='../carrito/index.php'> <i class='material-icons new badge'>shopping_cart</i>Añadido<span class='new badge'>1</span></a></li>
-					<li><a class='dropdown-button' href='#!' data-activates='dropdown4'>Bienvenido <b>$_SESSION[nombre_usuario]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
-				</ul>
+			$ip = getenv('REMOTE_ADDR');
+			
+			if($cliente->setId_cliente($_SESSION['id_cliente_p'])){//Establece el id empleado para obtener los registros del empleado
+				if($cliente->readCliente()){
+					if($cliente->getIp() == null){
+						$cliente->setIp($ip);
+						$cliente->insertIp();
+					}						
+					//if($ip == $empleado->getIp()){
 
-				<main class=''>
+						$fechaGuardada = $_SESSION["ultimoAcceso_p"];  
+						$ahora = time();  
+						$tiempo_transcurrido = $ahora-$fechaGuardada;   
+
+						//comparamos el tiempo transcurrido  
+						if($tiempo_transcurrido >= 300) {  
+							//si pasaron 10 minutos o más  
+							$cliente->unsetIp($_SESSION['nombre_usuario_p']);
+							session_destroy(); // destruyo la sesión
+							print("
+							<header class='navbar-fixed'>
 					
-			");
+							<!--Navbar Fijo-->
+							<div class='navbar-fixed'>
+								<nav>
+									<!--Navbar Color Azul-->
+									<div class='nav-wrapper  blue'>
+										<img class='brand-logo' src='../../web/img/mipintura.png'>
+										<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+										<ul class='right hide-on-med-and-down'>
+										<li><a href='../index/index.php'>Inicio</a></li>
+										<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+										<li><a href='../nosotros/index.php'>Nosotros</a></li>
+										<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
+										<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</header>
+		
+						<!--Navbar Mobil-->
+						<ul class='side-nav' id='mobile-demo'>
+							<li><a href='index.php'>Inicio</a></li>
+							<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+							<li><a href='../nosotros.php'>Nosotros</a></li>
+							<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
+							<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+						</ul>
+		
+						<main class=''>
+								");
+							Page::showMessage(3, "Se ha cerrado la sesión por tiempo de inactividad", "index.php"); //envío al usuario a la pag. de autenticación  
+							//sino, actualizo la fecha de la sesión  
+						}else{  
+							$_SESSION["ultimoAcceso_d"] = $ahora;
+							
+							$hoy = date('Y-m-d h:i:s');
+							$hoy2 = new DateTime($hoy);
+							if($cliente->setId_cliente($_SESSION['id_cliente_p'])){//Establece el id empleado para obtener los registros del empleado
+								if($cliente->readCliente()){
+									$fecha1 = new DateTime($cliente->getFecha());
+									$tiempo = $fecha1->diff($hoy2);
+									if($tiempo->d >= 90){
+										print("
+										<header class='navbar-fixed'>
+					
+										<!--Navbar Fijo-->
+										<div class='navbar-fixed'>
+											<nav>
+												<!--Navbar Color Azul-->
+												<div class='nav-wrapper  blue'>
+													<img class='brand-logo' src='../../web/img/mipintura.png'>
+													<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+													<ul class='right hide-on-med-and-down'>
+													<li><a href='../index/index.php'>Inicio</a></li>
+													<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+													<li><a href='../nosotros/index.php'>Nosotros</a></li>
+													<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
+													<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+													</ul>
+												</div>
+											</nav>
+										</div>
+									</header>
+					
+									<!--Navbar Mobil-->
+									<ul class='side-nav' id='mobile-demo'>
+										<li><a href='index.php'>Inicio</a></li>
+										<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+										<li><a href='../nosotros.php'>Nosotros</a></li>
+										<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
+										<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+									</ul>
+					
+									<main class=''>
+											");
+											self::showMessage(3, "¡Debe cambiar su contraseña!", "../cuenta/password2.php");
+											self::templateFooter();
+											exit;						
+									}else{
+										print("
+										<!-- Dropdown Structure -->
+										<ul id='dropdown3' class='dropdown-content'>
+											<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
+											<li class='divider'></li>
+											<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+											<li class='divider'></li>
+											<li><a href='../cuenta/compras.php'>Compras realizadas</a></li>
+											<li class='divider'></li>
+											<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
+										</ul>
+										<!-- Dropdown Structure Mobile -->
+										<ul id='dropdown4' class='dropdown-content'>
+											<li><a href='../cuenta/profile.php'>Editar perfil</a></li>
+											<li class='divider'></li>
+											<li><a href='../cuenta/password.php'>Cambiar contrase&ntilde;a</a></li>
+											<li class='divider'></li>
+											<li><a href='../cuenta/compras.php'>Compras realizadas</a></li>
+											<li class='divider'></li>
+											<li><a href='../cuenta/logout.php'>Cerrar sesi&oacute;n</a></li>
+										</ul>
+					
+										<!--Navbar Fijo-->
+										<div class='navbar-fixed'>
+											<nav>
+												<!--Navbar Color Azul-->
+												<div class='nav-wrapper  blue'>
+													<img class='brand-logo' src='../../web/img/mipintura.png'>
+													<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+													<ul class='right hide-on-med-and-down'>
+													<li><a href='../index/index.php'>Inicio</a></li>
+													<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+													<li><a href='../nosotros/index.php'>Nosotros</a></li>
+													<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
+													<li><a href='../carrito/index.php'><i class='material-icons'>shopping_cart</i></a></li>
+													<li><a class='dropdown-button' href='#!' data-activates='dropdown3'>Bienvenido <b>$_SESSION[nombre_usuario_p]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+													</ul>
+												</div>
+											</nav>
+										</div>
+									</header>
+					
+									<!--Navbar Mobil-->
+									<ul class='side-nav' id='mobile-demo'>
+										<li><a href='index.php'>Inicio</a></li>
+										<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+										<li><a href='../nosotros/index.php'>Nosotros</a></li>
+										<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
+										<li><a href='../carrito/index.php'> <i class='material-icons new badge'>shopping_cart</i>Añadido<span class='new badge'>1</span></a></li>
+										<li><a class='dropdown-button' href='#!' data-activates='dropdown4'>Bienvenido <b>$_SESSION[nombre_usuario_p]</b><i class='material-icons right'>arrow_drop_down</i></a></li>
+									</ul>
+					
+									<main class=''>
+												
+										");
+										printf('%d años, %d meses, %d días, %d horas, %d minutos', $tiempo->y, $tiempo->m, $tiempo->d, $tiempo->h, $tiempo->i);
+									}
+								}
+							}
+						}
+
+					/*}else{
+						print("
+							<header>
+								<div class='navbar-fixed'>  
+									<nav>
+									<!--Navbar Color gris azulado-->
+										<div class='nav-wrapper  blue-grey darken-4'>
+										<img class='brand-logo' src='../../web/img/mipintura.png'>
+										</div>
+									</nav>
+								</div>
+							</header>
+								<main class=''>
+							");
+							session_destroy();
+							self::showMessage(3, "¡Esta cuenta esta iniciada en otro terminal!", "../cuenta/correo.php");
+							self::templateFooter();
+							exit;
+					}*/
+				}
+			}
+
 		}else{
 			print("
 				<header class='navbar-fixed'>
