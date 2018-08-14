@@ -2,7 +2,7 @@
 require_once("../../app/models/cliente.class.php");
 try{
     $cliente = new Cliente;
-    if($cliente->setId_cliente($_SESSION['id_cliente'])){
+    if($cliente->setId_cliente($_SESSION['id_cliente_p'])){
         if($cliente->readCliente()){
             if($cliente){
                 $data = $cliente->getVentas();

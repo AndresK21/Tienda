@@ -4,7 +4,7 @@ try{
     if(isset($_POST['cambiar'])){//El controlador solo funciona con el post que se llame asi
         $usuario = new Cliente;
         $_POST = $usuario->validateForm($_POST);
-        if($usuario->setId_cliente($_SESSION['id_cliente'])){
+        if($usuario->setId_cliente($_SESSION['id_cliente_p'])){
             if($_POST['clave_actual_1'] == $_POST['clave_actual_2']){ //Verifica que la clave antigua sea igual
                 if($usuario->setContrasena2($_POST['clave_actual_1'])){
                     if($usuario->checkPassword_cliente()){

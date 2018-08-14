@@ -2,7 +2,7 @@
 require_once("../../../models/cliente.class.php");
 try{
 	if(isset($_GET['id'])){
-		if($_GET['id'] != $_SESSION['id_cliente']){
+		if($_GET['id'] != $_SESSION['id_cliente_p']){
 			$cliente = new Cliente;
 			if($cliente->setId_cliente($_GET['id'])){
 				if($cliente->readCliente()){

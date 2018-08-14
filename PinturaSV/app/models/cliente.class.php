@@ -14,7 +14,9 @@ class Cliente extends Validator{
 	private $precio = null;
 	private $subtotal = null;
 	private $id_pedido = null;
-
+	private $fecha2 = null;
+	private $estado = null;
+	private $ip = null;
 	private $nombre_correo = null;
 
 	//Métodos para sobrecarga de propiedades
@@ -127,6 +129,39 @@ class Cliente extends Validator{
 		return $this->fecha;
 	}
 
+	public function setIp($value){
+		if($this->validateAlphanumeric($value, 1, 20)){
+			$this->ip = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getIp(){
+		return $this->ip;
+	}
+	public function setEstado($value){
+		if($this->validateId($value)){
+			$this->estado = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getEstado(){
+		return $this->estado;
+	}
+	public function setFecha2($value){
+		if($this->validateAlphanumeric($value, 1, 30)){
+			$this->fecha2 = $value;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getFecha2(){
+		return $this->fecha2;
+	}
 	public function setProducto($value){
 		if($this->validateAlphanumeric($value)){
 			$this->producto = $value;
@@ -236,6 +271,32 @@ class Cliente extends Validator{
 			return false;
 		}
 	}
+
+	public function checkContrasena(){
+		$sql = "SELECT contrasena, estado, fecha_bloqueo FROM cliente WHERE id_cliente = ?";
+		$params = array($this->id_cliente);
+		$data = Database::getRow($sql, $params);
+		if(password_verify($this->contrasena, $data['contrasena'])){
+			$this->estado = $data['estado'];
+			$this->fecha2 = $data['fecha_bloqueo'];
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function updateEstado($user){
+		$sql = "UPDATE cliente SET estado = 0, fecha_bloqueo = ? WHERE nombre_usuario = ?";
+		$fech = date('Y-m-d h:i:s');
+		$params = array($fech, $user);
+		return Database::executeRow($sql, $params);
+	}
+
+	public function updateEstado2($user){
+		$sql = "UPDATE cliente SET estado = 1 WHERE nombre_usuario = ?";
+		$params = array($user);
+		return Database::executeRow($sql, $params);
+	}
+
 	public function changePassword_cliente(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
 		$sql = "UPDATE cliente SET contrasena = ? WHERE id_cliente = ?";
@@ -269,12 +330,13 @@ class Cliente extends Validator{
 	}
 	public function createCliente(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO cliente(nombres, apellidos, email, nombre_usuario, contrasena) VALUES (?, ?, ?, ?, ?)";
-		$params = array($this->nombres, $this->apellidos, $this->email, $this->nombre_usuario, $hash);
+		$sql = "INSERT INTO cliente(nombres, apellidos, email, nombre_usuario, contrasena, fecha_registro) VALUES (?, ?, ?, ?, ?, ?)";
+		$fech = date('y-m-d');
+		$params = array($this->nombres, $this->apellidos, $this->email, $this->nombre_usuario, $hash, $fech );
 		return Database::executeRow($sql, $params);
 	}
 	public function readCliente(){
-		$sql = "SELECT nombres, apellidos, email, nombre_usuario FROM cliente WHERE id_cliente = ?";
+		$sql = "SELECT nombres, apellidos, email, nombre_usuario, fecha_registro, ip FROM cliente WHERE id_cliente = ?";
 		$params = array($this->id_cliente);
 		$user = Database::getRow($sql, $params);
 		if($user){
@@ -282,10 +344,22 @@ class Cliente extends Validator{
 			$this->apellidos = $user['apellidos'];
 			$this->email = $user['email'];
 			$this->nombre_usuario = $user['nombre_usuario'];
+			$this->fecha = $user['fecha_registro'];
+			$this->ip = $user['ip'];
 			return true;
 		}else{
 			return null;
 		}
+	}
+	public function insertIp(){
+		$sql = "UPDATE cliente SET ip = ? WHERE nombre_usuario = ?";
+		$params = array($this->ip, $this->nombre_usuario);
+		return Database::executeRow($sql, $params);
+	}
+	public function unsetIp($usuario){
+		$sql = "UPDATE empleado SET ip = null WHERE nombre_usuario = ?";
+		$params = array($usuario);
+		return Database::executeRow($sql, $params);
 	}
 	public function updateCliente(){
 		$sql = "UPDATE cliente SET nombres = ?, apellidos = ?, email = ?, nombre_usuario = ? WHERE id_cliente = ?";
