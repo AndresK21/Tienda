@@ -22,6 +22,7 @@ class Page extends Component{
 				<link href='../../web/css/googlemaps.css' rel='stylesheet'>
 				<link rel='stylesheet' href='../../web/css/valoraciones.css'>
 				<script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
+				<script src='https://www.google.com/recaptcha/api.js'></script>
 				<!--Let browser know website is optimized for mobile-->
 				<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 			</head>
@@ -289,7 +290,8 @@ class Page extends Component{
 				<script type='text/javascript' src='../../js/materialize.min.js'></script>
 				<script type='text/javascript' src='../../web/js/fontawesom.js'></script>
         		<script type='text/javascript' src='../../web/js/inicial.js'></script>
-        		<script type='text/javascript' src='../../web/js/googlemaps.js'></script>
+				<script type='text/javascript' src='../../web/js/googlemaps.js'></script>
+				
 			</body>
 			</html>
 		");

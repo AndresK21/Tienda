@@ -125,14 +125,13 @@
                             </div>
                         </a>
                     </div>
-
                     <!-- BOTON INICIAR Sesi&oacute;n -->
                     <div class="input-field col l9 offset-l5 m9 offset-m4 s2 offset-s3">
                         <button type='submit' name='crear' class="blue waves-effect waves-light btn ">Iniciar Sesi&oacute;n</button>
                     </div>
                     <div class="white-text">.</div>
                     <div class="white-text">.</div>
-                
+                    <div class="g-recaptcha"  data-sitekey="6Lcba2oUAAAAAC-tJxoJ4P-fh_T3A51rkijPaPu3"></div>
                 </form>
             </div>
         </div>
