@@ -10,10 +10,14 @@ try{
                     if($usuario->checkPassword_cliente()){
                         if($_POST['clave_nueva_1'] == $_POST['clave_nueva_2']){ //Verifica que la clave nueva sea igual
                             if($usuario->setContrasena($_POST['clave_nueva_1'])){
-                                if($usuario->changePassword_cliente()){ //Cambia la contraseña
-                                    Page::showMessage(1, "Clave cambiada", "../categorias/categorias.php");
+                                if($_SESSION['nombre_usuario_p'] != $_POST['clave_nueva_1']){
+                                    if($usuario->changePassword_cliente()){ //Cambia la contraseña
+                                        Page::showMessage(1, "Clave cambiada", "../categorias/categorias.php");
+                                    }else{
+                                        throw new Exception(Database::getException());
+                                    }
                                 }else{
-                                    throw new Exception(Database::getException());
+                                    throw new Exception("La clave no puede ser igual al nombre de usuario");
                                 }
                             }else{
                                 throw new Exception("Clave nueva menor a 6 caracteres");
