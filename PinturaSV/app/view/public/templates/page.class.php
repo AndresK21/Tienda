@@ -90,7 +90,7 @@ class Page extends Component{
 							Page::showMessage(3, "Se ha cerrado la sesión por tiempo de inactividad", "index.php"); //envío al usuario a la pag. de autenticación  
 							//sino, actualizo la fecha de la sesión  
 						}else{  
-							$_SESSION["ultimoAcceso_d"] = $ahora;
+							$_SESSION["ultimoAcceso_p"] = $ahora;
 							
 							$hoy = date('Y-m-d h:i:s');
 							$hoy2 = new DateTime($hoy);
