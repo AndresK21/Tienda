@@ -50,7 +50,7 @@ class Page extends Component{
 						$tiempo_transcurrido = $ahora-$fechaGuardada;   
 
 						//comparamos el tiempo transcurrido  
-						if($tiempo_transcurrido >= 300) {  
+						if($tiempo_transcurrido >= 300) { 
 							//si pasaron 10 minutos o más  
 							$cliente->unsetIp($_SESSION['nombre_usuario_p']);
 							session_destroy(); // destruyo la sesión

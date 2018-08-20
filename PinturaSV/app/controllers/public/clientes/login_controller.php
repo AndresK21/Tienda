@@ -85,11 +85,15 @@ try{
 					if($cliente->setNombre_usuario($_POST['nombre_usuarior'])){
 						if($_POST['contrasena1'] == $_POST['contrasena2']){ //Verifica que la clave sea igual
 						if($cliente->setContrasena($_POST['contrasena1'])){
+							if($_POST['nombre_usuario'] != $_POST['contrasena1']){
 							if($cliente->createCliente()){
 								Page::showMessage(1, "Usuario creado", "../index/index.php");
 							}else{
 								throw new Exception(Database::getException());
 							}
+						}else{
+							throw new Exception("La clave no puede ser igual al nombre de usuario");
+						}
 						}else{
 							throw new Exception("Contraseña Incorrecta");
 						}
