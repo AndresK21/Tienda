@@ -330,9 +330,9 @@ class Cliente extends Validator{
 	}
 	public function createCliente(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO cliente(nombres, apellidos, email, nombre_usuario, contrasena, fecha_registro) VALUES (?, ?, ?, ?, ?, ?)";
+		$sql = "INSERT INTO cliente(nombres, apellidos, email, nombre_usuario, contrasena, fecha_registro, estado) VALUES (?, ?, ?, ?, ?, ?, ?)";
 		$fech = date('y-m-d');
-		$params = array($this->nombres, $this->apellidos, $this->email, $this->nombre_usuario, $hash, $fech );
+		$params = array($this->nombres, $this->apellidos, $this->email, $this->nombre_usuario, $hash, $fech, 1 );
 		return Database::executeRow($sql, $params);
 	}
 	public function readCliente(){
