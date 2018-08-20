@@ -8,7 +8,7 @@ try{
 		if(isset($_POST['iniciar'])){
 			$_POST = $object->validateForm($_POST);
 			if($object->setUsuario($_POST['nombre_usuario'])){
-				$_SESSION['usuario_d'] = $object->getNombre_usuario();
+				$_SESSION['usuario_d'] = $object->getUsuario();
 				if($object->checkUsuarios()){
 					if($object->checkPermisos()){
 						if($object->setContrasena2($_POST['contrasena'])){
