@@ -44,6 +44,7 @@ try{
 								Page::showMessage(2, "Clave incorrecta", "login.php");
 								if($_SESSION['cont_d'] >= 3){
 									$object->updateEstado($_SESSION['usuario_d']);
+									$_SESSION['cont_d'] = 0;
 									Page::showMessage(3, "Ha superado el limite de intentos de inicio de sesión", "../cuenta/login.php");
 								}
 							}
