@@ -98,7 +98,7 @@ class Page extends Component{
 								if($cliente->readCliente()){
 									$fecha1 = new DateTime($cliente->getFecha());
 									$tiempo = $fecha1->diff($hoy2);
-									if($tiempo->d >= 90){
+									if($tiempo->m >= 3){
 										print("
 										<header class='navbar-fixed'>
 					
