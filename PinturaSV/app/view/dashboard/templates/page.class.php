@@ -73,7 +73,7 @@ class Page extends Component{
 								if($empleado->readEmpleado()){
 									$fecha1 = new DateTime($empleado->getFecha());
 									$tiempo = $fecha1->diff($hoy2);
-									if($tiempo->d >= 90){
+									if($tiempo->m >= 3){
 										print("
 											<header>
 												<div class='navbar-fixed'>  
@@ -217,7 +217,7 @@ class Page extends Component{
 								if($empleado->readEmpleado()){
 									$fecha1 = new DateTime($empleado->getFecha());
 									$tiempo = $fecha1->diff($hoy2);
-									if($tiempo->d >= 90){
+									if($tiempo->m >= 3){
 										print("
 											<header>
 												<div class='navbar-fixed'>  

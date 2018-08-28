@@ -55,37 +55,37 @@ class Page extends Component{
 							$cliente->unsetIp($_SESSION['nombre_usuario_p']);
 							session_destroy(); // destruyo la sesión
 							print("
-							<header class='navbar-fixed'>
-					
-							<!--Navbar Fijo-->
-							<div class='navbar-fixed'>
-								<nav>
-									<!--Navbar Color Azul-->
-									<div class='nav-wrapper  blue'>
-										<img class='brand-logo' src='../../web/img/mipintura.png'>
-										<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
-										<ul class='right hide-on-med-and-down'>
-										<li><a href='../index/index.php'>Inicio</a></li>
-										<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-										<li><a href='../nosotros/index.php'>Nosotros</a></li>
-										<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
-										<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
-										</ul>
-									</div>
-								</nav>
-							</div>
-						</header>
-		
-						<!--Navbar Mobil-->
-						<ul class='side-nav' id='mobile-demo'>
-							<li><a href='index.php'>Inicio</a></li>
-							<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-							<li><a href='../nosotros.php'>Nosotros</a></li>
-							<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
-							<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
-						</ul>
-		
-						<main class=''>
+								<header class='navbar-fixed'>
+						
+								<!--Navbar Fijo-->
+								<div class='navbar-fixed'>
+									<nav>
+										<!--Navbar Color Azul-->
+										<div class='nav-wrapper  blue'>
+											<img class='brand-logo' src='../../web/img/mipintura.png'>
+											<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+											<ul class='right hide-on-med-and-down'>
+											<li><a href='../index/index.php'>Inicio</a></li>
+											<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+											<li><a href='../nosotros/index.php'>Nosotros</a></li>
+											<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
+											<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+											</ul>
+										</div>
+									</nav>
+								</div>
+							</header>
+			
+							<!--Navbar Mobil-->
+							<ul class='side-nav' id='mobile-demo'>
+								<li><a href='index.php'>Inicio</a></li>
+								<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+								<li><a href='../nosotros.php'>Nosotros</a></li>
+								<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
+								<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+							</ul>
+			
+							<main class=''>
 								");
 							Page::showMessage(3, "Se ha cerrado la sesión por tiempo de inactividad", "index.php"); //envío al usuario a la pag. de autenticación  
 							//sino, actualizo la fecha de la sesión  
@@ -100,41 +100,42 @@ class Page extends Component{
 									$tiempo = $fecha1->diff($hoy2);
 									if($tiempo->m >= 3){
 										print("
-										<header class='navbar-fixed'>
-					
-										<!--Navbar Fijo-->
-										<div class='navbar-fixed'>
-											<nav>
-												<!--Navbar Color Azul-->
-												<div class='nav-wrapper  blue'>
-													<img class='brand-logo' src='../../web/img/mipintura.png'>
-													<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
-													<ul class='right hide-on-med-and-down'>
-													<li><a href='../index/index.php'>Inicio</a></li>
-													<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-													<li><a href='../nosotros/index.php'>Nosotros</a></li>
-													<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
-													<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
-													</ul>
-												</div>
-											</nav>
-										</div>
-									</header>
-					
-									<!--Navbar Mobil-->
-									<ul class='side-nav' id='mobile-demo'>
-										<li><a href='index.php'>Inicio</a></li>
-										<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
-										<li><a href='../nosotros.php'>Nosotros</a></li>
-										<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
-										<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
-									</ul>
-					
-									<main class=''>
+											<header class='navbar-fixed'>
+						
+											<!--Navbar Fijo-->
+											<div class='navbar-fixed'>
+												<nav>
+													<!--Navbar Color Azul-->
+													<div class='nav-wrapper  blue'>
+														<img class='brand-logo' src='../../web/img/mipintura.png'>
+														<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+														<ul class='right hide-on-med-and-down'>
+														<li><a href='../index/index.php'>Inicio</a></li>
+														<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+														<li><a href='../nosotros/index.php'>Nosotros</a></li>
+														<li><a href='../contactanos/index.php'>Cont&aacute;ctanos</a></li>
+														<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+														</ul>
+													</div>
+												</nav>
+											</div>
+										</header>
+						
+										<!--Navbar Mobil-->
+										<ul class='side-nav' id='mobile-demo'>
+											<li><a href='index.php'>Inicio</a></li>
+											<li><a href='../categorias/categorias.php'>Categor&iacute;as</a></li>
+											<li><a href='../nosotros.php'>Nosotros</a></li>
+											<li><a href='../contactanos.php'>Cont&aacute;ctanos</a></li>
+											<li><a href='../cuenta/login.php'>Iniciar Sesi&oacute;n</a></li>
+										</ul>
+						
+										<main class=''>
 											");
-											self::showMessage(3, "¡Debe cambiar su contraseña!", "../cuenta/password2.php");
-											self::templateFooter();
-											exit;						
+										self::showMessage(3, "¡Debe cambiar su contraseña!", "../cuenta/password2.php");
+										self::templateFooter();
+										exit;		
+
 									}else{
 										print("
 										<!-- Dropdown Structure -->
