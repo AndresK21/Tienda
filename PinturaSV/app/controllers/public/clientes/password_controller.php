@@ -10,17 +10,21 @@ try{
                     if($usuario->checkPassword_cliente()){
                         if($_POST['clave_nueva_1'] == $_POST['clave_nueva_2']){ //Verifica que la clave nueva sea igual
                             if($usuario->setContrasena($_POST['clave_nueva_1'])){
-                                if($_SESSION['nombre_usuario_p'] != $_POST['clave_nueva_1']){
-                                    if($usuario->changePassword_cliente()){ //Cambia la contraseña
-                                        Page::showMessage(1, "Clave cambiada", "../categorias/categorias.php");
+                                if($_POST['clave_actual_1'] != $_POST['clave_nueva_1']){
+                                    if($_SESSION['nombre_usuario_p'] != $_POST['clave_nueva_1']){
+                                        if($usuario->changePassword_cliente()){ //Cambia la contraseña
+                                            Page::showMessage(1, "Clave cambiada", "../index/index.php");
+                                        }else{
+                                            throw new Exception(Database::getException());
+                                        }
                                     }else{
-                                        throw new Exception(Database::getException());
+                                        throw new Exception("La clave no puede ser igual al nombre de usuario");
                                     }
                                 }else{
-                                    throw new Exception("La clave no puede ser igual al nombre de usuario");
+                                    throw new Exception("Las clave nueva no puede ser igual a la actual");
                                 }
                             }else{
-                                throw new Exception("Clave nueva menor a 6 caracteres");
+                                throw new Exception("La clave debe tener al menos 8 dígitos, al menos un número, al menos una minúscula, al menos una mayúscula y al menos un caracter especial");
                             }
                         }else{
                             throw new Exception("Claves nuevas diferentes");
@@ -29,7 +33,7 @@ try{
                         throw new Exception("Clave actual incorrecta");
                     }
                 }else{
-                    throw new Exception("Clave actual menor a 6 caracteres");
+                    throw new Exception("La clave debe tener al menos 8 dígitos, al menos un número, al menos una minúscula, al menos una mayúscula y al menos un caracter especial");
                 }
             }else{
                 throw new Exception("Claves actuales diferentes");

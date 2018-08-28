@@ -104,7 +104,7 @@
                 <p class="right">
                     <div class="card-action ">
                         <div class="col s12 m12 l4 offset-l2">
-                            <div class="g-recaptcha"  data-sitekey="6Lcba2oUAAAAAC-tJxoJ4P-fh_T3A51rkijPaPu3"></div>
+                            <div class="g-recaptcha"  data-sitekey="6Lcba2oUAAAAAC-tJxoJ4P-fh_T3A51rkijPaPu3"></div> // Clave izquierda 
                         </div>
                         <div class="white-text">.</div>
                     <input type="checkbox" id="indeterminate-checkbox" required/>
