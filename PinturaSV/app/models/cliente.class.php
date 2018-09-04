@@ -299,8 +299,9 @@ class Cliente extends Validator{
 
 	public function changePassword_cliente(){
 		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "UPDATE cliente SET contrasena = ? WHERE id_cliente = ?";
-		$params = array($hash, $this->id_cliente);
+		$sql = "UPDATE cliente SET contrasena = ?, fecha_registro = ? WHERE id_cliente = ?";
+		$fech = date('Y-m-d h:i:s');
+		$params = array($hash, $fech, $this->id_cliente);
 		return Database::executeRow($sql, $params);
 	}
 	public function logOut(){
