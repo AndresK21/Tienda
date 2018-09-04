@@ -19,7 +19,7 @@
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input name="contrasena" id="contrasena" type="password" class="validate" '<?php print($object->getContrasena()) ?>' required />
+									<input name="contrasena" id="contrasena" type="password" class="validate" value='<?php print($object->getContrasena()) ?>' required />
 									<label class="black-text" for="contrasena">Contrase&ntilde;a</label>
 								</div>
 							</div>
