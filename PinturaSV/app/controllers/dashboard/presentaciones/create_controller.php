@@ -9,7 +9,7 @@ try{
                 if($presentaciones->createPresentacion()){ //Crea una presentacion
                     Page::showMessage(1, "Presentacion creada", "index.php");
                 }else{
-                throw new Exception("No se pudo crear la presentacion");        
+                    throw new Exception("No se pudo crear la presentacion");        
                 }
             }else{
                 throw new Exception("Tipo de producto incorrecto");

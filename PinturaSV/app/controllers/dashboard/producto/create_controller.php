@@ -17,7 +17,7 @@ try{
                                                 if($producto->createProducto()){ //Crea el producto
                                                     Page::showMessage(1, "Producto creado", "index.php");
                                                 }else{
-                                                throw new Exception("No se pudo crear el producto");        
+                                                    throw new Exception("No se pudo crear el producto");        
                                                 }
                                             }else{
                                                 throw new Exception("Marca incorrecta");
